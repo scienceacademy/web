@@ -1,0 +1,21 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Welcome to AP CSP"
+theme = "hyde"
+
+pygmentsStyle = "dracula"
+pygmentsCodeFences = true
+
+[params]
+    themeColor = "theme-base-08"
+    description = "Mr. Bradfield's AP Computer Science Principles"
+    layoutReverse = true
+
+[outputs]
+    home = [ "HTML", "RSS", "JSON"]
+
+[Menus]
+	main = [
+		{Name = "submit50 Submissions", URL = "https://submit.cs50.io/"},
+		{Name = "cs50 IDE", URL = "https://ide.cs50.io/"}
+	]
