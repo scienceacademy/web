@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://scienceacademy.github.io/web/"
 languageCode = "en-us"
 title = "Welcome to AP CSP"
 theme = "hyde"
