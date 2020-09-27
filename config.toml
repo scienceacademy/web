@@ -2,6 +2,7 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Welcome to AP CSP"
 theme = "hyde"
+publishDir = "docs"
 
 pygmentsStyle = "dracula"
 pygmentsCodeFences = true
