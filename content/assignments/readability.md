@@ -1,12 +1,13 @@
 ---
-title: "Readability"
+title: "Assignment: Readability"
 date: 2020-09-26T09:55:45-07:00
 draft: false
 ---
 
-Implement a program that computes the approximate grade level needed to comprehend some text, per the below.
+Implement a program that computes the approximate grade level needed to comprehend some text.
 <!--more-->
 
+Example:
 ```
 $ ./readability
 Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
@@ -56,7 +57,7 @@ Text: As the average number of letters and words per sentence increases, the Col
 Grade 11
 ```
 
-# Specification
+# Requirements
 
 Design and implement a program, `readability`, that computes the Coleman-Liau index of the text.
 
@@ -66,7 +67,7 @@ Design and implement a program, `readability`, that computes the Coleman-Liau in
 * Your program should print as output `"Grade X"` where `X` is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
 * If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output `"Grade 16+"` instead of giving the exact index number. If the index number is less than 1, your program should output `"Before Grade 1"`.
 
-## Getting User Input
+## 1. Getting User Input
 
 First write some C code that just gets some text input from the user, and prints it back out. Specifically, write code in a new file called `readability.c` such that when the user runs the program, they are prompted with `"Text: "` to enter some text.
 
@@ -78,7 +79,7 @@ Text: In my younger and more vulnerable years my father gave me some advice that
 In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
 ```
 
-## Letters
+## 2. Letters
 
 Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify `readability.c` so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.
 
@@ -94,7 +95,7 @@ Letters can be any uppercase or lowercase alphabetic characters, but shouldn’t
 
 You can reference [https://man.cs50.io/](https://man.cs50.io/) for standard library functions that may help you here! You may also find that writing a separate function, like `count_letters()`, may be useful to keep your code organized.
 
-## Words
+## 3. Words
 
 The Coleman-Liau index cares not only about the number of letters, but also the number of words in a sentence. For the purpose of this problem, we’ll consider any sequence of characters separated by a space to be a word (so a hyphenated word like `"sister-in-law"` should be considered one word, not three).
 
@@ -111,7 +112,7 @@ Text: It was a bright cold day in April, and the clocks were striking thirteen. 
 55 word(s)
 ```
 
-## Sentences
+## 4. Sentences
 
 The last piece of information that the Coleman-Liau formula cares about, in addition to the number of letters and words, is the number of sentences. Determining the number of sentences can be surprisingly trickly. You might first imagine that a sentence is just any sequence of characters that ends with a period, but of course sentences could end with an exclamation point or a question mark as well. But of course, not all periods necessarily mean the sentence is over. For instance, consider the sentence below.
 
@@ -131,7 +132,7 @@ Text: When he was nearly thirteen, my brother Jem got his arm badly broken at th
 3 sentence(s)
 ```
 
-## Putting It All Together
+## 5. Putting It All Together
 
 Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:
 

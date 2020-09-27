@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to AP CSP</title>
+    <title>AP CSP 2020-21</title>
     <link>https://scienceacademy.github.io/web/</link>
-    <description>Recent content on Welcome to AP CSP</description>
+    <description>Recent content on AP CSP 2020-21</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Sep 2020 09:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2020 13:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Readability</title>
+      <title>Assignment: Caesar</title>
+      <link>https://scienceacademy.github.io/web/assignments/caesar/</link>
+      <pubDate>Sat, 26 Sep 2020 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/caesar/</guid>
+      <description>&lt;p&gt;Implement a program that encrypts messages using Caesar’s cipher.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Assignment: Readability</title>
       <link>https://scienceacademy.github.io/web/assignments/readability/</link>
       <pubDate>Sat, 26 Sep 2020 09:55:45 -0700</pubDate>
       
       <guid>https://scienceacademy.github.io/web/assignments/readability/</guid>
-      <description>&lt;p&gt;Implement a program that computes the approximate grade level needed to comprehend some text, per the below.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Implement a program that computes the approximate grade level needed to comprehend some text.&lt;/p&gt;</description>
     </item>
     
     <item>

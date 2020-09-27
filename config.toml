@@ -1,6 +1,6 @@
 baseURL = "https://scienceacademy.github.io/web/"
 languageCode = "en-us"
-title = "Welcome to AP CSP"
+title = "AP CSP 2020-21"
 theme = "hyde"
 publishDir = "docs"
 
@@ -11,6 +11,10 @@ pygmentsCodeFences = true
     themeColor = "theme-base-08"
     description = "Mr. Bradfield's AP Computer Science Principles"
     layoutReverse = false
+
+[markup]
+    [markup.goldmark.renderer]
+        unsafe = true
 
 [outputs]
     home = [ "HTML", "RSS", "JSON"]
