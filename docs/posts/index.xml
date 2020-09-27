@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Welcome to AP CSP</title>
+    <link>https://scienceacademy.github.io/web/posts/</link>
+    <description>Recent content in Posts on Welcome to AP CSP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Sep 2020 19:55:45 -0700</lastBuildDate>
+    
+	<atom:link href="https://scienceacademy.github.io/web/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Welcome</title>
+      <link>https://scienceacademy.github.io/web/posts/my-first-post/</link>
+      <pubDate>Wed, 02 Sep 2020 19:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/posts/my-first-post/</guid>
+      <description>Welcome to AP Computer Science Principles for 2020-21!</description>
+    </item>
+    
+  </channel>
+</rss>

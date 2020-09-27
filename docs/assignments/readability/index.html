@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Readability &middot; Welcome to AP CSP</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>Welcome to AP CSP</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> Your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Readability</h1>
+  <time datetime=2020-09-26T09:55:45-0700 class="post-date">Sat, Sep 26, 2020</time>
+  <p>Implement a program that computes the approximate grade level needed to comprehend some text, per the below.</p>
+<pre><code>$ ./readability
+Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
+Grade 3
+</code></pre><h1 id="reading-levels">Reading Levels</h1>
+<p>According to Scholastic, E.B. White’s “Charlotte’s Web” is between a second and fourth grade reading level, and Lois Lowry’s “The Giver” is between an eighth grade reading level and a twelfth grade reading level. What does it mean, though, for a book to be at a “fourth grade reading level”?</p>
+<p>Well, in many cases, a human expert might read a book and make a decision on the grade for which they think the book is most appropriate. But you could also imagine an algorithm attempting to figure out what the reading level of a text is.</p>
+<p>So what sorts of traits are characteristic of higher reading levels? Well, longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.</p>
+<p>One such readability test is the <em>Coleman-Liau index</em>. The Coleman-Liau index of a text is designed to output what (U.S.) grade level is needed to understand the text. The formula is:</p>
+<blockquote>
+<p>index = 0.0588 * L - 0.296 * S - 15.8</p>
+</blockquote>
+<p>Here, <em>L</em> is the average number of letters per 100 words in the text, and <em>S</em> is the average number of sentences per 100 words in the text.</p>
+<p>Your task is to write a program called <code>readability</code> that takes a text and determines its reading level. For example, if user types in a line from Dr. Seuss:</p>
+<pre><code>$ ./readability
+Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
+Grade 3
+</code></pre><p>The text the user inputted has 65 letters, 4 sentences, and 14 words. 65 letters per 14 words is an average of about 464.29 letters per 100 words. And 4 sentences per 14 words is an average of about 28.57 sentences per 100 words. Plugged into the Coleman-Liau formula, and rounded to the nearest whole number, we get an answer of 3: so this passage is at a third grade reading level.</p>
+<p>Let’s try another one:</p>
+<pre><code>$ ./readability
+Text: Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.
+Grade 5
+</code></pre><p>This text has 214 letters, 4 sentences, and 56 words. That comes out to about 382.14 letters per 100 words, and 7.14 sentences per 100 words. Plugged into the Coleman-Liau formula, we get a fifth grade reading level.</p>
+<p>As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.</p>
+<pre><code>$ ./readability
+Text: As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.
+Grade 11
+</code></pre><h1 id="specification">Specification</h1>
+<p>Design and implement a program, <code>readability</code>, that computes the Coleman-Liau index of the text.</p>
+<ul>
+<li>Implement your program in a file called <code>readability.c</code>.</li>
+<li>Your program must prompt the user for a string of text (using get_string).</li>
+<li>Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from <code>a</code> to <code>z</code> or any uppercase character from <code>A</code> to <code>Z</code>, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.</li>
+<li>Your program should print as output <code>&quot;Grade X&quot;</code> where <code>X</code> is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.</li>
+<li>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>&quot;Grade 16+&quot;</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>&quot;Before Grade 1&quot;</code>.</li>
+</ul>
+<h2 id="getting-user-input">Getting User Input</h2>
+<p>First write some C code that just gets some text input from the user, and prints it back out. Specifically, write code in a new file called <code>readability.c</code> such that when the user runs the program, they are prompted with <code>&quot;Text: &quot;</code> to enter some text.</p>
+<p>The behavior of the resulting program should be like the below.</p>
+<pre><code>$ ./readability
+Text: In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+</code></pre><h2 id="letters">Letters</h2>
+<p>Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify <code>readability.c</code> so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.</p>
+<p>The behavior of the resulting program should be like the below.</p>
+<pre><code>$ ./readability
+Text: Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, &quot;and what is the use of a book,&quot; thought Alice &quot;without pictures or conversation?&quot;
+235 letter(s)
+</code></pre><p>Letters can be any uppercase or lowercase alphabetic characters, but shouldn’t include any punctuation, digits, or other symbols.</p>
+<p>You can reference <a href="https://man.cs50.io/">https://man.cs50.io/</a> for standard library functions that may help you here! You may also find that writing a separate function, like <code>count_letters()</code>, may be useful to keep your code organized.</p>
+<h2 id="words">Words</h2>
+<p>The Coleman-Liau index cares not only about the number of letters, but also the number of words in a sentence. For the purpose of this problem, we’ll consider any sequence of characters separated by a space to be a word (so a hyphenated word like <code>&quot;sister-in-law&quot;</code> should be considered one word, not three).</p>
+<p>Modify <code>readability.c</code> so that, in addition to printing out the number of letters in the text, also prints out the number of words in the text.</p>
+<p>You may assume that a sentence will not start or end with a space, and you may assume that a sentence will not have multiple spaces in a row.</p>
+<p>The behavior of the resulting program should be like the below.</p>
+<pre><code>$ ./readability
+Text: It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.
+250 letter(s)
+55 word(s)
+</code></pre><h2 id="sentences">Sentences</h2>
+<p>The last piece of information that the Coleman-Liau formula cares about, in addition to the number of letters and words, is the number of sentences. Determining the number of sentences can be surprisingly trickly. You might first imagine that a sentence is just any sequence of characters that ends with a period, but of course sentences could end with an exclamation point or a question mark as well. But of course, not all periods necessarily mean the sentence is over. For instance, consider the sentence below.</p>
+<blockquote>
+<p>Mr. and Mrs. Dursley, of number four Privet Drive, were proud to say that they were perfectly normal, thank you very much.</p>
+</blockquote>
+<p>This is just a single sentence, but there are three periods! For this problem, you may ignore that subtlety: you should consider any sequence of characters that ends with a <code>.</code> or a <code>!</code> or a <code>?</code> to be a sentence (so for the above “sentence”, you may count that as three sentences). In practice, sentence boundary detection needs to be a little more intelligent to handle these cases, but don&rsquo;t worry about that for now.</p>
+<p>Modify <code>readability.c</code> so that it also now prints out the number of sentences in the text.</p>
+<p>The behavior of the resulting program should be like the below.</p>
+<pre><code>$ ./readability
+Text: When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.
+295 letter(s)
+70 word(s)
+3 sentence(s)
+</code></pre><h2 id="putting-it-all-together">Putting It All Together</h2>
+<p>Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:</p>
+<blockquote>
+<p>index = 0.0588 * L - 0.296 * S - 15.8</p>
+</blockquote>
+<p>where <code>L</code> is the average number of letters per 100 words in the text, and <code>S</code> is the average number of sentences per 100 words in the text.</p>
+<p>Modify <code>readability.c</code> so that instead of outputting the number of letters, words, and sentences, it instead outputs the grade level as given by the Coleman-Liau index (e.g. <code>&quot;Grade 2&quot;</code> or <code>&quot;Grade 8&quot;</code>). Be sure to round the resulting index number to the nearest whole number!</p>
+<p>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>&quot;Grade 16+&quot;</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>&quot;Before Grade 1&quot;</code>.</p>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>Recall that, when dividing values of type <code>int</code> in C, the result will also be an <code>int</code>, with any remainder (i.e., digits after the decimal point) discarded. Put another way, the result will be “truncated.” You might want to cast your one or more values to <code>float</code> before performing division when calculating <code>L</code> and <code>S</code>!</li>
+</ul>
+<h1 id="how-to-test-your-code">How to Test Your Code</h1>
+<p>Try running your program on the following texts.</p>
+<pre><code>One fish. Two fish. Red fish. Blue fish. (Before Grade 1)
+</code></pre><pre><code>Would you like them here or there? I would not like them here or there. I would not like them anywhere. (Grade 2)
+</code></pre><pre><code>Congratulations! Today is your day. You're off to Great Places! You're off and away! (Grade 3)
+</code></pre><pre><code>Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard. (Grade 5)
+</code></pre><pre><code>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. (Grade 7)
+</code></pre><pre><code>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, &quot;and what is the use of a book,&quot; thought Alice &quot;without pictures or conversation?&quot; (Grade 8)
+</code></pre><pre><code>When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh. (Grade 8)
+</code></pre><pre><code>There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy. (Grade 9)
+</code></pre><pre><code>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him. (Grade 10)
+</code></pre><pre><code>A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains. (Grade 16+)
+</code></pre><p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<pre><code>check50 scienceacademy/problems/2020ap/readability
+</code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<pre><code>style50 readability.c
+</code></pre><h1 id="how-to-submit">How to Submit</h1>
+<p>Execute the below, logging in with your GitHub username and password when prompted.</p>
+<pre><code>submit50 scienceacademy/problems/2020ap/readability
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

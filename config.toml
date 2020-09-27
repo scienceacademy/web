@@ -10,13 +10,13 @@ pygmentsCodeFences = true
 [params]
     themeColor = "theme-base-08"
     description = "Mr. Bradfield's AP Computer Science Principles"
-    layoutReverse = true
+    layoutReverse = false
 
 [outputs]
     home = [ "HTML", "RSS", "JSON"]
 
 [Menus]
 	main = [
-		{Name = "submit50 Submissions", URL = "https://submit.cs50.io/"},
+		{Name = "Your submit50 submissions", URL = "https://submit.cs50.io/"},
 		{Name = "cs50 IDE", URL = "https://ide.cs50.io/"}
 	]

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to AP CSP</title>
-    <link>https://scienceacademy.github.io/web/</link>
-    <description>Recent content on Welcome to AP CSP</description>
+    <title>Assignments on Welcome to AP CSP</title>
+    <link>https://scienceacademy.github.io/web/assignments/</link>
+    <description>Recent content in Assignments on Welcome to AP CSP</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 26 Sep 2020 09:55:45 -0700</lastBuildDate>
     
-	<atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://scienceacademy.github.io/web/assignments/readability/</guid>
       <description>&lt;p&gt;Implement a program that computes the approximate grade level needed to comprehend some text, per the below.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Welcome</title>
-      <link>https://scienceacademy.github.io/web/posts/my-first-post/</link>
-      <pubDate>Wed, 02 Sep 2020 19:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/posts/my-first-post/</guid>
-      <description>Welcome to AP Computer Science Principles for 2020-21!</description>
     </item>
     
   </channel>
