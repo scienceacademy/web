@@ -15,7 +15,7 @@ plaintext:  HELLO
 ciphertext: URYYB
 ```
 
-# Background
+## Background
 
 Supposedly, Caesar (yes, that Caesar) used to “encrypt” (i.e., conceal in a reversible way) confidential messages by shifting each letter therein by some number of places. For instance, he might write A as B, B as C, C as D, etc., and, wrapping around alphabetically, Z as A. And so, to say HELLO to someone, Caesar might write IFMMP. Upon receiving such messages from Caesar, recipients would have to “decrypt” them by shifting letters in the opposite direction by the same number of places.
 
@@ -90,7 +90,7 @@ $ ./caesar 1 2 3
 Usage: ./caesar key
 ```
 
-# Requirements
+## Requirements
 
 Write a program, `caesar`, that encrypts messages using Caesar’s cipher.
 
@@ -106,7 +106,7 @@ Write a program, `caesar`, that encrypts messages using Caesar’s cipher.
 
 How to begin? Let’s approach this problem one step at a time.
 
-## 1. Pseudocode
+### 1. Pseudocode
 
 There’s more than one way to do this, so here’s just one example:
 
@@ -120,7 +120,7 @@ There’s more than one way to do this, so here’s just one example:
     1. If it is neither, print out the character as is
 1. Print a newline
 
-## 2. Counting Command-Line Arguments
+### 2. Counting Command-Line Arguments
 
 Whatever your pseudocode, first write only the C code that checks whether the program was run with a single command-line argument before you add any additional functionality.
 
@@ -150,7 +150,7 @@ Usage: ./caesar key
 * Recall that `argc` and `argv` give you information about what was provided at the command line.
 * Recall that the name of the program itself (ie, `./caesar`) is in `argv[0]`.
 
-## 3. Accessing the Key
+### 3. Accessing the Key
 
 Now that your program is (hopefully!) accepting input as prescribed, it’s time for another step.
 
@@ -174,7 +174,7 @@ Success
 * Recall that `argv` is an array of strings.
 * Recall that you can access individual elements of an array, such as `argv` using square brackets, for example: `argv[0]`.
 
-## 4. Validating the Key
+### 4. Validating the Key
 
 Now that you know how to read the key, you can analyze it. Modify `caesar.c` so that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and if any of them are not, terminates after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the integer. So, for example, the behavior might look like this:
 
@@ -199,7 +199,7 @@ Usage: ./caesar key
 * Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters.
 * Recall that the `atoi()` function converts a string that looks like a number into that number.
 
-## 5. Under the Hood
+### 5. Under the Hood
 
 As humans it’s easy for us to intuitively understand the formula described above, so we can say “H + 1 = I”. But can a computer understand that same logic? For now, temporarily ignore the key the user provided and instead prompt the user for a secret message and just try to shift all of its characters by 1.
 
@@ -216,7 +216,7 @@ ciphertext: ifmmp
 * Try to iterate over every character in the plaintext and literally add `1` to it, then print it.
 * If `c` is a variable of type `char` in C, what happens when you call `printf("%c", c + 1)`?
 
-## 6. Last step
+### 6. Last step
 
 You're in the home stretch! Instead of shifting the characters by 1, change `caesar.c` to instead shift them by the actual key value. Be sure to preserve case! Uppercase letters should stay uppercase, lowercase letters should stay lowercase, and characters that aren’t alphabetical should remain unchanged.
 
@@ -228,7 +228,7 @@ You're in the home stretch! Instead of shifting the characters by 1, change `cae
 * Recall that the ASCII value of `A` is 65. The ASCII value of `a` is 97.
 *  If you’re not seeing any output at all when you call `printf()`, odds are it’s because you’re printing characters outside of the valid ASCII range from 0 to 127. Try printing characters as numbers (using `%i` instead of `%c`) at first to see what values you’re printing, and make sure you’re only ever trying to print valid characters!
 
-# How to Test Your Code
+## How to Test Your Code
 
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
@@ -242,7 +242,7 @@ Execute the below to evaluate the style of your code using `style50`.
 style50 caesar.c
 ```
 
-# How to Submit
+## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted.
 

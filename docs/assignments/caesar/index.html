@@ -57,7 +57,7 @@
 <pre><code>$ ./caesar 13
 plaintext:  HELLO
 ciphertext: URYYB
-</code></pre><h1 id="background">Background</h1>
+</code></pre><h2 id="background">Background</h2>
 <p>Supposedly, Caesar (yes, that Caesar) used to “encrypt” (i.e., conceal in a reversible way) confidential messages by shifting each letter therein by some number of places. For instance, he might write A as B, B as C, C as D, etc., and, wrapping around alphabetically, Z as A. And so, to say HELLO to someone, Caesar might write IFMMP. Upon receiving such messages from Caesar, recipients would have to “decrypt” them by shifting letters in the opposite direction by the same number of places.</p>
 <p>The secrecy of this “cryptosystem” relied on only Caesar and the recipients knowing a secret: the number of places by which Caesar had shifted his letters (e.g., 1). Not particularly secure by modern standards, but, hey, if you’re perhaps the first in the world to do it, pretty secure!</p>
 <p>Cryptographers, refer to unencrypted text as <em>plaintext</em>. Encrypted text is called <em>ciphertext</em>. And the secret is called a <em>key</em>.</p>
@@ -130,7 +130,7 @@ Usage: ./caesar key
 </code></pre><p>Or even…</p>
 <pre><code>$ ./caesar 1 2 3
 Usage: ./caesar key
-</code></pre><h1 id="requirements">Requirements</h1>
+</code></pre><h2 id="requirements">Requirements</h2>
 <p>Write a program, <code>caesar</code>, that encrypts messages using Caesar’s cipher.</p>
 <ul>
 <li>Write your program in a file called <code>caesar.c</code>.</li>
@@ -144,7 +144,7 @@ Usage: ./caesar key
 <li>After outputting ciphertext, you should print a newline. Your program should then exit by returning <code>0</code> from <code>main()</code>.</li>
 </ul>
 <p>How to begin? Let’s approach this problem one step at a time.</p>
-<h2 id="1-pseudocode">1. Pseudocode</h2>
+<h3 id="1-pseudocode">1. Pseudocode</h3>
 <p>There’s more than one way to do this, so here’s just one example:</p>
 <ol>
 <li>Check that program was run with one command-line argument</li>
@@ -160,7 +160,7 @@ Usage: ./caesar key
 </li>
 <li>Print a newline</li>
 </ol>
-<h2 id="2-counting-command-line-arguments">2. Counting Command-Line Arguments</h2>
+<h3 id="2-counting-command-line-arguments">2. Counting Command-Line Arguments</h3>
 <p>Whatever your pseudocode, first write only the C code that checks whether the program was run with a single command-line argument before you add any additional functionality.</p>
 <p>Specifically, in a new file called <code>caesar.c</code> write code such that: if the user provides exactly one command-line argument, it prints <code>Success</code>; if the user provides no command-line arguments, or two or more, it prints <code>Usage: ./caesar key</code>. Remember, since this key is coming from the command line at runtime, and not via get_string, we don’t have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.</p>
 <pre><code>$ ./caesar 20
@@ -176,7 +176,7 @@ Usage: ./caesar key
 <li>Recall that <code>argc</code> and <code>argv</code> give you information about what was provided at the command line.</li>
 <li>Recall that the name of the program itself (ie, <code>./caesar</code>) is in <code>argv[0]</code>.</li>
 </ul>
-<h2 id="3-accessing-the-key">3. Accessing the Key</h2>
+<h3 id="3-accessing-the-key">3. Accessing the Key</h3>
 <p>Now that your program is (hopefully!) accepting input as prescribed, it’s time for another step.</p>
 <p>In your program, you must defend against users who technically provide a single command-line argument (the key), but provide something that isn’t actually an integer, for example:</p>
 <pre><code>$ ./caesar xyz
@@ -190,7 +190,7 @@ Success
 <li>Recall that <code>argv</code> is an array of strings.</li>
 <li>Recall that you can access individual elements of an array, such as <code>argv</code> using square brackets, for example: <code>argv[0]</code>.</li>
 </ul>
-<h2 id="4-validating-the-key">4. Validating the Key</h2>
+<h3 id="4-validating-the-key">4. Validating the Key</h3>
 <p>Now that you know how to read the key, you can analyze it. Modify <code>caesar.c</code> so that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., <code>0</code>, <code>1</code>, <code>2</code>, etc.) and if any of them are not, terminates after printing the message <code>Usage: ./caesar key</code>. But if the argument consists solely of digit characters, you should convert that string (recall that <code>argv</code> is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the integer. So, for example, the behavior might look like this:</p>
 <pre><code>$ ./caesar 20
 Success
@@ -206,7 +206,7 @@ Usage: ./caesar key
 <li>Recall that the <code>ctype.h</code> header file contains a number of useful functions that tell us things about characters.</li>
 <li>Recall that the <code>atoi()</code> function converts a string that looks like a number into that number.</li>
 </ul>
-<h2 id="5-under-the-hood">5. Under the Hood</h2>
+<h3 id="5-under-the-hood">5. Under the Hood</h3>
 <p>As humans it’s easy for us to intuitively understand the formula described above, so we can say “H + 1 = I”. But can a computer understand that same logic? For now, temporarily ignore the key the user provided and instead prompt the user for a secret message and just try to shift all of its characters by 1.</p>
 <p>Add to <code>caesar.c</code> so that, after validating the key, you prompt the user for a string and then shift all of its characters by 1, printing out the result. You can also remove the code you wrote earlier that prints <code>Success</code>. You&rsquo;re goal is something like this:</p>
 <pre><code>$ ./caesar 1
@@ -217,7 +217,7 @@ ciphertext: ifmmp
 <li>Try to iterate over every character in the plaintext and literally add <code>1</code> to it, then print it.</li>
 <li>If <code>c</code> is a variable of type <code>char</code> in C, what happens when you call <code>printf(&quot;%c&quot;, c + 1)</code>?</li>
 </ul>
-<h2 id="6-last-step">6. Last step</h2>
+<h3 id="6-last-step">6. Last step</h3>
 <p>You&rsquo;re in the home stretch! Instead of shifting the characters by 1, change <code>caesar.c</code> to instead shift them by the actual key value. Be sure to preserve case! Uppercase letters should stay uppercase, lowercase letters should stay lowercase, and characters that aren’t alphabetical should remain unchanged.</p>
 <h3 id="hints-4">Hints</h3>
 <ul>
@@ -227,12 +227,12 @@ ciphertext: ifmmp
 <li>Recall that the ASCII value of <code>A</code> is 65. The ASCII value of <code>a</code> is 97.</li>
 <li>If you’re not seeing any output at all when you call <code>printf()</code>, odds are it’s because you’re printing characters outside of the valid ASCII range from 0 to 127. Try printing characters as numbers (using <code>%i</code> instead of <code>%c</code>) at first to see what values you’re printing, and make sure you’re only ever trying to print valid characters!</li>
 </ul>
-<h1 id="how-to-test-your-code">How to Test Your Code</h1>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
 <pre><code>check50 scienceacademy/problems/2020ap/caesar
 </code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
 <pre><code>style50 caesar.c
-</code></pre><h1 id="how-to-submit">How to Submit</h1>
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted.</p>
 <pre><code>submit50 scienceacademy/problems/2020ap/caesar
 </code></pre>

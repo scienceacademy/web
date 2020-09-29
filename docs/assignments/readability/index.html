@@ -57,7 +57,7 @@
 <pre><code>$ ./readability
 Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
 Grade 3
-</code></pre><h1 id="reading-levels">Reading Levels</h1>
+</code></pre><h2 id="reading-levels">Reading Levels</h2>
 <p>According to Scholastic, E.B. White’s “Charlotte’s Web” is between a second and fourth grade reading level, and Lois Lowry’s “The Giver” is between an eighth grade reading level and a twelfth grade reading level. What does it mean, though, for a book to be at a “fourth grade reading level”?</p>
 <p>Well, in many cases, a human expert might read a book and make a decision on the grade for which they think the book is most appropriate. But you could also imagine an algorithm attempting to figure out what the reading level of a text is.</p>
 <p>So what sorts of traits are characteristic of higher reading levels? Well, longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.</p>
@@ -80,22 +80,23 @@ Grade 5
 <pre><code>$ ./readability
 Text: As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.
 Grade 11
-</code></pre><h1 id="requirements">Requirements</h1>
+</code></pre><h2 id="requirements">Requirements</h2>
 <p>Design and implement a program, <code>readability</code>, that computes the Coleman-Liau index of the text.</p>
 <ul>
 <li>Implement your program in a file called <code>readability.c</code>.</li>
-<li>Your program must prompt the user for a string of text (using get_string).</li>
+<li>Your program must prompt the user for a string of text (using <code>get_string()</code>).</li>
 <li>Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from <code>a</code> to <code>z</code> or any uppercase character from <code>A</code> to <code>Z</code>, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.</li>
 <li>Your program should print as output <code>&quot;Grade X&quot;</code> where <code>X</code> is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.</li>
 <li>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>&quot;Grade 16+&quot;</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>&quot;Before Grade 1&quot;</code>.</li>
 </ul>
-<h2 id="1-getting-user-input">1. Getting User Input</h2>
+<h2 id="walkthrough">Walkthrough</h2>
+<h3 id="1-getting-user-input">1. Getting User Input</h3>
 <p>First write some C code that just gets some text input from the user, and prints it back out. Specifically, write code in a new file called <code>readability.c</code> such that when the user runs the program, they are prompted with <code>&quot;Text: &quot;</code> to enter some text.</p>
 <p>The behavior of the resulting program should be like the below.</p>
 <pre><code>$ ./readability
 Text: In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
 In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
-</code></pre><h2 id="2-letters">2. Letters</h2>
+</code></pre><h3 id="2-letters">2. Letters</h3>
 <p>Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify <code>readability.c</code> so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.</p>
 <p>The behavior of the resulting program should be like the below.</p>
 <pre><code>$ ./readability
@@ -103,7 +104,7 @@ Text: Alice was beginning to get very tired of sitting by her sister on the bank
 235 letter(s)
 </code></pre><p>Letters can be any uppercase or lowercase alphabetic characters, but shouldn’t include any punctuation, digits, or other symbols.</p>
 <p>You can reference <a href="https://man.cs50.io/">https://man.cs50.io/</a> for standard library functions that may help you here! You may also find that writing a separate function, like <code>count_letters()</code>, may be useful to keep your code organized.</p>
-<h2 id="3-words">3. Words</h2>
+<h3 id="3-words">3. Words</h3>
 <p>The Coleman-Liau index cares not only about the number of letters, but also the number of words in a sentence. For the purpose of this problem, we’ll consider any sequence of characters separated by a space to be a word (so a hyphenated word like <code>&quot;sister-in-law&quot;</code> should be considered one word, not three).</p>
 <p>Modify <code>readability.c</code> so that, in addition to printing out the number of letters in the text, also prints out the number of words in the text.</p>
 <p>You may assume that a sentence will not start or end with a space, and you may assume that a sentence will not have multiple spaces in a row.</p>
@@ -112,7 +113,7 @@ Text: Alice was beginning to get very tired of sitting by her sister on the bank
 Text: It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.
 250 letter(s)
 55 word(s)
-</code></pre><h2 id="4-sentences">4. Sentences</h2>
+</code></pre><h3 id="4-sentences">4. Sentences</h3>
 <p>The last piece of information that the Coleman-Liau formula cares about, in addition to the number of letters and words, is the number of sentences. Determining the number of sentences can be surprisingly trickly. You might first imagine that a sentence is just any sequence of characters that ends with a period, but of course sentences could end with an exclamation point or a question mark as well. But of course, not all periods necessarily mean the sentence is over. For instance, consider the sentence below.</p>
 <blockquote>
 <p>Mr. and Mrs. Dursley, of number four Privet Drive, were proud to say that they were perfectly normal, thank you very much.</p>
@@ -125,7 +126,7 @@ Text: When he was nearly thirteen, my brother Jem got his arm badly broken at th
 295 letter(s)
 70 word(s)
 3 sentence(s)
-</code></pre><h2 id="5-putting-it-all-together">5. Putting It All Together</h2>
+</code></pre><h3 id="5-putting-it-all-together">5. Putting It All Together</h3>
 <p>Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:</p>
 <blockquote>
 <p>index = 0.0588 * L - 0.296 * S - 15.8</p>
@@ -137,7 +138,7 @@ Text: When he was nearly thirteen, my brother Jem got his arm badly broken at th
 <ul>
 <li>Recall that, when dividing values of type <code>int</code> in C, the result will also be an <code>int</code>, with any remainder (i.e., digits after the decimal point) discarded. Put another way, the result will be “truncated.” You might want to cast your one or more values to <code>float</code> before performing division when calculating <code>L</code> and <code>S</code>!</li>
 </ul>
-<h1 id="how-to-test-your-code">How to Test Your Code</h1>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Try running your program on the following texts.</p>
 <pre><code>One fish. Two fish. Red fish. Blue fish. (Before Grade 1)
 </code></pre><pre><code>Would you like them here or there? I would not like them here or there. I would not like them anywhere. (Grade 2)
@@ -153,7 +154,7 @@ Text: When he was nearly thirteen, my brother Jem got his arm badly broken at th
 <pre><code>check50 scienceacademy/problems/2020ap/readability
 </code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
 <pre><code>style50 readability.c
-</code></pre><h1 id="how-to-submit">How to Submit</h1>
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted.</p>
 <pre><code>submit50 scienceacademy/problems/2020ap/readability
 </code></pre>

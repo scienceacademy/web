@@ -14,7 +14,7 @@ Text: Congratulations! Today is your day. You're off to Great Places! You're off
 Grade 3
 ```
 
-# Reading Levels
+## Reading Levels
 
 According to Scholastic, E.B. White’s “Charlotte’s Web” is between a second and fourth grade reading level, and Lois Lowry’s “The Giver” is between an eighth grade reading level and a twelfth grade reading level. What does it mean, though, for a book to be at a “fourth grade reading level”?
 
@@ -57,17 +57,19 @@ Text: As the average number of letters and words per sentence increases, the Col
 Grade 11
 ```
 
-# Requirements
+## Requirements
 
 Design and implement a program, `readability`, that computes the Coleman-Liau index of the text.
 
 * Implement your program in a file called `readability.c`.
-* Your program must prompt the user for a string of text (using get_string).
+* Your program must prompt the user for a string of text (using `get_string()`).
 * Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from `a` to `z` or any uppercase character from `A` to `Z`, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
 * Your program should print as output `"Grade X"` where `X` is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.
 * If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output `"Grade 16+"` instead of giving the exact index number. If the index number is less than 1, your program should output `"Before Grade 1"`.
 
-## 1. Getting User Input
+## Walkthrough
+
+### 1. Getting User Input
 
 First write some C code that just gets some text input from the user, and prints it back out. Specifically, write code in a new file called `readability.c` such that when the user runs the program, they are prompted with `"Text: "` to enter some text.
 
@@ -79,7 +81,7 @@ Text: In my younger and more vulnerable years my father gave me some advice that
 In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
 ```
 
-## 2. Letters
+### 2. Letters
 
 Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify `readability.c` so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.
 
@@ -95,7 +97,7 @@ Letters can be any uppercase or lowercase alphabetic characters, but shouldn’t
 
 You can reference [https://man.cs50.io/](https://man.cs50.io/) for standard library functions that may help you here! You may also find that writing a separate function, like `count_letters()`, may be useful to keep your code organized.
 
-## 3. Words
+### 3. Words
 
 The Coleman-Liau index cares not only about the number of letters, but also the number of words in a sentence. For the purpose of this problem, we’ll consider any sequence of characters separated by a space to be a word (so a hyphenated word like `"sister-in-law"` should be considered one word, not three).
 
@@ -112,7 +114,7 @@ Text: It was a bright cold day in April, and the clocks were striking thirteen. 
 55 word(s)
 ```
 
-## 4. Sentences
+### 4. Sentences
 
 The last piece of information that the Coleman-Liau formula cares about, in addition to the number of letters and words, is the number of sentences. Determining the number of sentences can be surprisingly trickly. You might first imagine that a sentence is just any sequence of characters that ends with a period, but of course sentences could end with an exclamation point or a question mark as well. But of course, not all periods necessarily mean the sentence is over. For instance, consider the sentence below.
 
@@ -132,7 +134,7 @@ Text: When he was nearly thirteen, my brother Jem got his arm badly broken at th
 3 sentence(s)
 ```
 
-## 5. Putting It All Together
+### 5. Putting It All Together
 
 Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:
 
@@ -148,7 +150,7 @@ If the resulting index number is 16 or higher (equivalent to or greater than a s
 
 * Recall that, when dividing values of type `int` in C, the result will also be an `int`, with any remainder (i.e., digits after the decimal point) discarded. Put another way, the result will be “truncated.” You might want to cast your one or more values to `float` before performing division when calculating `L` and `S`!
 
-# How to Test Your Code
+## How to Test Your Code
 
 Try running your program on the following texts.
 
@@ -204,7 +206,7 @@ Execute the below to evaluate the style of your code using `style50`.
 style50 readability.c
 ```
 
-# How to Submit
+## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted.
 
