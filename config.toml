@@ -21,6 +21,6 @@ pygmentsCodeFences = true
 
 [Menus]
 	main = [
-		{Name = "Your submit50 submissions", URL = "https://submit.cs50.io/"},
+		{Name = "View your submit50 submissions", URL = "https://submit.cs50.io/"},
 		{Name = "cs50 IDE", URL = "https://ide.cs50.io/"}
 	]
