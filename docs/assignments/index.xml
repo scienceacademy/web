@@ -6,10 +6,19 @@
     <description>Recent content in Assignments on AP CSP 2020-21</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Oct 2020 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 13 Oct 2020 13:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Voting: Runoff</title>
+      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+      <pubDate>Tue, 13 Oct 2020 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Assignment: Plurality</title>
