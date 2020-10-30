@@ -6,10 +6,19 @@
     <description>Recent content on AP CSP 2020-21</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Oct 2020 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2020 13:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Filter</title>
+      <link>https://scienceacademy.github.io/web/assignments/filter/</link>
+      <pubDate>Wed, 28 Oct 2020 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/filter/</guid>
+      <description>&lt;p&gt;Implement a program that applies filters to images.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Voting: Runoff</title>
