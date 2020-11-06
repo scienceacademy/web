@@ -1,5 +1,5 @@
 ---
-title: "Assignment: Video poker ♥ ♣ ♠ ♦"
+title: "Video poker ♥ ♣ ♠ ♦"
 date: 2020-10-25T13:55:45-07:00
 draft: true
 ---

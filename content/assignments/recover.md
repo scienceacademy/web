@@ -1,5 +1,5 @@
 ---
-title: "Assignment: Recover"
+title: "Recover"
 date: 2020-11-05T13:55:45-07:00
 draft: false
 ---
