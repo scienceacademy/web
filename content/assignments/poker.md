@@ -44,7 +44,7 @@ Poker hands are ranked by the relative rarity of the combinations. The order is 
 
 * Score the hand and, if it's a winning hand, add the winnings to the player's funds.
 
-* If the player's funds are 0, end the game.
+* If the player's funds are $0, end the game.
 
 * Finally, ask the player if they'd like to play again. If they don't, display their final winnings. If they do, shuffle the deck and repeat.
 
@@ -72,6 +72,10 @@ Any other hands pay 0.
 You can play a free example game here:
 
 [https://www.freeslots.com/poker.htm](https://www.freeslots.com/poker.htm)
+
+You can also download an example completed assignment here:
+
+[vp.zip](/web/vp.zip)
 
 ## Implementation
 
