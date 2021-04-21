@@ -39,6 +39,15 @@
     </item>
     
     <item>
+      <title>Video poker ♥ ♣ ♠ ♦</title>
+      <link>https://scienceacademy.github.io/web/assignments/poker/</link>
+      <pubDate>Sun, 25 Oct 2020 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/poker/</guid>
+      <description>&lt;p&gt;Implement a program that runs a game of video poker.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Voting: Runoff</title>
       <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
       <pubDate>Tue, 13 Oct 2020 13:55:45 -0700</pubDate>

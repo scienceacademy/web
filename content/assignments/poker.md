@@ -1,7 +1,7 @@
 ---
 title: "Video poker ♥ ♣ ♠ ♦"
 date: 2020-10-25T13:55:45-07:00
-draft: true
+draft: false
 ---
 Implement a program that runs a game of video poker.
 <!--more-->
@@ -34,8 +34,6 @@ Poker hands are ranked by the relative rarity of the combinations. The order is 
 
 ## Specification
 
-* Use the `card` struct, `deck` array, and `shuffle()` function we discussed in class.
-
 * The player should start with $100 in funds.
 
 * Before each hand, the player can choose any amount to bet, up to their current funds.
@@ -49,6 +47,8 @@ Poker hands are ranked by the relative rarity of the combinations. The order is 
 * If the player's funds are 0, end the game.
 
 * Finally, ask the player if they'd like to play again. If they don't, display their final winnings. If they do, shuffle the deck and repeat.
+
+* Don't forget to shuffle the deck before dealing each hand.
 
 ## Payout table
 
@@ -67,13 +67,38 @@ There are many possible payout tables for video poker. Typically, they change ba
 
 Any other hands pay 0.
 
-## Submitting
+## Example
 
-Random seed
+You can play a free example game here:
 
+[https://www.freeslots.com/poker.htm](https://www.freeslots.com/poker.htm)
 
+## Implementation
+
+You may write this program in Python or C.
+
+### Random seed
+
+In order to properly check for the correct output, your submission needs to use a known "random" sequence. Before submitting, make sure to seed your program's RNG with the following seed: `581321`.
+
+## How to Test Your Code
+
+Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+
+```
 check50 scienceacademy/problems/2020ap/poker
+```
 
-style50 poker.c
+Execute the below to evaluate the style of your code using `style50`.
 
+```
+style50 [poker.c | poker.py]
+```
+
+## How to Submit
+
+Execute the below, logging in with your GitHub username and password when prompted.
+
+```
 submit50 scienceacademy/problems/2020ap/poker
+```
