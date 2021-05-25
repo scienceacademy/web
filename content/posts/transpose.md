@@ -90,7 +90,7 @@ Itcmlbrx
 
 And again, reading down the columns you'll find the original message.
 
-Can you see why we "padded" the length of the original message with the extra character? The more factors your message length has, the more possible arrangements of the grid.
+Can you see why we "padded" the length of the original message with the extra character? The more factors your message length has, the more possible arrangements of the grid. (You can use anything for the extra padding at the end, not just "x".)
 
 # Challenge #4
 
