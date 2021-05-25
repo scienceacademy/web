@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Challenge #6</title>
+      <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+</head>
+<body class="theme-base-08">
+    <h1>Challenge #6</h1>
+    <h2>Cyphertext:</h2>
+    <pre>
+tQ5TCgmY5Yp3p/meRaytMZc87Oy96dly/YPyACPVdsNBu6q/MlB7RlDrzSoEy79EPFqfkL38WZa3Tc6CDmj7XVWvFisWtLQEi+jGF73+izqsKzVifvP1ybPMmunoFSrIEzuirPKXS0HdjEnhnCI80rqkFKq9K9FHRtbfW+Gkc/JQ1fwHEebKOvO3OIlEhnIYiaNTlIjGE52NE+WZx4igEEctICOtHUWzT6bi+ONFgKtOF+6joth3GWS8r0LCFOZTx8yX98EW5Sz3S3tNNYu14YWRBRLZ4xeEicAt8vF92tWkiieIpvnPhKYFk03MgtU8TbaSdhu2trjfvDApbSyWzN3qrjKTtP9yk2/Y7X8JtmLQMGTGyQzIOQsQcZ9Swixzf+6rnIOWYKZWpPffyYM70+DeWFrioYyqSAI51O4uv4PbKTgDhzduIygTic6VrdZ4CjaWmyW7VP1BhUueY2KFrKDX/SQqeViOHahHLqAG6T2fX1ptDOck7d8MS3gLcg+kPZfEKMx3mx42u/dahD7t8w==
+    </pre>
+    <p>This cyphertext has been created by using AES-128. To decrypt it, you can use <a href="https://gist.github.com/cbscribe/92b13f91985013b442405b8c6f85bbe8">this Python program.</a>
+    However, you'll need the <i>decryption key</i>. For AES-128, a key must be exactly 16 characters long (and that's how long the one you need is).</p>
+    <p>The key is a combination of two 8 letter words. The first is your keyword from Challenge #3. The second is encoded here:</p>
+    <pre>
+    301:39:2
+    </pre>
+    <p>The next clue is the last name of the person who wrote the poem encrypted above.</p>
+    <div style="color:white;">
+    <h3 style="color:white;">Hints:</h3>
+    <ul>
+        <li>Ottendorf</li>
+        <li>Textbook<!-- Giancoli page:line:word --></li>
+    </ul>
+</div>
+</body>
+</html>

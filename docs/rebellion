@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Challenge #5</title>
+      <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+</head>
+<body class="theme-base-08">
+        <h1>Challenge #5</h1>
+        <p>Secrecy isn't just about making a message hard for an unauthorized person to read,
+        it also helps if you can hide it where it can't be found!</p>
+        <p> For example, use your mouse to highlight below to find some text hiding in plain sight:
+        </p>
+    <p style="color: white;">
+    Where else could information be hidden? You won't be able to continue until you find the <i>source</i> of your next clue.
+    </p>
+    <p>
+    </p>
+
+<!--
+Challenge #6 can be found if you change the current URL to the first keyword (from Challenge #1)
+spelled backwards:
+
+https://scienceacademy.github.io/web/keyword
+
+-->
+</body>
+</html>

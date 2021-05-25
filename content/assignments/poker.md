@@ -79,7 +79,7 @@ You can also download an example completed assignment here:
 
 ## Implementation
 
-You may write this program in Python or C.
+You may write this program in Python or C. Name your program `vp.py` or `vp.c`.
 
 ### Random seed
 
