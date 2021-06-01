@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Overrun</title>
+    <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+    <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+    <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+    <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+</head>
+
+<body class="theme-base-08">
+    <h1>Overrun</h1>
+<p>
+    The following ciphertext was created using the same steps you used in the RSA worksheet, but with bigger numbers.
+</p>
+
+<h3>Ciphertext:</h3>
+<pre>
+054889000685155834038324063013000685039505157972000685155743164286039505128514062931039505102531077774131269166630062931164286164286127074039505131070062931157972039505157972000685062931023572062931039505155743164286039505102531062931157972000685155834131269039505155743166630039505155743157972088202
+</pre>
+<p>
+    In order to decrypt it, you'll need <code>D</code>, which means you have to find which numbers I chose for <code>p</code> and <code>q</code>,
+    the <em>prime numbers</em> that start everything off. The value I used for <code>E</code> is <strong>257</strong>.
+</p>
+<h4>Fill in the blanks:</h4>
+<table style="width:15%;">
+    <tr>
+        <td><em>p</em></td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td><em>q</em></td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td><em>m</em></td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td><em>A</em></td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td><em>E</em></td>
+        <td>257</td>
+    </tr>
+    <tr>
+        <td><em>D</em></td>
+        <td> </td>
+    </tr>
+</table>
+<p>
+    Once you've got <code>m</code> and <code>D</code>, you can use <a href="https://gist.github.com/cbscribe/a161a78f45b0c189ad9aa9fa8dacc49e">this Python program</a> for decryption.
+</p>
+<p>To confirm the answer, put the 8th word in the URL.</p>
+</body>
+</html>
+
+<!-- ON/?/OFF/? -->
