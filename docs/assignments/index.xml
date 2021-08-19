@@ -1,86 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Assignments on AP CSP 2020-21</title>
+    <title>Assignments on AP CSP 2021-22</title>
     <link>https://scienceacademy.github.io/web/assignments/</link>
-    <description>Recent content in Assignments on AP CSP 2020-21</description>
+    <description>Recent content in Assignments on AP CSP 2021-22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Apr 2021 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 17 Aug 2021 19:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Video poker ♥ ♣ ♠ ♦</title>
-      <link>https://scienceacademy.github.io/web/assignments/poker/</link>
-      <pubDate>Tue, 20 Apr 2021 13:55:45 -0700</pubDate>
+      <title>Hello</title>
+      <link>https://scienceacademy.github.io/web/assignments/hello/</link>
+      <pubDate>Tue, 17 Aug 2021 19:55:45 -0700</pubDate>
       
-      <guid>https://scienceacademy.github.io/web/assignments/poker/</guid>
-      <description>&lt;p&gt;Implement a program that runs a game of video poker.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Winter Break Assignment</title>
-      <link>https://scienceacademy.github.io/web/assignments/winter/</link>
-      <pubDate>Fri, 18 Dec 2020 03:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/winter/</guid>
-      <description>&lt;p&gt;Practice work to keep your brain going over the break.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Recover</title>
-      <link>https://scienceacademy.github.io/web/assignments/recover/</link>
-      <pubDate>Thu, 05 Nov 2020 13:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/recover/</guid>
-      <description>&lt;p&gt;Implement a program that recovers JPEGs from a forensic image.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Filter</title>
-      <link>https://scienceacademy.github.io/web/assignments/filter/</link>
-      <pubDate>Wed, 28 Oct 2020 13:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/filter/</guid>
-      <description>&lt;p&gt;Implement a program that applies filters to images.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Voting: Runoff</title>
-      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
-      <pubDate>Tue, 13 Oct 2020 13:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
-      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Assignment: Plurality</title>
-      <link>https://scienceacademy.github.io/web/assignments/plurality/</link>
-      <pubDate>Wed, 07 Oct 2020 13:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/plurality/</guid>
-      <description>&lt;p&gt;Implement a program that runs a plurality election, as shown below.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Assignment: Caesar</title>
-      <link>https://scienceacademy.github.io/web/assignments/caesar/</link>
-      <pubDate>Sat, 26 Sep 2020 13:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/caesar/</guid>
-      <description>&lt;p&gt;Implement a program that encrypts messages using Caesar’s cipher.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Assignment: Readability</title>
-      <link>https://scienceacademy.github.io/web/assignments/readability/</link>
-      <pubDate>Sat, 26 Sep 2020 09:55:45 -0700</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/readability/</guid>
-      <description>&lt;p&gt;Implement a program that computes the approximate grade level needed to comprehend some text.&lt;/p&gt;</description>
+      <guid>https://scienceacademy.github.io/web/assignments/hello/</guid>
+      <description></description>
     </item>
     
   </channel>

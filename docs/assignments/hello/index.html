@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Hello &middot; AP CSP 2021-22</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2021-22</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Hello</h1>
+  <time datetime=2021-08-17T19:55:45-0700 class="post-date">Tue, Aug 17, 2021</time>
+  <h2 id="listing-files">Listing Files</h2>
+<p>Hello, world! Below is the very first program we wrote in C. Save this in your IDE in a file called <code>hello.c</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span><span style="color:#ff79c6"></span>
+<span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
+{
+    printf(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+}
+</code></pre></div><p>Next, in the <em>terminal window</em>, immediately to the right of the dollar sign (<code>$</code>), otherwise known as a <em>prompt</em>, type precisely the below (in lowercase), then hit Enter:</p>
+<pre><code>ls
+</code></pre><p>Do you see <code>hello.c</code>? That&rsquo;s because you&rsquo;ve just listed the files in that same folder, this time using a command-line interface (CLI), using your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you <em>executed</em> (i.e., ran) a command called <code>ls</code>, which is shorthand for &ldquo;list.&rdquo; (It&rsquo;s such a frequently used command that its authors called it just <code>ls</code> to save keystrokes.) Make sense?</p>
+<p>From here on out, to &ldquo;execute&rdquo; (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are <em>case-sensitive</em>, so be sure not to type in uppercase when you mean lowercase or vice versa.</p>
+<h2 id="compiling-programs">Compiling Programs</h2>
+<p>Now, before we can execute the program at right, recall that we must <em>compile</em> it with a <em>compiler</em> (e.g., <code>clang</code>), translating it from <em>source code</em> into <em>machine code</em> (i.e., zeroes and ones). Execute the command below to do just that:</p>
+<pre><code>make hello
+</code></pre><p>And then execute this one again:</p>
+<pre><code>ls
+</code></pre><p>This time, you should see not only <code>hello.c</code> but <code>hello*</code> listed as well? (You can see the same graphically if you click that folder icon again.) That&rsquo;s because <code>make</code> has translated the source code in <code>hello.c</code> into machine code in <code>hello</code>.</p>
+<p>Also note that the <code>*</code> next to the filename indicates this file is an <em>executable</em>, or a file that contains machine code that can be run.</p>
+<p>Now run the program by executing the below.</p>
+<pre><code>./hello
+</code></pre><p>Hello, world!</p>
+<h2 id="getting-user-input">Getting User Input</h2>
+<p>Suffice it to say, no matter how you compile or execute this program, it only ever prints <code>hello, world</code>. Let&rsquo;s personalize it a bit, just as we did in class.</p>
+<p>Modify this program in such a way that it first prompts the user for their name and then prints <code>hello, so-and-so</code>, where <code>so-and-so</code> is their actual name.</p>
+<p>As before, be sure to compile your program with:</p>
+<pre><code>make hello
+</code></pre><p>And be sure to execute your program, testing it a few times with different inputs, with:</p>
+<pre><code>./hello
+</code></pre><h3 id="walkthrough">Walkthrough</h3>
+<h4 id="dont-recall-how-to-prompt-the-user-for-their-name">Don&rsquo;t recall how to prompt the user for their name?</h4>
+<p>Recall that you can use <code>get_string</code> as follows, storing its <em>return value</em> in a variable called <code>name</code> of type <code>string</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">string name <span style="color:#ff79c6">=</span> get_string(<span style="color:#f1fa8c">&#34;What is your name?</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</code></pre></div><h4 id="dont-recall-how-to-format-a-string">Don&rsquo;t recall how to format a string?</h4>
+<p>Don&rsquo;t recall how to join (i.e., concatenate) the user&rsquo;s name with a greeting? Recall that you can use <code>printf</code> not only to print but to format a string (hence, the <code>f</code> in <code>printf</code>), a la the below, wherein <code>name</code> is a <code>string</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#f1fa8c">&#34;hello, %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, name);
+</code></pre></div><h4 id="use-of-undeclared-identifier">Use of undeclared identifier?</h4>
+<p>Seeing the below, perhaps atop other errors?</p>
+<pre><code>error: use of undeclared identifier 'string'; did you mean 'stdin'?
+</code></pre><p>Recall that, to use <code>get_string</code>, you need to include <code>cs50.h</code> (in which <code>get_string</code> is <em>declared</em>) atop a file, as with:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;cs50.h&gt;</span><span style="color:#ff79c6">
+</span></code></pre></div><h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>Once you&rsquo;ve tested the program yourself, execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<pre><code>check50 scienceacademy/labs/2021ap/hello
+</code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<pre><code>style50 hello.c
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you&rsquo;ll see asterisks (<code>*</code>) instead of the actual characters in your password.</p>
+<pre><code>submit50 scienceacademy/labs/2021ap/hello
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

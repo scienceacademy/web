@@ -1,7 +1,7 @@
 ---
 title: "Voting: Runoff"
 date: 2020-10-13T13:55:45-07:00
-draft: false
+draft: true
 ---
 Implement a program that runs a runoff election, as shown below.
 <!--more-->

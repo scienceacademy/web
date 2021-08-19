@@ -1,7 +1,7 @@
 ---
 title: "Transposition Cipher"
 date: 2021-05-22T19:55:45-07:00
-draft: false
+draft: true
 ---
 
 In a transposition cipher, one rearranges the order of the letters in the text *without making substitutions*.

@@ -1,7 +1,7 @@
 ---
 title: "Recover"
 date: 2020-11-05T13:55:45-07:00
-draft: false
+draft: true
 ---
 Implement a program that recovers JPEGs from a forensic image.
 <!--more-->

@@ -1,7 +1,7 @@
 ---
 title: "Filter"
 date: 2020-10-28T13:55:45-07:00
-draft: false
+draft: true
 ---
 Implement a program that applies filters to images.
 <!--more-->
