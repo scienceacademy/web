@@ -4,7 +4,6 @@ date: 2021-08-17T19:55:45-07:00
 draft: false
 ---
 <!--more-->
-## Listing Files
 
 Hello, world! Below is the very first program we wrote in C. Save this in your IDE in a file called `hello.c`.
 
@@ -19,7 +18,7 @@ int main(void)
 
 Next, in the *terminal window*, immediately to the right of the dollar sign (`$`), otherwise known as a *prompt*, type precisely the below (in lowercase), then hit Enter:
 
-```
+```md
 ls
 ```
 
@@ -31,13 +30,13 @@ From here on out, to "execute" (i.e., run) a command means to type it into a ter
 
 Now, before we can execute the program at right, recall that we must *compile* it with a *compiler* (e.g., `clang`), translating it from *source code* into *machine code* (i.e., zeroes and ones). Execute the command below to do just that:
 
-```
+```md
 make hello
 ```
 
 And then execute this one again:
 
-```
+```md
 ls
 ```
 
@@ -47,7 +46,7 @@ Also note that the `*` next to the filename indicates this file is an *executabl
 
 Now run the program by executing the below.
 
-```
+```md
 ./hello
 ```
 
@@ -61,13 +60,13 @@ Modify this program in such a way that it first prompts the user for their name 
 
 As before, be sure to compile your program with:
 
-```
+```md
 make hello
 ```
 
 And be sure to execute your program, testing it a few times with different inputs, with:
 
-```
+```md
 ./hello
 ```
 
@@ -93,7 +92,7 @@ printf("hello, %s\n", name);
 
 Seeing the below, perhaps atop other errors?
 
-```
+```md
 error: use of undeclared identifier 'string'; did you mean 'stdin'?
 ```
 
@@ -107,13 +106,13 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
-```
+```md
 check50 scienceacademy/labs/2021ap/hello
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
 
-```
+```md
 style50 hello.c
 ```
 
@@ -121,6 +120,6 @@ style50 hello.c
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
-```
+```md
 submit50 scienceacademy/labs/2021ap/hello
 ```
