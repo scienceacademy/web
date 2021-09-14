@@ -6,10 +6,19 @@
     <description>Recent content on AP CSP 2021-22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Aug 2021 19:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 12 Sep 2021 09:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Assignment: Readability</title>
+      <link>https://scienceacademy.github.io/web/assignments/readability/</link>
+      <pubDate>Sun, 12 Sep 2021 09:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/readability/</guid>
+      <description>&lt;p&gt;Implement a program that computes the approximate grade level needed to comprehend some text.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Credit</title>

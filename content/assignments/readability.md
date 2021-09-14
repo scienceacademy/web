@@ -1,14 +1,14 @@
 ---
 title: "Assignment: Readability"
-date: 2020-09-26T09:55:45-07:00
-draft: true
+date: 2021-09-12T09:55:45-07:00
+draft: false
 ---
 
 Implement a program that computes the approximate grade level needed to comprehend some text.
 <!--more-->
 
 Example:
-```
+```md
 $ ./readability
 Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
 Grade 3
@@ -20,11 +20,11 @@ You can access your CS50 IDE at [ide.cs50.io](https://ide.cs50.io/).
 
 According to Scholastic, E.B. White’s “Charlotte’s Web” is between a second and fourth grade reading level, and Lois Lowry’s “The Giver” is between an eighth grade reading level and a twelfth grade reading level. What does it mean, though, for a book to be at a “fourth grade reading level”?
 
-Well, in many cases, a human expert might read a book and make a decision on the grade for which they think the book is most appropriate. But you could also imagine an algorithm attempting to figure out what the reading level of a text is.
+A human expert might read a book and make a decision on the grade for which they think the book is most appropriate. But you could also imagine an algorithm attempting to figure out what the reading level of a text is.
 
-So what sorts of traits are characteristic of higher reading levels? Well, longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.
+What sorts of traits are characteristic of higher reading levels? Longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.
 
-One such readability test is the *Coleman-Liau index*. The Coleman-Liau index of a text is designed to output what (U.S.) grade level is needed to understand the text. The formula is:
+One such readability test is the *Coleman-Liau index*. The Coleman-Liau index of a text is designed to output what (U.S. grade) reading level is needed to understand the text. The formula is:
 
 > index = 0.0588 * L - 0.296 * S - 15.8
 
@@ -33,7 +33,7 @@ Here, *L* is the average number of letters per 100 words in the text, and *S* is
 
 Your task is to write a program called `readability` that takes a text and determines its reading level. For example, if user types in a line from Dr. Seuss:
 
-```
+```md
 $ ./readability
 Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
 Grade 3
@@ -43,7 +43,7 @@ The text the user inputted has 65 letters, 4 sentences, and 14 words. 65 letters
 
 Let’s try another one:
 
-```
+```md
 $ ./readability
 Text: Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.
 Grade 5
@@ -53,7 +53,7 @@ This text has 214 letters, 4 sentences, and 56 words. That comes out to about 38
 
 As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.
 
-```
+```md
 $ ./readability
 Text: As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.
 Grade 11
@@ -77,7 +77,7 @@ First write some C code that just gets some text input from the user, and prints
 
 The behavior of the resulting program should be like the below.
 
-```
+```md
 $ ./readability
 Text: In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
 In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
@@ -85,11 +85,11 @@ In my younger and more vulnerable years my father gave me some advice that I've 
 
 ### 2. Letters
 
-Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify `readability.c` so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.
+Now that you’ve collected input from the user, you can first count the number of letters in the text. Modify `readability.c` so that, instead of printing out the text itself, it instead prints out a count of the number of letters in the text.
 
 The behavior of the resulting program should be like the below.
 
-```
+```md
 $ ./readability
 Text: Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"
 235 letter(s)
@@ -109,7 +109,7 @@ You may assume that a sentence will not start or end with a space, and you may a
 
 The behavior of the resulting program should be like the below.
 
-```
+```md
 $ ./readability
 Text: It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.
 250 letter(s)
@@ -128,7 +128,7 @@ Modify `readability.c` so that it also now prints out the number of sentences in
 
 The behavior of the resulting program should be like the below.
 
-```
+```md
 $ ./readability
 Text: When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.
 295 letter(s)
@@ -156,55 +156,55 @@ If the resulting index number is 16 or higher (equivalent to or greater than a s
 
 Try running your program on the following texts.
 
-```
+```md
 One fish. Two fish. Red fish. Blue fish. (Before Grade 1)
 ```
 
-```
+```md
 Would you like them here or there? I would not like them here or there. I would not like them anywhere. (Grade 2)
 ```
 
-```
+```md
 Congratulations! Today is your day. You're off to Great Places! You're off and away! (Grade 3)
 ```
 
-```
+```md
 Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard. (Grade 5)
 ```
 
-```
+```md
 In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. (Grade 7)
 ```
 
-```
+```md
 Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?" (Grade 8)
 ```
 
-```
+```md
 When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh. (Grade 8)
 ```
 
-```
+```md
 There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy. (Grade 9)
 ```
 
-```
+```md
 It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him. (Grade 10)
 ```
 
-```
+```md
 A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains. (Grade 16+)
 ```
 
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
-```
-check50 scienceacademy/problems/2020ap/readability
+```md
+check50 scienceacademy/problems/2021ap/readability
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
 
-```
+```md
 style50 readability.c
 ```
 
@@ -212,6 +212,6 @@ style50 readability.c
 
 Execute the below, logging in with your GitHub username and password when prompted.
 
-```
-submit50 scienceacademy/problems/2020ap/readability
+```md
+submit50 scienceacademy/problems/2021ap/readability
 ```
