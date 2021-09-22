@@ -1,7 +1,7 @@
 ---
-title: "Assignment: Caesar"
-date: 2020-09-26T13:55:45-07:00
-draft: true
+title: "Caesar"
+date: 2021-09-21T13:55:45-07:00
+draft: false
 ---
 
 Implement a program that encrypts messages using Caesar’s cipher.
@@ -9,7 +9,7 @@ Implement a program that encrypts messages using Caesar’s cipher.
 
 Example:
 
-```
+```md
 $ ./caesar 13
 plaintext:  HELLO
 ciphertext: URYYB
@@ -45,7 +45,7 @@ Your task is to write a program called `caesar` that enables you to encrypt mess
 
 Here are a few examples of how the program might work. For example, if the user inputs a key of `1` and a plaintext of `HELLO`:
 
-```
+```md
 $ ./caesar 1
 plaintext:  HELLO
 ciphertext: IFMMP
@@ -53,7 +53,7 @@ ciphertext: IFMMP
 
 Here’s how the program might work if the user provides a key of `13` and a plaintext of `hello, world`:
 
-```
+```md
 $ ./caesar 13
 plaintext:  hello, world
 ciphertext: uryyb, jbeyq
@@ -63,7 +63,7 @@ Notice that neither the comma nor the space were “shifted” by the cipher. On
 
 How about one more? Here’s how the program might work if the user provides a key of `13` again, with a more complex plaintext:
 
-```
+```md
 $ ./caesar 13
 plaintext:  be sure to drink your Ovaltine
 ciphertext: or fher gb qevax lbhe Binygvar
@@ -73,22 +73,15 @@ Notice that the case of the original message has been preserved. Lowercase lette
 
 And what if a user doesn’t cooperate?
 
-```
+```md
 $ ./caesar HELLO
 Usage: ./caesar key
 ```
 
 Or really doesn’t cooperate?
 
-```
+```md
 $ ./caesar
-Usage: ./caesar key
-```
-
-Or even…
-
-```
-$ ./caesar 1 2 3
 Usage: ./caesar key
 ```
 
@@ -128,21 +121,21 @@ Whatever your pseudocode, first write only the C code that checks whether the pr
 
 Specifically, in a new file called `caesar.c` write code such that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar key`. Remember, since this key is coming from the command line at runtime, and not via get_string, we don’t have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
 
-```
+```md
 $ ./caesar 20
 Success
 ```
 
 or
 
-```
+```md
 $ ./caesar
 Usage: ./caesar key
 ```
 
 or
 
-```
+```md
 $ ./caesar 1 2 3
 Usage: ./caesar key
 ```
@@ -164,7 +157,7 @@ $ ./caesar xyz
 
 Before we start to analyze the key for validity, though, let’s make sure we can actually read it. Modify `caesar.c` so that it not only checks that the user has provided one command-line argument, but after verifying that, prints out that single command-line argument. So, for example, the behavior might look like this:
 
-```
+```md
 $ ./caesar 20
 Success
 20
@@ -180,7 +173,7 @@ Success
 
 Now that you know how to read the key, you can analyze it. Modify `caesar.c` so that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and if any of them are not, terminates after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the integer. So, for example, the behavior might look like this:
 
-```
+```md
 $ ./caesar 20
 Success
 20
@@ -188,7 +181,7 @@ Success
 
 or
 
-```
+```md
 $ ./caesar 20x
 Usage: ./caesar key
 ```
@@ -207,7 +200,7 @@ As humans it’s easy for us to intuitively understand the formula described abo
 
 Add to `caesar.c` so that, after validating the key, you prompt the user for a string and then shift all of its characters by 1, printing out the result. You can also remove the code you wrote earlier that prints `Success`. You're goal is something like this:
 
-```
+```md
 $ ./caesar 1
 plaintext:  hello
 ciphertext: ifmmp
@@ -234,13 +227,13 @@ You're in the home stretch! Instead of shifting the characters by 1, change `cae
 
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
-```
-check50 scienceacademy/problems/2020ap/caesar
+```md
+check50 scienceacademy/problems/2021ap/caesar
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
 
-```
+```md
 style50 caesar.c
 ```
 
@@ -248,6 +241,6 @@ style50 caesar.c
 
 Execute the below, logging in with your GitHub username and password when prompted.
 
-```
-submit50 scienceacademy/problems/2020ap/caesar
+```md
+submit50 scienceacademy/problems/2021ap/caesar
 ```

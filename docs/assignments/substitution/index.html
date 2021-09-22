@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Substitution &middot; AP CSP 2021-22</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2021-22</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Substitution</h1>
+  <time datetime=2021-09-21T14:55:45-0700 class="post-date">Tue, Sep 21, 2021</time>
+  <p>Implement a program that encrypts messages using Caesar’s cipher.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./substitution JTREKYAVOGDXPSNCUIZLFBMWHQ
+plaintext:  HELLO
+ciphertext: VKXXN
+</code></pre></div><h2 id="background">Background</h2>
+<p>In a substitution cipher, we “encrypt” (i.e., conceal in a reversible way) a message by replacing every letter with another letter. To do so, we use a key: in this case, a mapping of each of the letters of the alphabet to the letter it should correspond to when we encrypt it. To “decrypt” the message, the receiver of the message would need to know the key, so that they can reverse the process: translating the encrypt text (generally called ciphertext) back into the original message (generally called plaintext).</p>
+<p>A key, for example, might be the string <code>NQXPOMAFTRHLZGECYJIUWSKDVB</code>. This 26-character key means that <code>A</code> (the first letter of the alphabet) should be converted into <code>N</code> (the first character of the key), <code>B</code> (the second letter of the alphabet) should be converted into <code>Q</code> (the second character of the key), and so forth.</p>
+<p>A message like <code>HELLO</code>, then, would be encrypted as <code>FOLLE</code>, replacing each of the letters according to the mapping determined by the key.</p>
+<p>Write a program called <code>substitution</code> that enables you to encrypt messages using a substitution cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime.</p>
+<p>Here are a few examples of how the program might work. For example, if the user inputs a key of <code>YTNSHKVEFXRBAUQZCLWDMIPGJO</code> and a plaintext of <code>HELLO</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
+plaintext:  HELLO
+ciphertext: EHBBQ
+</code></pre></div><p>Here’s how the program might work if the user provides a key of <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> and a plaintext of <code>hello, world</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
+plaintext:  hello, world
+ciphertext: jrssb, ybwsp
+</code></pre></div><p>Notice that neither the comma nor the space were substituted by the cipher. Only substitute alphabetical characters! Notice, too, that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
+<p>Whether the characters in the key itself are uppercase or lowercase doesn’t matter. A key of <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> is functionally identical to a key of <code>vchprzgjntlskfbdqwaxeuymoi</code> (as is, for that matter, <code>VcHpRzGjNtLsKfBdQwAxEuYmOi</code>).</p>
+<p>And what if a user doesn’t provide a valid key?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./substitution ABC
+Key must contain 26 characters.
+</code></pre></div><p>Or really doesn’t cooperate?</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./substitution
+Usage: ./substitution key
+</code></pre></div><h2 id="specification">Specification</h2>
+<p>Design and implement a program, <code>substitution</code>, that encrypts messages using a substitution cipher.</p>
+<ul>
+<li>Implement your program in a file called <code>substitution.c</code>.</li>
+<li>Your program must accept a single command-line argument, the key to use for the substitution. The key itself should be case-insensitive, so whether any character in the key is uppercase or lowercase should not affect the behavior of your program.</li>
+<li>If your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error message of your choice (with <code>printf()</code>) and return from <code>main()</code> a value of <code>1</code> immediately.</li>
+<li>If the key is invalid (as by not containing 26 characters, containing any character that is not an alphabetic character, or not containing each letter exactly once), your program should print an error message of your choice (with <code>printf()</code>) and return from <code>main()</code> a value of <code>2</code> immediately.</li>
+<li>Your program must prompt the user with <code>plaintext:</code> (ie, using <code>get_string()</code>).</li>
+<li>Your program must output <code>ciphertext:</code> followed by the plaintext’s corresponding ciphertext, with each alphabetical character in the plaintext substituted for the corresponding character in the ciphertext; non-alphabetical characters should be outputted unchanged.</li>
+<li>Your program must preserve case: capitalized letters must remain capitalized letters; lowercase letters must remain lowercase letters.</li>
+<li>After outputting ciphertext, you should print a newline. Your program should then exit by returning <code>0</code> from <code>main()</code>.</li>
+</ul>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
+<p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/substitution
+</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 substitution.c
+</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below, logging in with your GitHub username and password when prompted.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/substitution</code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
