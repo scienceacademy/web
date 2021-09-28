@@ -18,7 +18,7 @@ In class, we saw a few algorithms for sorting a sequence of numbers: selection s
 ## Getting Started
 
 1. Log into your CS50 IDE.
-2. In the terminal window, run `wget https://scienceacedemy.github.io/web/lab3.zip` to download a zip file of the lab code.
+2. In the terminal window, run `wget https://scienceacademy.github.io/web/lab3.zip` to download a zip file of the lab code.
 3. In the terminal window, run `unzip lab3.zip` to unzip (decompress) the file.
 4. In the terminal window, run `cd lab3` to change directories into your `lab3` directory.
 
