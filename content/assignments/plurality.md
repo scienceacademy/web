@@ -92,12 +92,6 @@ Alice
 Bob
 ```
 
-## Walkthrough
-
-Watch the following video for a step-by-step breakdown of the task:
-
-<iframe width="1068" height="601" src="https://www.youtube.com/embed/ftOapzDjEb8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Testing
 
 Be sure to test your code to make sure it handles the following:
