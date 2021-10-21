@@ -3,8 +3,6 @@ title: "Lab: Volume"
 date: 2021-10-19T13:55:45-07:00
 draft: false
 ---
-# Volume
-
 Write a program to modify the volume of an audio file.
 <!--more-->
 ```md
