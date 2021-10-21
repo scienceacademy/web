@@ -22,14 +22,24 @@ So far, we’ve seen a number of different types in C, including `int`, `bool`, 
 * `uint8_t` is a type that stores an 8-bit unsigned (i.e., not negative) integer. We can treat each byte of a WAV file’s header as a `uint8_t` value.
 * `int16_t` is a type that stores a 16-bit signed (i.e., positive or negative) integer. We can treat each sample of audio in a WAV file as an `int16_t` value.
 
+## Getting Started
 
-Complete the implementation of `volume.c` at right, such that it changes the volume of a sound file by a given factor.
+1. Log into your CS50 IDE.
+2. In the terminal window, run
+```md
+wget https://scienceacademy.github.io/web/lab4.zip
+```
+
+ to download a zip file of the lab code.
+
+3. In the terminal window, run `unzip lab4.zip` to unzip (decompress) the file.
+4. In the terminal window, run `cd lab4` to change directories into your `lab4` directory.
 
 ## Implementation Details
 
-Complete the implementation of `volume.c`, such that it changes the volume of the sound by a given factor.
+Complete the implementation of `volume.c`, so that it changes the volume of the sound by a given factor.
 
-* The program accepts three command-line arguments: `input` stores the name of an audio file, `output` stores the name of the new audio file that should be generated, and `factor` is the amount by which the volume of the original audio file should be scaled.
+* The program accepts three command-line arguments: `input` is the name of an audio file, `output` is the name of the new audio file to be created, and `factor` is the amount by which the volume of the original audio file should be scaled.
     * For example, if `factor` is `2.0`, then your program should double the volume of the audio file in `input` and save the newly generated audio file in `output`.
 * Your program should first read the header from the input file and write the header to the output file. Recall that this header is always exactly 44 bytes long.
     * Note that `volume.c` already defines a variable for you called `HEADER_SIZE`, equal to the number of bytes in the header.
@@ -79,8 +89,6 @@ $ ./volume input.wav output.wav 0.5
 ```
 
 When you listen to `output.wav`, it should be half as loud as `input.wav`!
-
-## How to Submit
 
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 

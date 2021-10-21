@@ -63,11 +63,21 @@
 <li><code>uint8_t</code> is a type that stores an 8-bit unsigned (i.e., not negative) integer. We can treat each byte of a WAV file’s header as a <code>uint8_t</code> value.</li>
 <li><code>int16_t</code> is a type that stores a 16-bit signed (i.e., positive or negative) integer. We can treat each sample of audio in a WAV file as an <code>int16_t</code> value.</li>
 </ul>
-<p>Complete the implementation of <code>volume.c</code> at right, such that it changes the volume of a sound file by a given factor.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>Log into your CS50 IDE.</li>
+<li>In the terminal window, run</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">wget https://scienceacademy.github.io/web/lab4.zip
+</code></pre></div><p>to download a zip file of the lab code.</p>
+<ol start="3">
+<li>In the terminal window, run <code>unzip lab4.zip</code> to unzip (decompress) the file.</li>
+<li>In the terminal window, run <code>cd lab4</code> to change directories into your <code>lab4</code> directory.</li>
+</ol>
 <h2 id="implementation-details">Implementation Details</h2>
-<p>Complete the implementation of <code>volume.c</code>, such that it changes the volume of the sound by a given factor.</p>
+<p>Complete the implementation of <code>volume.c</code>, so that it changes the volume of the sound by a given factor.</p>
 <ul>
-<li>The program accepts three command-line arguments: <code>input</code> stores the name of an audio file, <code>output</code> stores the name of the new audio file that should be generated, and <code>factor</code> is the amount by which the volume of the original audio file should be scaled.
+<li>The program accepts three command-line arguments: <code>input</code> is the name of an audio file, <code>output</code> is the name of the new audio file to be created, and <code>factor</code> is the amount by which the volume of the original audio file should be scaled.
 <ul>
 <li>For example, if <code>factor</code> is <code>2.0</code>, then your program should double the volume of the audio file in <code>input</code> and save the newly generated audio file in <code>output</code>.</li>
 </ul>
@@ -116,12 +126,11 @@
 </code></pre></div><p>When you listen to <code>output.wav</code>, it should be twice as loud as <code>input.wav</code>!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./volume input.wav output.wav 0.5
 </code></pre></div><p>When you listen to <code>output.wav</code>, it should be half as loud as <code>input.wav</code>!</p>
-<h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/volume
 </code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 volume.c
-</code></pre></div><h2 id="how-to-submit-1">How to Submit</h2>
+</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/volume
 </code></pre></div>
 </div>
