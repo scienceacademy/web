@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lab: Volume &middot; AP CSP 2021-22</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2021-22</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Lab: Volume</h1>
+  <time datetime=2021-10-19T13:55:45-0700 class="post-date">Tue, Oct 19, 2021</time>
+  <h1 id="volume">Volume</h1>
+<p>Write a program to modify the volume of an audio file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./volume input.wav output.wav 2.0
+</code></pre></div><h2 id="wav-files">WAV Files</h2>
+<p><a href="https://docs.fileformat.com/audio/wav/">WAV files</a> are a common file format for representing audio. WAV files store audio as a sequence of &ldquo;samples&rdquo;: numbers that represent the value of some audio signal at a particular point in time. WAV files begin with a 44-byte &ldquo;header&rdquo; that contains information about the file itself, including the size of the file, the number of samples per second, and the size of each sample. After the header, the WAV file contains a sequence of samples, each a single numerical value representing the audio signal at a particular point in time.</p>
+<p>Scaling each sample value by a given factor has the effect of changing the volume of the audio. Multiplying each sample value by 2.0, for example, will have the effect of doubling the volume of the origin audio. Multiplying each sample by 0.5, meanwhile, will have the effect of cutting the volume in half.</p>
+<h2 id="types">Types</h2>
+<p>So far, we’ve seen a number of different types in C, including <code>int</code>, <code>bool</code>, <code>char</code>, <code>double</code>, <code>float</code>, and <code>long</code>. Inside a header file called <code>stdint.h</code> are the declarations of a number of other types that allow us to very precisely define the size (in bits) and sign (signed or unsigned) of an integer. Two types in particular will be useful to us in this lab.</p>
+<ul>
+<li><code>uint8_t</code> is a type that stores an 8-bit unsigned (i.e., not negative) integer. We can treat each byte of a WAV file’s header as a <code>uint8_t</code> value.</li>
+<li><code>int16_t</code> is a type that stores a 16-bit signed (i.e., positive or negative) integer. We can treat each sample of audio in a WAV file as an <code>int16_t</code> value.</li>
+</ul>
+<p>Complete the implementation of <code>volume.c</code> at right, such that it changes the volume of a sound file by a given factor.</p>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>Complete the implementation of <code>volume.c</code>, such that it changes the volume of the sound by a given factor.</p>
+<ul>
+<li>The program accepts three command-line arguments: <code>input</code> stores the name of an audio file, <code>output</code> stores the name of the new audio file that should be generated, and <code>factor</code> is the amount by which the volume of the original audio file should be scaled.
+<ul>
+<li>For example, if <code>factor</code> is <code>2.0</code>, then your program should double the volume of the audio file in <code>input</code> and save the newly generated audio file in <code>output</code>.</li>
+</ul>
+</li>
+<li>Your program should first read the header from the input file and write the header to the output file. Recall that this header is always exactly 44 bytes long.
+<ul>
+<li>Note that <code>volume.c</code> already defines a variable for you called <code>HEADER_SIZE</code>, equal to the number of bytes in the header.</li>
+</ul>
+</li>
+<li>Your program should then read the rest of the data from the WAV file, one 16-bit (2-byte) sample at a time. Your program should multiply each sample by the <code>factor</code> and write the new sample to the output file.
+<ul>
+<li>You may assume that the WAV file will use 16-bit signed values as samples. In practice, WAV files can have varying numbers of bits per sample, but we&rsquo;ll assume 16-bit samples for simplicity here.</li>
+</ul>
+</li>
+<li>Your program, if it uses <code>malloc</code>, must not leak any memory.</li>
+</ul>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>You&rsquo;ll likely want to create an array of bytes to store the data from the WAV file header that you’ll read from the input file. Using the <code>uint8_t</code> type to represent a byte, you can create an array of <code>n</code> bytes for your header with syntax like</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">uint8_t header[n];
+</code></pre></div><p>replacing <code>n</code> with the number of bytes. You can then use header as an argument to <code>fread()</code> or <code>fwrite()</code> to read into or write from the header.</p>
+<ul>
+<li>You’ll likely want to create a “buffer” in which to store audio samples that you read from the WAV file. Using the <code>int16_t</code> type to store an audio sample, you can create a buffer variable with syntax like</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">int16_t buffer;
+</code></pre></div><p>You can then use <code>&amp;buffer</code> as an argument to <code>fread()</code> or <code>fwrite()</code> to read into or write from the buffer. (Recall that the <code>&amp;</code> operator is used to get the address of the variable.)</p>
+<ul>
+<li>You may find the documentation for <code>fread()</code> and <code>fwrite()</code> helpful.
+<ul>
+<li>In particular, note that both functions accept the following arguments:
+<ul>
+<li><code>ptr</code>: a pointer to the location in memory to store data (when reading from a file) or from which to write data (when writing data to a file)</li>
+<li><code>size</code>: the number of bytes in a piece of data</li>
+<li><code>nmemb</code>: the number of items of data (each of <code>size</code> bytes) to read or write</li>
+<li><code>stream</code>: the file pointer to read from or write to</li>
+</ul>
+</li>
+<li><code>fread()</code> will return the number of items of data successfully read. You may find this useful to check for when you&rsquo;ve reached the end of the file.</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>Your program should behave per the examples below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./volume input.wav output.wav 2.0
+</code></pre></div><p>When you listen to <code>output.wav</code>, it should be twice as loud as <code>input.wav</code>!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./volume input.wav output.wav 0.5
+</code></pre></div><p>When you listen to <code>output.wav</code>, it should be half as loud as <code>input.wav</code>!</p>
+<h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/volume
+</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 volume.c
+</code></pre></div><h2 id="how-to-submit-1">How to Submit</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/volume
+</code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

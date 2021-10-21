@@ -1,7 +1,7 @@
 baseURL = "https://scienceacademy.github.io/web/"
 languageCode = "en-us"
 title = "AP CSP 2021-22"
-theme = "hyde"
+theme = "hyde_cb"
 publishDir = "docs"
 
 pygmentsStyle = "dracula"
