@@ -1,7 +1,7 @@
 ---
 title: "Filter"
-date: 2020-10-28T13:55:45-07:00
-draft: true
+date: 2021-10-25T13:55:45-07:00
+draft: false
 ---
 Implement a program that applies filters to images.
 <!--more-->
@@ -93,7 +93,10 @@ For a pixel along the edge or corner, like pixel 15, we would still look for all
 Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into CS50 IDE and then, in a terminal window, execute each of the below.
 
 * Execute `cd` to ensure you're in `~/` (i.e. your home directory).
-* Execute `wget https://cdn.cs50.net/2019/fall/psets/4/filter/less/filter.zip` to download a (compressed) ZIP file with this problem’s distribution.
+* Execute the following to download a (compressed) ZIP file with this problem’s distribution:
+```md
+wget https://scienceacademy.github.io/web/filter.zip
+```
 * Execute `unzip filter.zip` to uncompress that file.
 * You'll now see a `filter` directory in your file list.
 * It contains the following files: `bmp.h`, `filter.c`, `helpers.h`, `helpers.c`, and `Makefile`. You'll also see a directory called `images` with some sample bitmaps.
