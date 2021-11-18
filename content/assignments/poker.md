@@ -1,7 +1,7 @@
 ---
 title: "Video poker ♥ ♣ ♠ ♦"
-date: 2021-04-20T13:55:45-07:00
-draft: true
+date: 2021-11-17T13:55:45-07:00
+draft: false
 ---
 
 Implement a program that runs a game of video poker.
@@ -91,7 +91,7 @@ In order to properly check for the correct output, your submission needs to use 
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2020ap/poker
+check50 scienceacademy/problems/2021ap/poker
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -105,5 +105,5 @@ style50 [poker.c | poker.py]
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```
-submit50 scienceacademy/problems/2020ap/poker
+submit50 scienceacademy/problems/2021ap/poker
 ```
