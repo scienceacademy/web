@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lab: Songs &middot; AP CSP 2021-22</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2021-22</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2021. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Lab: Songs</h1>
+  <time datetime=2021-11-29T13:55:45-0700 class="post-date">Mon, Nov 29, 2021</time>
+  <p>Write SQL queries to answer questions about a database of songs.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>Log into your CS50 IDE.</li>
+<li>In the terminal window, run</li>
+</ol>
+<pre><code>wget https://scienceacademy.github.io/web/lab7.zip
+</code></pre><p>to download a zip file of the lab code.</p>
+<ol start="3">
+<li>In the terminal window, run <code>unzip lab7.zip</code> to unzip (decompress) the file.</li>
+<li>In the terminal window, run <code>cd lab7</code> to change directories into your <code>lab7</code> directory.</li>
+</ol>
+<p>You&rsquo;ve been provided with a file called <code>songs.db</code>, a SQLite database containing data from Spotify about songs and artists. It contains the top 100 streamed songs on Spotify in 2018.</p>
+<p>Run <code>sqlite3 songs.db</code> to to open the database and run queries.</p>
+<p>First, try typing the command <code>.schema</code>. This will output the <code>CREATE TABLE</code> statements that were used to create the tables in the database. By looking at them, you can see the columns available in each table.</p>
+<p>Notice that every <code>artist</code> has an <code>id</code> and a <code>name</code>. Every song has a <code>name</code>, an <code>artist_id</code> (corresponding to the <code>id</code> of the artist), as well as other values such as <code>energy</code>, <code>key</code>, <code>tempo</code>, etc.</p>
+<h2 id="assignment">Assignment</h2>
+<p>For each of the following problems, write a single SQL query that outputs the specified results. You <strong>should not</strong> assume anything about the <code>id</code>s of particular songs or artists (your queries should work even if the <code>id</code> of any song or artist were different). Finally, each query should only return the data necessary to answer the question, nothing more.</p>
+<ul>
+<li>In 1.sql, write a SQL query to list the names of all songs in the database.
+<ul>
+<li>Your query should output a table with a single column for the name of each song.</li>
+</ul>
+</li>
+<li>In 2.sql, write a SQL query to list the names of all songs in increasing order of tempo.
+<ul>
+<li>Your query should output a table with a single column for the name of each song.</li>
+</ul>
+</li>
+<li>In 3.sql, write a SQL query to list the names of the top 5 longest songs, in descending order of length.
+<ul>
+<li>Your query should output a table with a single column for the name of each song.</li>
+</ul>
+</li>
+<li>In 4.sql, write a SQL query that lists the names of any songs that have danceability, energy, and valence greater than 0.75.
+<ul>
+<li>Your query should output a table with a single column for the name of each song.</li>
+</ul>
+</li>
+<li>In 5.sql, write a SQL query that returns the average energy of all the songs.
+<ul>
+<li>Your query should output a table with a single column and a single row containing the average energy.</li>
+</ul>
+</li>
+<li>In 6.sql, write a SQL query that lists the names of songs that are by Post Malone.
+<ul>
+<li>Your query should output a table with a single column for the name of each song.</li>
+<li>You should not make any assumptions about what Post Malone’s artist_id is.</li>
+</ul>
+</li>
+<li>In 7.sql, write a SQL query that returns the average energy of songs that are by The Weeknd.
+<ul>
+<li>Your query should output a table with a single column and a single row containing the average energy.</li>
+<li>You should not make any assumptions about what The Weeknd’s artist_id is.</li>
+</ul>
+</li>
+<li>In 8.sql, write a SQL query that lists the names of the songs that feature other artists.
+<ul>
+<li>Songs that feature other artists will include “feat.” in the name of the song.</li>
+<li>Your query should output a table with a single column for the name of each song.</li>
+</ul>
+</li>
+</ul>
+<h2 id="hints">Hints</h2>
+<p>See <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">this SQL keywords reference</a> for some helpful hints.</p>
+<h2 id="testing">Testing</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/songs
+</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/songs
+</code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
