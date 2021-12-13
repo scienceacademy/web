@@ -100,6 +100,8 @@ Here's a message that's been encrypted via transposition. Can you decode it?
 IietesoaveeredsEdeloibatnamltmbhabyleRshattvrrefgylaesodieeoteetdefinhhaeiefhLkbwetosfluhedrrbrddeedaatrtuelsoefaolgSnIoieodpmgidlaeekrieniHdrihtdmovlmeuaaneSgerehsctcoatotaeppeftnrclgdtrdsSahrhetrhnhrsesnohbsratIaoolkseeewhkeAehtrhtreauoxhmrumeyedtroxtRlDariahcisesyepfpfdwsaberx
 ```
 
-To find the next challenge, use the 8th word you found above and insert it at the end of this URL:
+The keyword for this puzzle is the 8th word you found above.
 
-https://scienceacademy.github.io/web/
+To complete the final challenges and find the remaining clues, insert each of the keywords you've found in puzzles 1-4 at the end of this URL:
+
+`https://scienceacademy.github.io/web/<keyword>`
