@@ -20,5 +20,14 @@
       <description>Welcome to AP Computer Science Principles for 2021-22!</description>
     </item>
     
+    <item>
+      <title>Transposition Cipher</title>
+      <link>https://scienceacademy.github.io/web/posts/transpose/</link>
+      <pubDate>Sat, 22 May 2021 19:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/posts/transpose/</guid>
+      <description>&lt;p&gt;In a transposition cipher, one rearranges the order of the letters in the text &lt;em&gt;without making substitutions&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
