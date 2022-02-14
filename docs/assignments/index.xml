@@ -6,10 +6,19 @@
     <description>Recent content in Assignments on AP CSP 2021-22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Dec 2021 03:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 09 Feb 2022 13:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Todo app</title>
+      <link>https://scienceacademy.github.io/web/assignments/todos/</link>
+      <pubDate>Wed, 09 Feb 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/todos/</guid>
+      <description>&lt;p&gt;Create a fully-functional web application for managing a todo list.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Winter Break Assignment</title>

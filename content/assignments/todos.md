@@ -1,7 +1,7 @@
 ---
 title: "Todo app"
 date: 2022-02-09T13:55:45-07:00
-draft: true
+draft: false
 ---
 Create a fully-functional web application for managing a todo list.
 <!--more-->
