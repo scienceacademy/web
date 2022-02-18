@@ -30,7 +30,9 @@ Starting with the provided code, your task is to add the following functionality
 
 The starting code handles displaying the list of tasks, and an `add.html` page for adding new tasks, but doesn't allow for deleting from the list. Add this functionality.
 
-For example, you might add an "x" or "delete" button that's displayed next to each task that removes it when clicked.
+For example, you might add an "x" or "delete" button that's displayed next to each task that removes it when clicked. Using an `<a>` tag, you can link to, for example, a "/del" route.
+
+_Tip:_ In the loop on `tasks.html`, you can use the variable`loop.index0` to get what iteration your loop is on when listing each task (in other words, its index).
 
 ### 2. Saving tasks
 

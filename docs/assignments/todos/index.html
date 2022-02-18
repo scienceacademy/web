@@ -69,7 +69,8 @@
 <p>Starting with the provided code, your task is to add the following functionality to the application:</p>
 <h3 id="1-remove-tasks">1. Remove tasks</h3>
 <p>The starting code handles displaying the list of tasks, and an <code>add.html</code> page for adding new tasks, but doesn&rsquo;t allow for deleting from the list. Add this functionality.</p>
-<p>For example, you might add an &ldquo;x&rdquo; or &ldquo;delete&rdquo; button that&rsquo;s displayed next to each task that removes it when clicked.</p>
+<p>For example, you might add an &ldquo;x&rdquo; or &ldquo;delete&rdquo; button that&rsquo;s displayed next to each task that removes it when clicked. Using an <code>&lt;a&gt;</code> tag, you can link to, for example, a &ldquo;/del&rdquo; route.</p>
+<p><em>Tip:</em> In the loop on <code>tasks.html</code>, you can use the variable<code>loop.index0</code> to get what iteration your loop is on when listing each task (in other words, its index).</p>
 <h3 id="2-saving-tasks">2. Saving tasks</h3>
 <p>You may have noticed that if you stop the Flask application, all changes to the task list are lost. Add the code to save and load the task list to a file so that the data can be preserved.</p>
 <h3 id="3-authentication">3. Authentication</h3>
