@@ -6,10 +6,19 @@
     <description>Recent content in Assignments on AP CSP 2021-22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Feb 2022 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2022 13:55:45 -0700</lastBuildDate>
     
 	<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>World Cup</title>
+      <link>https://scienceacademy.github.io/web/assignments/worldcup/</link>
+      <pubDate>Sun, 06 Mar 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/worldcup/</guid>
+      <description>&lt;p&gt;Write a program to run simulations of the FIFA World Cup.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Todo app</title>

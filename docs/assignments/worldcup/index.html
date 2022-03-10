@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>World Cup &middot; AP CSP 2021-22</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2021-22</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://ide.cs50.io/"> cs50 IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>World Cup</h1>
+  <time datetime=2022-03-06T13:55:45-0700 class="post-date">Sun, Mar 6, 2022</time>
+  <p>Write a program to run simulations of the FIFA World Cup.</p>
+<p>In the soccer World Cup, the knockout round consists of 16 teams. In each round, each team plays another team and the losing teams are eliminated. When only two teams remain, the winner of the final match is the champion.</p>
+<p>Soccer teams are assigned <a href="https://en.wikipedia.org/wiki/FIFA_World_Rankings#Current_calculation_method">FIFA Ratings</a>, which are numerical values representing each team’s relative skill level. A higher FIFA rating indicates better previous game results, and given two teams’ FIFA ratings, it’s possible to estimate the probability that either team wins a game based on their current ratings. The FIFA Ratings from just before two previous World Cups are available:</p>
+<ul>
+<li><a href="https://www.fifa.com/fifa-world-ranking/ranking-table/men/rank/id12189/">May 2018 Men’s FIFA Ratings</a></li>
+<li><a href="https://www.fifa.com/fifa-world-ranking/ranking-table/women/rank/ranking_20190329/">March 2019 Women’s FIFA Ratings</a></li>
+</ul>
+<p>Using this information, we can simulate the entire tournament by repeatedly simulating rounds until we’re left with just one team. And if we want to estimate how likely it is that any given team wins the tournament, we might simulate the tournament many times (&gt;1000 simulations) and count how many times each team wins a simulated tournament.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>Log into your CS50 IDE.</li>
+<li>In the terminal window, run</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">wget https://scienceacademy.github.io/web/worldcup.zip
+</code></pre></div><p>to download a zip file of the starter code.</p>
+<ol start="3">
+<li>In the terminal window, run <code>unzip worldcup.zip</code> to unzip the file.</li>
+<li>In the terminal window, run <code>cd worldcup</code> to change directories into your <code>worldcup</code> directory.</li>
+</ol>
+<h2 id="whats-provided">What&rsquo;s provided</h2>
+<p>Start by looking at the <code>2018m.csv</code> file. This file contains the 16 teams in the knockout round of the 2018 Men’s World Cup and the ratings for each team. Notice that the CSV file has two columns, one called <code>team</code> (representing the team’s country name) and one called <code>rating</code> (representing the team’s rating).</p>
+<p>The order in which the teams are listed determines which teams will play each other in each round (in the first round, for example, Uruguay will play Portugal and France will play Argentina; in the next round, the winner of the Uruguay-Portugal match will play the winner of the France-Argentina match). Do not edit the order in which teams appear in this file!</p>
+<p>In Python, we can represent each team as a dictionary that contains two values: the team name and the rating. Uruguay, for example, would appear as <code>{&quot;team&quot;: &quot;Uruguay&quot;, &quot;rating&quot;: 976}</code>.</p>
+<p>Next, see <code>2019w.csv</code>, which contains data formatted the same way for the 2019 Women’s World Cup.</p>
+<p>Now, open <code>tournament.py</code>, where some code has already been written for you. The variable <code>N</code> at the top represents how many World Cup simulations to run: in this case, <code>1000</code>.</p>
+<p>The <code>simulate_tournament()</code> function accepts a list of teams (in a variable called <code>teams</code>) as input, and repeatedly calls <code>simulate_round()</code> to simulate a round of play until only one team remains.</p>
+<p>In the main function, we first ensure that <code>len(sys.argv)</code> (the number of command-line arguments) is <code>2</code>. The command line argument will determine which CSV file to use to run the tournament simulation. Next is a list called <code>teams</code> (which will eventually be a list of teams) and a dictionary called <code>counts</code> (which will associate team names with the number of times that team won a simulated tournament). Right now they’re both empty, so populating them is left up to you.</p>
+<p>Finally, at the end of <code>main()</code>, we sort the teams in descending order of how many times they won simulations (according to <code>counts</code>) and print the estimated probability that each team wins the World Cup.</p>
+<p>Populating <code>teams</code> and <code>counts</code> and writing the <code>simulate_round()</code> and <code>simulate_game()</code> functions are left up to you.</p>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>Complete <code>tournament.py</code>.</p>
+<p>First, in <code>main()</code>, read the team data from the CSV file and add each team to the list <code>teams</code>.</p>
+<ul>
+<li>The file to use will be provided as a command-line argument. You can access the name of the file, then, with <code>sys.argv[1]</code>.</li>
+<li>You can open a file with <code>open(filename)</code>, where <code>filename</code> is a variable storing the name of the file.</li>
+<li>Once you have a file <code>f</code>, you can use <code>csv.DictReader(f)</code> to give you a “reader”: an object in Python that you can loop over to read the file one row at a time, treating each row as a dictionary.</li>
+<li>By default, all values read from the file will be strings. So be sure to first convert the team’s <code>rating</code> to an <code>int</code>.</li>
+<li>Append each team’s dictionary to <code>teams</code>.</li>
+<li>Remember that each team should be a dictionary with a <code>team</code> name and a <code>rating</code>.</li>
+</ul>
+<p>Next, implement the <code>simulate_game()</code> function. This function should accept as input two teams and return <code>True</code> if team 1 wins, and <code>False</code> otherwise.</p>
+<ul>
+<li><code>team1</code> and <code>team2</code> are dictionaries from the <code>teams</code> list.</li>
+<li>The probability of <code>team1</code> beating <code>team2</code> based on each team&rsquo;s <code>rating</code> can be found with this formula:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">probability <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">/</span> (<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">10</span> <span style="color:#ff79c6">**</span> ((rating2 <span style="color:#ff79c6">-</span> rating1) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">600</span>))
+</code></pre></div><ul>
+<li>You can get a random number between <code>0</code> and <code>1</code> with <code>random.random()</code>.</li>
+</ul>
+<p>Next, implement the <code>simulate_round()</code> function. This function simulates one round of play. It takes as input a list of teams that are playing in the round, and returns a list of the winners.</p>
+<ul>
+<li>Remember that the returned list of <code>winners</code> will always be half the size of the list of <code>teams</code> that are playing in the round!</li>
+</ul>
+<p>Finally, back in the <code>main()</code> function, run <code>N</code> tournament simulations, and keep track of how many times each team wins in the <code>counts</code> dictionary.</p>
+<ul>
+<li>For example, if Uruguay won 2 tournaments and Portugal won 3, then your <code>counts</code> dictionary should be <code>{&quot;Uruguay&quot;: 2, &quot;Portugal&quot;: 3}</code>.</li>
+<li>You should call <code>simulate_tournament()</code> to simulate each tournament and determine the winner.</li>
+<li>You can use the <code>in</code> keyword in Python to check if a dictionary has a particular key already. For example, <code>if &quot;Portugal&quot; in counts:</code> would check to see if <code>&quot;Portugal&quot;</code> already has a value in the <code>counts</code> dictionary.</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>Your program should behave as below. Since simulations involve randomness, your output may not match these examples exactly.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ python tournament.py 2018m.csv
+Belgium: 20.9% chance of winning
+Brazil: 20.3% chance of winning
+Portugal: 14.5% chance of winning
+Spain: 13.6% chance of winning
+Switzerland: 10.5% chance of winning
+Argentina: 6.5% chance of winning
+England: 3.7% chance of winning
+France: 3.3% chance of winning
+Denmark: 2.2% chance of winning
+Croatia: 2.0% chance of winning
+Colombia: 1.8% chance of winning
+Sweden: 0.5% chance of winning
+Uruguay: 0.1% chance of winning
+Mexico: 0.1% chance of winning
+
+$ python tournament.py 2019w.csv
+Germany: 17.1% chance of winning
+United States: 14.8% chance of winning
+England: 14.0% chance of winning
+France: 9.2% chance of winning
+Canada: 8.5% chance of winning
+Japan: 7.1% chance of winning
+Australia: 6.8% chance of winning
+Netherlands: 5.4% chance of winning
+Sweden: 3.9% chance of winning
+Italy: 3.0% chance of winning
+Norway: 2.9% chance of winning
+Brazil: 2.9% chance of winning
+Spain: 2.2% chance of winning
+China PR: 2.1% chance of winning
+Nigeria: 0.1% chance of winning
+</code></pre></div><p>In case you&rsquo;re wondering, here&rsquo;s what actually happened at the actual tournaments:</p>
+<ul>
+<li>In the 2018 Men&rsquo;s World Cup, France won, defeating Croatia in the final. Belgium defeated England for third place.</li>
+<li>In the 2019 Women&rsquo;s World Cup, the United States beat the Netherlands in the final. England defeated Sweden to finish third.</li>
+</ul>
+<p>Execute the below to evaluate the correctness of your code using <code>check50</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/worldcup
+</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 tournament.py
+</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/worldcup
+</code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
