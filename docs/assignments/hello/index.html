@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,54 +53,54 @@
   <h1>Hello</h1>
   <time datetime=2021-08-17T19:55:45-0700 class="post-date">Tue, Aug 17, 2021</time>
   <p>Hello, world! Below is the very first program we wrote in C. Save this in your IDE in a file called <code>hello.c</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
-</span><span style="color:#ff79c6"></span>
-<span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
-{
-    printf(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
-}
-</code></pre></div><p>Next, in the <em>terminal window</em>, immediately to the right of the dollar sign (<code>$</code>), otherwise known as a <em>prompt</em>, type precisely the below (in lowercase), then hit Enter:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">ls
-</code></pre></div><p>Do you see <code>hello.c</code>? That&rsquo;s because you&rsquo;ve just listed the files in that same folder, this time using a command-line interface (CLI), using your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you <em>executed</em> (i.e., ran) a command called <code>ls</code>, which is shorthand for &ldquo;list.&rdquo; (It&rsquo;s such a frequently used command that its authors called it just <code>ls</code> to save keystrokes.) Make sense?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Next, in the <em>terminal window</em>, immediately to the right of the dollar sign (<code>$</code>), otherwise known as a <em>prompt</em>, type precisely the below (in lowercase), then hit Enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>ls
+</span></span></code></pre></div><p>Do you see <code>hello.c</code>? That&rsquo;s because you&rsquo;ve just listed the files in that same folder, this time using a command-line interface (CLI), using your keyboard, rather than the graphical user interface (GUI) represented by that folder icon. In particular, you <em>executed</em> (i.e., ran) a command called <code>ls</code>, which is shorthand for &ldquo;list.&rdquo; (It&rsquo;s such a frequently used command that its authors called it just <code>ls</code> to save keystrokes.) Make sense?</p>
 <p>From here on out, to &ldquo;execute&rdquo; (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are <em>case-sensitive</em>, so be sure not to type in uppercase when you mean lowercase or vice versa.</p>
 <h2 id="compiling-programs">Compiling Programs</h2>
 <p>Now, before we can execute the program at right, recall that we must <em>compile</em> it with a <em>compiler</em> (e.g., <code>clang</code>), translating it from <em>source code</em> into <em>machine code</em> (i.e., zeroes and ones). Execute the command below to do just that:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">make hello
-</code></pre></div><p>And then execute this one again:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">ls
-</code></pre></div><p>This time, you should see not only <code>hello.c</code> but <code>hello*</code> listed as well? (You can see the same graphically if you click that folder icon again.) That&rsquo;s because <code>make</code> has translated the source code in <code>hello.c</code> into machine code in <code>hello</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>make hello
+</span></span></code></pre></div><p>And then execute this one again:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>ls
+</span></span></code></pre></div><p>This time, you should see not only <code>hello.c</code> but <code>hello*</code> listed as well? (You can see the same graphically if you click that folder icon again.) That&rsquo;s because <code>make</code> has translated the source code in <code>hello.c</code> into machine code in <code>hello</code>.</p>
 <p>Also note that the <code>*</code> next to the filename indicates this file is an <em>executable</em>, or a file that contains machine code that can be run.</p>
 <p>Now run the program by executing the below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">./hello
-</code></pre></div><p>Hello, world!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>./hello
+</span></span></code></pre></div><p>Hello, world!</p>
 <h2 id="getting-user-input">Getting User Input</h2>
 <p>Suffice it to say, no matter how you compile or execute this program, it only ever prints <code>hello, world</code>. Let&rsquo;s personalize it a bit, just as we did in class.</p>
 <p>Modify this program in such a way that it first prompts the user for their name and then prints <code>hello, so-and-so</code>, where <code>so-and-so</code> is their actual name.</p>
 <p>As before, be sure to compile your program with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">make hello
-</code></pre></div><p>And be sure to execute your program, testing it a few times with different inputs, with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">./hello
-</code></pre></div><h3 id="walkthrough">Walkthrough</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>make hello
+</span></span></code></pre></div><p>And be sure to execute your program, testing it a few times with different inputs, with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>./hello
+</span></span></code></pre></div><h3 id="walkthrough">Walkthrough</h3>
 <h4 id="dont-recall-how-to-prompt-the-user-for-their-name">Don&rsquo;t recall how to prompt the user for their name?</h4>
 <p>Recall that you can use <code>get_string</code> as follows, storing its <em>return value</em> in a variable called <code>name</code> of type <code>string</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">string name <span style="color:#ff79c6">=</span> get_string(<span style="color:#f1fa8c">&#34;What is your name?</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
-</code></pre></div><h4 id="dont-recall-how-to-format-a-string">Don&rsquo;t recall how to format a string?</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>string name <span style="color:#ff79c6">=</span> get_string(<span style="color:#f1fa8c">&#34;What is your name?</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span></code></pre></div><h4 id="dont-recall-how-to-format-a-string">Don&rsquo;t recall how to format a string?</h4>
 <p>Don&rsquo;t recall how to join (i.e., concatenate) the user&rsquo;s name with a greeting? Recall that you can use <code>printf</code> not only to print but to format a string (hence, the <code>f</code> in <code>printf</code>), a la the below, wherein <code>name</code> is a <code>string</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c">printf(<span style="color:#f1fa8c">&#34;hello, %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, name);
-</code></pre></div><h4 id="use-of-undeclared-identifier">Use of undeclared identifier?</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>printf(<span style="color:#f1fa8c">&#34;hello, %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, name);
+</span></span></code></pre></div><h4 id="use-of-undeclared-identifier">Use of undeclared identifier?</h4>
 <p>Seeing the below, perhaps atop other errors?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">error: use of undeclared identifier &#39;string&#39;; did you mean &#39;stdin&#39;?
-</code></pre></div><p>Recall that, to use <code>get_string</code>, you need to include <code>cs50.h</code> (in which <code>get_string</code> is <em>declared</em>) atop a file, as with:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;cs50.h&gt;</span><span style="color:#ff79c6">
-</span></code></pre></div><h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>error: use of undeclared identifier &#39;string&#39;; did you mean &#39;stdin&#39;?
+</span></span></code></pre></div><p>Recall that, to use <code>get_string</code>, you need to include <code>cs50.h</code> (in which <code>get_string</code> is <em>declared</em>) atop a file, as with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;cs50.h&gt;</span><span style="color:#ff79c6">
+</span></span></span></code></pre></div><h3 id="how-to-test-your-code">How to Test Your Code</h3>
 <p>Once you&rsquo;ve tested the program yourself, execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/labs/2021ap/hello
-</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 hello.c
-</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/labs/2021ap/hello
+</span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 hello.c
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted. For security, you&rsquo;ll see asterisks (<code>*</code>) instead of the actual characters in your password.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/labs/2021ap/hello
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/labs/2021ap/hello
+</span></span></code></pre></div>
 </div>
 
 

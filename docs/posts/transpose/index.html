@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,15 +54,15 @@
   <time datetime=2021-05-22T19:55:45-0700 class="post-date">Sat, May 22, 2021</time>
   <p>In a transposition cipher, one rearranges the order of the letters in the text <em>without making substitutions</em>.</p>
 <p>For example, let&rsquo;s say the following was the cleartext we want to encrypt:</p>
-<pre><code>The story so far:
+<pre tabindex="0"><code>The story so far:
 In the beginning the Universe was created.
 This has made a lot of people very angry and been widely regarded as a bad move.
 </code></pre><p>First, we&rsquo;ll remove all the punctuation and spaces:</p>
-<pre><code>ThestorysofarInthebeginningtheUniversewascreatedThishasmadealotofpeopleveryangryandbeenwidelyregardedasabadmove
+<pre tabindex="0"><code>ThestorysofarInthebeginningtheUniversewascreatedThishasmadealotofpeopleveryangryandbeenwidelyregardedasabadmove
 </code></pre><p>This is 111 characters long. For a reason you&rsquo;ll soon see, let&rsquo;s add an extra &ldquo;x&rdquo; at the end to get:</p>
-<pre><code>ThestorysofarInthebeginningtheUniversewascreatedThishasmadealotofpeopleveryangryandbeenwidelyregardedasabadmovex
+<pre tabindex="0"><code>ThestorysofarInthebeginningtheUniversewascreatedThishasmadealotofpeopleveryangryandbeenwidelyregardedasabadmovex
 </code></pre><p>We can now write the message in a &ldquo;grid&rdquo; with 8 rows of 14 letters:</p>
-<pre><code>ThestorysofarI
+<pre tabindex="0"><code>ThestorysofarI
 nthebeginningt
 heUniversewasc
 reatedThishasm
@@ -71,14 +71,14 @@ everyangryandb
 eenwidelyregar
 dedasabadmovex
 </code></pre><p>Reading down the columns, we wind up with:</p>
-<pre><code>TnhraeedhteedveeehUaeendsentarwatbielyisoevdoadargeTtnebyirhoglasnsifrydonespyrmfiwheaeoanaaongvrgsspdaeItcmlbrx
+<pre tabindex="0"><code>TnhraeedhteedveeehUaeendsentarwatbielyisoevdoadargeTtnebyirhoglasnsifrydonespyrmfiwheaeoanaaongvrgsspdaeItcmlbrx
 </code></pre><p>This is very hard to read if you don&rsquo;t know which size grid was used to encrypt it. To make things even tougher, in a variant of this cipher, you rearrange the columns!</p>
 <h2 id="decrypting">Decrypting</h2>
 <p>To decrypt this message, you need to know which factors of 112 were used to make the grid, or else try all of them:</p>
-<pre><code>1 x 112, 2 x 56, 4 x 28, 7 x 16, 8 x 14
+<pre tabindex="0"><code>1 x 112, 2 x 56, 4 x 28, 7 x 16, 8 x 14
 14 x 8, 16 x 7, 28 x 4, 56 x 2, 112 x 1
 </code></pre><p>It would be silly to use the factors of 1, but, for example 16x7 would be:</p>
-<pre><code>Tnhraeedhteedvee
+<pre tabindex="0"><code>Tnhraeedhteedvee
 ehUaeendsentarwa
 tbielyisoevdoada
 rgeTtnebyirhogla
@@ -86,7 +86,7 @@ snsifrydonespyrm
 fiwheaeoanaaongv
 rgsspdaeItcmlbrx
 </code></pre><p>Still nonsense. But using a size of 14x8 (opposite of the 8x14 we used to encrypt) would read:</p>
-<pre><code>Tnhraeed
+<pre tabindex="0"><code>Tnhraeed
 hteedvee
 ehUaeend
 sentarwa
@@ -104,7 +104,7 @@ Itcmlbrx
 <p>Can you see why we &ldquo;padded&rdquo; the length of the original message with the extra character? The more factors your message length has, the more possible arrangements of the grid. (You can use anything for the extra padding at the end, not just &ldquo;x&rdquo;.)</p>
 <h1 id="challenge-4">Challenge #4</h1>
 <p>Here&rsquo;s a message that&rsquo;s been encrypted via transposition. Can you decode it?</p>
-<pre><code>IietesoaveeredsEdeloibatnamltmbhabyleRshattvrrefgylaesodieeoteetdefinhhaeiefhLkbwetosfluhedrrbrddeedaatrtuelsoefaolgSnIoieodpmgidlaeekrieniHdrihtdmovlmeuaaneSgerehsctcoatotaeppeftnrclgdtrdsSahrhetrhnhrsesnohbsratIaoolkseeewhkeAehtrhtreauoxhmrumeyedtroxtRlDariahcisesyepfpfdwsaberx
+<pre tabindex="0"><code>IietesoaveeredsEdeloibatnamltmbhabyleRshattvrrefgylaesodieeoteetdefinhhaeiefhLkbwetosfluhedrrbrddeedaatrtuelsoefaolgSnIoieodpmgidlaeekrieniHdrihtdmovlmeuaaneSgerehsctcoatotaeppeftnrclgdtrdsSahrhetrhnhrsesnohbsratIaoolkseeewhkeAehtrhtreauoxhmrumeyedtroxtRlDariahcisesyepfpfdwsaberx
 </code></pre><p>The keyword for this puzzle is the 8th word you found above.</p>
 <p>To complete the final challenges and find the remaining clues, insert each of the keywords you&rsquo;ve found in puzzles 1-4 at the end of this URL:</p>
 <p><code>https://scienceacademy.github.io/web/&lt;keyword&gt;</code></p>

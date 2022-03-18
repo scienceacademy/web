@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
   <h1>Filter</h1>
   <time datetime=2021-10-25T13:55:45-0700 class="post-date">Mon, Oct 25, 2021</time>
   <p>Implement a program that applies filters to images.</p>
-<pre><code>$ ./filter -g image.bmp grayscale.bmp
+<pre tabindex="0"><code>$ ./filter -g image.bmp grayscale.bmp
 </code></pre><h2 id="background">Background</h2>
 <h3 id="bitmaps">Bitmaps</h3>
 <p>Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.</p>
@@ -80,7 +80,7 @@
 <p>Most image editing programs support a “sepia” filter, which gives images an old-timey feel by making the whole image look a bit reddish-brown.</p>
 <p>An image can be converted to sepia by taking each pixel, and computing new red, green, and blue values based on the original values of the three.</p>
 <p>There are a number of algorithms for converting an image to sepia, but for this problem, we’ll ask you to use the following algorithm. For each pixel, the sepia color values should be calculated based on the original color values per the below.</p>
-<pre><code>  sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
+<pre tabindex="0"><code>  sepiaRed = .393 * originalRed + .769 * originalGreen + .189 * originalBlue
   sepiaGreen = .349 * originalRed + .686 * originalGreen + .168 * originalBlue
   sepiaBlue = .272 * originalRed + .534 * originalGreen + .131 * originalBlue
 </code></pre><p>Of course, the result of each of these formulas may not be an integer, but each value could be rounded to the nearest integer. It’s also possible that the result of the formula is a number greater than 255, the maximum value for an 8-bit color value. In that case, the red, green, and blue values should be capped at 255. As a result, we can guarantee that the resulting red, green, and blue values will be whole numbers between 0 and 255, inclusive.</p>
@@ -99,8 +99,8 @@
 <li>Execute <code>cd</code> to ensure you&rsquo;re in <code>~/</code> (i.e. your home directory).</li>
 <li>Execute the following to download a (compressed) ZIP file with this problem’s distribution:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">wget https://scienceacademy.github.io/web/filter.zip
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/filter.zip
+</span></span></code></pre></div><ul>
 <li>Execute <code>unzip filter.zip</code> to uncompress that file.</li>
 <li>You&rsquo;ll now see a <code>filter</code> directory in your file list.</li>
 <li>It contains the following files: <code>bmp.h</code>, <code>filter.c</code>, <code>helpers.h</code>, <code>helpers.c</code>, and <code>Makefile</code>. You&rsquo;ll also see a directory called <code>images</code> with some sample bitmaps.</li>
@@ -135,9 +135,9 @@
 <h3 id="makefile">Makefile</h3>
 <p>There&rsquo;s also a <code>Makefile</code>, which specifies what happens when you run <code>make filter</code>. In the past, we&rsquo;ve written programs that were confined to just one file, but this project contains multiple: <code>filter.c</code>, &lsquo;helpers.h<code>, and </code>helpers.c<code>. </code>Makefile` tells the compiler how to include those files.</p>
 <p>Try compiling <code>filter</code> by running</p>
-<pre><code>$ make filter
+<pre tabindex="0"><code>$ make filter
 </code></pre><p>Then you can run the program with</p>
-<pre><code>$ ./filter -g images/yard.bmp out.bmp
+<pre tabindex="0"><code>$ ./filter -g images/yard.bmp out.bmp
 </code></pre><p>This generates a new image called <code>out.bmp</code> after calling the <code>grayscale</code> function. <code>grayscale</code> doesn&rsquo;t do anything yet, though, so the output image just matches the original.</p>
 <h2 id="specification">Specification</h2>
 <p>Implement the functions in <code>helpers.c</code>.</p>
@@ -155,12 +155,12 @@
 <h2 id="testing">Testing</h2>
 <p>Be sure to test all of your filters on the example bitmaps!</p>
 <p>Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!</p>
-<pre><code>check50 scienceacademy/problems/2021ap/filter
+<pre tabindex="0"><code>check50 scienceacademy/problems/2021ap/filter
 </code></pre><p>Execute the below to evaluate the style of your code using style50.</p>
-<pre><code>style50 helpers.c
+<pre tabindex="0"><code>style50 helpers.c
 </code></pre><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below to submit your code:</p>
-<pre><code>submit50 scienceacademy/problems/2021ap/filter
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2021ap/filter
 </code></pre><h2 id="bonus-filter-edges">Bonus Filter: Edges</h2>
 <p>In artificial intelligence algorithms for image processing, it is often useful to detect edges in an image: lines in the image that create a boundary between one object and another. One way to achieve this effect is by applying the <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel operator</a> to the image.</p>
 <p>Like image blurring, edge detection also works by taking each pixel and modifying it based on the 3x3 grid of pixels that surrounds it. But instead of just taking the average of the nine pixels, the Sobel operator computes the new value of each pixel by taking a weighted sum of the values for the surrounding pixels. And since edges between objects could take place in both a vertical and a horizontal direction, we actually compute two weighted sums: one for detecting edges in the x direction, and one for detecting edges in the y direction. In particular, we’ll use the following two “kernels”:</p>

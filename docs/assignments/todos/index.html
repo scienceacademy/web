@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,8 +59,8 @@
 <li>Log into your CS50 IDE.</li>
 <li>In the terminal window, run</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">wget https://scienceacademy.github.io/web/todos.zip
-</code></pre></div><p>to download a zip file of the lab code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/todos.zip
+</span></span></code></pre></div><p>to download a zip file of the lab code.</p>
 <ol start="3">
 <li>In the terminal window, run <code>unzip todos.zip</code> to unzip (decompress) the file.</li>
 <li>In the terminal window, run <code>cd todos</code> to change directories into your <code>todos</code> directory.</li>
@@ -76,16 +76,16 @@
 <h3 id="3-authentication">3. Authentication</h3>
 <p>You don&rsquo;t want just anyone to have access to your task list. Add a simple authentication scheme that displays a login form when no user is authenticated. You can use a simple username + password for authentication.</p>
 <p>You can save the user&rsquo;s authenticated state in a cookie. In Flask, cookies are set/accessed using the <code>session</code> dictionary (add this to the <code>import</code> list at the top). For example, to preserve a session variable called <code>test</code> with a value of <code>&quot;saved&quot;</code>, you would use the following line of code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">session[<span style="color:#f1fa8c">&#34;test&#34;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;saved&#34;</span>
-</code></pre></div><p>Checking if a session variable exists:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">if</span> <span style="color:#f1fa8c">&#34;test&#34;</span> <span style="color:#ff79c6">in</span> session:
-</code></pre></div><p>And to remove the session variable, use <code>pop()</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">session<span style="color:#ff79c6">.</span>pop(<span style="color:#f1fa8c">&#34;test&#34;</span>)
-</code></pre></div><h3 id="4-style">4. Style</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>session[<span style="color:#f1fa8c">&#34;test&#34;</span>] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;saved&#34;</span>
+</span></span></code></pre></div><p>Checking if a session variable exists:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> <span style="color:#f1fa8c">&#34;test&#34;</span> <span style="color:#ff79c6">in</span> session:
+</span></span></code></pre></div><p>And to remove the session variable, use <code>pop()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>session<span style="color:#ff79c6">.</span>pop(<span style="color:#f1fa8c">&#34;test&#34;</span>)
+</span></span></code></pre></div><h3 id="4-style">4. Style</h3>
 <p>In <code>static/style.css</code>, add CSS styles to customize and beautify your application. Try to create a unified theme that is pleasing - don&rsquo;t forget to style the &ldquo;new task&rdquo; and login forms, the list style of the todo list, and other elements such as font and color.</p>
 <h2 id="how-to-submit">How to Submit</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/todos
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2021ap/todos
+</span></span></code></pre></div>
 </div>
 
 

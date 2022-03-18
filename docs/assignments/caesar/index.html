@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,10 +54,10 @@
   <time datetime=2021-09-21T13:55:45-0700 class="post-date">Tue, Sep 21, 2021</time>
   <p>Implement a program that encrypts messages using Caesar’s cipher.</p>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 13
-plaintext:  HELLO
-ciphertext: URYYB
-</code></pre></div><p>You can access your CS50 IDE at <a href="https://ide.cs50.io/">ide.cs50.io</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 13
+</span></span><span style="display:flex;"><span>plaintext:  HELLO
+</span></span><span style="display:flex;"><span>ciphertext: URYYB
+</span></span></code></pre></div><p>You can access your CS50 IDE at <a href="https://ide.cs50.io/">ide.cs50.io</a>.</p>
 <h2 id="background">Background</h2>
 <p>Supposedly, Caesar (yes, that Caesar) used to “encrypt” (i.e., conceal in a reversible way) confidential messages by shifting each letter therein by some number of places. For instance, he might write A as B, B as C, C as D, etc., and, wrapping around alphabetically, Z as A. And so, to say HELLO to someone, Caesar might write IFMMP. Upon receiving such messages from Caesar, recipients would have to “decrypt” them by shifting letters in the opposite direction by the same number of places.</p>
 <p>The secrecy of this “cryptosystem” relied on only Caesar and the recipients knowing a secret: the number of places by which Caesar had shifted his letters (e.g., 1). Not particularly secure by modern standards, but, hey, if you’re perhaps the first in the world to do it, pretty secure!</p>
@@ -109,26 +109,26 @@ ciphertext: URYYB
 <p>For the sake of discussion, think of A (or a) as 0, B (or b) as 1, …, H (or h) as 7, I (or i) as 8, …, and Z (or z) as 25. Suppose that Caesar just wants to say &ldquo;Hi&rdquo; to someone using a key, <em>k</em>, of 3. His plaintext, <em>p</em>, is &ldquo;Hi&rdquo;. His plaintext’s first character, <em>p<sub>0</sub></em>, is H (aka 7), and his plaintext’s second character, <em>p<sub>1</sub></em>, is i (aka 8). His ciphertext’s first character, <em>c<sub>0</sub></em>, is thus 7 + 3 = 10 (aka K), and his ciphertext’s second character, <em>c<sub>1</sub></em>, is 8 + 3 = 11 (or L).</p>
 <p>Your task is to write a program called <code>caesar</code> that enables you to encrypt messages using Caesar’s cipher. At the time the user executes the program, they should decide, by providing a command-line argument, what the key should be. We shouldn’t necessarily assume that the user’s key is going to be a number; though you may assume that, if it is a number, it will be a positive integer.</p>
 <p>Here are a few examples of how the program might work. For example, if the user inputs a key of <code>1</code> and a plaintext of <code>HELLO</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 1
-plaintext:  HELLO
-ciphertext: IFMMP
-</code></pre></div><p>Here’s how the program might work if the user provides a key of <code>13</code> and a plaintext of <code>hello, world</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 13
-plaintext:  hello, world
-ciphertext: uryyb, jbeyq
-</code></pre></div><p>Notice that neither the comma nor the space were “shifted” by the cipher. Only rotate alphabetical characters!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 1
+</span></span><span style="display:flex;"><span>plaintext:  HELLO
+</span></span><span style="display:flex;"><span>ciphertext: IFMMP
+</span></span></code></pre></div><p>Here’s how the program might work if the user provides a key of <code>13</code> and a plaintext of <code>hello, world</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 13
+</span></span><span style="display:flex;"><span>plaintext:  hello, world
+</span></span><span style="display:flex;"><span>ciphertext: uryyb, jbeyq
+</span></span></code></pre></div><p>Notice that neither the comma nor the space were “shifted” by the cipher. Only rotate alphabetical characters!</p>
 <p>How about one more? Here’s how the program might work if the user provides a key of <code>13</code> again, with a more complex plaintext:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 13
-plaintext:  be sure to drink your Ovaltine
-ciphertext: or fher gb qevax lbhe Binygvar
-</code></pre></div><p>Notice that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 13
+</span></span><span style="display:flex;"><span>plaintext:  be sure to drink your Ovaltine
+</span></span><span style="display:flex;"><span>ciphertext: or fher gb qevax lbhe Binygvar
+</span></span></code></pre></div><p>Notice that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
 <p>And what if a user doesn’t cooperate?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar HELLO
-Usage: ./caesar key
-</code></pre></div><p>Or really doesn’t cooperate?</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar
-Usage: ./caesar key
-</code></pre></div><h2 id="requirements">Requirements</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar HELLO
+</span></span><span style="display:flex;"><span>Usage: ./caesar key
+</span></span></code></pre></div><p>Or really doesn’t cooperate?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar
+</span></span><span style="display:flex;"><span>Usage: ./caesar key
+</span></span></code></pre></div><h2 id="requirements">Requirements</h2>
 <p>Write a program, <code>caesar</code>, that encrypts messages using Caesar’s cipher.</p>
 <ul>
 <li>Write your program in a file called <code>caesar.c</code>.</li>
@@ -161,15 +161,15 @@ Usage: ./caesar key
 <h3 id="2-counting-command-line-arguments">2. Counting Command-Line Arguments</h3>
 <p>Whatever your pseudocode, first write only the C code that checks whether the program was run with a single command-line argument before you add any additional functionality.</p>
 <p>Specifically, in a new file called <code>caesar.c</code> write code such that: if the user provides exactly one command-line argument, it prints <code>Success</code>; if the user provides no command-line arguments, or two or more, it prints <code>Usage: ./caesar key</code>. Remember, since this key is coming from the command line at runtime, and not via get_string, we don’t have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 20
-Success
-</code></pre></div><p>or</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar
-Usage: ./caesar key
-</code></pre></div><p>or</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 1 2 3
-Usage: ./caesar key
-</code></pre></div><h3 id="hints">Hints</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 20
+</span></span><span style="display:flex;"><span>Success
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar
+</span></span><span style="display:flex;"><span>Usage: ./caesar key
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 1 2 3
+</span></span><span style="display:flex;"><span>Usage: ./caesar key
+</span></span></code></pre></div><h3 id="hints">Hints</h3>
 <ul>
 <li>Recall that <code>argc</code> and <code>argv</code> give you information about what was provided at the command line.</li>
 <li>Recall that the name of the program itself (ie, <code>./caesar</code>) is in <code>argv[0]</code>.</li>
@@ -177,12 +177,12 @@ Usage: ./caesar key
 <h3 id="3-accessing-the-key">3. Accessing the Key</h3>
 <p>Now that your program is (hopefully!) accepting input as prescribed, it’s time for another step.</p>
 <p>In your program, you must defend against users who technically provide a single command-line argument (the key), but provide something that isn’t actually an integer, for example:</p>
-<pre><code>$ ./caesar xyz
+<pre tabindex="0"><code>$ ./caesar xyz
 </code></pre><p>Before we start to analyze the key for validity, though, let’s make sure we can actually read it. Modify <code>caesar.c</code> so that it not only checks that the user has provided one command-line argument, but after verifying that, prints out that single command-line argument. So, for example, the behavior might look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 20
-Success
-20
-</code></pre></div><h3 id="hints-1">Hints</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 20
+</span></span><span style="display:flex;"><span>Success
+</span></span><span style="display:flex;"><span>20
+</span></span></code></pre></div><h3 id="hints-1">Hints</h3>
 <ul>
 <li>Recall that <code>argc</code> and <code>argv</code> give you information about what was provided at the command line.</li>
 <li>Recall that <code>argv</code> is an array of strings.</li>
@@ -190,13 +190,13 @@ Success
 </ul>
 <h3 id="4-validating-the-key">4. Validating the Key</h3>
 <p>Now that you know how to read the key, you can analyze it. Modify <code>caesar.c</code> so that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., <code>0</code>, <code>1</code>, <code>2</code>, etc.) and if any of them are not, terminates after printing the message <code>Usage: ./caesar key</code>. But if the argument consists solely of digit characters, you should convert that string (recall that <code>argv</code> is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the integer. So, for example, the behavior might look like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 20
-Success
-20
-</code></pre></div><p>or</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 20x
-Usage: ./caesar key
-</code></pre></div><h3 id="hints-2">Hints</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 20
+</span></span><span style="display:flex;"><span>Success
+</span></span><span style="display:flex;"><span>20
+</span></span></code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 20x
+</span></span><span style="display:flex;"><span>Usage: ./caesar key
+</span></span></code></pre></div><h3 id="hints-2">Hints</h3>
 <ul>
 <li>Recall that a string is actually an array of chars.</li>
 <li>Recall that the <code>string.h</code> header file contains a number of useful functions that work with strings.</li>
@@ -207,10 +207,10 @@ Usage: ./caesar key
 <h3 id="5-under-the-hood">5. Under the Hood</h3>
 <p>As humans it’s easy for us to intuitively understand the formula described above, so we can say “H + 1 = I”. But can a computer understand that same logic? For now, temporarily ignore the key the user provided and instead prompt the user for a secret message and just try to shift all of its characters by 1.</p>
 <p>Add to <code>caesar.c</code> so that, after validating the key, you prompt the user for a string and then shift all of its characters by 1, printing out the result. You can also remove the code you wrote earlier that prints <code>Success</code>. You&rsquo;re goal is something like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./caesar 1
-plaintext:  hello
-ciphertext: ifmmp
-</code></pre></div><h3 id="hints-3">Hints</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./caesar 1
+</span></span><span style="display:flex;"><span>plaintext:  hello
+</span></span><span style="display:flex;"><span>ciphertext: ifmmp
+</span></span></code></pre></div><h3 id="hints-3">Hints</h3>
 <ul>
 <li>Try to iterate over every character in the plaintext and literally add <code>1</code> to it, then print it.</li>
 <li>If <code>c</code> is a variable of type <code>char</code> in C, what happens when you call <code>printf(&quot;%c&quot;, c + 1)</code>?</li>
@@ -227,13 +227,13 @@ ciphertext: ifmmp
 </ul>
 <h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/caesar
-</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 caesar.c
-</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2021ap/caesar
+</span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 caesar.c
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/caesar
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2021ap/caesar
+</span></span></code></pre></div>
 </div>
 
 

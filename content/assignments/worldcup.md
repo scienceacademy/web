@@ -133,6 +133,14 @@ Execute the below to evaluate the correctness of your code using `check50`.
 check50 scienceacademy/problems/2021ap/worldcup
 ```
 
+# **IMPORTANT**
+In order to successfully run `check50`, you'll need to make sure the last 2 lines of your program are as follows:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
 Execute the below to evaluate the style of your code using `style50`.
 
 ```md

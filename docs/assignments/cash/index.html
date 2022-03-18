@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.93.3" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,20 +79,20 @@
 </li>
 <li>
 <p>Take care to round your cents to the nearest penny, using <code>round()</code>, which is declared in the <code>math.h</code> library. For instance, if <code>dollars</code> is a <code>float</code> with the user&rsquo;s input (e.g., <code>0.20</code>), then code like</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#8be9fd">int</span> cents <span style="color:#ff79c6">=</span> round(dollars <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>);
-</code></pre></div><p>will safely convert <code>0.20</code> (or even <code>0.200000002980232238769531250</code>) to <code>20</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> cents <span style="color:#ff79c6">=</span> round(dollars <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>);
+</span></span></code></pre></div><p>will safely convert <code>0.20</code> (or even <code>0.200000002980232238769531250</code>) to <code>20</code>.</p>
 </li>
 </ul>
 <p>Your program should behave like the examples below.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./cash
-Change owed: 0.41
-4
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ ./cash
-Change owed: -0.41
-Change owed: foo
-Change owed: 0.67
-6
-</code></pre></div><h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./cash
+</span></span><span style="display:flex;"><span>Change owed: 0.41
+</span></span><span style="display:flex;"><span>4
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./cash
+</span></span><span style="display:flex;"><span>Change owed: -0.41
+</span></span><span style="display:flex;"><span>Change owed: foo
+</span></span><span style="display:flex;"><span>Change owed: 0.67
+</span></span><span style="display:flex;"><span>6
+</span></span></code></pre></div><h3 id="how-to-test-your-code">How to Test Your Code</h3>
 <p>Does your code work as prescribed when you input</p>
 <ul>
 <li><code>-1.00</code> (or any other negative numbers)?</li>
@@ -101,13 +101,13 @@ Change owed: 0.67
 <li>no input at all, when you only hit Enter?</li>
 </ul>
 <p>You can also execute the below to evaluate the correctness of your code using <code>check50</code>. <strong>But be sure to compile and test it yourself as well!</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/cash
-</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 cash.c
-</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2021ap/cash
+</span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 cash.c
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/cash
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2021ap/cash
+</span></span></code></pre></div>
 </div>
 
 
