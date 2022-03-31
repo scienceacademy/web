@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.96.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,8 +65,8 @@
 <li>Log into your CS50 IDE.</li>
 <li>In the terminal window, run</li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">wget https://scienceacademy.github.io/web/worldcup.zip
-</code></pre></div><p>to download a zip file of the starter code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/worldcup.zip
+</span></span></code></pre></div><p>to download a zip file of the starter code.</p>
 <ol start="3">
 <li>In the terminal window, run <code>unzip worldcup.zip</code> to unzip the file.</li>
 <li>In the terminal window, run <code>cd worldcup</code> to change directories into your <code>worldcup</code> directory.</li>
@@ -97,8 +97,8 @@
 <li><code>team1</code> and <code>team2</code> are dictionaries from the <code>teams</code> list.</li>
 <li>The probability of <code>team1</code> beating <code>team2</code> based on each team&rsquo;s <code>rating</code> can be found with this formula:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">probability <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">/</span> (<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">10</span> <span style="color:#ff79c6">**</span> ((rating2 <span style="color:#ff79c6">-</span> rating1) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">600</span>))
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>probability <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">/</span> (<span style="color:#bd93f9">1</span> <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">10</span> <span style="color:#ff79c6">**</span> ((rating2 <span style="color:#ff79c6">-</span> rating1) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">600</span>))
+</span></span></code></pre></div><ul>
 <li>You can get a random number between <code>0</code> and <code>1</code> with <code>random.random()</code>.</li>
 </ul>
 <p>Next, implement the <code>simulate_round()</code> function. This function simulates one round of play. It takes as input a list of teams that are playing in the round, and returns a list of the winners.</p>
@@ -113,54 +113,54 @@
 </ul>
 <h2 id="testing">Testing</h2>
 <p>Your program should behave as below. Since simulations involve randomness, your output may not match these examples exactly.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">$ python tournament.py 2018m.csv
-Belgium: 20.9% chance of winning
-Brazil: 20.3% chance of winning
-Portugal: 14.5% chance of winning
-Spain: 13.6% chance of winning
-Switzerland: 10.5% chance of winning
-Argentina: 6.5% chance of winning
-England: 3.7% chance of winning
-France: 3.3% chance of winning
-Denmark: 2.2% chance of winning
-Croatia: 2.0% chance of winning
-Colombia: 1.8% chance of winning
-Sweden: 0.5% chance of winning
-Uruguay: 0.1% chance of winning
-Mexico: 0.1% chance of winning
-
-$ python tournament.py 2019w.csv
-Germany: 17.1% chance of winning
-United States: 14.8% chance of winning
-England: 14.0% chance of winning
-France: 9.2% chance of winning
-Canada: 8.5% chance of winning
-Japan: 7.1% chance of winning
-Australia: 6.8% chance of winning
-Netherlands: 5.4% chance of winning
-Sweden: 3.9% chance of winning
-Italy: 3.0% chance of winning
-Norway: 2.9% chance of winning
-Brazil: 2.9% chance of winning
-Spain: 2.2% chance of winning
-China PR: 2.1% chance of winning
-Nigeria: 0.1% chance of winning
-</code></pre></div><p>In case you&rsquo;re wondering, here&rsquo;s what actually happened at the actual tournaments:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ python tournament.py 2018m.csv
+</span></span><span style="display:flex;"><span>Belgium: 20.9% chance of winning
+</span></span><span style="display:flex;"><span>Brazil: 20.3% chance of winning
+</span></span><span style="display:flex;"><span>Portugal: 14.5% chance of winning
+</span></span><span style="display:flex;"><span>Spain: 13.6% chance of winning
+</span></span><span style="display:flex;"><span>Switzerland: 10.5% chance of winning
+</span></span><span style="display:flex;"><span>Argentina: 6.5% chance of winning
+</span></span><span style="display:flex;"><span>England: 3.7% chance of winning
+</span></span><span style="display:flex;"><span>France: 3.3% chance of winning
+</span></span><span style="display:flex;"><span>Denmark: 2.2% chance of winning
+</span></span><span style="display:flex;"><span>Croatia: 2.0% chance of winning
+</span></span><span style="display:flex;"><span>Colombia: 1.8% chance of winning
+</span></span><span style="display:flex;"><span>Sweden: 0.5% chance of winning
+</span></span><span style="display:flex;"><span>Uruguay: 0.1% chance of winning
+</span></span><span style="display:flex;"><span>Mexico: 0.1% chance of winning
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ python tournament.py 2019w.csv
+</span></span><span style="display:flex;"><span>Germany: 17.1% chance of winning
+</span></span><span style="display:flex;"><span>United States: 14.8% chance of winning
+</span></span><span style="display:flex;"><span>England: 14.0% chance of winning
+</span></span><span style="display:flex;"><span>France: 9.2% chance of winning
+</span></span><span style="display:flex;"><span>Canada: 8.5% chance of winning
+</span></span><span style="display:flex;"><span>Japan: 7.1% chance of winning
+</span></span><span style="display:flex;"><span>Australia: 6.8% chance of winning
+</span></span><span style="display:flex;"><span>Netherlands: 5.4% chance of winning
+</span></span><span style="display:flex;"><span>Sweden: 3.9% chance of winning
+</span></span><span style="display:flex;"><span>Italy: 3.0% chance of winning
+</span></span><span style="display:flex;"><span>Norway: 2.9% chance of winning
+</span></span><span style="display:flex;"><span>Brazil: 2.9% chance of winning
+</span></span><span style="display:flex;"><span>Spain: 2.2% chance of winning
+</span></span><span style="display:flex;"><span>China PR: 2.1% chance of winning
+</span></span><span style="display:flex;"><span>Nigeria: 0.1% chance of winning
+</span></span></code></pre></div><p>In case you&rsquo;re wondering, here&rsquo;s what actually happened at the actual tournaments:</p>
 <ul>
 <li>In the 2018 Men&rsquo;s World Cup, France won, defeating Croatia in the final. Belgium defeated England for third place.</li>
 <li>In the 2019 Women&rsquo;s World Cup, the United States beat the Netherlands in the final. England defeated Sweden to finish third.</li>
 </ul>
 <p>Execute the below to evaluate the correctness of your code using <code>check50</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">check50 scienceacademy/problems/2021ap/worldcup
-</code></pre></div><h1 id="important"><strong>IMPORTANT</strong></h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2021ap/worldcup
+</span></span></code></pre></div><h1 id="important"><strong>IMPORTANT</strong></h1>
 <p>In order to successfully run <code>check50</code>, you&rsquo;ll need to make sure the last 2 lines of your program are as follows:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#ff79c6">if</span> __name__ <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;__main__&#34;</span>:
-    main()
-</code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">style50 tournament.py
-</code></pre></div><h2 id="how-to-submit">How to Submit</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md">submit50 scienceacademy/problems/2021ap/worldcup
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">if</span> __name__ <span style="color:#ff79c6">==</span> <span style="color:#f1fa8c">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    main()
+</span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 tournament.py
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2021ap/worldcup
+</span></span></code></pre></div>
 </div>
 
 

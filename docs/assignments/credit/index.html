@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.96.0" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,29 +89,29 @@
 <p>In <code>credit.c</code> write a program that prompts the user for a credit card number and then reports (via <code>printf</code>) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each&rsquo;s format herein. So that we can automate some tests of your code, we ask that your program&rsquo;s last line of output be <code>AMEX\n</code> or <code>MASTERCARD\n</code> or <code>VISA\n</code> or <code>INVALID\n</code>, nothing more, nothing less.</p>
 <p>For simplicity, you may assume that the user&rsquo;s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card). But do not assume that the user&rsquo;s input will fit in an <code>int</code>! Best to use <code>get_long</code> from CS50&rsquo;s library to get users&rsquo; input. (Why?)</p>
 <p>Consider the below representative of how your own program should behave when passed a valid credit card number:</p>
-<pre><code>$ ./credit
+<pre tabindex="0"><code>$ ./credit
 Number: 4003600000000014
 VISA
 </code></pre><p>Note: <code>get_long</code> itself will reject hyphens (and more) anyway:</p>
-<pre><code>$ ./credit
+<pre tabindex="0"><code>$ ./credit
 Number: 4003-6000-0000-0014
 Number: foo
 Number: 4003600000000014
 VISA
 </code></pre><p>But it&rsquo;s up to you to catch inputs that are not credit card numbers (e.g., a phone number), even if numeric:</p>
-<pre><code>$ ./credit
+<pre tabindex="0"><code>$ ./credit
 Number: 6176292929
 INVALID
 </code></pre><p>Test out your program with a whole bunch of inputs, both valid and invalid. (The grader certainly will!) Here are a <a href="https://developer.paypal.com/docs/classic/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing">few card numbers</a> that PayPal recommends for testing.</p>
 <p>If your program behaves incorrectly on some inputs (or doesn&rsquo;t compile at all), time to debug!</p>
 <h3 id="how-to-test-your-code">How to Test Your Code</h3>
 <p>You can also execute the below to evaluate the correctness of your code using <code>check50</code>. <strong>But be sure to compile and test it yourself as well!</strong></p>
-<pre><code>check50 scienceacademy/problems/2021ap/credit
+<pre tabindex="0"><code>check50 scienceacademy/problems/2021ap/credit
 </code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<pre><code>style50 credit.c
+<pre tabindex="0"><code>style50 credit.c
 </code></pre><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below:</p>
-<pre><code>submit50 scienceacademy/problems/2021ap/credit
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2021ap/credit
 </code></pre>
 </div>
 

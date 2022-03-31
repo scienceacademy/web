@@ -6,10 +6,15 @@
     <description>Recent content on AP CSP 2021-22</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Mar 2022 13:55:45 -0700</lastBuildDate>
-    
-	<atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 29 Mar 2022 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Map Coloring</title>
+      <link>https://scienceacademy.github.io/web/assignments/map/</link>
+      <pubDate>Tue, 29 Mar 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/map/</guid>
+      <description>&lt;p&gt;Write a program to color a map using the least number of colors.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Graphs</title>
