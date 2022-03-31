@@ -34,7 +34,7 @@ wget https://scienceacademy.github.io/web/map_colors.zip
  to download a zip file of the starter code.
 
 3. In the terminal window, run `unzip map_colors.zip` to unzip the file.
-4. In the terminal window, run `cd map_colors` to change directories into your `worldcup` directory.
+4. In the terminal window, run `cd map_colors` to change directories into your `map_colors` directory.
 
 ## Understanding
 
