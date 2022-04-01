@@ -35,6 +35,11 @@ wget https://scienceacademy.github.io/web/map_colors.zip
 
 3. In the terminal window, run `unzip map_colors.zip` to unzip the file.
 4. In the terminal window, run `cd map_colors` to change directories into your `map_colors` directory.
+5. Next, you need to install the correct library for map creation:
+
+```md
+pip install basemap
+```
 
 ## Understanding
 
