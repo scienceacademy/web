@@ -62,7 +62,7 @@ Running your code should produce the following output:
 
 ```md
 $ python greedy_color.py
-{'Alabama': 1, 'Arizona': 3, 'Arkansas': 1, 'California': 4, 'Colorado': 2, 'Connecticut': 2, 'Delaware': 3, 'Florida': 2, 'Georgia': 3, 'Idaho': 3, 'Illinois': 3, 'Indiana': 2, 'Iowa': 1, 'Kansas': 1, 'Kentucky': 1, 'Louisiana': 3, 'Maine': 1, 'Maryland': 4, 'Massachusetts': 3, 'Michigan': 1, 'Minnesota': 3, 'Mississippi': 2, 'Missouri': 2, 'Montana': 1, 'Nebraska': 3, 'Nevada': 2, 'New Hampshire': 2, 'New Jersey': 2, 'New Mexico': 1, 'New York': 4, 'North Carolina': 2, 'North Dakota': 3, 'Ohio': 3, 'Oklahoma': 3, 'Oregon': 1, 'Pennsylvania': 1, 'Rhode Island': 1, 'South Carolina': 1, 'South Dakota': 2, 'Tennessee': 4, 'Texas': 2, 'Utah': 1, 'Vermont': 1, 'Virginia': 3, 'Washington': 2, 'West Virginia': 2, 'Wisconsin': 2, 'Wyoming': 4}
+{'Alabama': 1, 'Arizona': 3, 'Arkansas': 1, 'California': 4, 'Colorado': 2, 'Connecticut': 2, 'Delaware': 3, 'Florida': 2, 'Georgia': 3, 'Idaho': 3, 'Illinois': 3, 'Indiana': 2, 'Iowa': 1, 'Kansas': 1, 'Kentucky': 1, 'Louisiana': 3, 'Maine': 2, 'Maryland': 4, 'Massachusetts': 3, 'Michigan': 1, 'Minnesota': 3, 'Mississippi': 2, 'Missouri': 1, 'Montana': 1, 'Nebraska': 3, 'Nevada': 2, 'New Hampshire': 2, 'New Jersey': 2, 'New Mexico': 1, 'New York': 4, 'North Carolina': 2, 'North Dakota': 3, 'Ohio': 3, 'Oklahoma': 3, 'Oregon': 1, 'Pennsylvania': 1, 'Rhode Island': 1, 'South Carolina': 1, 'South Dakota': 2, 'Tennessee': 4, 'Texas': 2, 'Utah': 1, 'Vermont': 1, 'Virginia': 3, 'Washington': 2, 'West Virginia': 2, 'Wisconsin': 2, 'Wyoming': 4}
 ```
 
 In addition, a file called `us_map.png` will be created in your project folder. This will show the map with your colors applied.
