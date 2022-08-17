@@ -1,7 +1,7 @@
 ---
 title: "Assignment: Readability"
 date: 2021-09-12T09:55:45-07:00
-draft: false
+draft: true
 ---
 
 Implement a program that computes the approximate grade level needed to comprehend some text.

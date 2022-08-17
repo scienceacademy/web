@@ -1,8 +1,11 @@
 ---
 title: "Hello"
-date: 2021-08-17T19:55:45-07:00
+date: 2022-08-16T19:55:45-07:00
 draft: false
 ---
+
+A simple assignment to practice testing and submitting your code.
+
 <!--more-->
 
 Hello, world! Below is the very first program we wrote in C. Save this in your IDE in a file called `hello.c`.
@@ -96,7 +99,7 @@ Seeing the below, perhaps atop other errors?
 error: use of undeclared identifier 'string'; did you mean 'stdin'?
 ```
 
-Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
+Remember, to use `get_string`, you need to include `cs50.h` (in which `get_string` is *declared*) atop a file, as with:
 
 ```c
 #include <cs50.h>
@@ -107,7 +110,7 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/labs/2021ap/hello
+check50 scienceacademy/labs/2022ap/hello
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -121,5 +124,5 @@ style50 hello.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```md
-submit50 scienceacademy/labs/2021ap/hello
+submit50 scienceacademy/labs/2022ap/hello
 ```

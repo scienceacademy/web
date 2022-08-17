@@ -1,6 +1,6 @@
 baseURL = "https://scienceacademy.github.io/web/"
 languageCode = "en-us"
-title = "AP CSP 2021-22"
+title = "AP CSP 2022-23"
 theme = "hyde_cb"
 publishDir = "docs"
 
@@ -22,5 +22,5 @@ pygmentsCodeFences = true
 [Menus]
 	main = [
 		{Name = "View your submit50 submissions", URL = "https://submit.cs50.io/"},
-		{Name = "cs50 IDE", URL = "https://ide.cs50.io/"}
+		{Name = "CodeSpace IDE", URL = "https://code.cs50.io/"}
 	]

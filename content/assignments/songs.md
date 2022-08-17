@@ -1,7 +1,7 @@
 ---
 title: "Lab: Songs"
 date: 2021-11-29T13:55:45-07:00
-draft: false
+draft: true
 ---
 Write SQL queries to answer questions about a database of songs.
 <!--more-->

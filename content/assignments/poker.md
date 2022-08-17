@@ -1,7 +1,7 @@
 ---
 title: "Video poker ♥ ♣ ♠ ♦"
 date: 2021-11-17T13:55:45-07:00
-draft: false
+draft: true
 ---
 
 Implement a program that runs a game of video poker.
@@ -14,10 +14,10 @@ Video poker is a popular casino game based on 5-card draw poker.
 The game works like this:
 
 1. The player places a bet.
-1. The player receives a hand of 5 cards.
-1. The player chooses any number of cards to hold.
-1. Unheld cards are replaced by newly dealt cards.
-1. The final hand is scored and the player wins or loses their bet, based on the game's pay table.
+2. The player receives a hand of 5 cards.
+3. The player chooses any number of cards to hold.
+4. Unheld cards are replaced by newly dealt cards.
+5. The final hand is scored and the player wins or loses their bet, based on the game's pay table.
 
 ## Poker hands
 
