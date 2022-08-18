@@ -6,7 +6,16 @@
     <description>Recent content on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Aug 2022 19:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Aug 2022 11:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Practice: sum.c</title>
+      <link>https://scienceacademy.github.io/web/assignments/practice_sum/</link>
+      <pubDate>Thu, 18 Aug 2022 11:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/practice_sum/</guid>
+      <description>&lt;p&gt;Write a program called &lt;code&gt;sum.c&lt;/code&gt; that asks the user to provide ten integers as input and computes the sum.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Hello</title>
       <link>https://scienceacademy.github.io/web/assignments/hello/</link>
