@@ -30,6 +30,24 @@ Number: 10
 Sum: 55
 ```
 
+### Tips
+
+* While you could just have 10 separate `get_int()` lines, you should probably use a loop for this program. Remember the `for` loop:
+
+```C
+for (int i = 0; i < 10; i++)
+{
+    printf("Hello\n");
+}
+```
+
+* Remember that to add to an existing variable, you can use `+=`:
+
+```C
+int total = 0;
+total += get_int("Number: ");
+```
+
 ### How to Test Your Code
 
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
