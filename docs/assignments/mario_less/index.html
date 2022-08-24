@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mario: Less comfortable &middot; AP CSP 2022-23</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2022-23</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Mario: Less comfortable</h1>
+  <time datetime=2022-08-23T19:55:45-0700 class="post-date">Tue, Aug 23, 2022</time>
+  <h2 id="world-1-1">World 1-1</h2>
+<p>Toward the end of World 1-1 in Nintendo&rsquo;s <em>Super Mario Brothers</em>, Mario must ascend a right-aligned pyramid of blocks, as shown below.</p>
+<p><img src="/web/pyramid.png" alt="screenshot of Mario jumping up a right-aligned pyramid"></p>
+<p>Let&rsquo;s recreate that pyramid in C, albeit in text, using hashes (<code>#</code>) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we&rsquo;re using), so the pyramid itself will also appear taller than it is wide.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>       #
+</span></span><span style="display:flex;"><span>      ##
+</span></span><span style="display:flex;"><span>     ###
+</span></span><span style="display:flex;"><span>    ####
+</span></span><span style="display:flex;"><span>   #####
+</span></span><span style="display:flex;"><span>  ######
+</span></span><span style="display:flex;"><span> #######
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">########
+</span></span></span></code></pre></div><p>The program we&rsquo;ll write will be called <code>mario</code>. And let&rsquo;s allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between 1 and 8, inclusive.</p>
+<p>Here&rsquo;s how the program might work if the user inputs <code>8</code> when prompted:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: 8
+</span></span><span style="display:flex;"><span>       #
+</span></span><span style="display:flex;"><span>      ##
+</span></span><span style="display:flex;"><span>     ###
+</span></span><span style="display:flex;"><span>    ####
+</span></span><span style="display:flex;"><span>   #####
+</span></span><span style="display:flex;"><span>  ######
+</span></span><span style="display:flex;"><span> #######
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">########
+</span></span></span></code></pre></div><p>Here&rsquo;s how the program might work if the user inputs <code>4</code> when prompted:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: 4
+</span></span><span style="display:flex;"><span>   #
+</span></span><span style="display:flex;"><span>  ##
+</span></span><span style="display:flex;"><span> ###
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">####
+</span></span></span></code></pre></div><p>Here&rsquo;s how the program might work if the user inputs <code>2</code> when prompted:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: 2
+</span></span><span style="display:flex;"><span> #
+</span></span><span style="display:flex;"><span>##
+</span></span></code></pre></div><p>And here&rsquo;s how the program might work if the user inputs <code>1</code> when prompted:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: 1
+</span></span><span style="display:flex;"><span>#
+</span></span></code></pre></div><p>If the user doesn&rsquo;t, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: -1
+</span></span><span style="display:flex;"><span>Height: 0
+</span></span><span style="display:flex;"><span>Height: 42
+</span></span><span style="display:flex;"><span>Height: 50
+</span></span><span style="display:flex;"><span>Height: 4
+</span></span><span style="display:flex;"><span>   #
+</span></span><span style="display:flex;"><span>  ##
+</span></span><span style="display:flex;"><span> ###
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">####
+</span></span></span></code></pre></div><p>How to begin? Let&rsquo;s approach this problem one step at a time.</p>
+<h2 id="1-prompting-for-input">1. Prompting for Input</h2>
+<p>Let&rsquo;s first write only the C code that prompts (and re-prompts, as needed) the user for input.</p>
+<p>Specifically, add code in <code>mario.c</code> in such a way that it prompts the user for the pyramid&rsquo;s height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable, confirming (for yourself) that you&rsquo;ve indeed stored the user&rsquo;s input successfully, a la the below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+</span></span><span style="display:flex;"><span>Height: -1
+</span></span><span style="display:flex;"><span>Height: 0
+</span></span><span style="display:flex;"><span>Height: 42
+</span></span><span style="display:flex;"><span>Height: 50
+</span></span><span style="display:flex;"><span>Height: 4
+</span></span><span style="display:flex;"><span>OK: 4
+</span></span></code></pre></div><h3 id="hints">Hints</h3>
+<ul>
+<li>Recall that you can print an <code>int</code> with <code>printf</code> using <code>%i</code>.</li>
+<li>Recall that you can get an integer from the user with <code>get_int</code>.</li>
+<li>Recall that <code>get_int</code> is declared in the <code>cs50.h</code> library.</li>
+<li>Recall that we prompted the user for a positive integer in class via <code>positive.c</code> <a href="https://github.com/scienceacademy/apcsp_2021">(link)</a>.</li>
+</ul>
+<h2 id="2-building-the-opposite">2. Building the Opposite</h2>
+<p>Now that your program is (hopefully!) accepting input correctly, it&rsquo;s time for another step.</p>
+<p>It turns out it&rsquo;s a bit easier to build a left-aligned pyramid than right-, like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span><span style="font-weight:bold">#
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">##
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span><span style="font-weight:bold">###
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">####
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#####
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">######
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">#######
+</span></span></span><span style="display:flex;"><span><span style="font-weight:bold">########
+</span></span></span></code></pre></div><p>So let&rsquo;s build a left-aligned pyramid first and then, once that&rsquo;s working, right-align it instead!</p>
+<p>Modify <code>mario.c</code> so that it no longer simply prints the user&rsquo;s input but instead prints a left-aligned pyramid of that height.</p>
+<h3 id="hints-1">Hints</h3>
+<ul>
+<li>
+<p>Keep in mind that a hash is just a character like any other, so you can print it with <code>printf</code>.</p>
+</li>
+<li>
+<p>In C we have a <code>for</code> loop, where you can iterate some number of times. Perhaps on each iteration, <em>i</em>, you could print that many hashes?</p>
+</li>
+<li>
+<p>You can actually &ldquo;nest&rdquo; loops, iterating with one variable (e.g., <code>i</code>) in the &ldquo;outer&rdquo; loop and another (e.g., <code>j</code>) in the &ldquo;inner&rdquo; loop. For instance, here&rsquo;s how you might print a square of height and width <code>n</code>, below. Of course, it&rsquo;s not a square that you want to print for this problem!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">for</span> (<span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> n; i<span style="color:#ff79c6">++</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd">int</span> j <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; j <span style="color:#ff79c6">&lt;</span> n; j<span style="color:#ff79c6">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#f1fa8c">&#34;#&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    printf(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+<h2 id="3-right-aligning-with-dots">3. Right-Aligning with Dots</h2>
+<p>Let&rsquo;s now right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), a la the below.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>.......#
+</span></span><span style="display:flex;"><span>......##
+</span></span><span style="display:flex;"><span>.....###
+</span></span><span style="display:flex;"><span>....####
+</span></span><span style="display:flex;"><span>...#####
+</span></span><span style="display:flex;"><span>..######
+</span></span><span style="display:flex;"><span>.#######
+</span></span><span style="display:flex;"><span><span style="font-weight:bold">########
+</span></span></span></code></pre></div><p>Modify <code>mario.c</code> in such a way that it does exactly that!</p>
+<h3 id="hint">Hint</h3>
+<p>Notice how the number of dots needed on each line is the &ldquo;opposite&rdquo; of the number of that line&rsquo;s hashes. For a pyramid of height 8, like the above, the first line has just 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print the right number of dots and hashes on each line?</p>
+<h3 id="test-your-code">Test Your Code</h3>
+<p>Does your code work as prescribed when you input:</p>
+<ul>
+<li><code>-1</code> (or other negative numbers)?</li>
+<li><code>0</code>?</li>
+<li><code>1</code> through <code>8</code>?</li>
+<li><code>9</code> or other positive numbers?</li>
+<li>letters or words?</li>
+<li>no input at all, when you just hit Enter?</li>
+</ul>
+<h2 id="4-removing-the-dots">4. Removing the Dots</h2>
+<p>All that remains now is a finishing flourish! Modify your program so that it prints spaces instead of those dots!</p>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
+<p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/labs/2021ap/mario/less
+</span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 mario.c
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/labs/2021ap/mario/less
+</span></span></code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
