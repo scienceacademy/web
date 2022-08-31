@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Credit &middot; AP CSP 2022-23</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2022-23</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Credit</h1>
+  <time datetime=2022-08-30T19:55:45-0700 class="post-date">Tue, Aug 30, 2022</time>
+  <p>Validating credit cards&hellip;</p>
+<p>A credit (or debit) card is a plastic card with which you can pay for goods and services. Printed on that card is a number that&rsquo;s also stored in a database somewhere, so that when your card is used to buy something, the creditor knows whom to bill.</p>
+<p>There are a lot of people with credit cards in the world, so those numbers are pretty long: American Express uses 15-digit numbers, MasterCard uses 16-digit numbers, and Visa uses 13- and 16-digit numbers.  And those are decimal numbers (0 through 9), not binary, which means, for instance, that American Express could print as many as 10^15 = 1,000,000,000,000,000 unique cards! (That&rsquo;s a quadrillion.)</p>
+<p>Actually, that&rsquo;s a bit of an exaggeration, because credit card numbers actually have some structure to them. All American Express numbers start with 34 or 37; most MasterCard numbers start with 51, 52, 53, 54, or 55 (they also have some other potential starting numbers which we won’t concern ourselves with for this problem); and all Visa numbers start with 4.</p>
+<p>But credit card numbers also have a &ldquo;checksum&rdquo; built into them, a mathematical relationship between at least one number and others. That checksum enables computers (or humans who like math) to detect typos (e.g., transpositions), if not fraudulent numbers, without having to query a database, which can be slow. Of course, a dishonest mathematician could certainly craft a fake number that nonetheless respects the mathematical constraint, so a database lookup is still necessary for more rigorous checks.</p>
+<h2 id="luhns-algorithm">Luhn&rsquo;s Algorithm</h2>
+<p>So what&rsquo;s the secret formula?  Well, most cards use an algorithm invented by Hans Peter Luhn of IBM. According to Luhn&rsquo;s algorithm, you can determine if a credit card number is (syntactically) valid as follows:</p>
+<ol>
+<li>Multiply every other digit by 2, starting with the number&rsquo;s second-to-last digit, and then add those products&rsquo; digits together.</li>
+<li>Add the sum to the sum of the digits that weren&rsquo;t multiplied by 2.</li>
+<li>If the total&rsquo;s last digit is 0 (or, put more formally, if the total modulo 10 is congruent to 0), the number is valid!</li>
+</ol>
+<p>That&rsquo;s kind of confusing, so let&rsquo;s try an example with this Visa number: 4003600000000014.</p>
+<ol>
+<li>
+<p>For the sake of discussion, let&rsquo;s first underline every other digit, starting with the number&rsquo;s second-to-last digit:</p>
+<p><u>4</u>0<u>0</u>3<u>6</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>1</u>4</p>
+<p>Okay, let&rsquo;s multiply each of the underlined digits by 2:</p>
+<p>1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2</p>
+<p>That gives us:</p>
+<p>2 + 0 + 0 + 0 + 0 + 12 + 0 + 8</p>
+<p>Now let&rsquo;s add those products&rsquo; digits (i.e., not the products themselves) together:</p>
+<p>2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13</p>
+</li>
+<li>
+<p>Now let&rsquo;s add that sum (13) to the sum of the digits that weren&rsquo;t multiplied by 2 (starting from the end):</p>
+<p>13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20</p>
+</li>
+<li>
+<p>Yup, the last digit in that sum (20) is a 0, so the card is legit!</p>
+</li>
+</ol>
+<p>So, validating credit card numbers isn&rsquo;t hard, but it does get a bit tedious by hand. Let&rsquo;s write a program.</p>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>In <code>credit.c</code> write a program that prompts the user for a credit card number and then reports (via <code>printf</code>) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each&rsquo;s format herein. So that we can automate some tests of your code, we ask that your program&rsquo;s last line of output be <code>AMEX\n</code> or <code>MASTERCARD\n</code> or <code>VISA\n</code> or <code>INVALID\n</code>, nothing more, nothing less.</p>
+<p>For simplicity, you may assume that the user&rsquo;s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card). But do not assume that the user&rsquo;s input will fit in an <code>int</code>! Best to use <code>get_long</code> from CS50&rsquo;s library to get users&rsquo; input. (Why?)</p>
+<p>Consider the below representative of how your own program should behave when passed a valid credit card number:</p>
+<pre tabindex="0"><code>$ ./credit
+Number: 4003600000000014
+VISA
+</code></pre><p>Note: <code>get_long</code> itself will reject hyphens (and more) anyway:</p>
+<pre tabindex="0"><code>$ ./credit
+Number: 4003-6000-0000-0014
+Number: foo
+Number: 4003600000000014
+VISA
+</code></pre><p>But it&rsquo;s up to you to catch inputs that are not credit card numbers (e.g., a phone number), even if numeric:</p>
+<pre tabindex="0"><code>$ ./credit
+Number: 6176292929
+INVALID
+</code></pre><p>Test out your program with a whole bunch of inputs, both valid and invalid. (The grader certainly will!) Here are a <a href="https://developer.paypal.com/docs/classic/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing">few card numbers</a> that PayPal recommends for testing.</p>
+<p>If your program behaves incorrectly on some inputs (or doesn&rsquo;t compile at all), time to debug!</p>
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>You can also execute the below to evaluate the correctness of your code using <code>check50</code>. <strong>But be sure to compile and test it yourself as well!</strong></p>
+<pre tabindex="0"><code>check50 scienceacademy/problems/2022ap/credit
+</code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<pre tabindex="0"><code>style50 credit.c
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below:</p>
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2022ap/credit
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
