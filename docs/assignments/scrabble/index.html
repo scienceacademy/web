@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.101.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Scrabble &middot; AP CSP 2022-23</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2022-23</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Scrabble</h1>
+  <time datetime=2022-09-19T09:55:45-0700 class="post-date">Mon, Sep 19, 2022</time>
+  <p>Determine which of two Scrabble words is worth more points.</p>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./scrabble
+</span></span><span style="display:flex;"><span>Player 1: COMPUTER
+</span></span><span style="display:flex;"><span>Player 2: science
+</span></span><span style="display:flex;"><span>Player 1 wins!
+</span></span></code></pre></div><h2 id="getting-started">Getting started</h2>
+<p>Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own IDE. In the terminal window, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/scrabble.c
+</span></span></code></pre></div><h2 id="background">Background</h2>
+<p>In the game of Scrabble, players create words to score points, and the number of points is the sum of the point values of each letter in the word.</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+<th>S</th>
+<th>T</th>
+<th>U</th>
+<th>V</th>
+<th>W</th>
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>1</td>
+<td>8</td>
+<td>5</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>10</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>4</td>
+<td>8</td>
+<td>4</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>For example, if we wanted to score the word <code>Code</code>, we would note that in general Scrabble rules, the <code>C</code> is worth <code>3</code> points, the <code>o</code> is worth <code>1</code> point, the <code>d</code> is worth <code>2</code> points, and the <code>e</code> is worth <code>1</code> point. Summing these, we get that <code>Code</code> is worth <code>3+1+2+1 = 7</code> points.</p>
+<h2 id="specification">Specification</h2>
+<p>Complete the implementation of <code>scrabble.c</code> so that it determines the winner of a short scrabble-like game, where two players each enter their word, and the higher scoring player wins.</p>
+<ul>
+<li>Notice that we&rsquo;ve stored the point values of each letter of the alphabet in an integer array named <code>POINTS</code>.
+<ul>
+<li>For example, <code>A</code> or <code>a</code> is worth 1 point (represented by <code>POINTS[0]</code>), <code>B</code> or <code>b</code> is worth 3 points (represented by <code>POINTS[1]</code>), etc.</li>
+</ul>
+</li>
+<li>We&rsquo;ve created a prototype for a helper function called <code>score()</code> that takes a string as input and returns an <code>int</code>. Whenever we would like to assign point values to a particular word, we can call this function.</li>
+<li>In <code>main()</code>, the program prompts the two players for their words using the <code>get_string()</code> function. These values are stored inside variables named <code>p1</code> and <code>p2</code>.</li>
+<li>In <code>score()</code>, your program should compute, using the <code>POINTS</code> array, and return the score for the string argument. Characters that are not letters should be given zero points, and uppercase and lowercase letters should be given the same point values.
+<ul>
+<li>For example, <code>!</code> is worth <code>0</code> points while <code>A</code> and <code>a</code> are both worth <code>1</code> point.</li>
+</ul>
+</li>
+<li>In <code>main()</code>, your program should print, depending on the players&rsquo; scores, <code>&quot;Player 1 Wins!&quot;</code>, <code>&quot;Player 2 Wins!&quot;</code>, or <code>&quot;Tie!&quot;</code>.</li>
+</ul>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>
+<p>You may find the functions <code>isupper()</code> and <code>islower()</code> to be helpful to you. These functions take in a character as the argument and return a boolean.</p>
+</li>
+<li>
+<p>To find the value at the <code>n</code>th index of an array called <code>arr</code>, we can write <code>arr[n]</code>. We can apply this to strings as well, as strings are arrays of characters.</p>
+</li>
+<li>
+<p>Recall that computers represent characters using <a href="http://asciitable.com/">ASCII</a>, a standard that represents each character as a number.</p>
+</li>
+</ul>
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>Your program should behave per the examples below.</p>
+<pre tabindex="0"><code>./scrabble
+Player 1: Question?
+Player 2: Question!
+Tie!
+</code></pre><pre tabindex="0"><code>$ ./scrabble
+Player 1: Oh,
+Player 2: hai!
+Player 2 wins!
+</code></pre><pre tabindex="0"><code>$ ./scrabble
+Player 1: COMPUTER
+Player 2: science
+Player 1 wins!
+</code></pre><pre tabindex="0"><code>$ ./scrabble
+Player 1: Scrabble
+Player 2: wiNNeR
+Player 1 wins!
+</code></pre><p>Execute the below to test the correctness of your code using <code>check50</code>. Be sure to compile and test it yourself!</p>
+<pre tabindex="0"><code>check50 scienceacademy/problems/2022ap/scrabble
+</code></pre><p>Execute the below to evaluate the style of your code using <code>style50</code>:</p>
+<pre tabindex="0"><code>style50 plurality.c
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below to submit your code:</p>
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2022ap/scrabble
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

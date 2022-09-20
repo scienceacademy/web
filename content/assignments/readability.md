@@ -1,6 +1,6 @@
 ---
 title: "Assignment: Readability"
-date: 2021-09-12T09:55:45-07:00
+date: 2022-09-19T09:55:45-07:00
 draft: true
 ---
 
@@ -199,7 +199,7 @@ A large class of computational problems involve the determination of properties 
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2021ap/readability
+check50 scienceacademy/problems/2022ap/readability
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -213,5 +213,5 @@ style50 readability.c
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```md
-submit50 scienceacademy/problems/2021ap/readability
+submit50 scienceacademy/problems/2022ap/readability
 ```
