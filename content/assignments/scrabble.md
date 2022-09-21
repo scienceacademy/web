@@ -94,7 +94,7 @@ check50 scienceacademy/problems/2022ap/scrabble
 Execute the below to evaluate the style of your code using `style50`:
 
 ```
-style50 plurality.c
+style50 scrabble.c
 ```
 
 ## How to Submit
