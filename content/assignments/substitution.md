@@ -1,10 +1,10 @@
 ---
 title: "Substitution"
-date: 2021-09-21T14:55:45-07:00
-draft: true
+date: 2022-09-26T14:55:45-07:00
+draft: false
 ---
 
-Implement a program that encrypts messages using Caesar’s cipher.
+Implement a program that encrypts messages using the substitution cipher.
 <!--more-->
 ```md
 $ ./substitution JTREKYAVOGDXPSNCUIZLFBMWHQ
@@ -58,9 +58,9 @@ Usage: ./substitution key
 
 ## Specification
 
-Design and implement a program, `substitution`, that encrypts messages using a substitution cipher.
+Implement a program, `substitution`, that encrypts messages using a substitution cipher.
 
-* Implement your program in a file called `substitution.c`.
+* Write your program in a file called `substitution.c`.
 * Your program must accept a single command-line argument, the key to use for the substitution. The key itself should be case-insensitive, so whether any character in the key is uppercase or lowercase should not affect the behavior of your program.
 * If your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error message of your choice (with `printf()`) and return from `main()` a value of `1` immediately.
 * If the key is invalid (as by not containing 26 characters, containing any character that is not an alphabetic character, or not containing each letter exactly once), your program should print an error message of your choice (with `printf()`) and return from `main()` a value of `2` immediately.
@@ -74,7 +74,7 @@ Design and implement a program, `substitution`, that encrypts messages using a s
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2021ap/substitution
+check50 scienceacademy/problems/2022ap/substitution
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -88,4 +88,4 @@ style50 substitution.c
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```md
-submit50 scienceacademy/problems/2021ap/substitution
+submit50 scienceacademy/problems/2022ap/substitution
