@@ -6,7 +6,16 @@
     <description>Recent content on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 Sep 2022 14:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Oct 2022 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab: Sorting</title>
+      <link>https://scienceacademy.github.io/web/assignments/sorting/</link>
+      <pubDate>Wed, 05 Oct 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/sorting/</guid>
+      <description>&lt;p&gt;Analyze three sorting programs to determine which algorithms they use.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Substitution</title>
       <link>https://scienceacademy.github.io/web/assignments/substitution/</link>
