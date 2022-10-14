@@ -24,11 +24,11 @@ Perhaps the simplest way to hold an election, though, is via a method commonly k
 
 ## Getting Started
 
-Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into CS50 IDE and then, in a terminal window, execute each of the below.
+Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own IDE. In the terminal window, execute the following command:
 
-* Create a folder called `plurality` in your CS50 IDE.
-* Click [plurality.c](/web/plurality.c) to see the starting code and download it to your computer.
-* Drag the `plurality.c` file from your computer and drop it on the folder in your IDE. Or create a new file in your IDE called `plurality.c` and copy-and-paste the code into it.
+```md
+wget https://scienceacademy.github.io/web/plurality.c
+```
 
 ## Understanding
 

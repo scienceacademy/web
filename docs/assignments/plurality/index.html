@@ -64,13 +64,9 @@ Alice
 <p>Elections come in all shapes and sizes. In the UK, the Prime Minister is officially appointed by the monarch, who generally chooses the leader of the political party that wins the most seats in the House of Commons. The United States uses a multi-step Electoral College process where citizens vote on how each state should allocate Electors who then elect the President.</p>
 <p>Perhaps the simplest way to hold an election, though, is via a method commonly known as the “plurality vote” (also known as “first-past-the-post” or “winner take all”). In the plurality vote, every voter gets to vote for one candidate. At the end of the election, whichever candidate has the greatest number of votes is declared the winner of the election.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into CS50 IDE and then, in a terminal window, execute each of the below.</p>
-<ul>
-<li>Create a folder called <code>plurality</code> in your CS50 IDE.</li>
-<li>Click <a href="/web/plurality.c">plurality.c</a> to see the starting code and download it to your computer.</li>
-<li>Drag the <code>plurality.c</code> file from your computer and drop it on the folder in your IDE. Or create a new file in your IDE called <code>plurality.c</code> and copy-and-paste the code into it.</li>
-</ul>
-<h2 id="understanding">Understanding</h2>
+<p>Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own IDE. In the terminal window, execute the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/plurality.c
+</span></span></code></pre></div><h2 id="understanding">Understanding</h2>
 <p>Now take a look at <code>plurality.c</code> and read through the distribution code that’s been provided to you.</p>
 <p>The line <code>#define MAX 9</code> is C syntax - used here to mean that <code>MAX</code> is a constant (equal to <code>9</code>) that can be used throughout the program. It represents the maximum number of candidates an election can have.</p>
 <p>The file then defines a <code>struct</code> called <code>candidate</code>. Each candidate has two fields: a <code>string</code> called <code>name</code> representing the candidate’s name, and an <code>int</code> called <code>votes</code> representing the number of votes the candidate has. Next, the file defines a global array of <code>candidates</code>, where each element is itself a candidate.</p>
