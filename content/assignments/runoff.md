@@ -1,7 +1,7 @@
 ---
 title: "Voting: Runoff"
-date: 2020-10-13T13:55:45-07:00
-draft: true
+date: 2022-10-20T12:55:45-07:00
+draft: false
 ---
 Implement a program that runs a runoff election, as shown below.
 <!--more-->
@@ -76,9 +76,9 @@ Sounds a bit more complicated than a plurality vote, doesn’t it? But it arguab
 
 Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into CS50 IDE and then, in a terminal window, execute each of the below.
 
-* Create a folder called `runoff` in your CS50 IDE.
+* Create a folder called `runoff` in your CS50 Codespace.
 * Click [runoff.c](/web/runoff.c) to see the starting code and download it to your computer.
-* Drag the `runoff.c` file from your computer and drop it on the folder in your IDE. Or create a new file in your IDE called `runoff.c` and copy-and-paste the code into it
+* Drag the `runoff.c` file from your computer and drop it on the folder in your IDE. Or create a new file in your workspace called `runoff.c` and copy-and-paste the code into it
 
 ## Understanding
 
@@ -169,11 +169,6 @@ Complete the `eliminate()` function.
 * The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.
 The function should eliminate the candidate (or candidates) who have `min` number of votes.
 
-## Walkthrough
-
-Watch the following video for a step-by-step breakdown of the task:
-
-<iframe width="618" height="348" src="https://www.youtube.com/embed/-Vc5aGywKxo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Usage
 
@@ -218,7 +213,7 @@ Be sure to test your code to make sure it handles:
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2020ap/runoff
+check50 scienceacademy/problems/2022ap/runoff
 ```
 
 Execute the below to evaluate the style of your code using style50.
@@ -232,5 +227,5 @@ style50 runoff.c
 Execute the below to submit your code:
 
 ```
-submit50 scienceacademy/problems/2020ap/runoff
+submit50 scienceacademy/problems/2022ap/runoff
 ```

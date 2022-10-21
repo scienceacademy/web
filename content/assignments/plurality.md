@@ -100,7 +100,7 @@ Be sure to test your code to make sure it handles the following:
 * Voting for a candidate by name
 * Invalid votes for candidates who are not on the ballot
 * Printing the winner of the election if there's only one
-* Printing the winners of the election if there are multiple winnners
+* Printing the winners of the election if there are multiple winners
 
 Execute the below to test the correctness of your code using `check50`. Be sure to compile and test it yourself!
 

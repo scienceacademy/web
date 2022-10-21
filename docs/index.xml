@@ -6,7 +6,25 @@
     <description>Recent content on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2022 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Oct 2022 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tideman</title>
+      <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
+      <pubDate>Thu, 20 Oct 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/tideman/</guid>
+      <description>&lt;p&gt;Implement a program that runs a &amp;ldquo;Tideman&amp;rdquo; election, as shown below.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Voting: Runoff</title>
+      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+      <pubDate>Thu, 20 Oct 2022 12:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Plurality</title>
       <link>https://scienceacademy.github.io/web/assignments/plurality/</link>
