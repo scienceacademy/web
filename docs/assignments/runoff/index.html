@@ -53,30 +53,30 @@
   <h1>Voting: Runoff</h1>
   <time datetime=2022-10-20T12:55:45-0700 class="post-date">Thu, Oct 20, 2022</time>
   <p>Implement a program that runs a runoff election, as shown below.</p>
-<pre tabindex="0"><code>./runoff Alice Bob Charlie
-Number of voters: 5
-Rank 1: Alice
-Rank 2: Bob
-Rank 3: Charlie
-
-Rank 1: Alice
-Rank 2: Charlie
-Rank 3: Bob
-
-Rank 1: Bob
-Rank 2: Charlie
-Rank 3: Alice
-
-Rank 1: Bob
-Rank 2: Alice
-Rank 3: Charlie
-
-Rank 1: Charlie
-Rank 2: Alice
-Rank 3: Bob
-
-Alice
-</code></pre><h2 id="background">Background</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>./runoff Alice Bob Charlie
+</span></span><span style="display:flex;"><span>Number of voters: 5
+</span></span><span style="display:flex;"><span>Rank 1: Alice
+</span></span><span style="display:flex;"><span>Rank 2: Bob
+</span></span><span style="display:flex;"><span>Rank 3: Charlie
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Rank 1: Alice
+</span></span><span style="display:flex;"><span>Rank 2: Charlie
+</span></span><span style="display:flex;"><span>Rank 3: Bob
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Rank 1: Bob
+</span></span><span style="display:flex;"><span>Rank 2: Charlie
+</span></span><span style="display:flex;"><span>Rank 3: Alice
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Rank 1: Bob
+</span></span><span style="display:flex;"><span>Rank 2: Alice
+</span></span><span style="display:flex;"><span>Rank 3: Charlie
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Rank 1: Charlie
+</span></span><span style="display:flex;"><span>Rank 2: Alice
+</span></span><span style="display:flex;"><span>Rank 3: Bob
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Alice
+</span></span></code></pre></div><h2 id="background">Background</h2>
 <p>You already know about plurality elections, which follow a very simple algorithm for determining the winner of an election: every voter gets one vote, and the candidate with the most votes wins.</p>
 <p>But the plurality vote does have some disadvantages. What happens, for instance, in an election with three candidates, and the ballots below are cast?</p>
 <p><img src="/web/fptp_ballot_1.png" alt="alt"></p>

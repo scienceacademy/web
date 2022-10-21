@@ -1,5 +1,5 @@
 ---
-title: "Tideman"
+title: "Voting: Tideman"
 date: 2022-10-20T13:55:45-07:00
 draft: false
 ---

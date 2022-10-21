@@ -6,7 +6,7 @@ draft: false
 Implement a program that runs a runoff election, as shown below.
 <!--more-->
 
-```
+```md
 ./runoff Alice Bob Charlie
 Number of voters: 5
 Rank 1: Alice
