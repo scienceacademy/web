@@ -1,7 +1,7 @@
 ---
 title: "Lab: Volume"
-date: 2021-10-19T13:55:45-07:00
-draft: true
+date: 2022-10-25T13:55:45-07:00
+draft: false
 ---
 Write a program to modify the volume of an audio file.
 <!--more-->
@@ -93,7 +93,7 @@ When you listen to `output.wav`, it should be half as loud as `input.wav`!
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2021ap/volume
+check50 scienceacademy/problems/2022ap/volume
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -105,5 +105,5 @@ style50 volume.c
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2021ap/volume
+submit50 scienceacademy/problems/2022ap/volume
 ```
