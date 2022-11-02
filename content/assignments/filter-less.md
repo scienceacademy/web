@@ -1,7 +1,7 @@
 ---
-title: "Filter"
-date: 2021-10-25T13:55:45-07:00
-draft: true
+title: "Filter: Less Comfortable"
+date: 2022-11-01T13:55:45-07:00
+draft: false
 ---
 Implement a program that applies filters to images.
 <!--more-->
@@ -18,7 +18,7 @@ Perhaps the simplest way to represent an image is with a grid of pixels (i.e., d
 
 ![alt](/web/bitmap.png)
 
-In this sense, an image isjust a bitmap (i.e., a map of bits). For more colorful images, you simply need more bits per pixel. A file format (like BMP, JPEG, or PNG) that supports “24-bit color” uses 24 bits per pixel. (BMP actually supports 1-, 4-, 8-, 16-, 24-, and 32-bit color.)
+In this sense, an image is just a bitmap (i.e., a map of bits). For more colorful images, you simply need more bits per pixel. A file format (like BMP, JPEG, or PNG) that supports “24-bit color” uses 24 bits per pixel. (BMP actually supports 1-, 4-, 8-, 16-, 24-, and 32-bit color.)
 
 A 24-bit BMP uses 8 bits to signify the amount of red in a pixel’s color, 8 bits to signify the amount of green in a pixel’s color, and 8 bits to signify the amount of blue in a pixel’s color. If you’ve ever heard of RGB color, well, there you have it: red, green, blue.
 
@@ -95,10 +95,10 @@ Here’s how to download this problem’s “distribution code” (i.e., starter
 * Execute `cd` to ensure you're in `~/` (i.e. your home directory).
 * Execute the following to download a (compressed) ZIP file with this problem’s distribution:
 ```md
-wget https://scienceacademy.github.io/web/filter.zip
+wget https://scienceacademy.github.io/web/filter-less.zip
 ```
-* Execute `unzip filter.zip` to uncompress that file.
-* You'll now see a `filter` directory in your file list.
+* Execute `unzip filter-less.zip` to uncompress that file.
+* You'll now see a `filter-less` directory in your file list.
 * It contains the following files: `bmp.h`, `filter.c`, `helpers.h`, `helpers.c`, and `Makefile`. You'll also see a directory called `images` with some sample bitmaps.
 
 ## Understanding
@@ -179,7 +179,7 @@ Be sure to test all of your filters on the example bitmaps!
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2021ap/filter
+check50 scienceacademy/problems/2022ap/filter/less
 ```
 
 Execute the below to evaluate the style of your code using style50.
@@ -193,23 +193,5 @@ style50 helpers.c
 Execute the below to submit your code:
 
 ```
-submit50 scienceacademy/problems/2021ap/filter
+submit50 scienceacademy/problems/2022ap/filter/less
 ```
-
-## Bonus Filter: Edges
-
-In artificial intelligence algorithms for image processing, it is often useful to detect edges in an image: lines in the image that create a boundary between one object and another. One way to achieve this effect is by applying the [Sobel operator](https://en.wikipedia.org/wiki/Sobel_operator) to the image.
-
-Like image blurring, edge detection also works by taking each pixel and modifying it based on the 3x3 grid of pixels that surrounds it. But instead of just taking the average of the nine pixels, the Sobel operator computes the new value of each pixel by taking a weighted sum of the values for the surrounding pixels. And since edges between objects could take place in both a vertical and a horizontal direction, we actually compute two weighted sums: one for detecting edges in the x direction, and one for detecting edges in the y direction. In particular, we’ll use the following two “kernels”:
-
-![alt](/web/sobel.png)
-
-What do these mean? For each of the color values for each pixel, we’ll compute two values: `Gx` and `Gy`. To compute `Gx` for the red channel value of a pixel, for instance, we’ll take the original red values for the nine pixels that form a 3x3 box around the pixel, multiply them each by the corresponding value in the `Gx` kernel, and take the sum of the resulting values.
-
-Why these particular values for the kernel? In the `Gx` direction, for instance, we’re multiplying the pixels to the right of the target pixel by a positive number, and the pixels to the left of the target pixel by a negative number. When we take the sum, if the pixels on the right are a similar color to the pixels on the left, the result will be close to 0 (ie, the numbers cancel out). But if the pixels on the right are very different from the pixels on the left, then the resulting value will be very positive or very negative, indicating a change in color that likely is the result of a boundary between objects. And a similar argument holds true for calculating edges in the `y` direction.
-
-Using these kernels, we can generate a `Gx` and `Gy` value for each of the red, green, and blue channels for a pixel. But each channel can only take on one value, not two: so we need some way to combine `Gx` and `Gy` into a single value. The Sobel filter algorithm combines `Gx` and `Gy` into a final value by calculating the square root of `Gx^2 + Gy^2`. And since channel values can only take on integer values from 0 to 255, be sure the resulting value is rounded to the nearest integer and capped at 255!
-
-What about handling pixels at the edge, or in the corner of the image? There are many ways to handle pixels at the edge, but for the purposes of this problem, we’ll treat the image as if there was a 1 pixel solid black border around the edge of the image: therefore, trying to access a pixel past the edge of the image should be treated as a solid black pixel (values of 0 for each of red, green, and blue). This will effectively ignore those pixels from our calculations of `Gx` and `Gy`.
-
-Add another command-line flag of `e` to execute your `edge` function.
