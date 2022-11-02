@@ -164,9 +164,9 @@ This generates a new image called `out.bmp` after calling the `grayscale` functi
 Implement the functions in `helpers.c`.
 
 * The function `grayscale` should take an image and turn it into a black-and-white version of the same image.
-* The function `sepia` should take an image and turn it into a sepia version of the same image.
 * The `reflect` function should take an image and reflect it horizontally.
-* Finally, the `blur` function should take an image and turn it into a box-blurred version of the same image.
+* The `blur` function should take an image and turn it into a box-blurred version of the same image.
+* The `edges` function should take an image and highlight the edges between objects, using the Sobel operator.
 
 You should not modify any of the function signatures, nor should you modify any other files other than `helpers.c`.
 
