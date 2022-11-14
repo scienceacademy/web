@@ -151,5 +151,14 @@
       <description>&lt;p&gt;A simple assignment to practice testing and submitting your code.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>World Cup</title>
+      <link>https://scienceacademy.github.io/web/assignments/worldcup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/worldcup/</guid>
+      <description>&lt;p&gt;Write a program to run simulations of the FIFA World Cup.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,7 +1,7 @@
 ---
 title: "World Cup"
-date: 2022-03-06T13:55:45-07:00
-draft: true
+date: 2022-13-06T13:55:45-07:00
+draft: false
 ---
 Write a program to run simulations of the FIFA World Cup.
 <!--more-->
@@ -17,7 +17,7 @@ Using this information, we can simulate the entire tournament by repeatedly simu
 
 ## Getting Started
 
-1. Log into your CS50 IDE.
+1. Log into your CS50 Codespace.
 2. In the terminal window, run
 
 ```md
@@ -130,7 +130,7 @@ In case you're wondering, here's what actually happened at the actual tournament
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2021ap/worldcup
+check50 scienceacademy/problems/2022ap/worldcup
 ```
 
 # **IMPORTANT**
@@ -150,5 +150,5 @@ style50 tournament.py
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2021ap/worldcup
+submit50 scienceacademy/problems/2022ap/worldcup
 ```
