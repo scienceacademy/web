@@ -1,6 +1,6 @@
 ---
 title: "World Cup"
-date: 2022-13-06T13:55:45-07:00
+date: 2022-11-06T13:55:45-07:00
 draft: false
 ---
 Write a program to run simulations of the FIFA World Cup.

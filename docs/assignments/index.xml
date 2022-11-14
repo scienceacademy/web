@@ -6,7 +6,16 @@
     <description>Recent content in Assignments on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2022 13:56:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>World Cup</title>
+      <link>https://scienceacademy.github.io/web/assignments/worldcup/</link>
+      <pubDate>Sun, 06 Nov 2022 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/worldcup/</guid>
+      <description>&lt;p&gt;Write a program to run simulations of the FIFA World Cup.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Filter: More Comfortable</title>
       <link>https://scienceacademy.github.io/web/assignments/filter-more/</link>
@@ -149,15 +158,6 @@
       
       <guid>https://scienceacademy.github.io/web/assignments/hello/</guid>
       <description>&lt;p&gt;A simple assignment to practice testing and submitting your code.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>World Cup</title>
-      <link>https://scienceacademy.github.io/web/assignments/worldcup/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://scienceacademy.github.io/web/assignments/worldcup/</guid>
-      <description>&lt;p&gt;Write a program to run simulations of the FIFA World Cup.&lt;/p&gt;</description>
     </item>
     
   </channel>
