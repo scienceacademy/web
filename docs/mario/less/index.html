@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mario</title>
+        <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="mario">Mario (less comfortable)</h1>
+<h2 id="world-1-1">World 1-1</h2>
+<p>Toward the end of World 1-1 in Nintendo's <em>Super Mario Brothers</em>, Mario must climb a right-aligned pyramid of blocks, as shown below.</p>
+<p><img src="/web/pyramid.png" alt="screenshot of Mario jumping up a right-aligned pyramid"></p>
+<p>Let's recreate that pyramid in Python, by using hashes (<code>#</code>) for bricks, like shown below. Each hash is a bit taller than it is wide (at least for the font we're using), so the pyramid itself will also appear taller than it is wide.</p>
+<pre><code>       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre>
+<p>The program you'll write will be called <code>mario.py</code>. And it also should allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between 1 and 8, inclusive.</p>
+<p>Here's how the program might work if the user inputs <code>8</code> when prompted:</p>
+<pre><code>$ python mario.py
+Height: 8
+       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre>
+<p>Here's how the program might work if the user inputs <code>4</code> when prompted:</p>
+<pre><code>$ python mario.py
+Height: 4
+   #
+  ##
+ ###
+####
+</code></pre>
+<p>Here's how the program might work if the user inputs <code>2</code> when prompted:</p>
+<pre><code>$ python mario.py
+Height: 2
+ #
+##
+</code></pre>
+<p>And here's how the program might work if the user inputs <code>1</code> when prompted:</p>
+<pre><code>$ python mario.py
+Height: 1
+#
+</code></pre>
+<p>If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, the program should re-prompt the user until they cooperate:</p>
+<pre><code>$ python mario.py
+Height: -1
+Height: 0
+Height: 42
+Height: 50
+Height: 4
+   #
+  ##
+ ###
+####
+</code></pre>
+<p>How to begin? Let's approach this problem one step at a time.</p>
+<h2 id="step-1-prompting-for-input">Step 1: Prompting for Input</h2>
+<p>Let's first write only the code that prompts (and re-prompts, as needed) the user for input.</p>
+<p>Specifically, modify <code>mario.py</code> at right so that it prompts the user for the pyramid's height, storing their input in a variable as an integer. Make sure to re-prompt the user again and again if their input is not a positive integer between 1 and 8, inclusive. Then, just print the value of that variable to confirm (for yourself) that you've indeed stored the user's input successfully. Running the program should look like this:</p>
+<pre><code>$ python mario.py
+Height: -1
+Height: 0
+Height: 42
+Height: 50
+Height: 4
+OK: 4
+</code></pre>
+<ul>
+<li>Recall that you can convert the user's input with <code>int()</code>.</li>
+<li>Don't forget to check for when the user enters a non-number, like &quot;hi&quot;. Remember the <code>try...except</code> example we did in class?</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-keyword">try</span>:
+    num = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&quot;Pick a number: &quot;</span>))
+<span class="hljs-keyword">except</span> ValueError:
+    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;That&#x27;s not a number!&quot;</span>)
+</code></pre>
+<h2 id="step-2-building-the-opposite">Step 2: Building the Opposite</h2>
+<p>Now that your program is (hopefully!) accepting input correctly, it's time for another step.</p>
+<p>It turns out it's a bit easier to build a left-aligned pyramid than right-, like this:</p>
+<pre><code>#
+##
+###
+####
+#####
+######
+#######
+########
+</code></pre>
+<p>So let's build a left-aligned pyramid first and then, once that's working, right-align it instead!</p>
+<p>Modify <code>mario.py</code> at right so that it no longer prints the user's input but instead prints a left-aligned pyramid of that height.</p>
+<ul>
+<li>Keep in mind that a hash is just a character like any other, so you can print it with <code>print()</code>.</li>
+<li>You've learned about the <code>for</code> loop: maybe on each iteration, <em>i</em>, you could print that many hashes?</li>
+<li>When you multiply a string by an integer, you get that string repeated. For example:</li>
+</ul>
+<pre><code class="language-python"><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;$&quot;</span> * <span class="hljs-number">5</span>)
+</code></pre>
+<p>Would print <code>$$$$$</code>. This could be very helpful to you!</p>
+<h2 id="step-3-right-aligning-with-dots">Step 3: Right-Aligning with Dots</h2>
+<p>Now, let's right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), like this:</p>
+<pre><code>.......#
+......##
+.....###
+....####
+...#####
+..######
+.#######
+########
+</code></pre>
+<p>Modify <code>mario.py</code> so that it does exactly that!</p>
+<p>Notice how the number of dots needed on each line is the &quot;opposite&quot; of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has just 1 hash and 7 dots. The second line has 2 hashes and 6 dots, and so on. The bottom line has 8 hashes and 0 dots. Via what formula (or arithmetic, really) could you print the correct number of dots and hashes on each line?</p>
+<h3 id="test-your-code">Test Your Code</h3>
+<p>Does your code work as required when you input:</p>
+<ul>
+<li><code>-1</code> (or other negative numbers)?</li>
+<li><code>0</code>?</li>
+<li><code>1</code> through <code>8</code>?</li>
+<li><code>9</code> or other positive numbers?</li>
+<li>letters or words?</li>
+<li>no input at all, when you just hit Enter?</li>
+</ul>
+<h2 id="step-4-removing-the-dots">Step 4: Removing the Dots</h2>
+<p>All that remains now is a finishing flourish! Modify your program so that it prints spaces instead of those dots!</p>
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to test it yourself as well!</p>
+<pre><code>check50 scienceacademy/problems/2023/p7/mario/less
+</code></pre>
+<p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
+<pre><code>style50 mario.py
+</code></pre>
+
+<h2 id="how-to-submit">How to Submit</h2>
+<p>Type the following command in the terminal:</p>
+<pre><code>submit50 scienceacademy/problems/2023/p7/mario/less
+</code></pre>
+
+        <script async src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+
+    </body>
+    </html>

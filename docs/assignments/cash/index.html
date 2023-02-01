@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.105.0">
+  <meta name="generator" content="Hugo 0.109.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
       </ul>
     </nav>
 
-    <p>&copy; 2022. All rights reserved. </p>
+    <p>&copy; 2023. All rights reserved. </p>
   </div>
 </aside>
 
@@ -79,7 +79,7 @@
 </li>
 <li>
 <p>Take care to round your cents to the nearest penny, using <code>round()</code>, which is declared in the <code>math.h</code> library. For instance, if <code>dollars</code> is a <code>float</code> with the user&rsquo;s input (e.g., <code>0.20</code>), then code like</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> cents <span style="color:#ff79c6">=</span> round(dollars <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int</span> cents <span style="color:#ff79c6">=</span> <span style="color:#50fa7b">round</span>(dollars <span style="color:#ff79c6">*</span> <span style="color:#bd93f9">100</span>);
 </span></span></code></pre></div><p>will safely convert <code>0.20</code> (or even <code>0.200000002980232238769531250</code>) to <code>20</code>.</p>
 </li>
 </ul>

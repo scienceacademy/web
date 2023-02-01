@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.105.0">
+  <meta name="generator" content="Hugo 0.109.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,7 @@
       </ul>
     </nav>
 
-    <p>&copy; 2022. All rights reserved. </p>
+    <p>&copy; 2023. All rights reserved. </p>
   </div>
 </aside>
 
@@ -58,7 +58,7 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
 </span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    printf(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Next, in the <em>terminal window</em>, immediately to the right of the dollar sign (<code>$</code>), otherwise known as a <em>prompt</em>, type precisely the below (in lowercase), then hit Enter:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>ls
@@ -84,10 +84,10 @@
 </span></span></code></pre></div><h3 id="walkthrough">Walkthrough</h3>
 <h4 id="dont-recall-how-to-prompt-the-user-for-their-name">Don&rsquo;t recall how to prompt the user for their name?</h4>
 <p>Recall that you can use <code>get_string</code> as follows, storing its <em>return value</em> in a variable called <code>name</code> of type <code>string</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>string name <span style="color:#ff79c6">=</span> get_string(<span style="color:#f1fa8c">&#34;What is your name?</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>string name <span style="color:#ff79c6">=</span> <span style="color:#50fa7b">get_string</span>(<span style="color:#f1fa8c">&#34;What is your name?</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
 </span></span></code></pre></div><h4 id="dont-recall-how-to-format-a-string">Don&rsquo;t recall how to format a string?</h4>
 <p>Don&rsquo;t recall how to join (i.e., concatenate) the user&rsquo;s name with a greeting? Recall that you can use <code>printf</code> not only to print but to format a string (hence, the <code>f</code> in <code>printf</code>), a la the below, wherein <code>name</code> is a <code>string</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>printf(<span style="color:#f1fa8c">&#34;hello, %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, name);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;hello, %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, name);
 </span></span></code></pre></div><h4 id="use-of-undeclared-identifier">Use of undeclared identifier?</h4>
 <p>Seeing the below, perhaps atop other errors?</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>error: use of undeclared identifier &#39;string&#39;; did you mean &#39;stdin&#39;?
