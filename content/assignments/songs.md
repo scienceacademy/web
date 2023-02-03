@@ -1,13 +1,13 @@
 ---
 title: "Lab: Songs"
-date: 2021-11-29T13:55:45-07:00
+date: 2023-01-29T13:55:45-07:00
 draft: true
 ---
 Write SQL queries to answer questions about a database of songs.
 <!--more-->
 ## Getting Started
 
-1. Log into your CS50 IDE.
+1. Open your CS50 Codespace.
 2. In the terminal window, run
 ```
 wget https://scienceacademy.github.io/web/lab7.zip
