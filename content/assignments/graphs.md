@@ -1,7 +1,7 @@
 ---
 title: "Graphs"
-date: 2022-03-19T13:55:45-07:00
-draft: true
+date: 2023-03-05T13:55:45-07:00
+draft: false
 ---
 
 Write a program that implements Breadth-First and Depth-First Search.
@@ -33,7 +33,7 @@ While using BFS, the order would be:
 
 ## Implementing graphs in Python
 
-In Python, we can represent a graph using a dictionary. For example, to represent the graph above, we might use the following code:
+In Python, we can represent a graph using a dictionary. For example, to represent the graph above, we could use the following code:
 
 ```python
 graph = {
@@ -93,7 +93,7 @@ Make sure your program works with any graph, not just the example one above. Her
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2021ap/graphs
+check50 scienceacademy/problems/2022ap/graphs
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -105,5 +105,5 @@ style50 graphs.py
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2021ap/graphs
+submit50 scienceacademy/problems/2022ap/graphs
 ```

@@ -6,7 +6,16 @@
     <description>Recent content in Assignments on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 29 Jan 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 05 Mar 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphs</title>
+      <link>https://scienceacademy.github.io/web/assignments/graphs/</link>
+      <pubDate>Sun, 05 Mar 2023 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/graphs/</guid>
+      <description>&lt;p&gt;Write a program that implements Breadth-First and Depth-First Search.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Lab: Songs</title>
       <link>https://scienceacademy.github.io/web/assignments/songs/</link>
