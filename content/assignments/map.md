@@ -1,7 +1,7 @@
 ---
 title: "Map Coloring"
-date: 2022-03-29T13:55:45-07:00
-draft: true
+date: 2023-03-07T13:55:45-07:00
+draft: false
 ---
 
 Write a program to color a map using the least number of colors.
@@ -72,7 +72,7 @@ In addition, a file called `us_map.png` will be created in your project folder. 
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2021ap/map_colors
+check50 scienceacademy/problems/2022ap/map_colors
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -84,5 +84,5 @@ style50 greedy_color.py
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2021ap/map_colors
+submit50 scienceacademy/problems/2022ap/map_colors
 ```
