@@ -1,7 +1,7 @@
 ---
 title: "Mario: More comfortable"
 date: 2022-08-23T19:55:45-07:00
-draft: false
+draft: true
 ---
 <!--more-->
 

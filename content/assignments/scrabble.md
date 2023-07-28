@@ -1,7 +1,7 @@
 ---
 title: "Scrabble"
 date: 2022-09-19T09:55:45-07:00
-draft: false
+draft: true
 ---
 
 Determine which of two Scrabble words is worth more points.
