@@ -16,5 +16,14 @@
       <description>&lt;p&gt;A simple assignment to practice testing and submitting your code.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Practice: sum.c</title>
+      <link>https://scienceacademy.github.io/web/assignments/practice_sum/</link>
+      <pubDate>Sat, 19 Aug 2023 11:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/practice_sum/</guid>
+      <description>&lt;p&gt;Write a program called &lt;code&gt;sum.c&lt;/code&gt; that asks the user to provide ten integers as input and computes the sum.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

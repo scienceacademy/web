@@ -1,7 +1,7 @@
 ---
 title: "Practice: sum.c"
-date: 2022-08-18T11:55:45-07:00
-draft: true
+date: 2023-08-19T11:55:45-07:00
+draft: false
 ---
 
 Write a program called `sum.c` that asks the user to provide ten integers as input and computes the sum.
@@ -53,7 +53,7 @@ total += get_int("Number: ");
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2022ap/sum
+check50 scienceacademy/problems/2023ap/sum
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -67,5 +67,5 @@ style50 sum.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```md
-submit50 scienceacademy/problems/2022ap/sum
+submit50 scienceacademy/problems/2023ap/sum
 ```
