@@ -1,6 +1,6 @@
 baseURL = "https://scienceacademy.github.io/web/"
 languageCode = "en-us"
-title = "AP CSP 2022-23"
+title = "AP CSP 2023-24"
 theme = "hyde_cb"
 publishDir = "docs"
 
