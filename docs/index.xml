@@ -5,6 +5,16 @@
     <link>https://scienceacademy.github.io/web/</link>
     <description>Recent content on AP CSP 2022-23</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Aug 2023 19:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello</title>
+      <link>https://scienceacademy.github.io/web/assignments/hello/</link>
+      <pubDate>Sat, 19 Aug 2023 19:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/hello/</guid>
+      <description>&lt;p&gt;A simple assignment to practice testing and submitting your code.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
