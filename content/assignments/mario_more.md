@@ -1,7 +1,7 @@
 ---
 title: "Mario: More comfortable"
-date: 2022-08-23T19:55:45-07:00
-draft: true
+date: 2023-08-23T19:55:45-07:00
+draft: false
 ---
 <!--more-->
 
@@ -99,7 +99,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2022ap/mario/more
+check50 scienceacademy/problems/2023ap/mario/more
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -113,5 +113,5 @@ style50 mario.c
 Execute the below:
 
 ```md
-submit50 scienceacademy/problems/2022ap/mario/more
+submit50 scienceacademy/problems/2023ap/mario/more
 ```
