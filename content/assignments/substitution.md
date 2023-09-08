@@ -1,6 +1,6 @@
 ---
 title: "Substitution"
-date: 2022-09-26T14:55:45-07:00
+date: 2023-09-09T14:55:45-07:00
 draft: true
 ---
 
@@ -74,7 +74,7 @@ Implement a program, `substitution`, that encrypts messages using a substitution
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2022ap/substitution
+check50 scienceacademy/problems/2023ap/substitution
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -88,4 +88,4 @@ style50 substitution.c
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```md
-submit50 scienceacademy/problems/2022ap/substitution
+submit50 scienceacademy/problems/2023ap/substitution
