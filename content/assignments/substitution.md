@@ -1,7 +1,7 @@
 ---
 title: "Substitution"
 date: 2023-09-09T14:55:45-07:00
-draft: true
+draft: false
 ---
 
 Implement a program that encrypts messages using the substitution cipher.
