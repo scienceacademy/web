@@ -1,7 +1,7 @@
 ---
 title: "Lab: Sorting"
-date: 2022-10-05T13:55:45-07:00
-draft: true
+date: 2023-09-19T13:55:45-07:00
+draft: false
 ---
 
 Analyze three sorting programs to determine which algorithms they use.
@@ -44,11 +44,11 @@ The different types of `.txt` files may help you determine which sort is which. 
 Execute the below to evaluate the correctness of your answers using check50. But be sure to fill in your explanations as well, which check50 won’t check here!
 
 ```md
-check50 scienceacademy/problems/2022ap/sort
+check50 scienceacademy/problems/2023ap/sort
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/sort
+submit50 scienceacademy/problems/2023ap/sort
 ```
