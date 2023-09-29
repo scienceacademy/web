@@ -1,6 +1,6 @@
 ---
 title: "Voting: Runoff"
-date: 2023-10-05T12:55:45-07:00
+date: 2023-09-28T12:55:45-07:00
 draft: false
 ---
 Implement a program that runs a runoff election, as shown below.
