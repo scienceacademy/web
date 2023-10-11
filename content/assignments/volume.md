@@ -1,7 +1,7 @@
 ---
 title: "Lab: Volume"
-date: 2022-10-25T13:55:45-07:00
-draft: true
+date: 2023-10-08T13:55:45-07:00
+draft: false
 ---
 Write a program to modify the volume of an audio file.
 <!--more-->
@@ -24,8 +24,7 @@ So far, we’ve seen a number of different types in C, including `int`, `bool`, 
 
 ## Getting Started
 
-1. Log into your CS50 IDE.
-2. In the terminal window, run
+1. In the terminal window, run
 ```md
 wget https://scienceacademy.github.io/web/lab4.zip
 ```
@@ -63,7 +62,7 @@ replacing `n` with the number of bytes. You can then use header as an argument t
 int16_t buffer;
 ```
 
-You can then use `&buffer` as an argument to `fread()` or `fwrite()` to read into or write from the buffer. (Recall that the `&` operator is used to get the address of the variable.)
+You can then use `&buffer` as an argument to `fread()` or `fwrite()` to read into or write from the buffer.
 
 * You may find the documentation for `fread()` and `fwrite()` helpful.
     * In particular, note that both functions accept the following arguments:
@@ -93,17 +92,11 @@ When you listen to `output.wav`, it should be half as loud as `input.wav`!
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2022ap/volume
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 volume.c
+check50 scienceacademy/problems/2023ap/volume
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/volume
+submit50 scienceacademy/problems/2023ap/volume
 ```

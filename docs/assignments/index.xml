@@ -6,7 +6,16 @@
     <description>Recent content in Assignments on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Sep 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Oct 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab: Volume</title>
+      <link>https://scienceacademy.github.io/web/assignments/volume/</link>
+      <pubDate>Sun, 08 Oct 2023 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/volume/</guid>
+      <description>&lt;p&gt;Write a program to modify the volume of an audio file.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Voting: Tideman</title>
       <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
