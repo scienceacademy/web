@@ -6,7 +6,16 @@
     <description>Recent content on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Oct 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Oct 2023 13:56:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filter: More Comfortable</title>
+      <link>https://scienceacademy.github.io/web/assignments/filter-more/</link>
+      <pubDate>Thu, 12 Oct 2023 13:56:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/filter-more/</guid>
+      <description>&lt;p&gt;Implement a program that applies filters to images.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Lab: Volume</title>
       <link>https://scienceacademy.github.io/web/assignments/volume/</link>
