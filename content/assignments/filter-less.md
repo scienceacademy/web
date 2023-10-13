@@ -1,6 +1,6 @@
 ---
 title: "Filter: Less Comfortable"
-date: 2023-10-13T13:55:45-07:00
+date: 2023-10-12T13:55:45-07:00
 draft: false
 ---
 Implement a program that applies filters to images.
