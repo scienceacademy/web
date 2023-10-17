@@ -1,7 +1,7 @@
 ---
 title: "Recover"
-date: 2020-11-05T13:55:45-07:00
-draft: true
+date: 2023-10-16T13:55:45-07:00
+draft: false
 ---
 Implement a program that recovers JPEGs from a forensic image.
 <!--more-->
@@ -26,9 +26,9 @@ Odds are, if you find this pattern of four bytes on media known to store photos 
 
 Fortunately, digital cameras tend to store photographs contiguously on memory cards, whereby each photo is stored immediately after the previously taken photo. Accordingly, the start of a JPEG usually demarks the end of another. However, digital cameras often initialize cards with a FAT file system whose “block size” is 512 bytes (B). The implication is that these cameras only write to those cards in units of 512 B. A photo that’s 1 MB (i.e., 1,048,576 B) thus takes up 1048576 ÷ 512 = 2048 “blocks” on a memory card. But so does a photo that’s, say, one byte smaller (i.e., 1,048,575 B)! The wasted space on disk is called “slack space.” Forensic investigators often look at slack space for remnants of suspicious data.
 
-The implication of all these details is that you, the investigator, can probably write a program that iterates over a copy of my memory card, looking for JPEGs’ signatures. Each time you find a signature, you can open a new file for writing and start filling that file with bytes from my memory card, closing that file only once you encounter another signature. Moreover, rather than read my memory card’s bytes one at a time, you can read 512 of them at a time into a buffer for efficiency’s sake. Thanks to FAT, you can trust that JPEGs’ signatures will be “block-aligned.” That is, you need only look for those signatures in a block’s first four bytes.
+The implication of all these details is that you, the investigator, can probably write a program that iterates over a copy of your memory card, looking for JPEGs’ signatures. Each time you find a signature, you can open a new file for writing and start filling that file with bytes from your memory card, closing that file only once you encounter another signature. Moreover, rather than read your memory card’s bytes one at a time, you can read 512 of them at a time into a buffer for efficiency’s sake. Thanks to FAT, you can trust that JPEGs’ signatures will be “block-aligned.” That is, you need only look for those signatures in a block’s first four bytes.
 
-Realize, of course, that JPEGs can span contiguous blocks. Otherwise, no JPEG could be larger than 512 B. But the last byte of a JPEG might not fall at the very end of a block. Recall the possibility of slack space. But not to worry. Because this memory card was brand-new when I started snapping photos, odds are it’d been “zeroed” (i.e., filled with 0s) by the manufacturer, in which case any slack space will be filled with 0s. It’s okay if those trailing 0s end up in the JPEGs you recover; they should still be viewable.
+Realize, of course, that JPEGs can span contiguous blocks. Otherwise, no JPEG could be larger than 512 B. But the last byte of a JPEG might not fall at the very end of a block. Recall the possibility of slack space. But not to worry. Because this memory card was brand-new when you started snapping photos, odds are it’d been “zeroed” (i.e., filled with 0s) by the manufacturer, in which case any slack space will be filled with 0s. It’s okay if those trailing 0s end up in the JPEGs you recover; they should still be viewable.
 
 Now, there isn't an actual memory card for each of you, so you'll be using a “forensic image” of the card, storing its contents, byte after byte, in a file called `card.raw`. You should ultimately find that the image contains 50 JPEGs.
 
@@ -37,7 +37,7 @@ Now, there isn't an actual memory card for each of you, so you'll be using a “
 Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into CS50 IDE and then, in a terminal window, execute each of the below.
 
 * Execute `cd` to ensure you're in `~/` (i.e. your home directory).
-* Execute `wget https://cdn.cs50.net/2019/fall/psets/4/recover/recover.zip` to download a (compressed) ZIP file with this problem’s distribution.
+* Execute `wget https://scienceacademy.github.io/web/recover.zip` to download a (compressed) ZIP file with this problem’s distribution.
 * Execute `unzip recover.zip` to uncompress that file.
 * You'll now see a `recover` directory in your file list.
 * It contains the following files: `recover.c` and `card.raw`.
@@ -89,18 +89,12 @@ Keep in mind, too, that you can read data from a file using `fread`, which will 
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2020ap/recover
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```
-style50 recover.c
+check50 scienceacademy/problems/2023ap/recover
 ```
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted.
 ```
-submit50 scienceacademy/problems/2020ap/recover
+submit50 scienceacademy/problems/2023ap/recover
 ```

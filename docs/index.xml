@@ -6,7 +6,16 @@
     <description>Recent content on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Oct 2023 13:56:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Oct 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recover</title>
+      <link>https://scienceacademy.github.io/web/assignments/recover/</link>
+      <pubDate>Mon, 16 Oct 2023 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/recover/</guid>
+      <description>&lt;p&gt;Implement a program that recovers JPEGs from a forensic image.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Filter: More Comfortable</title>
       <link>https://scienceacademy.github.io/web/assignments/filter-more/</link>
