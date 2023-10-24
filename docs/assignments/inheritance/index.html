@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Inheritance &middot; AP CSP 2023-24</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2023-24</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Inheritance</h1>
+  <time datetime=2023-10-23T13:55:45-0700 class="post-date">Mon, Oct 23, 2023</time>
+  <p>Simulate the inheritance of blood types for each member of a family.</p>
+<pre tabindex="0"><code>$ ./inheritance
+Child (Generation 0): blood type OO
+    Parent (Generation 1): blood type AO
+        Grandparent (Generation 2): blood type OA
+        Grandparent (Generation 2): blood type BO
+    Parent (Generation 1): blood type OB
+        Grandparent (Generation 2): blood type AO
+        Grandparent (Generation 2): blood type BO
+</code></pre><h2 id="background">Background</h2>
+<p>A person’s blood type is determined by two alleles (i.e., different forms of a gene). The three possible alleles are A, B, and O, of which each person has two (possibly the same, possibly different). Each of a child’s parents randomly passes one of their two blood type alleles to their child. The possible blood type combinations, then, are: OO, OA, OB, AO, AA, AB, BO, BA, and BB.</p>
+<p>For example, if one parent has blood type AO and the other parent has blood type BB, then the child’s possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child’s possible blood types would be AO, OB, AB, and OO.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>In the terminal window, run</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/inheritance.zip
+</span></span></code></pre></div><p>to download a zip file of the code.</p>
+<ol start="3">
+<li>In the terminal window, run <code>unzip inheritance.zip</code> to unzip (decompress) the file.</li>
+<li>In the terminal window, run <code>cd inheritance</code> to change directories into your <code>inheritance</code> directory.</li>
+</ol>
+<h2 id="implementation-details">Implementation Details</h2>
+<p>Complete the implementation of <code>inheritance.c</code>, such that it creates a family of a specified generation size and assigns blood type alleles to each family member. The oldest generation will have alleles assigned randomly to them.</p>
+<ul>
+<li>First, notice the <code>struct</code> named <code>person</code>. Each <code>person</code> has an array of two <code>parents</code>, each of which is a pointer to another <code>person</code>. Each <code>person</code> also has two alleles, one from each parent, stored in a <code>char</code> array named <code>alleles</code>.</li>
+<li>Notice that there are four helper functions.
+<ul>
+<li><code>create_family()</code> takes an integer input, allocates memory for the family, and returns a person with a family of that specified number of generations.
+<ul>
+<li>For example, <code>create_family(3)</code> will return a person with parents and grandparents.</li>
+</ul>
+</li>
+<li><code>print_family()</code> takes as input a person and a number signifying the generation that the person is in. This function prints the entire family, their generation numbers, and their blood types, as per the sample output.</li>
+<li><code>free_family()</code> takes as input a person and frees the memory associated with this person and the person&rsquo;s family. Remember that all the memory you allocate, you also have to free.</li>
+<li><code>random_allele()</code> returns a random allele of <code>A</code>, <code>B</code>, or <code>O</code>.</li>
+</ul>
+</li>
+<li><code>main()</code> is already implemented.
+<ul>
+<li>First, a random seed is set, using the system time.</li>
+<li>Next, a new family with three generations is created using <code>create_family(3)</code>, and stored in a variable, <code>p</code> of type <code>person</code>.</li>
+<li>The family of <code>p</code> is then printed with <code>print_family(p, 0)</code>.</li>
+<li>Finally, the memory associated with this family is freed with <code>free_family(p)</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="your-task">Your Task:</h3>
+<ul>
+<li>In <code>create_family()</code>, your program should create a family with the specified number of generations.
+<ul>
+<li>When creating a family, first allocate memory for a new person.</li>
+<li>Then, if the input to the function is not <code>1</code>, recursively create the person&rsquo;s parents and use the parents&rsquo; alleles to assign the child&rsquo;s alleles. Note the rules for assigning alleles described above—the determination of which of the two alleles the child gets from a parent is random.</li>
+<li>If the input to the function is <code>1</code>, set the person&rsquo;s parent pointers to <code>NULL</code> and randomly assign its alleles.</li>
+<li>For example, your program should work as follows for a family of generation size three.
+<ul>
+<li>A person, the child, is created. Currently, the child has no parents and no alleles.</li>
+<li>The person&rsquo;s parents are created. Neither parent has parents or alleles.</li>
+<li>The grandparents are created, and alleles are randomly assigned to the grandparents.</li>
+<li>Now that the grandparents have been created and have alleles, the parents&rsquo; alleles can also be assigned.</li>
+<li>Now that the parents&rsquo; alleles are assigned, the child&rsquo;s alleles can be assigned.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In <code>free_family()</code>, your program should free the memory associated with a particular person and their family. To do so, you should first handle the base case, then free the parents, and then free the child. Note that if <code>free_family()</code> is not written in this order and the child is freed first, you will not be able to access the parents anymore, losing that memory.</li>
+</ul>
+<h3 id="hints">Hints</h3>
+<ul>
+<li>Remember, to allocate memory for a particular person, you can use <code>malloc(n)</code>, which takes a size as argument and will allocate <code>n</code> bytes of memory.</li>
+<li>Remember, to access a variable via a pointer, you can use arrow notation.
+<ul>
+<li>For example, if <code>p</code> is a person, then this person&rsquo;s first parent can be accessed by <code>p-&gt;parents[0]</code>.</li>
+</ul>
+</li>
+<li>Recursion is particularly helpful in this problem, and looking at <code>print_family()</code> for an example may be helpful. In <code>print_family()</code>, you print the person and their blood type, and then call <code>print_family()</code> again on the person&rsquo;s parents to print the person&rsquo;s parents, which will call the person&rsquo;s parents&rsquo; parents, and so on. Additionally note that when calling <code>print_family()</code> on the person&rsquo;s parents, the generation number is incremented.</li>
+<li>For <code>create_family()</code>, sometimes it is not necessary to create parents for a person and sometimes it is. Consider this: assume you have already created the child and a parent for a family of three generations. You&rsquo;re now creating a grandparent. Is it necessary for the grandparent to have parent pointers, and how might you keep track of that?</li>
+<li>For the base case in <code>free_family()</code>, consider the edge cases in this family tree. Specifically, for a family with three generations, how do you represent the parents of the grandparents?</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>Upon running <code>./inheritance</code>, your program should adhere to the rules described in the background. The child should have two alleles, one from each parent. The parents should each have two alleles, one from each of their parents.</p>
+<p>For example, in the example below, the child in Generation 0 received an O allele from both Generation 1 parents. The first parent received an A from the first grandparent and a O from the second grandparent. Similarly, the second parent recieved an O and a B from their grandparents.</p>
+<pre tabindex="0"><code>$ ./inheritance
+Generation 0, blood type OO
+    Generation 1, blood type AO
+        Generation 2, blood type OA
+        Generation 2, blood type BO
+    Generation 1, blood type OB
+        Generation 2, blood type AO
+        Generation 2, blood type BO
+</code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2023ap/inheritance
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2023ap/inheritance
+</span></span></code></pre></div>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

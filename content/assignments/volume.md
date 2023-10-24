@@ -72,7 +72,7 @@ You can then use `&buffer` as an argument to `fread()` or `fwrite()` to read int
         * `stream`: the file pointer to read from or write to
     * `fread()` will return the number of items of data successfully read. You may find this useful to check for when you've reached the end of the file.
 
-### How to Test Your Code
+## How to Test Your Code
 
 Your program should behave per the examples below.
 
