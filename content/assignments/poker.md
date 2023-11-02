@@ -1,7 +1,7 @@
 ---
 title: "Video poker ♥ ♣ ♠ ♦"
-date: 2021-11-17T13:55:45-07:00
-draft: true
+date: 2023-11-01T13:55:45-07:00
+draft: false
 ---
 
 Implement a program that runs a game of video poker.
@@ -9,7 +9,7 @@ Implement a program that runs a game of video poker.
 
 Poker is a popular card game that comes in many forms: draw, stud, Texas Hold'em, and many more. Typically, poker is played by multiple players, betting against each other.
 
-Video poker is a popular casino game based on 5-card draw poker.
+Video poker is a popular single player casino game based on 5-card draw poker.
 
 The game works like this:
 
@@ -33,7 +33,42 @@ Poker hands are ranked by the relative rarity of the combinations. The order is 
 * One pair  - Ex: Q♠ Q♦ 8♥ 4♠ A♣
 * High card - Ex: 7♠ 5♥ Q♦ 4♣ A♠
 
+## Payout table
+
+There are many possible payout tables for video poker. Typically, they change based on the size of the bet. For our purposes, we'll keep things simple and just have a single table. The player wins their bet amount multiplied by the following number:
+
+| Hand | Payout |
+| ---------|----
+| Royal flush | 250
+| Straight flush |  50
+| Four of a kind |  25
+| Full house |  9
+| Flush |  6
+| Straight |  4
+| Three of a kind |  3
+| Two Pair |  2
+| One pair (Jacks or higher) |  1
+
+Any other hands pay 0.
+
+## Getting Started
+
+1. In the terminal window, run
+
+```md
+wget https://scienceacademy.github.io/web/poker.zip
+```
+
+ to download a zip file of the code.
+
+3. In the terminal window, run `unzip poker.zip` to unzip (decompress) the file.
+4. In the terminal window, run `cd poker` to change directories into your `poker` directory.
+
 ## Specification
+
+* Create a new file called `vp.py`.
+
+* Your program should use the included `cards.py`, which contains the `Card` and `Deck` classes we discussed in class. **You may not make any changes to this file** (it won't be submitted).
 
 * The player should start with $100 in funds.
 
@@ -47,63 +82,43 @@ Poker hands are ranked by the relative rarity of the combinations. The order is 
 
 * If the player's funds are $0, end the game.
 
-* Finally, ask the player if they'd like to play again. If they don't, display their final winnings. If they do, shuffle the deck and repeat.
+* Finally, ask the player if they'd like to play again. If they don't, display their final winnings. If they do, reset the deck and repeat.
 
 * Don't forget to shuffle the deck before dealing each hand.
 
-## Payout table
+## Hints
 
-There are many possible payout tables for video poker. Typically, they change based on the size of the bet. For our purposes, we'll keep things simple and just have a single table. The player wins their bet amount multiplied by the following number:
+* This program has several parts - it's easier if you break it down and complete one at a time:
+  * Dealing cards to the player and letting them draw new cards
+  * Repeating the game until the player runs out of money (or chooses to quit)
+  * Scoring the poker hand (this is the trickiest part of the assignment)
 
-| Hand | Payout |
-| ---------|----
-| Straight flush |  50
-| Four of a kind |  25
-| Full house |  9
-| Flush |  6
-| Straight |  4
-| Three of a kind |  3
-| Two Pair |  2
-| One pair (Jacks or higher) |  1
+* You may find it helpful to define a `Hand` class to handle all the functionality of the player's hand (holding cards, replacing cards, scoring).
 
-Any other hands pay 0.
+* You may find the `collections` library helpful in your hand scoring algorithm: <https://docs.python.org/3/library/collections.html>
+
+* To clear the screen as done in the example program, import `system` from the `os` library. You can then use `system("clear")` to clear the terminal screen during gameplay.
 
 ## Example
 
-You can play a free example game here:
+Included in the distribution file is a compiled version of the game coded in C. You can run it with:
 
-[https://www.freeslots.com/poker.htm](https://www.freeslots.com/poker.htm)
-
-You can also download an example completed assignment here:
-
-[vp.zip](/web/vp.zip)
-
-## Implementation
-
-You may write this program in Python or C. Name your program `vp.py` or `vp.c`.
+```bash
+./vp
+```
 
 ### Random seed
 
 In order to properly check for the correct output, your submission needs to use a known "random" sequence. Before submitting, make sure to seed your program's RNG with the following seed: `581321`.
 
+You can set the seed with the `seed` function from random `random` library.
+
 ## How to Test Your Code
 
-Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
-
-```
-check50 scienceacademy/problems/2021ap/poker
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```
-style50 [poker.c | poker.py]
-```
+There's no `check50` for this assignment. Make sure to run and test your program yourself to make sure its output and behavior matches the example program.
 
 ## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted.
-
 ```
-submit50 scienceacademy/problems/2021ap/poker
+submit50 scienceacademy/problems/2023ap/poker
 ```

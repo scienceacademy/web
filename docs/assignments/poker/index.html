@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Video poker ♥ ♣ ♠ ♦ &middot; AP CSP 2023-24</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2023-24</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Video poker ♥ ♣ ♠ ♦</h1>
+  <time datetime=2023-11-01T13:55:45-0700 class="post-date">Wed, Nov 1, 2023</time>
+  <p>Implement a program that runs a game of video poker.</p>
+<p>Poker is a popular card game that comes in many forms: draw, stud, Texas Hold&rsquo;em, and many more. Typically, poker is played by multiple players, betting against each other.</p>
+<p>Video poker is a popular single player casino game based on 5-card draw poker.</p>
+<p>The game works like this:</p>
+<ol>
+<li>The player places a bet.</li>
+<li>The player receives a hand of 5 cards.</li>
+<li>The player chooses any number of cards to hold.</li>
+<li>Unheld cards are replaced by newly dealt cards.</li>
+<li>The final hand is scored and the player wins or loses their bet, based on the game&rsquo;s pay table.</li>
+</ol>
+<h2 id="poker-hands">Poker hands</h2>
+<p>Poker hands are ranked by the relative rarity of the combinations. The order is as follows (best to worst):</p>
+<ul>
+<li>Straight flush  - Ex: 10♥ 9♥ 8♥ 7♥ 6♥</li>
+<li>Four of a kind  - Ex: 9♥ 9♣ 9♠ 9♦ J♦</li>
+<li>Full house  - Ex: 4♦ 4♣ J♦ J♣ J♠</li>
+<li>Flush  - Ex: 3♣ 10♣ 8♣ K♣ J♣</li>
+<li>Straight  - Ex: K♣ Q♦ J♥ 10♣ 9♥</li>
+<li>Three of a kind  - Ex: 7♥ 7♠ 7♣ J♠ 6♥</li>
+<li>Two pair  - Ex: K♣ K♥ 10♦ 10♠ 2♣</li>
+<li>One pair  - Ex: Q♠ Q♦ 8♥ 4♠ A♣</li>
+<li>High card - Ex: 7♠ 5♥ Q♦ 4♣ A♠</li>
+</ul>
+<h2 id="payout-table">Payout table</h2>
+<p>There are many possible payout tables for video poker. Typically, they change based on the size of the bet. For our purposes, we&rsquo;ll keep things simple and just have a single table. The player wins their bet amount multiplied by the following number:</p>
+<table>
+<thead>
+<tr>
+<th>Hand</th>
+<th>Payout</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Royal flush</td>
+<td>250</td>
+</tr>
+<tr>
+<td>Straight flush</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Four of a kind</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Full house</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Flush</td>
+<td>6</td>
+</tr>
+<tr>
+<td>Straight</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Three of a kind</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Two Pair</td>
+<td>2</td>
+</tr>
+<tr>
+<td>One pair (Jacks or higher)</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Any other hands pay 0.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>In the terminal window, run</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/poker.zip
+</span></span></code></pre></div><p>to download a zip file of the code.</p>
+<ol start="3">
+<li>In the terminal window, run <code>unzip poker.zip</code> to unzip (decompress) the file.</li>
+<li>In the terminal window, run <code>cd poker</code> to change directories into your <code>poker</code> directory.</li>
+</ol>
+<h2 id="specification">Specification</h2>
+<ul>
+<li>
+<p>Create a new file called <code>vp.py</code>.</p>
+</li>
+<li>
+<p>Your program should use the included <code>cards.py</code>, which contains the <code>Card</code> and <code>Deck</code> classes we discussed in class. <strong>You may not make any changes to this file</strong> (it won&rsquo;t be submitted).</p>
+</li>
+<li>
+<p>The player should start with $100 in funds.</p>
+</li>
+<li>
+<p>Before each hand, the player can choose any amount to bet, up to their current funds.</p>
+</li>
+<li>
+<p>Deal the player a hand of 5 cards and display them, along with an index of 0-5. You can then ask the player for a list of which cards they&rsquo;d like to hold. Player&rsquo;s input will be a string, such as <code>&quot;124&quot;</code>, indicating that they wish to hold cards 1, 2, and 4.</p>
+</li>
+<li>
+<p>Replace each card that was not held with a new card. This is the player&rsquo;s final hand.</p>
+</li>
+<li>
+<p>Score the hand and, if it&rsquo;s a winning hand, add the winnings to the player&rsquo;s funds.</p>
+</li>
+<li>
+<p>If the player&rsquo;s funds are $0, end the game.</p>
+</li>
+<li>
+<p>Finally, ask the player if they&rsquo;d like to play again. If they don&rsquo;t, display their final winnings. If they do, reset the deck and repeat.</p>
+</li>
+<li>
+<p>Don&rsquo;t forget to shuffle the deck before dealing each hand.</p>
+</li>
+</ul>
+<h2 id="hints">Hints</h2>
+<ul>
+<li>
+<p>This program has several parts - it&rsquo;s easier if you break it down and complete one at a time:</p>
+<ul>
+<li>Dealing cards to the player and letting them draw new cards</li>
+<li>Repeating the game until the player runs out of money (or chooses to quit)</li>
+<li>Scoring the poker hand (this is the trickiest part of the assignment)</li>
+</ul>
+</li>
+<li>
+<p>You may find it helpful to define a <code>Hand</code> class to handle all the functionality of the player&rsquo;s hand (holding cards, replacing cards, scoring).</p>
+</li>
+<li>
+<p>You may find the <code>collections</code> library helpful in your hand scoring algorithm: <a href="https://docs.python.org/3/library/collections.html">https://docs.python.org/3/library/collections.html</a></p>
+</li>
+<li>
+<p>To clear the screen as done in the example program, import <code>system</code> from the <code>os</code> library. You can then use <code>system(&quot;clear&quot;)</code> to clear the terminal screen during gameplay.</p>
+</li>
+</ul>
+<h2 id="example">Example</h2>
+<p>Included in the distribution file is a compiled version of the game coded in C. You can run it with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./vp
+</span></span></code></pre></div><h3 id="random-seed">Random seed</h3>
+<p>In order to properly check for the correct output, your submission needs to use a known &ldquo;random&rdquo; sequence. Before submitting, make sure to seed your program&rsquo;s RNG with the following seed: <code>581321</code>.</p>
+<p>You can set the seed with the <code>seed</code> function from random <code>random</code> library.</p>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
+<p>There&rsquo;s no <code>check50</code> for this assignment. Make sure to run and test your program yourself to make sure its output and behavior matches the example program.</p>
+<h2 id="how-to-submit">How to Submit</h2>
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2023ap/poker
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
