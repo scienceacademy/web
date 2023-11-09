@@ -58,11 +58,11 @@ See [this SQL keywords reference](https://www.w3schools.com/sql/sql_ref_keywords
 ## Testing
 
 ```md
-check50 scienceacademy/problems/2022ap/songs
+check50 scienceacademy/problems/2023ap/songs
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/songs
+submit50 scienceacademy/problems/2023ap/songs
 ```

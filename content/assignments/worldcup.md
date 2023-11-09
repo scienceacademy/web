@@ -130,7 +130,7 @@ In case you're wondering, here's what actually happened at the actual tournament
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2022ap/worldcup
+check50 scienceacademy/problems/2023ap/worldcup
 ```
 
 # **IMPORTANT**
@@ -141,14 +141,8 @@ if __name__ == "__main__":
     main()
 ```
 
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 tournament.py
-```
-
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/worldcup
+submit50 scienceacademy/problems/2023ap/worldcup
 ```
