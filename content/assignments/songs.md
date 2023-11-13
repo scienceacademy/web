@@ -37,18 +37,18 @@ For each of the following problems, write a single SQL query that outputs the sp
   * Your query should output a table with a single column for the name of each song.
 * In 3.sql, write a SQL query to list the names of the top 5 oldest songs, in ascending order of release year.
   * Your query should output a table with a single column for the name of each song.
-* In 4.sql, write a SQL query that lists the names of any songs that have danceability, energy, and valence greater than 0.75.
+* In 4.sql, write a SQL query that lists the names of any songs that have danceability, energy, and valence greater than 75.
   * Your query should output a table with a single column for the name of each song.
 * In 5.sql, write a SQL query that returns the average energy of all the songs.
   * Your query should output a table with a single column and a single row containing the average energy.
-* In 6.sql, write a SQL query that lists the names of songs that are by Post Malone.
+* In 6.sql, write a SQL query that lists the names of the most streamed songs that are by Post Malone.
   * Your query should output a table with a single column for the name of each song.
   * You should not make any assumptions about what Post Malone’s artist_id is.
-* In 7.sql, write a SQL query that returns the average energy of songs that are by The Weeknd.
-  * Your query should output a table with a single column and a single row containing the average energy.
+* In 7.sql, write a SQL query that returns the names of songs by The Weeknd, in descending order of bpm.
+  * Your query should output a table with a single column and a single row containing the song names.
   * You should not make any assumptions about what The Weeknd’s artist_id is.
-* In 8.sql, write a SQL query that lists the names of the songs that feature multiple artists.
-  * Your query should output a table with a single column for the name of each song.
+* In 8.sql, write a SQL query that lists how many songs by Taylor Swift are in each musical key, in descending order (greatest to fewest).
+  * Your query should output a table with a two columns for the name of each key and the count of songs in that key.
 
 ## Hints
 
