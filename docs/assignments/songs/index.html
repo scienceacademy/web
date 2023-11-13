@@ -67,7 +67,6 @@
 <p>You&rsquo;ve been provided with a file called <code>songs.db</code>, a SQLite database containing data from Spotify about songs and artists. It contains the top 100 streamed songs on Spotify in 2018.</p>
 <p>Run <code>sqlite3 songs.db</code> to to open the database and run queries.</p>
 <p>First, try typing the command <code>.schema</code>. This will output the <code>CREATE TABLE</code> statements that were used to create the tables in the database. By looking at them, you can see the columns available in each table.</p>
-<p>Notice that every <code>artist</code> has an <code>id</code> and a <code>name</code>. Every song has a <code>name</code>, an <code>artist_id</code> (corresponding to the <code>id</code> of the artist), as well as other values such as <code>energy</code>, <code>key</code>, <code>tempo</code>, etc.</p>
 <h2 id="assignment">Assignment</h2>
 <p>For each of the following problems, write a single SQL query that outputs the specified results. You <strong>should not</strong> assume anything about the <code>id</code>s of particular songs or artists (your queries should work even if the <code>id</code> of any song or artist were different). Finally, each query should only return the data necessary to answer the question, nothing more.</p>
 <ul>

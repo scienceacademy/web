@@ -25,8 +25,6 @@ Run `sqlite3 songs.db` to to open the database and run queries.
 
 First, try typing the command `.schema`. This will output the `CREATE TABLE` statements that were used to create the tables in the database. By looking at them, you can see the columns available in each table.
 
-Notice that every `artist` has an `id` and a `name`. Every song has a `name`, an `artist_id` (corresponding to the `id` of the artist), as well as other values such as `energy`, `key`, `tempo`, etc.
-
 ## Assignment
 
 For each of the following problems, write a single SQL query that outputs the specified results. You **should not** assume anything about the `id`s of particular songs or artists (your queries should work even if the `id` of any song or artist were different). Finally, each query should only return the data necessary to answer the question, nothing more.
