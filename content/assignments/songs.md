@@ -41,10 +41,8 @@ For each of the following problems, write a single SQL query that outputs the sp
   * Your query should output a table with a single column and a single row containing the average energy.
 * In 6.sql, write a SQL query that lists the names of the most streamed songs that are by Post Malone.
   * Your query should output a table with a single column for the name of each song.
-  * You should not make any assumptions about what Post Malone’s artist_id is.
-* In 7.sql, write a SQL query that returns the names of songs by The Weeknd, in descending order of bpm.
+* In 7.sql, write a SQL query that returns the name of the song by The Weeknd with the highest bpm.
   * Your query should output a table with a single column and a single row containing the song names.
-  * You should not make any assumptions about what The Weeknd’s artist_id is.
 * In 8.sql, write a SQL query that lists how many songs by Taylor Swift are in each musical key, in descending order (greatest to fewest).
   * Your query should output a table with a two columns for the name of each key and the count of songs in that key.
 
