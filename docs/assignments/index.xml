@@ -6,7 +6,16 @@
     <description>Recent content in Assignments on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Nov 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 Nov 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab: Songs</title>
+      <link>https://scienceacademy.github.io/web/assignments/songs/</link>
+      <pubDate>Sat, 11 Nov 2023 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/songs/</guid>
+      <description>&lt;p&gt;Write SQL queries to answer questions about a database of songs.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Video poker ♥ ♣ ♠ ♦</title>
       <link>https://scienceacademy.github.io/web/assignments/poker/</link>
