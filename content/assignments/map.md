@@ -1,6 +1,6 @@
 ---
 title: "Map Coloring"
-date: 2023-03-07T13:55:45-07:00
+date: 2023-11-07T13:55:45-07:00
 draft: true
 ---
 
@@ -72,17 +72,11 @@ In addition, a file called `us_map.png` will be created in your project folder. 
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2022ap/map_colors
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 greedy_color.py
+check50 scienceacademy/problems/2023ap/map_colors
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/map_colors
+submit50 scienceacademy/problems/2023ap/map_colors
 ```

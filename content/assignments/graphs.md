@@ -1,7 +1,7 @@
 ---
 title: "Graphs"
-date: 2023-03-05T13:55:45-07:00
-draft: true
+date: 2023-11-15T13:55:45-07:00
+draft: false
 ---
 
 Write a program that implements Breadth-First and Depth-First Search.
@@ -93,17 +93,11 @@ Make sure your program works with any graph, not just the example one above. Her
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2022ap/graphs
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 graphs.py
+check50 scienceacademy/problems/2023ap/graphs
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2022ap/graphs
+submit50 scienceacademy/problems/2023ap/graphs
 ```

@@ -6,7 +6,16 @@
     <description>Recent content on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Nov 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Nov 2023 13:55:45 -0700</lastBuildDate><atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphs</title>
+      <link>https://scienceacademy.github.io/web/assignments/graphs/</link>
+      <pubDate>Wed, 15 Nov 2023 13:55:45 -0700</pubDate>
+      
+      <guid>https://scienceacademy.github.io/web/assignments/graphs/</guid>
+      <description>&lt;p&gt;Write a program that implements Breadth-First and Depth-First Search.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Lab: Songs</title>
       <link>https://scienceacademy.github.io/web/assignments/songs/</link>
