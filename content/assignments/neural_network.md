@@ -32,12 +32,12 @@ Your task is to explore how changing various parameters of a neural network affe
     - In the terminal window, run `cd ml` to change directories into your `ml` directory.
     -
 2. **Understand the Code**
-   - Begin by examining the provided digit classification code.
+   - Begin by examining the provided code, which is commented by section.
      - Data loading and preprocessing.
      - Neural network model creation (`MLPClassifier`).
      - Model training and evaluation.
    - Run the code to ensure it works and that you understand the output.
-   - To see the graphical output, select "GUI" from the "CS50" menu on the left side of your IDE.
+   - To see the graphical output, select "GUI" from the "CS50" menu on the left side of your IDE. Clicking the "X" on the window, or pressing <Ctrl-C> in the Terminal will end the program.
 
 3. **Parameter Experimentation**
    - Your main task is to experiment with the neural network's parameters and observe the effects on model accuracy and training time.
@@ -56,7 +56,7 @@ Your task is to explore how changing various parameters of a neural network affe
      - Any notable changes in training time.
      - Your observations and conclusions about each change.
 
-4.  **Report Your Conclusions**
+5.  **Report Your Conclusions**
     - In the "Conclusions" tab of the data sheet, compile your observations into a brief report. Include your hypotheses on why certain parameters had the impacts they did.
 
 ## Guidelines
