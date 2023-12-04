@@ -56,7 +56,7 @@ for neighbor in graph["A"]:
 
 ## Implementation
 
-You will write a program, `graph_search.py` that will implement both DFS and BFS searches. First, your program's command line will accept two arguments: the type of search to perform, and filename containing the graph data.
+You will write a program, `graphs.py` that will implement both DFS and BFS searches. First, your program's command line will accept two arguments: the type of search to perform, and filename containing the graph data.
 
 Your program will do the following:
 

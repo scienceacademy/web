@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.119.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Experimenting with ML &middot; AP CSP 2023-24</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2023-24</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2023. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Experimenting with ML</h1>
+  <time datetime=2023-12-01T13:55:45-0700 class="post-date">Fri, Dec 1, 2023</time>
+  <p>Experiment with neural network performance.</p>
+<p>Your task is to explore how changing various parameters of a neural network affects its performance. You will use the <a href="https://en.wikipedia.org/wiki/MNIST_database">MNIST</a> dataset for this purpose, focusing on the classification of handwritten digits.</p>
+<p><img src="/web/MnistExamplesModified.png" alt="data image"></p>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>
+<p><strong>Set Up Your Environment</strong></p>
+<ul>
+<li>Install the required libraries using pip:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>pip install scikit-learn pandas
+</span></span></code></pre></div><ul>
+<li>In the terminal window, run</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/ml.zip
+</span></span></code></pre></div><p>to download a zip file of the code.</p>
+<ul>
+<li>In the terminal window, run <code>unzip ml.zip</code> to unzip (decompress) the file.</li>
+<li>In the terminal window, run <code>cd ml</code> to change directories into your <code>ml</code> directory.</li>
+<li></li>
+</ul>
+</li>
+<li>
+<p><strong>Understand the Code</strong></p>
+<ul>
+<li>Begin by examining the provided digit classification code.
+<ul>
+<li>Data loading and preprocessing.</li>
+<li>Neural network model creation (<code>MLPClassifier</code>).</li>
+<li>Model training and evaluation.</li>
+</ul>
+</li>
+<li>Run the code to ensure it works and that you understand the output.</li>
+<li>To see the graphical output, select &ldquo;GUI&rdquo; from the &ldquo;CS50&rdquo; menu on the left side of your IDE.</li>
+</ul>
+</li>
+<li>
+<p><strong>Parameter Experimentation</strong></p>
+<ul>
+<li>Your main task is to experiment with the neural network&rsquo;s parameters and observe the effects on model accuracy and training time.</li>
+<li>Make changes to one parameter at a time and record your findings. Here are the parameters to experiment with:
+<ul>
+<li><strong>Number of Neurons in the Hidden Layer</strong>: Try different sizes for <code>hidden_layer_sizes</code>, e.g., <code>(30,)</code>, <code>(100,)</code>, or <code>(50, 50)</code>.</li>
+<li><strong>Number of Hidden Layers</strong>: Modify the <code>hidden_layer_sizes</code> to add or remove layers, e.g., <code>(50, 30, 20)</code>.</li>
+<li><strong>Maximum Number of Iterations (<code>max_iter</code>)</strong>: Adjust this value to see how longer or shorter training periods affect performance. Try values like <code>10</code>, <code>50</code>, or <code>100</code>.</li>
+<li><strong>Learning Rate (<code>learning_rate_init</code>)</strong>: Experiment with different learning rates, e.g., <code>0.01</code>, <code>0.001</code>.</li>
+<li><strong>Regularization Term (<code>alpha</code>)</strong>: Adjust the regularization to see its impact. Test values like <code>1e-4</code>, <code>1e-3</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Record Your Observations</strong></p>
+<ul>
+<li>Record your results in a copy of this spreadsheet: <a href="https://docs.google.com/spreadsheets/d/1rQLndy0Ll2HU7fTBvTjDWmND_3Lr2borqWWH3xIK7VE/edit?usp=sharing">ML Experiments Data Sheet</a></li>
+<li>For each parameter adjustment, record:
+<ul>
+<li>The change you made.</li>
+<li>The model&rsquo;s accuracy.</li>
+<li>Any notable changes in training time.</li>
+<li>Your observations and conclusions about each change.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Report Your Conclusions</strong></p>
+<ul>
+<li>In the &ldquo;Conclusions&rdquo; tab of the data sheet, compile your observations into a brief report. Include your hypotheses on why certain parameters had the impacts they did.</li>
+</ul>
+</li>
+</ol>
+<h2 id="guidelines">Guidelines</h2>
+<ul>
+<li><strong>One Change at a Time</strong>: To clearly understand the impact of each parameter, be sure to change only one parameter at a time.</li>
+<li><strong>Document Your Findings</strong>: Keeping a detailed record of your experiments is crucial. It will help in understanding the outcomes and in discussions.</li>
+<li><strong>Explore and Think Critically</strong>: Don&rsquo;t hesitate to try wide-ranging values for parameters. Use critical thinking to analyze why certain changes affect the model as they do.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This exercise is a hands-on opportunity to understand the workings of neural networks. Your explorations and findings will contribute to a deeper understanding of how different parameters influence a neural network&rsquo;s learning process and performance. Happy experimenting!</p>
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>
