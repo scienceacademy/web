@@ -1,0 +1,25 @@
+#nickname-p{
+    margin-bottom : 0px;
+    padding : 0px;
+    border : none;
+}
+#nickname-ul
+{
+    margin-top : 0px;
+}
+
+.student{
+    margin-bottom : 0px;
+    padding : 0px;
+    border : none;
+}
+
+.student-h {
+    margin-top : 10px;
+    margin-bottom : 10px;
+}
+
+.student-p{
+    margin-top : 0px;
+    margin-bottom : 0px;
+}

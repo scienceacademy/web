@@ -1,0 +1,49 @@
+body {
+    background: #1E2329;
+    color: #F0EBD8;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding-bottom: 50px;
+    }
+
+h1.first {
+    color: #7FB3D5;
+    text-shadow: -1px 0 #06D6A0, 0 1px #06D6A0, 1px 0 #06D6A0, 0 -1px #06D6A0;
+    font-size: 50px;
+    }
+.second {
+    color: green;
+    text-shadow: -1px 0 #06D6A0, 0 1px #06D6A0, 1px 0 #06D6A0, 0 -1px #06D6A0;
+    font-size: 50px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #262C33;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+/* Nav bar from w3 schools*/

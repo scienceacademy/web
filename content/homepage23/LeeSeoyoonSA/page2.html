@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Hobbies</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+/* template from w3schools */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px;
+}
+
+.column.side {
+  width: 25%;
+}
+
+.column.middle {
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+  <ul>
+    <div class="topnav"></div>
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="page2.html">My Hobbies</a></li>
+    <li><a href="page3.html">My Pinterest</a></li>
+
+
+  </ul>
+<h2>My hobbies</h2>
+<p>I will talk about some of the hobbies I do in my free time!</p>
+
+
+<div class="header">
+  <h2>Hobbies</h2>
+  <img src="doll.jpg" alt="https://www.pinterest.com/pin/610941505727600550/">
+
+</div>
+
+<div class="row">
+  <div class="column side" style="background-color:#aaa;">Video Games
+    <p>I like playing league of legends with my friends competitively. It's a way of collaborating with your teammates to reach a common goal of winning, a part I like the most in video games.</p>
+
+</div>
+  <div class="column middle" style="background-color:#bbb;">Art and Music
+    <p>I like creating art, whether it's crafting, painting, or drawing. I also like listening to music while peacefully drawing. It helps me focus for hours to finish the artwork. Although I am not proficient, I enjoy it as a hobby since I can express myself creatively.</p>
+</div>
+  <div class="column side" style="background-color:#ccc;">Tennis
+    <p>I played tennis for around 4 years. I enjoy playing tennis with my dad. It is a great sport to stay fit and also thrilling.</p>
+</div>
+</div>
+
+<div class="footer">
+  <p>About me</p>
+</div>
+
+</body>
+</html>
+
+

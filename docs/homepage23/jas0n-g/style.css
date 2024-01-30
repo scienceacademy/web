@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+p {
+    text-align: left;
+    text-justify: left;
+}
+
+/* media */
+
+img {
+    border-radius: 10px;
+}
+
+.video-mask {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* links */
+
+a {
+    color: cyan;
+    text-decoration-line: none;
+}
+
+a:visited {
+    color: blue;
+    text-decoration-line: none;
+}
+
+.back {
+    text-align: right;
+    font-size: 15px;
+    padding: 0px;
+}
+
+/* headers */
+
+h1 {
+    color: red;
+    font-size: 60px;
+}
+
+h2 {
+    color: orange;
+    font-size: 40px;
+}
+
+/* index link images */
+
+.cubing,
+.typing,
+.gaming {
+    display: inline-block;
+}
+
+.cubing a,
+.typing a,
+.gaming a {
+    text-align: center;
+    font-size: 0px;
+    display: block;
+    transition: font-size, .25s;
+}
+
+.cubing img,
+.typing img,
+.gaming img {
+    opacity: .25;
+    width: 175px;
+    height: 175px;
+    border-radius: 10px;
+    transition: opacity, width, height, .25s;
+    vertical-align: middle;
+}
+
+.cubing:hover img,
+.typing:hover img,
+.gaming:hover img {
+    opacity: 1;
+    width: 225px;
+    height: 225px;
+}
+
+.cubing:hover a,
+.typing:hover a,
+.gaming:hover a {
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}

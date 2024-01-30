@@ -1,0 +1,76 @@
+/* code for the nav bar*/
+.taskbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  .taskbarli {
+    float: left;
+  }
+
+  .taskbarhighlight {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+body{
+    font-family: "Arial", sans-serif
+}
+h1{
+    text-align: center;
+}
+h3{
+  text-align: center;
+}
+h4{
+    text-align: center;
+}
+p{
+  text-align: center;
+}
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+}
+hr{
+  height: 5px;
+  border-width: 0;
+  background-color: black;
+}
+.scheduleline{
+    display: flex;
+}
+.block1and3{
+    margin: auto;
+    width: 50%;
+    border: 3px solid red;
+    padding: 10px;
+}
+.block2{
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+}
+.container{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5px;
+}
+.inlineimage{
+  width: 90%;
+}

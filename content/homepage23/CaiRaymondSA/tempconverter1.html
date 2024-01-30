@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel = "stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	  <buttonback class="material-symbols-outlined" onclick = "window.location.href='index.html';">
+		arrow_back
+	  </buttonback>
+</head>
+
+<body>
+
+	<h1>
+		Temperature Converter (One Output)
+	</h1>
+
+	<script>
+		function convertFahrenheit(fahrenheitInput){
+document.getElementById("output").value = (fahrenheitInput.value - 32) / 1.8
+}
+
+function convertCelsius(celsiusInput){
+document.getElementById("output").value = celsiusInput.value * 1.8 + 32
+}
+	</script>
+	<form>
+		Fahrenheit <input type = "number" name = "Fahrenheit" id = "fahrenheit" oninput = "convertFahrenheit(this)" />
+
+   Celsius <input type = "number" name = "Celsius" id = "celsius" oninput = "convertCelsius(this)" />
+   <br>
+   Output <input type = "number" name = "Output" id = "output"/>
+   <input type="reset" name="reset" value="Reset" />
+</form>
+<a href = "tempconverter2.html">Simplified Version</a>
+
+<table>
+<tr><th>Fahrenheit</th>
+<th>Celsius</th>
+</tr>
+<script>
+for(let n = 0; n < 201; n++){
+document.write(
+"<tr><td>" + n + "</td><td>" + Math.round((n-32)/1.8)+ "</td></tr>"
+)
+}
+</script>
+</table>
+
+</body>
+
+</html>

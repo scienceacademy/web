@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function getRoot(){
+			debugger;
+			let num = +document.getElementById("number").value;
+			let g = +document.getElementById("gnum").value;
+			let result = (((num / g) + g) / 2)
+			if(Math.abs(result * result - num)< 0.00000000001){
+				document.getElementById("guess").innerHTML = "This is an accurate square root: " + result;
+				}else{
+					document.getElementById("gnum").value = result;
+				}
+			return result;
+		}
+	</script>
+
+	<link rel = "stylesheet" href="style.css">
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	<buttonback class="material-symbols-outlined" onclick = "window.location.href='https://ubiquitous-dollop-5579w7q5x6qcqgv-8080.app.github.dev/index.html';">
+	  arrow_back
+	</buttonback>
+</head>
+<body style="background-color:#ccffff;">
+	<h1>Square Roots</h1>
+	<p>This tool will help you find the square root of any number :)</p>
+	<h4>Input the number here</h4>
+	<input type = "number" id = "number" >
+	<br>
+	<br>
+	<h4>Enter your guess here</h4>
+	<input type = "number" id = "gnum">
+	<br>
+	<br>
+	<button type = "button" onclick = "getRoot()">Guess</button>
+	<br>
+	<br>
+	<div id = "guess"></div>
+	<br>
+	<div id = "bla"></div>
+</body>
+
+</html>
