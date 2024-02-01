@@ -1,0 +1,72 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+body {
+  background-image: url("murica.gif");
+}
+
+.murica.gif {
+  background-image: url("murica.gif");
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: red;
+    font-size: 50px;
+}
+
+p {
+    text-align: center;
+    color: red;
+}
+
+a {
+    text-align: center;
+    color: blue;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+.hi {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+}
+
+
+
+  @keyframes eagle {
+    0% {left:-150px;}
+    100% {left:1300px;}
+  }
+
+  .eagle {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    animation: eagle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+
