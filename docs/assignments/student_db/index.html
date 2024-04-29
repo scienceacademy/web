@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Student Database &middot; AP CSP 2023-24</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://localhost:1313/web/"><h1>AP CSP 2023-24</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://localhost:1313/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2024. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Student Database</h1>
+  <time datetime=2021-01-18T03:55:45-0700 class="post-date">Mon, Jan 18, 2021</time>
+  <p>You&rsquo;ve been hired to build an application to help manage the student database at a school.</p>
+<p>Create a new database called <code>school.db</code>. This will contain all of the data about the students and classes at the school.</p>
+<p>Here is the database schema:</p>
+<pre tabindex="0"><code>CREATE TABLE auth (
+    username PRIMARY KEY,
+    password TEXT NOT NULL
+);
+
+CREATE TABLE courses (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL
+);
+
+CREATE TABLE enrollment (
+    course_id INTEGER NOT NULL,
+    person_id INTEGER NOT NULL
+);
+
+CREATE TABLE people (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+);
+</code></pre><blockquote>
+<p><strong>NOTE:</strong> These tables are slightly different from the example we did together in class. If you create a new blank database, you can paste the above to create all the required tables.</p>
+</blockquote>
+<h2 id="step-1-logging-in">Step 1: Logging in</h2>
+<p>Create a program called <code>students.py</code>.</p>
+<p>Your program needs some security - only authorized users should be able to run it. Therefore, when your program is first run, it will require the user to authenticate. Ask the user for a username and password. If they both do not match an entry in the <code>auth</code> table, print an error message and require them to login again.</p>
+<blockquote>
+<p>For testing purposes, you can make as many users/passwords as you like. However, for submitting, make sure you have the username &ldquo;admin&rdquo; with the password &ldquo;1234&rdquo;. (We all know this is a terrible password, right?)</p>
+</blockquote>
+<h2 id="step-2-main-menu">Step 2: Main Menu</h2>
+<p>Once the user has successfully authenticated, present them with a menu of options like so:</p>
+<pre tabindex="0"><code>----------
+Menu
+----------
+1) Add new student
+2) Show list of student&#39;s courses
+3) Add/remove student from a course
+4) Quit
+
+Your choice:
+</code></pre><p>Make sure to validate the choice. If the user types anything other than 1, 2, 3, or 4, reject the input and repeat the question.</p>
+<h3 id="option-1-add-a-student">Option 1: Add a student</h3>
+<p>Selecting this option will ask the user for the new student&rsquo;s name, insert it into the database, and return the user to the main menu.</p>
+<blockquote>
+<p>For the purposes of this assignment, assume ther are no students with the same name.</p>
+</blockquote>
+<pre tabindex="0"><code>Name of new student: John
+Student added!
+</code></pre><h3 id="option-2-show-students-courses">Option 2: Show student&rsquo;s courses</h3>
+<p>After selecting this option, ask the user to type a name. If there are multiple matches to the name (for example, if the user typed &ldquo;Sam&rdquo; and there is a &ldquo;Samuel&rdquo; and a &ldquo;Samantha&rdquo; in the database), show a list of names and ids, and ask which one to use.</p>
+<blockquote>
+<p><strong>HINT:</strong> You should use a <code>LIKE</code> query here. If the query returns only one record, then you can use that student.</p>
+</blockquote>
+<p>Once a student has been chosen, display a list of the courses the student is enrolled in.</p>
+<pre tabindex="0"><code>Menu
+----
+1) Add new student
+2) Show list of student&#39;s courses
+3) Add/remove student from course
+4) Quit
+
+Your choice: 2
+Student name: sam
+Found these names:
+2 : Samuel
+3 : Samantha
+Choose a student ID: 3
+Course ID : Title
+2 : Spanish II
+3 : Quantum Physics
+</code></pre><h3 id="option-3-addremove-student-from-a-course">Option 3: Add/Remove student from a course</h3>
+<p>Again, the first step will be to select a student, using the same criteria as above.</p>
+<p>Example, enrolling a student:</p>
+<pre tabindex="0"><code>----------
+Menu
+----------
+1) Add new student
+2) Show list of student&#39;s courses
+3) Add/remove student from course
+4) Quit
+
+Your choice: 3
+Student name: bob
+(E)nroll or (U)nenroll? e
+Course ID | Title
+1 | Spanish I
+2 | Spanish II
+3 | Quantum Physics
+4 | English Literature
+5 | Ancient History
+Course ID: 4
+Student is already enrolled in that course.
+</code></pre><p>Example, unenrolling a student:</p>
+<pre tabindex="0"><code>----------
+Menu
+----------
+1) Add new student
+2) Show list of student&#39;s courses
+3) Add/remove student from course
+4) Quit
+
+Your choice: 3
+Student name: bob
+(E)nroll or (U)nenroll? u
+Course ID | Title
+1 | Spanish I
+4 | English Literature
+----------
+Course ID: 4
+Student unenrolled.
+</code></pre><p>Execute the below to evaluate the correctness of your code using check50. But be sure to test it yourself as well!</p>
+<pre tabindex="0"><code>check50 scienceacademy/problems/2020ap/student_db
+</code></pre><p>Execute the below to evaluate the style of your code using style50.</p>
+<pre tabindex="0"><code>style50 students.py
+</code></pre><h2 id="submitting">Submitting</h2>
+<p>Execute the below to submit your code:</p>
+<pre tabindex="0"><code>submit50 scienceacademy/problems/2020ap/student_db
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>

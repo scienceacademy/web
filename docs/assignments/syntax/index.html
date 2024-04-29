@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.124.1">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Syntax &middot; AP CSP 2023-24</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://localhost:1313/web/"><h1>AP CSP 2023-24</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://localhost:1313/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2024. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Syntax</h1>
+  <time datetime=2021-08-17T20:55:45-0700 class="post-date">Tue, Aug 17, 2021</time>
+  <p>In this lab you will learn:</p>
+<ul>
+<li>What syntax is, and how it works in C</li>
+<li>When to use parentheses and double quotes</li>
+<li>What curly braces and semicolons are for</li>
+</ul>
+<h2 id="what-is-syntax">What is Syntax?</h2>
+<p>In linguistics, syntax is the set of rules for using words, phrases, and punctuation to form sentences. As you can see above, if the word order of a sentence is incorrect, you might not understand what is being said to you.</p>
+<h2 id="syntax-in-c">Syntax in C</h2>
+<p>In computer science, <strong>syntax</strong> is important for a computer to understand what you are telling it to do. Each programming language has its own syntactical rules, which include the combination of both words and punctuation.</p>
+<p>For instance, to say &ldquo;hello&rdquo; in C, you would write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;hello,  world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span></code></pre></div><p>Note that the <code>printf</code> function takes an <strong>argument</strong>, or parameter, which is wrapped in symmetrical parentheses, <code>(</code> and <code>)</code>.</p>
+<p>You may also notice the double quotes <code>&quot;</code>, which are also symmetrical, and surround words, or sequences of characters. We call these sequences of characters <code>strings</code>.</p>
+<p>And finally, the entire line ends with a semicolon, <code>;</code>. A semicolon is used at the end of every statement, like a period at the end of a sentence.</p>
+<h2 id="creating-a-program">Creating a program</h2>
+<p>A C program won’t work unless you write a few lines to set it up.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;hello, world</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Notice the <code>int main(void)</code> line, which is the standard name in C of a default function which is required for the program to run. When you execute a C program, the <code>main</code> function will automatically run.</p>
+<p>Don&rsquo;t worry yet about the terms <code>int</code> and <code>void</code>! We&rsquo;ll be learning more about those later on.</p>
+<p>The curly braces <code>{</code> and <code>}</code> are symbols you&rsquo;ll see frequently in C. They are used here to wrap the code that we want to execute in functions like <code>main</code>. The code inside the curly braces is called a <strong>block</strong> (put another way, curly braces <em>define</em> a block of code). You&rsquo;ll see curly braces used with loops to indicate which segments of code to repeat; with conditional statements to tell the computer which block to choose; and with other programing constructs as well.</p>
+<p>The line <code>#include &lt;stdio.h&gt;</code> may look incomprehensible at first. <code>include</code> is a keyword that indicates you want to include some other file in your program, and it must be preceded by the symbol <code>#</code>. <code>stdio.h</code> is a <strong>library</strong>, containing functions for input and output, which means that it deals with input (like from the keyboard) and output (printing characters to the screen).</p>
+<h2 id="now-its-your-turn">Now it&rsquo;s your turn!</h2>
+<p>Now it&rsquo;s your turn to try out decoding some syntax in C!</p>
+<p>Take a look at the program below. There are several syntactical errors in it. See if you can edit the code to correct the errors. Look carefully at all the details in the example above for reference.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>include stdio.h
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>(<span style="color:#8be9fd">void</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;This is CSP!</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>When you are done, <strong>compile</strong> your program by typing the following in the terminal window after the <code>$</code> prompt followed by pressing enter.</p>
+<pre tabindex="0"><code>make syntax
+</code></pre><p>If you see any errors, it&rsquo;s time to debug! You may have left out something small like a <code>;</code> or misspelled something. If you have a hard time finding your error, try prefixing <code>help50</code> to your command like this:</p>
+<pre tabindex="0"><code>help50 make syntax
+</code></pre><p>Once you feel you&rsquo;ve corrected any errors, execute <code>make syntax</code> again, and repeat this process until no more errors appear.</p>
+<p>Now execute your program by typing in the following, again followed by enter:</p>
+<pre tabindex="0"><code>./syntax
+</code></pre><h3 id="code-style">Code style</h3>
+<p>Though C doesn&rsquo;t care about how you style your code (in other words code with correct syntax but inconsistent spacing will compile and execute), your teacher does (and you should)! That&rsquo;s because formatting your code consistently makes it easier to read and as you&rsquo;ll soon find, easier to debug.</p>
+<p>You can check that your style is correct by executing the following at the <code>$</code> prompt:</p>
+<pre tabindex="0"><code>style50 syntax.c
+</code></pre><p>If there’s room for improvement in your code’s style, any characters you should delete will be highlighted in red, and any characters you should add will be highlighted in green.</p>
+<p>When style50 outputs:</p>
+<div id="green">
+    <pre><code>Looks good!</code></pre>
+</div>
+<p>you are stylish!</p>
+<h3 id="how-to-test-your-code">How to Test Your Code</h3>
+<p>Once you&rsquo;ve tested the program yourself, execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<pre tabindex="0"><code>check50 scienceacademy/labs/2021ap/syntax
+</code></pre><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you&rsquo;ll see asterisks (<code>*</code>) instead of the actual characters in your password.</p>
+<pre tabindex="0"><code>submit50 scienceacademy/labs/2021ap/syntax
+</code></pre>
+</div>
+
+
+    </main>
+
+    
+  </body>
+</html>
