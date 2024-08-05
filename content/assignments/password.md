@@ -1,7 +1,7 @@
 ---
 title: "Lab: Password"
 date: 2023-09-06T19:55:45-07:00
-draft: false
+draft: true
 ---
 
 Validating passwords.

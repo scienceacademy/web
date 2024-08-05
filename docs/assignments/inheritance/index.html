@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
-<head>
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="generator" content="Hugo 0.124.1">
@@ -12,10 +12,10 @@
   <meta name="description" content="" />
 
   
-  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/hyde.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
 
 
@@ -31,7 +31,7 @@
   <aside class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
-      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2023-24</h1></a>
+      <a href="http://localhost:1313/web/"><h1>AP CSP 2023-24</h1></a>
       <p class="lead">
        Mr. Bradfield&#39;s AP Computer Science Principles 
       </p>
@@ -39,7 +39,7 @@
 
     <nav>
       <ul class="sidebar-nav">
-        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="http://localhost:1313/web/">Home</a> </li>
         <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
       </ul>
     </nav>
@@ -52,24 +52,31 @@
     <div class="post">
   <h1>Inheritance</h1>
   <time datetime=2023-10-23T13:55:45-0700 class="post-date">Mon, Oct 23, 2023</time>
-  <p>Simulate the inheritance of blood types for each member of a family.</p>
-<pre tabindex="0"><code>$ ./inheritance
+  <p>imulate the inheritance of blood types for each member of a family.
+&lt;</p>
+<p>``
+$ ./inheritance
 Child (Generation 0): blood type OO
-    Parent (Generation 1): blood type AO
-        Grandparent (Generation 2): blood type OA
-        Grandparent (Generation 2): blood type BO
-    Parent (Generation 1): blood type OB
-        Grandparent (Generation 2): blood type AO
-        Grandparent (Generation 2): blood type BO
-</code></pre><h2 id="background">Background</h2>
-<p>A person’s blood type is determined by two alleles (i.e., different forms of a gene). The three possible alleles are A, B, and O, of which each person has two (possibly the same, possibly different). Each of a child’s parents randomly passes one of their two blood type alleles to their child. The possible blood type combinations, then, are: OO, OA, OB, AO, AA, AB, BO, BA, and BB.</p>
-<p>For example, if one parent has blood type AO and the other parent has blood type BB, then the child’s possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child’s possible blood types would be AO, OB, AB, and OO.</p>
-<h2 id="getting-started">Getting Started</h2>
-<ol>
-<li>In the terminal window, run</li>
-</ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/inheritance.zip
-</span></span></code></pre></div><p>to download a zip file of the code.</p>
+Parent (Generation 1): blood type AO
+Grandparent (Generation 2): blood type OA
+Grandparent (Generation 2): blood type BO
+Parent (Generation 1): blood type OB
+Grandparent (Generation 2): blood type AO
+Grandparent (Generation 2): blood type BO</p>
+<pre tabindex="0"><code>
+## Background
+
+A person’s blood type is determined by two alleles (i.e., different forms of a gene). The three possible alleles are A, B, and O, of which each person has two (possibly the same, possibly different). Each of a child’s parents randomly passes one of their two blood type alleles to their child. The possible blood type combinations, then, are: OO, OA, OB, AO, AA, AB, BO, BA, and BB.
+
+For example, if one parent has blood type AO and the other parent has blood type BB, then the child’s possible blood types would be AB and OB, depending on which allele is received from each parent. Similarly, if one parent has blood type AO and the other OB, then the child’s possible blood types would be AO, OB, AB, and OO.
+
+## Getting Started
+
+1. In the terminal window, run
+
+```md
+wget https://scienceacademy.github.io/web/inheritance.zip
+</code></pre><p>to download a zip file of the code.</p>
 <ol start="3">
 <li>In the terminal window, run <code>unzip inheritance.zip</code> to unzip (decompress) the file.</li>
 <li>In the terminal window, run <code>cd inheritance</code> to change directories into your <code>inheritance</code> directory.</li>
@@ -145,14 +152,12 @@ Generation 0, blood type OO
 </code></pre><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2023ap/inheritance
 </span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2023ap/inheritance
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>�</p>
 </div>
 
 
     </main>
 
-    
-      
     
   </body>
 </html>

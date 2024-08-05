@@ -1,7 +1,7 @@
 ---
 title: "Practice: sum.c"
 date: 2023-08-19T11:55:45-07:00
-draft: false
+draft: true
 ---
 
 Write a program called `sum.c` that asks the user to provide ten integers as input and computes the sum.

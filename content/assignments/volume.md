@@ -1,7 +1,7 @@
 ---
 title: "Lab: Volume"
 date: 2023-10-08T13:55:45-07:00
-draft: false
+draft: true
 ---
 Write a program to modify the volume of an audio file.
 <!--more-->

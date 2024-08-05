@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Marios on AP CSP 2023-24</title>
-    <link>https://scienceacademy.github.io/web/mario/</link>
+    <link>http://localhost:1313/web/mario/</link>
     <description>Recent content in Marios on AP CSP 2023-24</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="https://scienceacademy.github.io/web/mario/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/web/mario/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title></title>
-      <link>https://scienceacademy.github.io/web/mario/less/</link>
+      <link>http://localhost:1313/web/mario/less/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://scienceacademy.github.io/web/mario/less/</guid>
+      <guid>http://localhost:1313/web/mario/less/</guid>
       <description>&lt;!DOCTYPE html&gt; Mario Mario (less comfortable) World 1-1 Toward the end of World 1-1 in Nintendo&#39;s Super Mario Brothers, Mario must climb a right-aligned pyramid of blocks, as shown below.&#xA;Let&#39;s recreate that pyramid in Python, by using hashes (#) for bricks, like shown below. Each hash is a bit taller than it is wide (at least for the font we&#39;re using), so the pyramid itself will also appear taller than it is wide.</description>
     </item>
     <item>
       <title></title>
-      <link>https://scienceacademy.github.io/web/mario/more/</link>
+      <link>http://localhost:1313/web/mario/more/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://scienceacademy.github.io/web/mario/more/</guid>
+      <guid>http://localhost:1313/web/mario/more/</guid>
       <description>&lt;!DOCTYPE html&gt; Mario Mario (more comfortable) World 1-1 Toward the beginning of World 1-1 in Nintendo&#39;s Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, as shown below.&#xA;Let&#39;s recreate those pyramids in Python, using hashes (#) for bricks, like shown below. Each hash is a bit taller than it is wide (at least for the font we&#39;re using), so the pyramids themselves will also appear taller than they are wide.</description>
     </item>
   </channel>

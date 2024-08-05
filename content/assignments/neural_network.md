@@ -1,7 +1,7 @@
 ---
 title: "Experimenting with ML"
 date: 2023-12-01T13:55:45-07:00
-draft: false
+draft: true
 ---
 
 Experiment with neural network performance.
