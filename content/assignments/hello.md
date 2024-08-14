@@ -1,7 +1,7 @@
 ---
 title: "Hello"
-date: 2024-08-15T19:55:45-07:00
-draft: true
+date: 2024-08-13T19:55:45-07:00
+draft: false
 ---
 
 A simple assignment to practice testing and submitting your code.
@@ -110,7 +110,7 @@ Remember, to use `get_string`, you need to include `cs50.h` (in which `get_strin
 Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2023ap/hello
+check50 scienceacademy/problems/2024ap/hello
 ```
 
 Execute the below to evaluate the style of your code using `style50`.
@@ -124,5 +124,5 @@ style50 hello.c
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```md
-submit50 scienceacademy/problems/2023ap/hello
+submit50 scienceacademy/problems/2024ap/hello
 ```
