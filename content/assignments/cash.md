@@ -1,7 +1,7 @@
 ---
 title: "Cash"
-date: 2023-08-23T19:55:45-07:00
-draft: true
+date: 2024-08-20T19:55:45-07:00
+draft: false
 ---
 
 Making change...
