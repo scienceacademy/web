@@ -1,7 +1,7 @@
 ---
 title: "Lab: Password"
-date: 2023-09-06T19:55:45-07:00
-draft: true
+date: 2024-09-01T10:55:45-07:00
+draft: false
 ---
 
 Validating passwords.
@@ -61,7 +61,7 @@ bool valid(string password)
 You can also execute the below to evaluate the correctness of your code using `check50`. **But be sure to compile and test it yourself as well!**
 
 ```
-check50 scienceacademy/problems/2023ap/password
+check50 scienceacademy/problems/2024ap/password
 ```
 
 ## How to Submit
@@ -69,5 +69,5 @@ check50 scienceacademy/problems/2023ap/password
 Execute the below:
 
 ```
-submit50 scienceacademy/problems/2023ap/password
+submit50 scienceacademy/problems/2024ap/password
 ```
