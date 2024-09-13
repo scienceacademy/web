@@ -1,7 +1,7 @@
 ---
 title: "Lab: Sorting"
-date: 2023-09-19T13:55:45-07:00
-draft: true
+date: 2024-09-12T13:55:45-07:00
+draft: false
 ---
 
 Analyze three sorting programs to determine which algorithms they use.
