@@ -44,11 +44,11 @@ The different types of `.txt` files may help you determine which sort is which. 
 Execute the below to evaluate the correctness of your answers using check50. But be sure to fill in your explanations as well, which check50 won’t check here!
 
 ```md
-check50 scienceacademy/problems/2023ap/sort
+check50 scienceacademy/problems/2024ap/sort
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2023ap/sort
+submit50 scienceacademy/problems/2024ap/sort
 ```
