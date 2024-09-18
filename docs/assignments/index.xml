@@ -6,8 +6,15 @@
     <description>Recent content in Assignments on AP CSP 2024-25</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Sep 2024 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2024 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Plurality</title>
+      <link>https://scienceacademy.github.io/web/assignments/plurality/</link>
+      <pubDate>Tue, 17 Sep 2024 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/plurality/</guid>
+      <description>&lt;p&gt;Implement a program that runs a plurality election, as shown below.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lab: Sorting</title>
       <link>https://scienceacademy.github.io/web/assignments/sorting/</link>
