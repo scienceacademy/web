@@ -6,8 +6,15 @@
     <description>Recent content on AP CSP 2024-25</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Sep 2024 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2024 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voting: Tideman</title>
+      <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
+      <pubDate>Wed, 18 Sep 2024 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/tideman/</guid>
+      <description>&lt;p&gt;Implement a program that runs a &amp;ldquo;Tideman&amp;rdquo; election, as shown below.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Plurality</title>
       <link>https://scienceacademy.github.io/web/assignments/plurality/</link>
@@ -84,6 +91,13 @@
       <pubDate>Sun, 04 Aug 2024 19:55:45 -0700</pubDate>
       <guid>https://scienceacademy.github.io/web/assignments/welcome/</guid>
       <description>&lt;p&gt;Welcome to AP Computer Science Principles for 2024-2025! Read this to get started.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Voting: Runoff</title>
+      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+      <pubDate>Mon, 18 Sep 2023 12:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
