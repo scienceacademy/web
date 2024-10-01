@@ -1,6 +1,6 @@
 ---
 title: "Filter: More Comfortable"
-date: 2024-10-01T13:56:45-07:00
+date: 2024-10-01T03:56:45-07:00
 draft: false
 ---
 Implement a program that applies filters to images.

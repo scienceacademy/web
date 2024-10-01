@@ -5,8 +5,8 @@
     {{ block "main" . -}}{{- end }}
     </main>
 
-    {{ if not .Site.IsServer }}
+    <!-- {{ if not . }}
       {{ template "_internal/google_analytics.html" . }}
-    {{ end }}
+    {{ end }} -->
   </body>
 </html>
