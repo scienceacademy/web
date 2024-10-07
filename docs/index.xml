@@ -6,8 +6,15 @@
     <description>Recent content on AP CSP 2024-25</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Oct 2024 03:56:45 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2024 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recover</title>
+      <link>https://scienceacademy.github.io/web/assignments/recover/</link>
+      <pubDate>Sun, 06 Oct 2024 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/recover/</guid>
+      <description>&lt;p&gt;Implement a program that recovers JPEGs from a forensic image.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Filter: More Comfortable</title>
       <link>https://scienceacademy.github.io/web/assignments/filter-more/</link>

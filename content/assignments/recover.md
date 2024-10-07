@@ -1,7 +1,7 @@
 ---
 title: "Recover"
-date: 2023-10-16T13:55:45-07:00
-draft: true
+date: 2024-10-06T13:55:45-07:00
+draft: false
 ---
 Implement a program that recovers JPEGs from a forensic image.
 <!--more-->
@@ -89,12 +89,12 @@ Keep in mind, too, that you can read data from a file using `fread`, which will 
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2023ap/recover
+check50 scienceacademy/problems/2024ap/recover
 ```
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted.
 ```
-submit50 scienceacademy/problems/2023ap/recover
+submit50 scienceacademy/problems/2024ap/recover
 ```
