@@ -1,7 +1,7 @@
 ---
 title: "Inheritance"
-date: 2023-10-23T13:55:45-07:00
-draft: true
+date: 2024-10-10T13:55:45-07:00
+draft: false
 ---
 Simulate the inheritance of blood types for each member of a family.
 <!--more-->
@@ -95,13 +95,13 @@ Generation 0, blood type OO
 ```
 
 ```md
-check50 scienceacademy/problems/2023ap/inheritance
+check50 scienceacademy/problems/2024ap/inheritance
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2023ap/inheritance
+submit50 scienceacademy/problems/2024ap/inheritance
 ```
 
 
