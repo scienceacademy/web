@@ -6,8 +6,15 @@
     <description>Recent content in Assignments on AP CSP 2024-25</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2024 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2024 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Video poker ♥ ♣ ♠ ♦</title>
+      <link>https://scienceacademy.github.io/web/assignments/poker/</link>
+      <pubDate>Sun, 20 Oct 2024 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/poker/</guid>
+      <description>&lt;p&gt;Implement a program that runs a game of video poker.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Inheritance</title>
       <link>https://scienceacademy.github.io/web/assignments/inheritance/</link>

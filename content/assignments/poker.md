@@ -1,7 +1,7 @@
 ---
 title: "Video poker ♥ ♣ ♠ ♦"
-date: 2023-11-01T13:55:45-07:00
-draft: true
+date: 2024-10-20T13:55:45-07:00
+draft: false
 ---
 
 Implement a program that runs a game of video poker.
@@ -120,5 +120,5 @@ There's no `check50` for this assignment. Make sure to run and test your program
 ## How to Submit
 
 ```
-submit50 scienceacademy/problems/2023ap/poker
+submit50 scienceacademy/problems/2024ap/poker
 ```
