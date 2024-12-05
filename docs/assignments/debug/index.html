@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.135.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Debugging Practice &middot; AP CSP 2024-25</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2024-25</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2024. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Debugging Practice</h1>
+  <time datetime=2024-12-04T19:55:45-0700 class="post-date">Wed, Dec 4, 2024</time>
+  <h2 id="submission-instructions">Submission Instructions</h2>
+<ol>
+<li>Open a new blank document named <code>debug.txt</code>.</li>
+<li>Copy the corrected code for each example into your solution document.</li>
+<li>Provide a brief explanation for each fix.</li>
+</ol>
+<p><strong>Good luck!</strong></p>
+<hr>
+<h2 id="part-1-python-debugging">Part 1: Python Debugging</h2>
+<h3 id="1-complex-syntax-error">1. Complex Syntax Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Counter</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> __init__(self, start<span style="color:#ff79c6">=</span><span style="color:#bd93f9">0</span>):
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">=</span> start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">increment</span>(self):
+</span></span><span style="display:flex;"><span>        self<span style="color:#ff79c6">.</span>value <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_counter <span style="color:#ff79c6">=</span> Counter(start: <span style="color:#bd93f9">10</span>)
+</span></span><span style="display:flex;"><span>my_counter<span style="color:#ff79c6">.</span>increment()
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;Counter value is </span><span style="color:#f1fa8c">{</span>my_counter<span style="color:#ff79c6">.</span>value<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><p><strong>Task:</strong> Correct the errors in object initialization and fix any other issues.</p>
+<hr>
+<h3 id="2-logic-error-with-data-structures">2. Logic Error with Data Structures</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">find_most_common</span>(nums):
+</span></span><span style="display:flex;"><span>    count_dict <span style="color:#ff79c6">=</span> {}
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> num <span style="color:#ff79c6">in</span> nums:
+</span></span><span style="display:flex;"><span>        count_dict[num] <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>  <span style="color:#6272a4"># Updates without initializing keys</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#8be9fd;font-style:italic">max</span>(count_dict, key<span style="color:#ff79c6">=</span><span style="color:#ff79c6">lambda</span> x: count_dict[x])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>numbers <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">5</span>, <span style="color:#bd93f9">3</span>]
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">&#34;Most common number:&#34;</span>, find_most_common(numbers))
+</span></span></code></pre></div><p><strong>Task:</strong> Identify and resolve the logic issues related to dictionary initialization and key handling.</p>
+<hr>
+<h3 id="3-error-in-recursive-function">3. Error in Recursive Function</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">factorial</span>(n):
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> n <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> n <span style="color:#ff79c6">*</span> factorial(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(factorial(<span style="color:#bd93f9">5</span>))
+</span></span></code></pre></div><p><strong>Task:</strong> Fix both the syntax and logic errors in the recursive implementation.</p>
+<hr>
+<h3 id="4-data-processing-logic">4. Data Processing Logic</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">calculate_average</span>(grades):
+</span></span><span style="display:flex;"><span>    total <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">sum</span>(grades)
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> total <span style="color:#ff79c6">/</span> <span style="color:#8be9fd;font-style:italic">len</span>(total)  <span style="color:#6272a4"># Incorrect parameter</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>student_grades <span style="color:#ff79c6">=</span> {<span style="color:#f1fa8c">&#34;Alice&#34;</span>: [<span style="color:#bd93f9">85</span>, <span style="color:#bd93f9">90</span>, <span style="color:#bd93f9">92</span>], <span style="color:#f1fa8c">&#34;Bob&#34;</span>: [<span style="color:#bd93f9">70</span>, <span style="color:#bd93f9">88</span>, <span style="color:#bd93f9">81</span>]}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ff79c6">for</span> student, grades <span style="color:#ff79c6">in</span> student_grades<span style="color:#ff79c6">.</span>items():
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">print</span>(<span style="color:#f1fa8c">f</span><span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">{</span>student<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#39;s average grade: </span><span style="color:#f1fa8c">{</span>calculate_average(grades)<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>)
+</span></span></code></pre></div><p><strong>Task:</strong> Debug the code to correctly calculate averages for each student.</p>
+<hr>
+<h3 id="5-algorithmic-bug">5. Algorithmic Bug</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">merge_sorted</span>(arr1, arr2):
+</span></span><span style="display:flex;"><span>    merged <span style="color:#ff79c6">=</span> []
+</span></span><span style="display:flex;"><span>    i, j <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">while</span> i <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(arr1) <span style="color:#ff79c6">or</span> j <span style="color:#ff79c6">&lt;</span> <span style="color:#8be9fd;font-style:italic">len</span>(arr2):  <span style="color:#6272a4"># Incorrect condition</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">if</span> arr1[i] <span style="color:#ff79c6">&lt;</span> arr2[j]:
+</span></span><span style="display:flex;"><span>            merged<span style="color:#ff79c6">.</span>append(arr1[i])
+</span></span><span style="display:flex;"><span>            i <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">else</span>:
+</span></span><span style="display:flex;"><span>            merged<span style="color:#ff79c6">.</span>append(arr2[j])
+</span></span><span style="display:flex;"><span>            j <span style="color:#ff79c6">+=</span> <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> merged
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">print</span>(merge_sorted([<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">5</span>], [<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">6</span>]))
+</span></span></code></pre></div><p><strong>Task:</strong> Debug the merging logic and handle edge cases.</p>
+<hr>
+<h2 id="part-2-c-debugging">Part 2: C Debugging</h2>
+<h3 id="1-pointer-arithmetic-and-array-error">1. Pointer Arithmetic and Array Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">print_array</span>(<span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>arr, <span style="color:#8be9fd">int</span> size) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;=</span> size; i<span style="color:#ff79c6">++</span>) {  <span style="color:#6272a4">// Off-by-one error
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;%d &#34;</span>, <span style="color:#ff79c6">*</span>(arr <span style="color:#ff79c6">+</span> i));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> nums[] <span style="color:#ff79c6">=</span> {<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">print_array</span>(nums, <span style="color:#bd93f9">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Task:</strong> Correct pointer and array boundary issues.</p>
+<hr>
+<h3 id="2-complex-logic-error">2. Complex Logic Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">fibonacci</span>(<span style="color:#8be9fd">int</span> n) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">if</span> (n <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">1</span> <span style="color:#ff79c6">||</span> n <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">2</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">return</span> <span style="color:#50fa7b">fibonacci</span>(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">+</span> <span style="color:#50fa7b">fibonacci</span>(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">3</span>);  <span style="color:#6272a4">// Incorrect base case logic
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;Fibonacci(5) = %d</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, <span style="color:#50fa7b">fibonacci</span>(<span style="color:#bd93f9">5</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Task:</strong> Correct the logic of the recursive Fibonacci function to handle standard cases properly.</p>
+<hr>
+<h3 id="3-memory-management-error">3. Memory Management Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdlib.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">allocate_and_fill</span>(<span style="color:#8be9fd">int</span> size) {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>array <span style="color:#ff79c6">=</span> <span style="color:#50fa7b">malloc</span>(size <span style="color:#ff79c6">*</span> <span style="color:#ff79c6">sizeof</span>(<span style="color:#8be9fd">int</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;</span> size; i<span style="color:#ff79c6">++</span>) {
+</span></span><span style="display:flex;"><span>        array[i] <span style="color:#ff79c6">=</span> i <span style="color:#ff79c6">*</span> i;  <span style="color:#6272a4">// Fill with squares
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// No free() call to release memory
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;Array allocated and filled.</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">allocate_and_fill</span>(<span style="color:#bd93f9">10</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Task:</strong> Debug the memory management issues and fix potential memory leaks.</p>
+<hr>
+<h3 id="4-string-manipulation-error">4. String Manipulation Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;string.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">reverse_string</span>(<span style="color:#8be9fd">char</span> <span style="color:#ff79c6">*</span>str) {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> len <span style="color:#ff79c6">=</span> <span style="color:#50fa7b">strlen</span>(str);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; i <span style="color:#ff79c6">&lt;=</span> len <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">2</span>; i<span style="color:#ff79c6">++</span>) {  <span style="color:#6272a4">// Off-by-one error
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>        <span style="color:#8be9fd">char</span> temp <span style="color:#ff79c6">=</span> str[i];
+</span></span><span style="display:flex;"><span>        str[i] <span style="color:#ff79c6">=</span> str[len <span style="color:#ff79c6">-</span> i <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>];
+</span></span><span style="display:flex;"><span>        str[len <span style="color:#ff79c6">-</span> i <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>] <span style="color:#ff79c6">=</span> temp;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">char</span> input[] <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;hello&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">reverse_string</span>(input);
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;Reversed string: %s</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, input);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Task:</strong> Fix the off-by-one error in string reversal logic.</p>
+<hr>
+<h3 id="5-mixed-pointer-and-logic-error">5. Mixed Pointer and Logic Error</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#ff79c6">#include</span> <span style="color:#ff79c6">&lt;stdio.h&gt;</span><span style="color:#ff79c6">
+</span></span></span><span style="display:flex;"><span><span style="color:#ff79c6"></span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">void</span> <span style="color:#50fa7b">swap</span>(<span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>a, <span style="color:#8be9fd">int</span> <span style="color:#ff79c6">*</span>b) {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span>a <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">*</span>a <span style="color:#ff79c6">+</span> <span style="color:#ff79c6">*</span>b;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span>b <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">*</span>a <span style="color:#ff79c6">-</span> <span style="color:#ff79c6">*</span>b;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">*</span>a <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">*</span>a <span style="color:#ff79c6">-</span> <span style="color:#ff79c6">*</span>b;  <span style="color:#6272a4">// Causes issues with overflow
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8be9fd">int</span> <span style="color:#50fa7b">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd">int</span> x <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2147483647</span>, y <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">-</span><span style="color:#bd93f9">2147483647</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;Before swap: x = %d, y = %d</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, x, y);
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">swap</span>(<span style="color:#ff79c6">&amp;</span>x, <span style="color:#ff79c6">&amp;</span>y);
+</span></span><span style="display:flex;"><span>    <span style="color:#50fa7b">printf</span>(<span style="color:#f1fa8c">&#34;After swap: x = %d, y = %d</span><span style="color:#f1fa8c">\n</span><span style="color:#f1fa8c">&#34;</span>, x, y);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Task:</strong> Redesign the swap function to avoid potential overflow issues.</p>
+<hr>
+
+</div>
+    </main>
+
+    
+  </body>
+</html>

@@ -1,7 +1,7 @@
 ---
 title: "Lab: Songs"
-date: 2023-11-11T13:55:45-07:00
-draft: true
+date: 2024-11-07T13:55:45-07:00
+draft: false
 ---
 Write SQL queries to answer questions about a database of songs.
 <!--more-->
@@ -53,11 +53,11 @@ See [this SQL keywords reference](https://www.w3schools.com/sql/sql_ref_keywords
 ## Testing
 
 ```md
-check50 scienceacademy/problems/2023ap/songs
+check50 scienceacademy/problems/2024ap/songs
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2023ap/songs
+submit50 scienceacademy/problems/2024ap/songs
 ```
