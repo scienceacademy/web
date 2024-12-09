@@ -1,18 +1,15 @@
 ---
-title: "Practice Create Task"
-date: 2022-11-26T03:55:45-07:00
-draft: true
+title: "Create Task Planning"
+date: 2024-12-08T03:55:45-07:00
+draft: false
 ---
 
-Practice the Create Performance Task.
+Prepare for the Create Performance Task.
 <!--more-->
 
-## Create PT practice
+## Create PT prep
 
-I'd like you to complete a Create PT practice.
+Use the linked document to plan your create task project. The checklist will help you make sure your project idea will meet the requirements.
 
-For this practice, use your code from the "Plurality" assignment.
-
-Open a new Google Doc, and answer the written questions found in section 3 of the AP CSP Student Handout (starts on page 7). Label each answer with the corresponding section & question number, ie 3c.i, 3b.ii, etc. Take note of the word limit, which is *per section*.
-
-* Don't forget to identify and *explain* your examples of sequencing, selection, and iteration.
+Use the doc linked here:
+[Create Task Planning Guide](https://docs.google.com/document/d/1JcE49Zjyght2SAyhkX_RPWih1uqPRcZC5xGcxqihg_c/edit?usp=sharing)

@@ -3,6 +3,8 @@ title: "Debugging Practice"
 date: 2024-12-04T19:55:45-07:00
 draft: false
 ---
+Practice your debugging skills.
+<!--more-->
 
 ## Submission Instructions
 
