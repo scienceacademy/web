@@ -1,7 +1,7 @@
 ---
 title: "Create Task Practice"
 date: 2025-01-05T09:55:45-07:00
-draft: true
+draft: false
 ---
 
 Write a simple program to practice for the AP Create Task.
