@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.135.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Create Task Practice &middot; AP CSP 2024-25</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://localhost:1313/web/"><h1>AP CSP 2024-25</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://localhost:1313/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Create Task Practice</h1>
+  <time datetime=2025-01-05T09:55:45-0700 class="post-date">Sun, Jan 5, 2025</time>
+  <p>Write a simple program to practice for the AP Create Task.</p>
+<p>This program will simulate a pizza ordering system. The user can select what size pizza and any number of toppings, and the output is the total price of the pizza.</p>
+<p>The basic flow of the program is as follows:</p>
+<ol>
+<li>Ask the user what size pizza they want.</li>
+<li>Allow them to choose any number of toppings.</li>
+<li>Calculate the total price of the pizza.</li>
+</ol>
+<p>Don&rsquo;t forget to disallow invalid inputs.</p>
+<p>Use the following values for pizza prices:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left">Size</th>
+          <th style="text-align: left">Price</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Small</td>
+          <td style="text-align: left"><code>$10.99</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Medium</td>
+          <td style="text-align: left"><code>$12.99</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Large</td>
+          <td style="text-align: left"><code>$14.99</code></td>
+      </tr>
+  </tbody>
+</table>
+<p>Each topping costs <code>$1.50</code>.</p>
+<p>Here&rsquo;s an example of the program being run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>$ python3 pizza.py
+</span></span><span style="display:flex;"><span>Welcome to the Pizza Ordering System!
+</span></span><span style="display:flex;"><span>Available sizes: small, medium, large
+</span></span><span style="display:flex;"><span>What size pizza would you like? small
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Available toppings:
+</span></span><span style="display:flex;"><span>1. pepperoni
+</span></span><span style="display:flex;"><span>2. mushrooms
+</span></span><span style="display:flex;"><span>3. onions
+</span></span><span style="display:flex;"><span>4. sausage
+</span></span><span style="display:flex;"><span>5. bacon
+</span></span><span style="display:flex;"><span>6. extra cheese
+</span></span><span style="display:flex;"><span>7. green peppers
+</span></span><span style="display:flex;"><span>8. olives
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter a topping number (or &#39;done&#39; to finish): 1
+</span></span><span style="display:flex;"><span>Added pepperoni
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter a topping number (or &#39;done&#39; to finish): done
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Order Summary:
+</span></span><span style="display:flex;"><span>Size: small
+</span></span><span style="display:flex;"><span>Toppings: pepperoni
+</span></span><span style="display:flex;"><span>Total Price: $12.49
+</span></span></code></pre></div><p>Once you have completed the assignment, write brief answers to the following potential FRQ questions:</p>
+<ul>
+<li>
+<p>Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Identify the parameter(s) used in this procedure. Explain how your identified parameter(s) use abstraction to manage complexity in your program.</p>
+</li>
+<li>
+<p>Consider the list identified in the List section of your Personalized Project Reference. Describe how your program could be written without the use of a list. If it is not possible for your program to work without the use of a list, describe how your program&rsquo;s functionality would be limited.</p>
+</li>
+<li>
+<p>Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Write two calls to your procedure that each cause a different code segment in the procedure to execute. Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure.</p>
+</li>
+</ul>
+<p>Submit your answers in a Google Doc to the Schoology assignment.</p>
+</div>
+    </main>
+
+    
+  </body>
+</html>
