@@ -1,25 +1,34 @@
 ---
 title: "Lab: Songs"
-date: 2024-11-07T13:55:45-07:00
-draft: true
+date: 2025-01-27T13:55:45-07:00
+draft: false
 ---
 Write SQL queries to answer questions about a database of songs.
 <!--more-->
 ## Getting Started
 
-1. Open your CS50 Codespace.
-2. In the terminal window, run
+> 1. Open your CS50 Codespace.
+> 2. In the terminal window, run
+>
 ```
 wget https://scienceacademy.github.io/web/songs.zip
 ```
 
- to download a zip file of the lab code.
+> to download a zip file of the lab code.
+>
+> 3. In the terminal window, run `unzip songs.zip` to unzip (decompress) the file.
+> 4. In the terminal window, run `cd songs` to change directories into your `songs` directory.
 
-3. In the terminal window, run `unzip songs.zip` to unzip (decompress) the file.
-4. In the terminal window, run `cd songs` to change directories into your `songs` directory.
+_**OR**_
+
+> You can also use the file locally. Download the link above on your computer and then go to this link:
+>
+> https://inloop.github.io/sqlite-viewer/
+>
+> Drop the `songs.db` file you downloaded on this page to open it.
 
 
-You've been provided with a file called `songs.db`, a SQLite database containing data from Spotify about songs and artists. It contains the top 100 streamed songs on Spotify in 2018.
+You've been provided with a file called `songs.db`, a SQLite database containing data from Spotify about songs and artists. It contains the top 100 streamed songs on Spotify in 2023.
 
 Run `sqlite3 songs.db` to to open the database and run queries.
 
