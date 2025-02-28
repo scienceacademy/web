@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.135.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Huffman Encoding: Assignment &middot; AP CSP 2024-25</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2024-25</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Huffman Encoding: Assignment</h1>
+  <time datetime=2025-02-27T15:55:45-0700 class="post-date">Thu, Feb 27, 2025</time>
+  <p>In this assignment, you will implement Huffman coding, a lossless data compression algorithm that assigns variable-length codes to input characters based on their frequencies.</p>
+<h2 id="learning-objectives">Learning Objectives</h2>
+<p>In this assignment you will:</p>
+<ul>
+<li>Understand the principles of lossless compression</li>
+<li>Implement a Huffman tree data structure</li>
+<li>Apply frequency analysis to text</li>
+<li>Generate optimal prefix codes</li>
+<li>Encode and decode text using Huffman coding</li>
+</ul>
+<h2 id="huffman-algorithm-step-by-step-description">Huffman Algorithm: Step-by-Step Description</h2>
+<p>See the detailed explanation here:</p>
+<p><a href="/web/assignments/huffman_guide/">Huffman Coding: Algorithm Guide</a></p>
+<h2 id="assignment-requirements">Assignment Requirements</h2>
+<h3 id="part-1-huffman-tree-construction">Part 1: Huffman Tree Construction</h3>
+<ol>
+<li>Use the provided <code>HuffmanNode</code> class</li>
+<li>Complete the <code>build_huffman_tree</code> function that:
+<ul>
+<li>Creates a leaf node for each character</li>
+<li>Uses a priority queue to build the tree</li>
+<li>Returns the root of the Huffman tree</li>
+</ul>
+</li>
+</ol>
+<h3 id="part-2-code-generation">Part 2: Code Generation</h3>
+<ol>
+<li>Complete the <code>generate_codes</code> function to traverse the Huffman tree and create codes</li>
+<li>Store the codes in a dictionary mapping characters to their binary codes</li>
+</ol>
+<h3 id="part-4-encoding-and-decoding">Part 4: Encoding and Decoding</h3>
+<ol>
+<li>Implement the <code>encode</code> function to convert text to Huffman codes</li>
+<li>Implement the <code>decode</code> function to convert encoded bits back to text</li>
+</ol>
+<h2 id="testing">Testing</h2>
+<p>The provided code will display the following to help you troubleshoot:</p>
+<ul>
+<li>Character frequency count</li>
+<li>Assigned Huffman codes</li>
+<li>Encoded text</li>
+<li>Decoded text (and whether they match)</li>
+<li>A visualization of your Huffman tree</li>
+<li>Some statistics about the efficiency of the compression</li>
+</ul>
+<h2 id="sample-texts-for-testing">Sample Texts for Testing</h2>
+<p>Test your code with the following:</p>
+<h3 id="simple-test">Simple test:</h3>
+<pre tabindex="0"><code>hello world
+</code></pre><h3 id="english-text">English text:</h3>
+<pre tabindex="0"><code>The quick brown fox jumps over the lazy dog. The five boxing wizards jump quickly. How vexingly quick daft zebras jump!
+</code></pre><h3 id="repeated-patterns">Repeated patterns:</h3>
+<pre tabindex="0"><code>aaaaaabbbbbccccddeeeeeeeeeeeee
+</code></pre><h3 id="code-snippet">Code snippet:</h3>
+<pre tabindex="0"><code>def hello_world():
+    print(&#34;Hello, World!&#34;)
+    return True
+</code></pre><h2 id="deliverables">Deliverables</h2>
+<ol>
+<li>Completed Python script with all functions implemented</li>
+<li>A short report (1-2 paragraphs) answering the following questions:
+<ul>
+<li>What was the compression ratio for each test text?</li>
+<li>Which text compressed the best and why?</li>
+<li>How does character frequency affect compression efficiency?</li>
+<li>What are some limitations of Huffman coding?</li>
+</ul>
+</li>
+</ol>
+<h2 id="hints-and-tips">Hints and Tips</h2>
+<ul>
+<li>Use Python&rsquo;s <code>heapq</code> module for the priority queue</li>
+<li>The <code>collections.Counter</code> class can simplify frequency counting</li>
+<li>Think recursively when generating codes and traversing the tree</li>
+<li>Test with simple examples first before moving to more complex texts</li>
+<li>Remember to handle edge cases (empty strings, single character texts)</li>
+</ul>
+<h2 id="grading-criteria-100-points">Grading Criteria (100 points)</h2>
+<ul>
+<li>Correct frequency analysis (15 points)</li>
+<li>Proper Huffman tree construction (25 points)</li>
+<li>Working code generation (20 points)</li>
+<li>Successful encoding/decoding (25 points)</li>
+<li>Analysis and report (10 points)</li>
+<li>Code clarity and comments (5 points)</li>
+</ul>
+<h2 id="bonus-challenges-optional">Bonus Challenges (Optional)</h2>
+<ul>
+<li>Implement a function to visualize the Huffman tree</li>
+<li>Add support for compressing/decompressing actual text files</li>
+<li>Compare your implementation with Python&rsquo;s built-in compression libraries (like <code>zlib</code>)</li>
+</ul>
+</div>
+    </main>
+
+    
+  </body>
+</html>

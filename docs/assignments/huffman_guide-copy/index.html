@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.135.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Huffman Encoding: Algorithm Guide &middot; AP CSP 2024-25</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://localhost:1313/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://localhost:1313/web/"><h1>AP CSP 2024-25</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://localhost:1313/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Huffman Encoding: Algorithm Guide</h1>
+  <time datetime=2025-02-27T13:55:45-0700 class="post-date">Thu, Feb 27, 2025</time>
+  <p>A step-by-step explanation of the Huffman coding algorithm.</p>
+<h2 id="1-introduction-to-huffman-coding">1. Introduction to Huffman Coding</h2>
+<p>Huffman coding is an entropy encoding algorithm used for lossless data compression, developed by David A. Huffman in 1952. The key insight of Huffman coding is that more frequently occurring symbols are encoded with fewer bits than less frequently occurring symbols.</p>
+<h2 id="2-core-concepts">2. Core Concepts</h2>
+<h3 id="21-prefix-codes">2.1 Prefix Codes</h3>
+<p>Huffman codes are <strong>prefix codes</strong>, meaning no code word is a prefix of any other code word. This allows for unambiguous decoding.</p>
+<p>Example of a prefix code:</p>
+<ul>
+<li>&lsquo;A&rsquo; → &lsquo;0&rsquo;</li>
+<li>&lsquo;B&rsquo; → &lsquo;10&rsquo;</li>
+<li>&lsquo;C&rsquo; → &lsquo;110&rsquo;</li>
+<li>&lsquo;D&rsquo; → &lsquo;111&rsquo;</li>
+</ul>
+<p>Example of a non-prefix code:</p>
+<ul>
+<li>&lsquo;A&rsquo; → &lsquo;0&rsquo;</li>
+<li>&lsquo;B&rsquo; → &lsquo;01&rsquo; (problematic because &lsquo;0&rsquo; is a prefix of &lsquo;01&rsquo;)</li>
+</ul>
+<h3 id="22-variable-length-codes">2.2 Variable-Length Codes</h3>
+<p>Unlike fixed-length encoding (like ASCII where each character uses 8 bits), Huffman uses variable-length codes where:</p>
+<ul>
+<li>Common characters get shorter codes</li>
+<li>Rare characters get longer codes</li>
+</ul>
+<h2 id="3-the-huffman-algorithm">3. The Huffman Algorithm</h2>
+<h3 id="31-frequency-analysis">3.1 Frequency Analysis</h3>
+<p>The first step is to count how often each character appears in the input:</p>
+<pre tabindex="0"><code>Example text: &#34;ABBCCCDDDDEEEEE&#34;
+Frequencies: &#39;A&#39;:1, &#39;B&#39;:2, &#39;C&#39;:3, &#39;D&#39;:4, &#39;E&#39;:5
+</code></pre><h3 id="32-building-the-huffman-tree">3.2 Building the Huffman Tree</h3>
+<p>The Huffman tree is built from the bottom up:</p>
+<ol>
+<li><strong>Create leaf nodes</strong>: Create a node for each character with its frequency as the weight.</li>
+<li><strong>Build a priority queue</strong>: Arrange all nodes in increasing order of their frequency.</li>
+<li><strong>Merge nodes</strong>: Repeatedly remove the two nodes with the lowest frequencies and create a new internal node with these two as children. The frequency of this new node is the sum of its children&rsquo;s frequencies.</li>
+<li><strong>Continue merging</strong>: Repeat step 3 until only one node remains (the root).</li>
+</ol>
+<h4 id="visual-example">Visual Example:</h4>
+<p>Starting with frequencies: &lsquo;A&rsquo;:1, &lsquo;B&rsquo;:2, &lsquo;C&rsquo;:3, &lsquo;D&rsquo;:4, &lsquo;E&rsquo;:5</p>
+<p>Initial nodes in priority queue: [A:1, B:2, C:3, D:4, E:5]</p>
+<pre tabindex="0"><code>Step 1: Remove A:1 and B:2
+        Create internal node AB:3
+        Queue: [AB:3, C:3, D:4, E:5]
+
+Step 2: Remove AB:3 and C:3 (tie broken arbitrarily)
+        Create internal node ABC:6
+        Queue: [D:4, E:5, ABC:6]
+
+Step 3: Remove D:4 and E:5
+        Create internal node DE:9
+        Queue: [ABC:6, DE:9]
+
+Step 4: Remove ABC:6 and DE:9
+        Create internal node ABCDE:15
+        Queue: [ABCDE:15]
+</code></pre><h4 id="detailed-tree-construction-process">Detailed Tree Construction Process:</h4>
+<p>Let&rsquo;s trace how the tree is built throughout the steps above. We&rsquo;ll visualize each step to show how nodes are merged.</p>
+<p><strong>Initial Leaf Nodes:</strong></p>
+<pre tabindex="0"><code>A:1   B:2   C:3   D:4   E:5
+(Each character is a separate leaf node)
+</code></pre><p><strong>After Step 1:</strong> We&rsquo;ve removed A:1 and B:2 and created AB:3</p>
+<pre tabindex="0"><code>  AB:3   C:3   D:4   E:5
+ /    \
+A:1    B:2
+</code></pre><p><strong>After Step 2:</strong> We&rsquo;ve removed AB:3 and C:3 and created ABC:6</p>
+<pre tabindex="0"><code>     ABC:6      D:4   E:5
+    /     \
+  AB:3     C:3
+ /    \
+A:1    B:2
+</code></pre><p><strong>After Step 3:</strong> We&rsquo;ve removed D:4 and E:5 and created DE:9</p>
+<pre tabindex="0"><code>     ABC:6        DE:9
+    /     \      /    \
+  AB:3     C:3  D:4    E:5
+ /    \
+A:1    B:2
+</code></pre><p><strong>After Step 4 (Final Tree):</strong> We&rsquo;ve removed ABC:6 and DE:9 and created ABCDE:15</p>
+<pre tabindex="0"><code>            ABCDE:15
+           /        \
+        ABC:6      DE:9
+       /    \     /    \
+    AB:3    C:3  D:4   E:5
+   /   \
+ A:1   B:2
+</code></pre><p><strong>Important Tree Construction Rules:</strong></p>
+<ol>
+<li>When two nodes are merged, the new internal node has the sum of the frequencies of its children.</li>
+<li>The lower frequency node typically becomes the left child, and the higher frequency node becomes the right child (though this convention can vary in implementations).</li>
+<li>Each internal node is labeled with the combined characters of its children and their summed frequency (e.g., AB:3 means this node represents characters A and B with a combined frequency of 3).</li>
+<li>The final tree has all original characters as leaf nodes, and all internal nodes represent merged groups of characters.</li>
+</ol>
+<h3 id="33-generating-codes">3.3 Generating Codes</h3>
+<p>Once the tree is built, we assign:</p>
+<ul>
+<li>&lsquo;0&rsquo; to each left branch</li>
+<li>&lsquo;1&rsquo; to each right branch</li>
+</ul>
+<p>The path from the root to each leaf node gives the Huffman code for the character at that leaf:</p>
+<pre tabindex="0"><code>A: left, left, left → 000
+B: left, left, right → 001
+C: left, right → 01
+D: right, left → 10
+E: right, right → 11
+</code></pre><p>This matches our tree structure:</p>
+<pre tabindex="0"><code>            ABCDE
+           /      \
+         ABC      DE
+        /   \    /  \
+      AB     C  D    E
+     /  \
+    A    B
+</code></pre><h3 id="34-encoding-the-text">3.4 Encoding the Text</h3>
+<p>To encode, we replace each character with its code:</p>
+<pre tabindex="0"><code>&#34;ABBCCCDDDDEEEEE&#34; becomes:
+A      B      B      C     C     C     D     D     D     D     E     E     E     E     E
+000    001    001    01    01    01    10    10    10    10    11    11    11    11    11
+
+Final encoded: 000001001010101101010101111111111
+</code></pre><h3 id="35-calculating-compression">3.5 Calculating Compression</h3>
+<p>Original size (8 bits per character × 15 characters) = 120 bits
+Encoded size = 33 bits
+Compression ratio = 120/33 ≈ 3.64:1
+Space savings = (1 - 33/120) × 100% ≈ 72.5%</p>
+<h2 id="4-decoding-process">4. Decoding Process</h2>
+<p>Decoding is straightforward with the Huffman tree:</p>
+<ol>
+<li>Start at the root of the tree</li>
+<li>Read encoded bits one by one:
+<ul>
+<li>If &lsquo;0&rsquo;, go to left child</li>
+<li>If &lsquo;1&rsquo;, go to right child</li>
+</ul>
+</li>
+<li>When you reach a leaf node, output its character and return to the root</li>
+<li>Continue until all bits are processed</li>
+</ol>
+<p>Example decoding the first few bits of &ldquo;000001001&hellip;&rdquo;:</p>
+<pre tabindex="0"><code>bit &#39;0&#39; → go left (to ABC)
+bit &#39;0&#39; → go left (to AB)
+bit &#39;0&#39; → go left (to A) → reach &#39;A&#39; → output &#39;A&#39;, return to root
+
+bit &#39;0&#39; → go left (to ABC)
+bit &#39;0&#39; → go left (to AB)
+bit &#39;1&#39; → go right (to B) → reach &#39;B&#39; → output &#39;B&#39;, return to root
+
+...and so on
+</code></pre><h2 id="5-edge-cases-and-implementation-notes">5. Edge Cases and Implementation Notes</h2>
+<h3 id="51-empty-input">5.1 Empty Input</h3>
+<ul>
+<li>Return an empty result or handle as a special case</li>
+</ul>
+<h3 id="52-single-character-input">5.2 Single Character Input</h3>
+<ul>
+<li>All codes will be a single bit (usually &lsquo;0&rsquo;)</li>
+<li>Example: &ldquo;AAAAA&rdquo; → Each &lsquo;A&rsquo; could be encoded as &lsquo;0&rsquo;</li>
+</ul>
+<h2 id="6-practical-applications">6. Practical Applications</h2>
+<p>Huffman coding is used in:</p>
+<ul>
+<li>File compression formats (part of ZIP)</li>
+<li>Image formats (JPEG uses a variant)</li>
+<li>MP3 audio encoding</li>
+<li>Data transmission to reduce bandwidth</li>
+</ul>
+<p>By understanding Huffman coding, you&rsquo;re learning a fundamental algorithm with widespread real-world applications!</p>
+</div>
+    </main>
+
+    
+  </body>
+</html>

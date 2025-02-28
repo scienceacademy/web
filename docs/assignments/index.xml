@@ -6,8 +6,22 @@
     <description>Recent content in Assignments on AP CSP 2024-25</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2025 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2025 15:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Huffman Encoding: Assignment</title>
+      <link>https://scienceacademy.github.io/web/assignments/huffman_assignment/</link>
+      <pubDate>Thu, 27 Feb 2025 15:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/huffman_assignment/</guid>
+      <description>&lt;p&gt;In this assignment, you will implement Huffman coding, a lossless data compression algorithm that assigns variable-length codes to input characters based on their frequencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Huffman Encoding: Algorithm Guide</title>
+      <link>https://scienceacademy.github.io/web/assignments/huffman_guide/</link>
+      <pubDate>Thu, 27 Feb 2025 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/huffman_guide/</guid>
+      <description>&lt;p&gt;A step-by-step explanation of the Huffman coding algorithm.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Lab: Songs</title>
       <link>https://scienceacademy.github.io/web/assignments/songs/</link>
