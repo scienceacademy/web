@@ -95,11 +95,46 @@ def hello_world():
 
 ## Hints and Tips
 
-- Use Python's `heapq` module for the priority queue
-- The `collections.Counter` class can simplify frequency counting
+### Using the `heapq` Module
+
+The Python `heapq` module provides an efficient implementation of the min-heap data structure, perfect for building Huffman trees:
+
+1. **Importing the module**:
+
+   ```python
+   import heapq
+   ```
+
+2. **Creating and using a heap**:
+
+   ```python
+   # Create nodes
+   nodes = [HuffmanNode('a', 10), HuffmanNode('b', 5), HuffmanNode('c', 15)]
+
+   # Convert list to a heap
+   heapq.heapify(nodes)  # Optional step when starting with a list
+
+   # Add an element to the heap
+   heapq.heappush(nodes, HuffmanNode('d', 7))
+
+   # Get and remove the smallest element
+   smallest_node = heapq.heappop(nodes)
+   ```
+
+3. **Important note**: The `heapq` module requires that elements can be compared. For your `HuffmanNode` class, you need a `__lt__` method (less than) to define how nodes should be compared:
+
+   ```python
+   def __lt__(self, other):
+       # Compare nodes based on frequency
+       return self.freq < other.freq
+   ```
+
+### Other Helpful Tips
+
 - Think recursively when generating codes and traversing the tree
 - Test with simple examples first before moving to more complex texts
 - Remember to handle edge cases (empty strings, single character texts)
+- For debugging, print the tree structure at each step
 
 ## Grading Criteria (100 points)
 
