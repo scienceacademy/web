@@ -127,17 +127,7 @@ The Python `heapq` module provides an efficient implementation of the min-heap d
 - Remember to handle edge cases (empty strings, single character texts)
 - For debugging, print the tree structure at each step
 
-## Grading Criteria (100 points)
-
-- Correct frequency analysis (15 points)
-- Proper Huffman tree construction (25 points)
-- Working code generation (20 points)
-- Successful encoding/decoding (25 points)
-- Analysis and report (10 points)
-- Code clarity and comments (5 points)
-
 ## Bonus Challenges (Optional)
 
-- Implement a function to visualize the Huffman tree
 - Add support for compressing/decompressing actual text files
 - Compare your implementation with Python's built-in compression libraries (like `zlib`)
