@@ -84,15 +84,6 @@ def hello_world():
     return True
 ```
 
-## Deliverables
-
-1. Completed Python script with all functions implemented
-2. A short report (1-2 paragraphs) answering the following questions:
-   - What was the compression ratio for each test text?
-   - Which text compressed the best and why?
-   - How does character frequency affect compression efficiency?
-   - What are some limitations of Huffman coding?
-
 ## Hints and Tips
 
 ### Using the `heapq` Module
