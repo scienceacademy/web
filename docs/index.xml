@@ -6,8 +6,15 @@
     <description>Recent content on AP CSP 2024-25</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Feb 2025 15:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 11 Mar 2025 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>World Cup</title>
+      <link>https://scienceacademy.github.io/web/assignments/worldcup_ca/</link>
+      <pubDate>Tue, 11 Mar 2025 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/worldcup_ca/</guid>
+      <description>&lt;p&gt;Write a program to run simulations of the FIFA World Cup.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Huffman Encoding: Assignment</title>
       <link>https://scienceacademy.github.io/web/assignments/huffman_assignment/</link>
