@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truss Solution Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            width: 120px;
+            display: inline-block;
+        }
+
+        input,
+        select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 150px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Truss Solution Checker</h1>
+    <p>Enter the value(s) you want to check.</p>
+
+    <div class="form-group">
+        <label for="grade">Select Truss:</label>
+        <select id="grade">
+            <option value="A">Howe A</option>
+            <option value="B">Howe B</option>
+            <option value="C">Howe C</option>
+            <option value="D">Warren A</option>
+            <option value="E">Warren B</option>
+            <option value="F">Parker A</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="q1">Left Reaction:</label>
+        <input type="text" id="q1">
+        <span id="result1" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q2">Right Reaction:</label>
+        <input type="text" id="q2">
+        <span id="result2" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q3">AB:</label>
+        <input type="text" id="q3">
+        <span id="result3" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q4">FH:</label>
+        <input type="text" id="q4">
+        <span id="result4" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q5">HJ:</label>
+        <input type="text" id="q5">
+        <span id="result5" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q6">KM:</label>
+        <input type="text" id="q6">
+        <span id="result6" class="result"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="q7">PQ:</label>
+        <input type="text" id="q7">
+        <span id="result7" class="result"></span>
+    </div>
+
+    <button onclick="checkAnswers()">Check Answers</button>
+
+    <script>
+        // Define the correct answers with ranges
+        const answers = {
+            "A": {
+                q1: { min: 18.0, max: 18.5 },
+                q2: { min: 23.0, max: 23.6 },
+                q3: { min: -22.2, max: -22.0 },
+                q4: { min: -21.0, max: -20.9 },
+                q5: { min: -22.0, max: -22.9 },
+                q6: { min: 22.0, max: 22.9 },
+                q7: { min: 23.0, max: 24.0 }
+            },
+            "B": {
+                q1: { min: 30.5, max: 31.0 },
+                q2: { min: 44, max: 44.5 },
+                q3: { min: -39.2, max: -39.0 },
+                q4: { min: -41.33, max: -41.0 },
+                q5: { min: -46.3, max: -46.0 },
+                q6: { min: 46.0, max: 46.3 },
+                q7: { min: 44.0, max: 44.5 }
+            },
+            "C": {
+                q1: { min: 54.0, max: 54.5 },
+                q2: { min: 65.5, max: 66.0 },
+                q3: { min: -65.5, max: -65.0 },
+                q4: { min: -69.0, max: -68.8 },
+                q5: { min: -75.0, max: -74.8 },
+                q6: { min: 74.8, max: 75.0 },
+                q7: { min: 65.5, max: 66.0 }
+            },
+            "D": {
+                q1: { min: 28.0, max: 28.33 },
+                q2: { min: 26.6, max: 27.0 },
+                q3: { min: 0.0, max: 0.0 },
+                q4: { min: 10.0, max: 10.03 },
+                q5: { min: 0.0, max: 0.0 },
+                q6: { min: -27.0, max: -26.6 },
+                q7: { min: -27.0, max: -26.6 }
+            },
+            "E": {
+                q1: { min: 16.0, max: 16.2 },
+                q2: { min: 18.8, max: 19.0 },
+                q3: { min: 0.0, max: 0.0 },
+                q4: { min: 7.0, max: 7.4 },
+                q5: { min: 0.0, max: 0.0 },
+                q6: { min: -18.0, max: -17.7 },
+                q7: { min: -19.0, max: -18.8 }
+            },
+            "F": {
+                q1: { min: 23.0, max: 23.4 },
+                q2: { min: 26.6, max: 27.0 },
+                q3: { min: -33.0, max: -33.0 },
+                q4: { min: -49.3, max: -49.0 },
+                q5: { min: -48.9, max: -49.0 },
+                q6: { min: 36.0, max: 36.3 },
+                q7: { min: 15.0, max: 15.0 }
+            }
+        };
+
+        function checkAnswers() {
+            // Get the selected grade
+            const grade = document.getElementById("grade").value;
+
+            // Get the correct answers for the selected grade
+            const correctAnswers = answers[grade];
+
+            // Check each answer
+            for (let i = 1; i <= 7; i++) {
+                const inputValue = document.getElementById(`q${i}`).value.trim();
+                const resultSpan = document.getElementById(`result${i}`);
+
+                // Check if input is a valid number
+                const numValue = parseFloat(inputValue);
+
+                if (!isNaN(numValue)) {
+                    // Get the acceptable range for this question
+                    const range = correctAnswers[`q${i}`];
+
+                    // Check if value is within range
+                    if (numValue >= range.min && numValue <= range.max) {
+                        resultSpan.textContent = "Correct";
+                        resultSpan.className = "result correct";
+                    } else {
+                        resultSpan.textContent = "Incorrect";
+                        resultSpan.className = "result incorrect";
+                    }
+                } else {
+                    resultSpan.textContent = "Enter a number";
+                    resultSpan.className = "result incorrect";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
