@@ -3,7 +3,7 @@
 <head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.145.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,8 +64,7 @@
 <p>What sorts of traits are characteristic of higher reading levels? Longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.</p>
 <p>One such readability test is the <em>Coleman-Liau index</em>. The Coleman-Liau index of a text is designed to output what (U.S. grade) reading level is needed to understand the text. The formula is:</p>
 <blockquote>
-<p>index = 0.0588 * L - 0.296 * S - 15.8</p>
-</blockquote>
+<p>index = 0.0588 * L - 0.296 * S - 15.8</p></blockquote>
 <p>Here, <em>L</em> is the average number of letters per 100 words in the text, and <em>S</em> is the average number of sentences per 100 words in the text.</p>
 <p>Your task is to write a program called <code>readability</code> that takes a text and determines its reading level. For example, if user types in a line from Dr. Seuss:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./readability
@@ -117,8 +116,7 @@
 </span></span></code></pre></div><h3 id="4-sentences">4. Sentences</h3>
 <p>The last piece of information that the Coleman-Liau formula cares about, in addition to the number of letters and words, is the number of sentences. Determining the number of sentences can be surprisingly trickly. You might first imagine that a sentence is just any sequence of characters that ends with a period, but of course sentences could end with an exclamation point or a question mark as well. But of course, not all periods necessarily mean the sentence is over. For instance, consider the sentence below.</p>
 <blockquote>
-<p>Mr. and Mrs. Dursley, of number four Privet Drive, were proud to say that they were perfectly normal, thank you very much.</p>
-</blockquote>
+<p>Mr. and Mrs. Dursley, of number four Privet Drive, were proud to say that they were perfectly normal, thank you very much.</p></blockquote>
 <p>This is just a single sentence, but there are three periods! For this problem, you may ignore that subtlety: you should consider any sequence of characters that ends with a <code>.</code> or a <code>!</code> or a <code>?</code> to be a sentence (so for the above “sentence”, you may count that as three sentences). In practice, sentence boundary detection needs to be a little more intelligent to handle these cases, but don&rsquo;t worry about that for now.</p>
 <p>Modify <code>readability.c</code> so that it also now prints out the number of sentences in the text.</p>
 <p>The behavior of the resulting program should be like the below.</p>
@@ -130,8 +128,7 @@
 </span></span></code></pre></div><h3 id="5-putting-it-all-together">5. Putting It All Together</h3>
 <p>Now it’s time to put all the pieces together! Recall that the Coleman-Liau index is computed using the formula:</p>
 <blockquote>
-<p>index = 0.0588 * L - 0.296 * S - 15.8</p>
-</blockquote>
+<p>index = 0.0588 * L - 0.296 * S - 15.8</p></blockquote>
 <p>where <code>L</code> is the average number of letters per 100 words in the text, and <code>S</code> is the average number of sentences per 100 words in the text.</p>
 <p>Modify <code>readability.c</code> so that instead of outputting the number of letters, words, and sentences, it instead outputs the grade level as given by the Coleman-Liau index (e.g. <code>&quot;Grade 2&quot;</code> or <code>&quot;Grade 8&quot;</code>). Be sure to round the resulting index number to the nearest whole number!</p>
 <p>If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code>&quot;Grade 16+&quot;</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code>&quot;Before Grade 1&quot;</code>.</p>

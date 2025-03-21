@@ -3,7 +3,7 @@
 <head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.145.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,14 +75,12 @@ CREATE TABLE people (
     name TEXT NOT NULL
 );
 </code></pre><blockquote>
-<p><strong>NOTE:</strong> These tables are slightly different from the example we did together in class. If you create a new blank database, you can paste the above to create all the required tables.</p>
-</blockquote>
+<p><strong>NOTE:</strong> These tables are slightly different from the example we did together in class. If you create a new blank database, you can paste the above to create all the required tables.</p></blockquote>
 <h2 id="step-1-logging-in">Step 1: Logging in</h2>
 <p>Create a program called <code>students.py</code>.</p>
 <p>Your program needs some security - only authorized users should be able to run it. Therefore, when your program is first run, it will require the user to authenticate. Ask the user for a username and password. If they both do not match an entry in the <code>auth</code> table, print an error message and require them to login again.</p>
 <blockquote>
-<p>For testing purposes, you can make as many users/passwords as you like. However, for submitting, make sure you have the username &ldquo;admin&rdquo; with the password &ldquo;1234&rdquo;. (We all know this is a terrible password, right?)</p>
-</blockquote>
+<p>For testing purposes, you can make as many users/passwords as you like. However, for submitting, make sure you have the username &ldquo;admin&rdquo; with the password &ldquo;1234&rdquo;. (We all know this is a terrible password, right?)</p></blockquote>
 <h2 id="step-2-main-menu">Step 2: Main Menu</h2>
 <p>Once the user has successfully authenticated, present them with a menu of options like so:</p>
 <pre tabindex="0"><code>----------
@@ -98,15 +96,13 @@ Your choice:
 <h3 id="option-1-add-a-student">Option 1: Add a student</h3>
 <p>Selecting this option will ask the user for the new student&rsquo;s name, insert it into the database, and return the user to the main menu.</p>
 <blockquote>
-<p>For the purposes of this assignment, assume ther are no students with the same name.</p>
-</blockquote>
+<p>For the purposes of this assignment, assume ther are no students with the same name.</p></blockquote>
 <pre tabindex="0"><code>Name of new student: John
 Student added!
 </code></pre><h3 id="option-2-show-students-courses">Option 2: Show student&rsquo;s courses</h3>
 <p>After selecting this option, ask the user to type a name. If there are multiple matches to the name (for example, if the user typed &ldquo;Sam&rdquo; and there is a &ldquo;Samuel&rdquo; and a &ldquo;Samantha&rdquo; in the database), show a list of names and ids, and ask which one to use.</p>
 <blockquote>
-<p><strong>HINT:</strong> You should use a <code>LIKE</code> query here. If the query returns only one record, then you can use that student.</p>
-</blockquote>
+<p><strong>HINT:</strong> You should use a <code>LIKE</code> query here. If the query returns only one record, then you can use that student.</p></blockquote>
 <p>Once a student has been chosen, display a list of the courses the student is enrolled in.</p>
 <pre tabindex="0"><code>Menu
 ----

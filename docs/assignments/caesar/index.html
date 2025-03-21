@@ -3,7 +3,7 @@
 <head><script src="/web/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=web/livereload" data-no-instant defer></script>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.135.0">
+  <meta name="generator" content="Hugo 0.145.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,45 +66,44 @@
 <table>
   <thead>
       <tr>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
-          <th style="text-align: left"></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left"><em>plaintext</em></td>
-          <td style="text-align: left">H</td>
-          <td style="text-align: left">E</td>
-          <td style="text-align: left">L</td>
-          <td style="text-align: left">L</td>
-          <td style="text-align: left">O</td>
+          <td><em>plaintext</em></td>
+          <td>H</td>
+          <td>E</td>
+          <td>L</td>
+          <td>L</td>
+          <td>O</td>
       </tr>
       <tr>
-          <td style="text-align: left">+ <em>key</em></td>
-          <td style="text-align: left">1</td>
-          <td style="text-align: left">1</td>
-          <td style="text-align: left">1</td>
-          <td style="text-align: left">1</td>
-          <td style="text-align: left">1</td>
+          <td>+ <em>key</em></td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
       </tr>
       <tr>
-          <td style="text-align: left">= <em>cyphertext</em></td>
-          <td style="text-align: left">I</td>
-          <td style="text-align: left">F</td>
-          <td style="text-align: left">M</td>
-          <td style="text-align: left">M</td>
-          <td style="text-align: left">P</td>
+          <td>= <em>cyphertext</em></td>
+          <td>I</td>
+          <td>F</td>
+          <td>M</td>
+          <td>M</td>
+          <td>P</td>
       </tr>
   </tbody>
 </table>
 <p>More formally, Caesar’s algorithm (i.e., cipher) encrypts messages by “rotating” each letter by <em>k</em> positions. More formally, if <em>p</em> is some plaintext (i.e., an unencrypted message), <em>p<sub>i</sub></em> is the ith character in <em>p</em>, and <em>k</em> is a secret key (i.e., a non-negative integer), then each letter, <em>c<sub>i</sub></em>, in the ciphertext, <em>c</em>, is computed as</p>
 <blockquote>
-<p>c<sub>i</sub> = (p<sub>i</sub> + k) % 26</p>
-</blockquote>
+<p>c<sub>i</sub> = (p<sub>i</sub> + k) % 26</p></blockquote>
 <p>where <code>% 26</code> here means “remainder when dividing by 26.” This formula might make the cipher seem more complicated than it is, but it’s really just a concise way of expressing the algorithm precisely.</p>
 <p>For the sake of discussion, think of A (or a) as 0, B (or b) as 1, …, H (or h) as 7, I (or i) as 8, …, and Z (or z) as 25. Suppose that Caesar just wants to say &ldquo;Hi&rdquo; to someone using a key, <em>k</em>, of 3. His plaintext, <em>p</em>, is &ldquo;Hi&rdquo;. His plaintext’s first character, <em>p<sub>0</sub></em>, is H (aka 7), and his plaintext’s second character, <em>p<sub>1</sub></em>, is i (aka 8). His ciphertext’s first character, <em>c<sub>0</sub></em>, is thus 7 + 3 = 10 (aka K), and his ciphertext’s second character, <em>c<sub>1</sub></em>, is 8 + 3 = 11 (or L).</p>
 <p>Your task is to write a program called <code>caesar</code> that enables you to encrypt messages using Caesar’s cipher. At the time the user executes the program, they should decide, by providing a command-line argument, what the key should be. We shouldn’t necessarily assume that the user’s key is going to be a number; though you may assume that, if it is a number, it will be a positive integer.</p>

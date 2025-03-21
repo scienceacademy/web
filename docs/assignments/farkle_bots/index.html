@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.145.0">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Farkle Bots &middot; AP CSP 2024-25</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2024-25</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Farkle Bots</h1>
+  <time datetime=2025-03-20T13:55:45-0700 class="post-date">Thu, Mar 20, 2025</time>
+  <p>Write a bot to play Farkle.</p>
+<p>In this assignment, you will create an AI bot that plays the dice game Farkle. Your bot will compete in a tournament against bots created by other students.</p>
+<h2 id="the-game">The Game</h2>
+<p>Farkle is a dice game where players take turns rolling six dice and scoring points based on certain combinations. The goal is to be the first player to reach 10,000 points.</p>
+<p>Basic Rules:</p>
+<ul>
+<li>Players take turns rolling six dice</li>
+<li>After each roll, the player must set aside at least one scoring die or combination</li>
+<li>The player can either roll the remaining dice to try to score more points or bank their current turn&rsquo;s points</li>
+<li>If a roll produces no scoring dice, the player &ldquo;farkles&rdquo; and loses all points accumulated in that turn</li>
+<li>A player must score at least 500 points in a turn before they can start banking points</li>
+</ul>
+<h2 id="task">Task</h2>
+<ol>
+<li>Create a bot file - extend the <code>FarkleBot</code> base class to create your own bot. Name it with your real name (ex: <code>BradfieldBot</code>)</li>
+<li>Develop a decision making strategy for your bot.</li>
+<li>Test your bot by running it against an example bot.</li>
+<li>Submit your bot and it will battle against the others.</li>
+</ol>
+<h2 id="getting-started">Getting started</h2>
+<p>Copy the <code>bot_template.py</code> file and rename it for your own bot. This is the only file you need to edit.</p>
+<p>Your bot must implement the <code>make_decision</code> method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#ff79c6">def</span> <span style="color:#50fa7b">make_decision</span>(self, state: TurnState) <span style="color:#ff79c6">-&gt;</span> BotDecision:
+</span></span><span style="display:flex;"><span>    <span style="color:#f1fa8c">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    Make a decision based on the current game state
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    Args:
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">        state: The current turn state
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    Returns:
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">        A BotDecision object with which dice to keep and whether to roll again
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">    &#34;&#34;&#34;</span>
+</span></span></code></pre></div><p>The <code>TurnState</code> object contains all the information your bot needs to make its decision:</p>
+<ul>
+<li><code>current_dice</code> - a list of dice values [1-6]</li>
+<li><code>remaining_dice</code> - the number of dice being rolled</li>
+<li><code>turn_score</code> - accumulated score for this turn</li>
+<li><code>banked_score</code> - your bot&rsquo;s current banked score</li>
+<li><code>opponent_score</code> - the opponent&rsquo;s banked score</li>
+</ul>
+<p>Return a BotDecision object with:</p>
+<ul>
+<li><code>dice_to_keep</code> - a list of dice values to keep (must be scorable)</li>
+<li><code>roll_again</code> - boolean value indicating whether to role again (<code>True</code>) or end turn (<code>False</code>)</li>
+</ul>
+<h3 id="helper-functions">Helper functions</h3>
+<ul>
+<li><code>FarkleGame.find_scorable_combinations(dice)</code> - Returns all valid scoring combinations for a set of dice</li>
+<li><code>FarkleGame.calculate_score(dice)</code> - Calculates the score for a set of dice</li>
+</ul>
+<h2 id="example-bots">Example Bots</h2>
+<p>The setup includes two example bots you can look at for reference:</p>
+<ul>
+<li><code>SimpleBot</code> - makes basic decisions</li>
+<li><code>ConservativeBot</code> - plays conservatively, banking after any score</li>
+</ul>
+<h2 id="testing-your-bot">Testing your bot</h2>
+<p>You also have a program called <code>test.py</code> that will run your bot against <code>SimpleBot</code> and show what it&rsquo;s doing.</p>
+<h2 id="submitting-your-bot">Submitting your bot</h2>
+<p><em>Instructions TBD</em></p>
+</div>
+    </main>
+
+    
+  </body>
+</html>
