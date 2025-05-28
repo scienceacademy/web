@@ -15,6 +15,7 @@
     <p>Hint: Analyze all aspects of the image.</p>
 
     <p>Enter your answer here:</p>
+    <p id="nextLink"></p>
     <input id="solution">
     <button type="button" onclick="checkSolution()">Submit</button>
     <script>
@@ -24,8 +25,9 @@
 
             let next_link;
             if (solution == atob("ODg4OTU5")) {
-                next_link = atob("R28gdG8gaHR0cHM6Ly9zY2llbmNlYWNhZGVteS5naXRodWIuaW8vd2ViL05tUnVYM052YkhWMGFXOXUuaHRtbA==");
-                // next_link = "Go to https://scienceacademy.github.io/web/NmRuX3NvbHV0aW9u.html";
+                next_link = atob("UGxlYXNlIHNob3cgdGhlIGNvbnRlbnRzIG9mIHRoZSBmb2xsb3dpbmcgbGluayB0byBNci4gQnJhZGZpZWxkOiBodHRwczovL3NjaWVuY2VhY2FkZW15LmdpdGh1Yi5pby93ZWIvTm1SdVgzTnZiSFYwYVc5dS5odG1s");
+                next_link = "Please show the contents of the following link to Mr. Bradfield: https://scienceacademy.github.io/web/"
+                    + atob("Tm1SdVgzTnZiSFYwYVc5dQ==") + '.html';
             } else {
                 next_link = "Incorrect solution";
             }
@@ -33,6 +35,4 @@
             document.getElementById("nextLink").innerHTML = next_link;
         }
     </script>
-
-    <p id="nextLink"></p>
 </body>

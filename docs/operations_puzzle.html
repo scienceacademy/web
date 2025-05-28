@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<!-- TODO: remove this file and 6digit-puzzle-888x959-2025-05-20.png -->
+<!-- Or keep them :) -->
+
+<head>
+    <title>Operations Puzzle</title>
+</head>
+
+<body>
+    <h1>Operations Puzzle</h1>
+
+    <p>To complete this puzzle, please look at the following:</p>
+    <code>2 ? 8 ? 9 ? 7 ? 3 ? 5 = 10.8</code>
+    <ul>
+        <li>A: Add</li>
+        <li>S: Subtract</li>
+        <li>M: Multiply</li>
+        <li>D: Divide</li>
+    </ul>
+
+    <p>
+        Assuming that operations are performed from left to right (so ignoring
+        PEMDAS), what is the correct sequence of operations listed above? please
+        write you answer using the one letter abbreviation associated with each
+        operation.
+    </p>
+
+    <p>For example, for:</p>
+    <code>1 ? 2 ? 3 = 1</code>
+    <p>The correct solutiong would be:</p>
+    <code>AD</code>
+    <p>Because:</p>
+    <p><code>1 + 2 = 3</code>: A</p>
+    <p><code>3 / 3 = 1</code>: D</p>
+
+
+    <p>Enter your answer here:</p>
+    <p id="nextLink"></p>
+    <input id="solution">
+    <button type="button" onclick="checkSolution()">Submit</button>
+    <script>
+        function checkSolution() {
+            let solution = document.getElementById("solution").value;
+
+            let next_link;
+            if (solution.toLowerCase() == atob("bWFzbWQ=")) {
+                next_link = "Please show the contents of the following link to Mr. Bradfield: https://scienceacademy.github.io/web/"
+                    + atob("YjNCbGNtRjBhVzl1YzE5d2RYcDZiR1VnWVc1emQyVnk=") + ".html";
+            } else {
+                next_link = "Incorrect solution";
+            }
+
+            document.getElementById("nextLink").innerHTML = next_link;
+        }
+    </script>
+</body>
