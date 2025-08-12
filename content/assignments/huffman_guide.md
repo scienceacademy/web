@@ -1,7 +1,7 @@
 ---
 title: "Huffman Encoding: Algorithm Guide"
 date: 2025-02-27T13:55:45-07:00
-draft: false
+draft: true
 ---
 
 A step-by-step explanation of the Huffman coding algorithm.

@@ -1,7 +1,7 @@
 ---
 title: "Create Task Planning"
 date: 2024-12-08T03:55:45-07:00
-draft: false
+draft: true
 ---
 
 Prepare for the Create Performance Task.

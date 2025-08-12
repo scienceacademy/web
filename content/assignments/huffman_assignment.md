@@ -1,7 +1,7 @@
 ---
 title: "Huffman Encoding: Assignment"
 date: 2025-02-27T15:55:45-07:00
-draft: false
+draft: true
 ---
 
 In this assignment, you will implement Huffman coding, a lossless data compression algorithm that assigns variable-length codes to input characters based on their frequencies.

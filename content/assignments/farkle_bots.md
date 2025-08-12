@@ -1,7 +1,7 @@
 ---
 title: "Farkle Bots"
 date: 2025-03-20T13:55:45-07:00
-draft: false
+draft: true
 ---
 Write a bot to play Farkle.
 <!--more-->

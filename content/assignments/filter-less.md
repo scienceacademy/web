@@ -1,7 +1,7 @@
 ---
 title: "Filter: Less Comfortable"
 date: 2024-10-01T03:55:45-07:00
-draft: false
+draft: true
 ---
 Implement a program that applies filters to images.
 <!--more-->

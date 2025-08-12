@@ -1,7 +1,7 @@
 ---
 title: "Calc"
 date: 2024-09-09T01:55:45-07:00
-draft: false
+draft: true
 ---
 Create a simple command line calculator.
 

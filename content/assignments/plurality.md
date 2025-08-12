@@ -1,7 +1,7 @@
 ---
 title: "Plurality"
 date: 2024-09-17T13:55:45-07:00
-draft: false
+draft: true
 ---
 Implement a program that runs a plurality election, as shown below.
 <!--more-->

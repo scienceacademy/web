@@ -1,7 +1,7 @@
 ---
 title: "Debugging Practice"
 date: 2024-12-04T19:55:45-07:00
-draft: false
+draft: true
 ---
 Practice your debugging skills.
 <!--more-->

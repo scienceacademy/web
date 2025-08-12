@@ -1,7 +1,7 @@
 ---
 title: "Inheritance"
 date: 2024-10-10T13:55:45-07:00
-draft: false
+draft: true
 ---
 Simulate the inheritance of blood types for each member of a family.
 <!--more-->

@@ -1,7 +1,7 @@
 ---
 title: "Hello"
 date: 2024-08-13T19:55:45-07:00
-draft: false
+draft: true
 ---
 
 A simple assignment to practice testing and submitting your code.
