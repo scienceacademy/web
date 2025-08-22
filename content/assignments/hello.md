@@ -121,7 +121,7 @@ style50 hello.c
 
 ## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+Execute the following:
 
 ```md
 submit50 scienceacademy/problems/2025ap/hello
