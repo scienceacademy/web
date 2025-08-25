@@ -1,7 +1,7 @@
 ---
 title: "Cash"
 date: 2025-08-22T19:55:45-07:00
-draft: true
+draft: false
 ---
 
 Making change...
@@ -65,13 +65,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. **But be sure to compile and test it yourself as well!**
 
 ```md
-check50 scienceacademy/problems/2024ap/cash
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 cash.c
+check50 scienceacademy/problems/2025ap/cash
 ```
 
 ## How to Submit
@@ -79,5 +73,5 @@ style50 cash.c
 Execute the below:
 
 ```md
-submit50 scienceacademy/problems/2024ap/cash
+submit50 scienceacademy/problems/2025ap/cash
 ```
