@@ -1,7 +1,7 @@
 ---
 title: "Credit"
-date: 2024-08-21T01:55:45-07:00
-draft: true
+date: 2025-08-27T01:55:45-07:00
+draft: false
 ---
 
 Validating credit cards...
@@ -91,13 +91,7 @@ If your program behaves incorrectly on some inputs (or doesn't compile at all), 
 You can also execute the below to evaluate the correctness of your code using `check50`. **But be sure to compile and test it yourself as well!**
 
 ```
-check50 scienceacademy/problems/2024ap/credit
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```
-style50 credit.c
+check50 scienceacademy/problems/2025ap/credit
 ```
 
 ## How to Submit
@@ -105,5 +99,5 @@ style50 credit.c
 Execute the below:
 
 ```
-submit50 scienceacademy/problems/2024ap/credit
+submit50 scienceacademy/problems/2025ap/credit
 ```
