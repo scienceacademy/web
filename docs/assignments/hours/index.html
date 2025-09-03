@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.148.2">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Array Practice: Hours &middot; AP CSP 2025-26</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2025-26</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Array Practice: Hours</h1>
+  <time datetime=2025-09-02T16:55:45-0700 class="post-date">Tue, Sep 2, 2025</time>
+  <h2 id="learning-goals">Learning Goals</h2>
+<ul>
+<li>Practice using arrays</li>
+<li>Using an array as a parameter to a function</li>
+<li>Adding values in a loop</li>
+<li>Integer division and type casting</li>
+</ul>
+<h2 id="background">Background</h2>
+<p>Suppose you&rsquo;re taking APCSP (and you are!) and spending time every week practicing writing code. You may be wondering how many hours you&rsquo;ve spent learning computer science. In this program, you&rsquo;ll complete a function that calculates, based on the user&rsquo;s input, a total number of hours <em>or</em> an average number of hours spent.</p>
+<h2 id="getting-started">Getting Started</h2>
+<ol>
+<li>To download the starting code for this exercise, paste the following command into your codespace&rsquo;s terminal:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/scienceacademy/apcsp2025/refs/heads/main/practice/hours.c
+</span></span></code></pre></div><ol start="2">
+<li>Open the code by typing</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>code hours.c
+</span></span></code></pre></div><h2 id="details">Details</h2>
+<p>The <code>main</code> function prompts the user for the number of weeks the user has been taking APCSP, then creates an array with that many elements. After the data has been entered, the program then prompts the user to enter a &ldquo;T&rdquo; or an &ldquo;A&rdquo; - to either print the total or average hours spent, respectively. However, that last part doesn&rsquo;t work yet!</p>
+<p>Your task is to complete the <code>calc_hours</code> function. You should first total up the hours into a new variable. Then, depending on the value of <code>choice</code>, return either that sum or the average.</p>
+<h2 id="testing-your-code">Testing Your Code</h2>
+<p>Your code should behave like the examples below:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
+</span></span><span style="display:flex;"><span>Number of weeks taking APCSP: 3
+</span></span><span style="display:flex;"><span>Week 0 hours coding: 3
+</span></span><span style="display:flex;"><span>Week 1 hours coding: 7
+</span></span><span style="display:flex;"><span>Week 2 hours coding: 10
+</span></span><span style="display:flex;"><span>Enter T for total hours, A for average hours per week: A
+</span></span><span style="display:flex;"><span>6.7 hours
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
+</span></span><span style="display:flex;"><span>Number of weeks taking APCSP: 2
+</span></span><span style="display:flex;"><span>Week 0 hours coding: 2
+</span></span><span style="display:flex;"><span>Week 1 hours coding: 8
+</span></span><span style="display:flex;"><span>Enter T for total hours, A for average hours per week: T
+</span></span><span style="display:flex;"><span>10.0 hours
+</span></span></code></pre></div><p>You can check the code with <code>check50</code> using the following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/hours
+</span></span></code></pre></div>
+</div>
+    </main>
+
+    
+  </body>
+</html>

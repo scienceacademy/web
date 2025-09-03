@@ -6,8 +6,15 @@
     <description>Recent content on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Aug 2025 01:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 16:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Array Practice: Hours</title>
+      <link>https://scienceacademy.github.io/web/assignments/hours/</link>
+      <pubDate>Tue, 02 Sep 2025 16:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/hours/</guid>
+      <description>&lt;h2 id=&#34;learning-goals&#34;&gt;Learning Goals&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Practice using arrays&lt;/li&gt;&#xA;&lt;li&gt;Using an array as a parameter to a function&lt;/li&gt;&#xA;&lt;li&gt;Adding values in a loop&lt;/li&gt;&#xA;&lt;li&gt;Integer division and type casting&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Suppose you&amp;rsquo;re taking APCSP (and you are!) and spending time every week practicing writing code. You may be wondering how many hours you&amp;rsquo;ve spent learning computer science. In this program, you&amp;rsquo;ll complete a function that calculates, based on the user&amp;rsquo;s input, a total number of hours &lt;em&gt;or&lt;/em&gt; an average number of hours spent.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Credit</title>
       <link>https://scienceacademy.github.io/web/assignments/credit/</link>
