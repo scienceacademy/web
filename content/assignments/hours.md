@@ -1,7 +1,7 @@
 ---
 title: "Array Practice: Hours"
 date: 2025-09-02T16:55:45-07:00
-draft: false
+draft: true
 ---
 Practicing with arrays...
 
@@ -62,4 +62,10 @@ You can check the code with `check50` using the following:
 
 ```bash
 check50 scienceacademy/problems/2025ap/hours
+```
+
+## Submitting
+
+```bash
+submit50 scienceacademy/problems/2025ap/hours
 ```
