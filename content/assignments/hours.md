@@ -1,7 +1,7 @@
 ---
 title: "Array Practice: Hours"
 date: 2025-09-02T16:55:45-07:00
-draft: true
+draft: false
 ---
 Practicing with arrays...
 
