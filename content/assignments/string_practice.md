@@ -1,7 +1,7 @@
 ---
 title: "String Practice"
 date: 2025-09-02T17:55:45-07:00
-draft: true
+draft: false
 ---
 Practice with strings...
 
@@ -107,7 +107,7 @@ submit50 scienceacademy/problems/2025ap/palindrome
 
 {{< details Palindrome2 >}}
 
-* Write a program `palindrome2.c` that works just like `palindrome.c` above but also ignores spaces, so that it will identify palindromes like `taco cat`.
+* Write a program `palindrome2.c` that works just like `palindrome.c` above but ignores spaces, so that it will identify palindromes like `taco cat`.
 
 ### Checking
 
