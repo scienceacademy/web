@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.148.2">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Columnar Transposition Cipher &middot; AP CSP 2025-26</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://scienceacademy.github.io/web/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-08 ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://scienceacademy.github.io/web/"><h1>AP CSP 2025-26</h1></a>
+      <p class="lead">
+       Mr. Bradfield&#39;s AP Computer Science Principles 
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://scienceacademy.github.io/web/">Home</a> </li>
+        <li><a href="https://code.cs50.io/"> CodeSpace IDE </a></li><li><a href="https://submit.cs50.io/"> View your submit50 submissions </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2025. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Columnar Transposition Cipher</h1>
+  <time datetime=2025-09-11T15:55:45-0700 class="post-date">Thu, Sep 11, 2025</time>
+  <p>Implement a program that encrypts messages using the columnar transposition cipher.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column test
+</span></span><span style="display:flex;"><span>plaintext:  now is the time to act.
+</span></span><span style="display:flex;"><span>ciphertext: otiowhmanstttieec
+</span></span></code></pre></div><h2 id="background">Background</h2>
+<p>A transposition cipher is a method of encryption that rearranges the order of plaintext characters to create ciphertext without changing the actual letters themselves. This is achieved through a predetermined pattern or a &ldquo;key,&rdquo; such as writing the message in a zigzag or a grid, and then reading it out in a different order. A <em>columnar transposition cipher</em> uses a keyword to determine the order of columns in a grid. Unlike substitution ciphers, transposition ciphers preserve the frequency of letters in the ciphertext, which can be a weakness for cryptanalysts.</p>
+<p>Columnar transposition involves writing the plaintext out in rows, and then reading the ciphertext off in columns. The key determines the number of columns and the order in which they are read. The plaintext is written row by row into a grid, and then the columns are reordered alphabetically by the keyword letters before being read out.</p>
+<p>For example, given a key of <code>hello</code> and a message of <code>This is a secret message.</code> you would construct a grid like this:</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>H</td>
+          <td>E</td>
+          <td>L</td>
+          <td>L</td>
+          <td>O</td>
+      </tr>
+      <tr>
+          <td>T</td>
+          <td>h</td>
+          <td>i</td>
+          <td>s</td>
+          <td>i</td>
+      </tr>
+      <tr>
+          <td>s</td>
+          <td>a</td>
+          <td>s</td>
+          <td>e</td>
+          <td>c</td>
+      </tr>
+      <tr>
+          <td>r</td>
+          <td>e</td>
+          <td>t</td>
+          <td>m</td>
+          <td>e</td>
+      </tr>
+      <tr>
+          <td>s</td>
+          <td>s</td>
+          <td>a</td>
+          <td>g</td>
+          <td>e</td>
+      </tr>
+  </tbody>
+</table>
+<p>The columns will then be read out in order based on the letters of the key: <code>1, 0, 2, 3, 4</code> resulting in the ciphertext:</p>
+<p><code>haesTsrsistasemgicee</code></p>
+<h2 id="your-task">Your task</h2>
+<p>Write a program called <code>column</code> that enables you to encrypt messages using a columnar transposition cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime.</p>
+<p>Here is an example of how the program might work. For example, if the user inputs a key of <code>hello</code> and a plaintext of <code>This is a test.</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column hello
+</span></span><span style="display:flex;"><span>plaintext:  This is a test.
+</span></span><span style="display:flex;"><span>ciphertext: haesTsrsistasemgicee
+</span></span></code></pre></div><p>Notice that punctuation and spaces were ignored by the cipher. Only consider alphabetical characters! Notice, too, that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
+<p>Whether the characters in the key itself are uppercase or lowercase doesn’t matter. A key of <code>hello</code> is functionally identical to a key of <code>HELLO</code> (as is, for that matter, <code>HeLlO</code>).</p>
+<p>And what if a user doesn’t provide a valid key?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column h
+</span></span><span style="display:flex;"><span>Key must be at least 3 characters.
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column he3
+</span></span><span style="display:flex;"><span>Key must be only alphabetic characters.
+</span></span></code></pre></div><p>Or really doesn’t cooperate?</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column
+</span></span><span style="display:flex;"><span>Usage: ./column key
+</span></span></code></pre></div><h2 id="specification">Specification</h2>
+<p>Implement a program, <code>column</code>, that encrypts messages using a columnar transposition cipher.</p>
+<ul>
+<li>Write your program in a file called <code>column.c</code>.</li>
+<li>Your program must accept a single command-line argument, the key to use for the encryption. The key itself should be case-insensitive, so whether any character in the key is uppercase or lowercase should not affect the behavior of your program.</li>
+<li>If your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error message of your choice (with <code>printf()</code>) and return from <code>main()</code> a value of <code>1</code> immediately.</li>
+<li>If the key is invalid (as by not containing 3+ characters or containing any character that is not an alphabetic character), your program should print an error message of your choice (with <code>printf()</code>) and return from <code>main()</code> a value of <code>2</code> immediately.</li>
+<li>Your program must prompt the user with <code>plaintext:</code> (ie, using <code>get_string()</code>).</li>
+<li>Your program must output <code>ciphertext:</code> followed by the plaintext’s corresponding ciphertext, as calculated using the algorithm described above.</li>
+<li>Your program must preserve case: capitalized letters must remain capitalized letters; lowercase letters must remain lowercase letters.</li>
+<li>After outputting ciphertext, you should print a newline. Your program should then exit by returning <code>0</code> from <code>main()</code>.</li>
+</ul>
+<h2 id="how-to-test-your-code">How to Test Your Code</h2>
+<p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/column
+</span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
+<p>Execute the below, logging in with your GitHub username and password when prompted.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/column
+</span></span></code></pre></div>
+</div>
+    </main>
+
+    
+  </body>
+</html>

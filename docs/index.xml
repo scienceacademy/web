@@ -6,8 +6,22 @@
     <description>Recent content on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Sep 2025 17:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 11 Sep 2025 15:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Columnar Transposition Cipher</title>
+      <link>https://scienceacademy.github.io/web/assignments/column_cipher/</link>
+      <pubDate>Thu, 11 Sep 2025 15:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/column_cipher/</guid>
+      <description>&lt;p&gt;Implement a program that encrypts messages using the columnar transposition cipher.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Substitution</title>
+      <link>https://scienceacademy.github.io/web/assignments/substitution/</link>
+      <pubDate>Thu, 11 Sep 2025 14:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/substitution/</guid>
+      <description>&lt;p&gt;Implement a program that encrypts messages using the substitution cipher.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>String Practice</title>
       <link>https://scienceacademy.github.io/web/assignments/string_practice/</link>
