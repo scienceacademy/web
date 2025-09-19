@@ -6,8 +6,15 @@
     <description>Recent content in Assignments on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Sep 2025 15:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lab: Sorting</title>
+      <link>https://scienceacademy.github.io/web/assignments/sorting/</link>
+      <pubDate>Thu, 18 Sep 2025 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/sorting/</guid>
+      <description>&lt;p&gt;Analyze three sorting programs to determine which algorithms they use.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Columnar Transposition Cipher</title>
       <link>https://scienceacademy.github.io/web/assignments/column_cipher/</link>
