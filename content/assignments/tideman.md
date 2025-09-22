@@ -1,6 +1,6 @@
 ---
 title: "Voting: Tideman"
-date: 2024-09-18T13:55:45-07:00
+date: 2025-09-22T14:55:45-07:00
 draft: true
 ---
 Implement a program that runs a "Tideman" election, as shown below.
@@ -220,7 +220,7 @@ Be sure to test your code to make sure it handles the following:
 Execute the below to test the correctness of your code using `check50`. Be sure to compile and test it yourself!
 
 ```
-check50 scienceacademy/problems/2024ap/tideman
+check50 scienceacademy/problems/2025ap/tideman
 ```
 
 ## How to Submit
@@ -228,5 +228,5 @@ check50 scienceacademy/problems/2024ap/tideman
 Execute the below to submit your code:
 
 ```
-submit50 scienceacademy/problems/2024ap/tideman
+submit50 scienceacademy/problems/2025ap/tideman
 ```

@@ -1,6 +1,6 @@
 ---
 title: "Voting: Runoff"
-date: 2024-09-18T12:55:45-07:00
+date: 2025-09-22T12:55:45-07:00
 draft: true
 ---
 Implement a program that runs a runoff election, as shown below.
