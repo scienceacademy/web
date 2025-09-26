@@ -85,5 +85,19 @@
       <guid>https://scienceacademy.github.io/web/assignments/welcome/</guid>
       <description>&lt;p&gt;Welcome to AP Computer Science Principles for 2025-2026! Read this to get started.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Voting: Tideman</title>
+      <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
+      <pubDate>Wed, 25 Sep 2024 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/tideman/</guid>
+      <description>&lt;p&gt;Implement a program that runs a &amp;ldquo;Tideman&amp;rdquo; election, as shown below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Voting: Runoff</title>
+      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+      <pubDate>Wed, 25 Sep 2024 12:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

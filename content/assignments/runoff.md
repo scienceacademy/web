@@ -1,7 +1,7 @@
 ---
 title: "Voting: Runoff"
-date: 2024-09-18T12:55:45-07:00
-draft: true
+date: 2024-09-25T12:55:45-07:00
+draft: false
 ---
 Implement a program that runs a runoff election, as shown below.
 <!--more-->
@@ -213,7 +213,7 @@ Be sure to test your code to make sure it handles:
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2024ap/runoff
+check50 scienceacademy/problems/2025ap/runoff
 ```
 
 ## Submitting
@@ -221,5 +221,5 @@ check50 scienceacademy/problems/2024ap/runoff
 Execute the below to submit your code:
 
 ```
-submit50 scienceacademy/problems/2024ap/runoff
+submit50 scienceacademy/problems/2025ap/runoff
 ```
