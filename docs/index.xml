@@ -6,8 +6,22 @@
     <description>Recent content on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Sep 2025 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Voting: Tideman</title>
+      <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
+      <pubDate>Thu, 25 Sep 2025 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/tideman/</guid>
+      <description>&lt;p&gt;Implement a program that runs a &amp;ldquo;Tideman&amp;rdquo; election, as shown below.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Voting: Runoff</title>
+      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+      <pubDate>Thu, 25 Sep 2025 12:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Plurality</title>
       <link>https://scienceacademy.github.io/web/assignments/plurality/</link>
@@ -91,20 +105,6 @@
       <pubDate>Mon, 11 Aug 2025 19:55:45 -0700</pubDate>
       <guid>https://scienceacademy.github.io/web/assignments/welcome/</guid>
       <description>&lt;p&gt;Welcome to AP Computer Science Principles for 2025-2026! Read this to get started.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Voting: Tideman</title>
-      <link>https://scienceacademy.github.io/web/assignments/tideman/</link>
-      <pubDate>Wed, 25 Sep 2024 13:55:45 -0700</pubDate>
-      <guid>https://scienceacademy.github.io/web/assignments/tideman/</guid>
-      <description>&lt;p&gt;Implement a program that runs a &amp;ldquo;Tideman&amp;rdquo; election, as shown below.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Voting: Runoff</title>
-      <link>https://scienceacademy.github.io/web/assignments/runoff/</link>
-      <pubDate>Wed, 25 Sep 2024 12:55:45 -0700</pubDate>
-      <guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
-      <description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
