@@ -1,7 +1,7 @@
 ---
 title: "Filter: Less Comfortable"
-date: 2024-10-01T03:55:45-07:00
-draft: true
+date: 2025-10-06T03:55:45-07:00
+draft: false
 ---
 Implement a program that applies filters to images.
 <!--more-->
@@ -179,7 +179,7 @@ Be sure to test all of your filters on the example bitmaps!
 Execute the below to evaluate the correctness of your code using check50. But be sure to compile and test it yourself as well!
 
 ```
-check50 scienceacademy/problems/2024ap/filter/less
+check50 scienceacademy/problems/2025ap/filter/less
 ```
 
 ## How to Submit
@@ -187,5 +187,5 @@ check50 scienceacademy/problems/2024ap/filter/less
 Execute the below to submit your code:
 
 ```
-submit50 scienceacademy/problems/2024ap/filter/less
+submit50 scienceacademy/problems/2025ap/filter/less
 ```
