@@ -6,8 +6,15 @@
     <description>Recent content in Assignments on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 13:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 16 Nov 2025 12:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run Length Encoding (RLE)</title>
+      <link>https://scienceacademy.github.io/web/assignments/rle/</link>
+      <pubDate>Sun, 16 Nov 2025 12:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/rle/</guid>
+      <description>&lt;p&gt;Implement RLE in Python.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Video poker ♥ ♣ ♠ ♦</title>
       <link>https://scienceacademy.github.io/web/assignments/poker/</link>
