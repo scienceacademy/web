@@ -76,3 +76,9 @@ test_image = [
 [0, 1, 1, 1, 1, 1, 1, 0]
 ]
 ```
+
+## How to Submit
+
+```
+submit50 scienceacademy/problems/2025ap/rle
+```
