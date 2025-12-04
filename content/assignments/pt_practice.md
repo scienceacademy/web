@@ -1,7 +1,7 @@
 ---
 title: "Create Task Practice"
-date: 2025-01-05T09:55:45-07:00
-draft: true
+date: 2025-12-04T09:55:45-07:00
+draft: false
 ---
 
 Write a simple program to practice for the AP Create Task.
@@ -59,10 +59,16 @@ Total Price: $12.49
 
 Once you have completed the assignment, write brief answers to the following potential FRQ questions:
 
-* Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Identify the parameter(s) used in this procedure. Explain how your identified parameter(s) use abstraction to manage complexity in your program.
+* Identify an unexpected or invalid input that a user could provide to your program. Describe the behavior of your program after it receives this input. If it is not possible for your program to accept an unexpected or invalid input, explain why this is the case.
+
+* Consider the procedure identified in the Procedure section of your Personalized Project Reference. Identify the parameter(s) used in this procedure. Explain how your identified parameter(s) use abstraction to manage complexity in your program.
 
 * Consider the list identified in the List section of your Personalized Project Reference. Describe how your program could be written without the use of a list. If it is not possible for your program to work without the use of a list, describe how your program's functionality would be limited.
 
-* Consider the procedure identified in part (i) of the Procedure section of your Personalized Project Reference. Write two calls to your procedure that each cause a different code segment in the procedure to execute. Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure.
+* Consider the first selection statement included in the Procedure section of your Personalized Project Reference. Identify the Boolean expression in this selection statement. Identify a specific value or set of values that will cause this expression to evaluate to false. Explain why the specified value(s) will cause this expression to evaluate to false.
+
+* Consider the code segment in the List section of your Personalized Project Reference. Suppose another programmer modifies this code segment. Describe a modification the other programmer could make to this code segment that would result in a logic error. Explain why this modification would result in a logic error.
+
+* Consider the procedure identified in the Procedure section of your Personalized Project Reference. Describe the functionality provided by this procedure. Explain how implementing this functionality as a procedure results in your program being easier to maintain than if the functionality were not implemented as a procedure.
 
 Submit your answers in a Google Doc to the Schoology assignment.
