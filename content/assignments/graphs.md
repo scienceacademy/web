@@ -72,7 +72,7 @@ E,F
 F
 ```
 
-* Be sure to check that `sys.argv[1]` is either `"bfs"` or `"dfs"`. If not, display an error and exit.
+* Be sure to check that `sys.argv[2]` is either `"bfs"` or `"dfs"`. If not, display an error and exit.
 * Write two functions: `bfs()` and `dfs()` that traverse `graph` and print the nodes in the order visited.
 
 The output of your program should look like this:
