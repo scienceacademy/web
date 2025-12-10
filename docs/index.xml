@@ -6,8 +6,15 @@
     <description>Recent content on AP CSP 2025-26</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Dec 2025 09:55:45 -0700</lastBuildDate>
+    <lastBuildDate>Tue, 09 Dec 2025 13:55:45 -0700</lastBuildDate>
     <atom:link href="https://scienceacademy.github.io/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Graphs</title>
+      <link>https://scienceacademy.github.io/web/assignments/graphs/</link>
+      <pubDate>Tue, 09 Dec 2025 13:55:45 -0700</pubDate>
+      <guid>https://scienceacademy.github.io/web/assignments/graphs/</guid>
+      <description>&lt;p&gt;Write a program that implements Breadth-First and Depth-First Search.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Create Task Practice</title>
       <link>https://scienceacademy.github.io/web/assignments/pt_practice/</link>

@@ -1,7 +1,7 @@
 ---
 title: "Graphs"
-date: 2023-11-15T13:55:45-07:00
-draft: true
+date: 2025-12-09T13:55:45-07:00
+draft: false
 ---
 
 Write a program that implements Breadth-First and Depth-First Search.
@@ -51,7 +51,7 @@ Each node is a key in the dictionary, and its value is a list of the connections
 ```python
 for neighbor in graph["A"]:
     print(neighbor)
-# Prints "B" and "D"
+# Prints "B" and "C"
 ```
 
 ## Implementation
@@ -78,7 +78,7 @@ F
 The output of your program should look like this:
 
 ```md
-$ python graph_search.py dfs graph.txt
+$ python graph_search.py graph.txt dfs
 A B D E F C
 ```
 
@@ -93,11 +93,11 @@ Make sure your program works with any graph, not just the example one above. Her
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2023ap/graphs
+check50 scienceacademy/problems/2025ap/graphs
 ```
 
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2023ap/graphs
+submit50 scienceacademy/problems/2025ap/graphs
 ```
