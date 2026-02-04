@@ -1,6 +1,6 @@
 ---
 title: "World Cup"
-date: 2022-11-06T13:55:45-07:00
+date: 2026-02-01T13:55:45-07:00
 draft: true
 ---
 Write a program to run simulations of the FIFA World Cup.
@@ -130,7 +130,7 @@ In case you're wondering, here's what actually happened at the actual tournament
 Execute the below to evaluate the correctness of your code using `check50`.
 
 ```md
-check50 scienceacademy/problems/2023ap/worldcup
+check50 scienceacademy/problems/2025ap/worldcup
 ```
 
 # **IMPORTANT**
@@ -144,5 +144,5 @@ if __name__ == "__main__":
 ## How to Submit
 
 ```md
-submit50 scienceacademy/problems/2023ap/worldcup
+submit50 scienceacademy/problems/2025ap/worldcup
 ```
