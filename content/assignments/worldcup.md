@@ -1,7 +1,7 @@
 ---
 title: "World Cup"
 date: 2026-02-01T13:55:45-07:00
-draft: true
+draft: false
 ---
 Write a program to run simulations of the FIFA World Cup.
 <!--more-->
