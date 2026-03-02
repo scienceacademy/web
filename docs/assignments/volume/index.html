@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.154.2">
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
   <h1>Lab: Volume</h1>
   <time datetime=2025-10-05T13:55:45-0700 class="post-date">Sun, Oct 5, 2025</time>
   <p>Write a program to modify the volume of an audio file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 2.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 2.0
 </span></span></code></pre></div><h2 id="wav-files">WAV Files</h2>
 <p><a href="https://docs.fileformat.com/audio/wav/">WAV files</a> are a common file format for representing audio. WAV files store audio as a sequence of &ldquo;samples&rdquo;: numbers that represent the value of some audio signal at a particular point in time. WAV files begin with a 44-byte &ldquo;header&rdquo; that contains information about the file itself, including the size of the file, the number of samples per second, and the size of each sample. After the header, the WAV file contains a sequence of samples, each a single numerical value representing the audio signal at a particular point in time.</p>
 <p>Scaling each sample value by a given factor has the effect of changing the volume of the audio. Multiplying each sample value by 2.0, for example, will have the effect of doubling the volume of the origin audio. Multiplying each sample by 0.5, meanwhile, will have the effect of cutting the volume in half.</p>
@@ -67,7 +67,7 @@
 <ol>
 <li>In the terminal window, run</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/lab4.zip
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>wget https://scienceacademy.github.io/web/lab4.zip
 </span></span></code></pre></div><p>to download a zip file of the lab code.</p>
 <ol start="3">
 <li>In the terminal window, run <code>unzip lab4.zip</code> to unzip (decompress) the file.</li>
@@ -97,12 +97,12 @@
 <ul>
 <li>You&rsquo;ll likely want to create an array of bytes to store the data from the WAV file header that you’ll read from the input file. Using the <code>uint8_t</code> type to represent a byte, you can create an array of <code>n</code> bytes for your header with syntax like</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">uint8_t</span> header[n];
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">uint8_t</span> header[n];
 </span></span></code></pre></div><p>replacing <code>n</code> with the number of bytes. You can then use header as an argument to <code>fread()</code> or <code>fwrite()</code> to read into or write from the header.</p>
 <ul>
 <li>You’ll likely want to create a “buffer” in which to store audio samples that you read from the WAV file. Using the <code>int16_t</code> type to store an audio sample, you can create a buffer variable with syntax like</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int16_t</span> buffer;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#8be9fd">int16_t</span> buffer;
 </span></span></code></pre></div><p>You can then use <code>&amp;buffer</code> as an argument to <code>fread()</code> or <code>fwrite()</code> to read into or write from the buffer.</p>
 <ul>
 <li>You may find the documentation for <code>fread()</code> and <code>fwrite()</code> helpful.
@@ -121,14 +121,14 @@
 </ul>
 <h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Your program should behave per the examples below.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 2.0
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 2.0
 </span></span></code></pre></div><p>When you listen to <code>output.wav</code>, it should be twice as loud as <code>input.wav</code>!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 0.5
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./volume input.wav output.wav 0.5
 </span></span></code></pre></div><p>When you listen to <code>output.wav</code>, it should be half as loud as <code>input.wav</code>!</p>
 <p>Execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/volume
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/volume
 </span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/volume
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/volume
 </span></span></code></pre></div>
 </div>
     </main>

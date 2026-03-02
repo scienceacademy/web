@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.154.2">
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
   <h1>Columnar Transposition Cipher</h1>
   <time datetime=2025-09-11T15:55:45-0700 class="post-date">Thu, Sep 11, 2025</time>
   <p>Implement a program that encrypts messages using the columnar transposition cipher.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column test
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column test
 </span></span><span style="display:flex;"><span>plaintext:  now is the time to act.
 </span></span><span style="display:flex;"><span>ciphertext: otiowhmanstttieec
 </span></span></code></pre></div><h2 id="background">Background</h2>
@@ -113,18 +113,18 @@
 <h2 id="your-task">Your task</h2>
 <p>Write a program called <code>column</code> that enables you to encrypt messages using a columnar transposition cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime.</p>
 <p>Here is an example of how the program might work. For example, if the user inputs a key of <code>hello</code> and a plaintext of <code>This is a test.</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column hello
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column hello
 </span></span><span style="display:flex;"><span>plaintext:  This is a test.
 </span></span><span style="display:flex;"><span>ciphertext: haesTsrsistasemgicee
 </span></span></code></pre></div><p>Notice that punctuation and spaces were ignored by the cipher. Only consider alphabetical characters! Notice, too, that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
 <p>Whether the characters in the key itself are uppercase or lowercase doesn’t matter. A key of <code>hello</code> is functionally identical to a key of <code>HELLO</code> (as is, for that matter, <code>HeLlO</code>).</p>
 <p>And what if a user doesn’t provide a valid key?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column h
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column h
 </span></span><span style="display:flex;"><span>Key must be at least 3 characters.
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column he3
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column he3
 </span></span><span style="display:flex;"><span>Key must be only alphabetic characters.
 </span></span></code></pre></div><p>Or really doesn’t cooperate?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./column
 </span></span><span style="display:flex;"><span>Usage: ./column key
 </span></span></code></pre></div><h2 id="specification">Specification</h2>
 <p>Implement a program, <code>column</code>, that encrypts messages using a columnar transposition cipher.</p>
@@ -140,10 +140,10 @@
 </ul>
 <h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/column
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/column
 </span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/column
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/column
 </span></span></code></pre></div>
 </div>
     </main>

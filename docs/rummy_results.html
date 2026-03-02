@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///var/folders/jh/hmvrzbpj3xsdjh6zmhfgkr8c0000gn/T/rummy_tournament.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Gin Rummy Tournament Results</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+         background: #f5f5f5; color: #222; padding: 2rem; }
+  h1 { text-align: center; margin-bottom: 0.25rem; font-size: 1.8rem; }
+  .meta { text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.9rem; }
+  .card { background: #fff; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+           padding: 1.5rem; margin-bottom: 1.5rem; overflow-x: auto; }
+  h2 { margin-bottom: 1rem; font-size: 1.2rem; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.9rem; }
+  th, td { padding: 0.5rem 0.75rem; text-align: right; border-bottom: 1px solid #eee; }
+  th { background: #fafafa; font-weight: 600; position: sticky; top: 0; }
+  td.bot-name { text-align: left; font-weight: 600; }
+  th:first-child, td:first-child { text-align: center; }
+  tr.top { background: #fffbe6; }
+  tr:hover { background: #f0f7ff; }
+  .pct { font-weight: 600; }
+  /* h2h */
+  .h2h-name { writing-mode: vertical-rl; text-orientation: mixed; font-size: 0.8rem;
+               white-space: nowrap; padding: 0.5rem 0.25rem; }
+  td.self { background: #f0f0f0; color: #aaa; text-align: center; }
+  td.win { background: #e6f4ea; color: #1a7f37; text-align: center; font-weight: 600; }
+  td.loss { background: #ffeef0; color: #cf222e; text-align: center; }
+  td.even { background: #fff8e1; text-align: center; }
+  .errors { background: #fff3f3; border-radius: 8px; padding: 1.5rem; }
+  .errors h2 { color: #cf222e; }
+  .errors ul { margin-left: 1.5rem; font-size: 0.85rem; }
+  /* sortable headers */
+  th.sortable { cursor: pointer; user-select: none; position: relative; padding-right: 1.2rem; }
+  th.sortable:hover { background: #eef; }
+  th.sortable::after { content: "\2195"; position: absolute; right: 0.2rem; opacity: 0.3; font-size: 0.75rem; }
+  th.sortable.asc::after { content: "\2191"; opacity: 0.8; }
+  th.sortable.desc::after { content: "\2193"; opacity: 0.8; }
+</style>
+</head>
+<body>
+<h1>Gin Rummy Tournament</h1>
+<p class="meta">52 bots · 100 games per match</p>
+
+<div class="card">
+<h2>Rankings</h2>
+<table id="rankings">
+<thead><tr>
+  <th class="sortable desc" data-col="0" data-type="num">#</th>
+  <th class="sortable" data-col="1" data-type="str" style="text-align:left">Bot</th>
+  <th class="sortable" data-col="2" data-type="num">W</th>
+  <th class="sortable" data-col="3" data-type="num">L</th>
+  <th class="sortable" data-col="4" data-type="num">D</th>
+  <th class="sortable" data-col="5" data-type="num">Win%</th>
+  <th class="sortable" data-col="6" data-type="num">Pts</th>
+  <th class="sortable" data-col="7" data-type="num">Avg</th>
+  <th class="sortable" data-col="8" data-type="num">Gins</th>
+  <th class="sortable" data-col="9" data-type="num">Undercuts</th>
+</tr></thead>
+<tbody>
+<tr>
+            <td data-v="1">1</td>
+            <td class="bot-name" data-v="FinnBot">FinnBot</td>
+            <td data-v="3485">3485</td>
+            <td data-v="1606">1606</td>
+            <td data-v="9">9</td>
+            <td class="pct" data-v="0.6845">68.5%</td>
+            <td data-v="77679">77679</td>
+            <td data-v="15.23">15.2</td>
+            <td data-v="137">137</td>
+            <td data-v="45">45</td>
+        </tr><tr>
+            <td data-v="2">2</td>
+            <td class="bot-name" data-v="kaiV2bot">kaiV2bot</td>
+            <td data-v="3351">3351</td>
+            <td data-v="1740">1740</td>
+            <td data-v="9">9</td>
+            <td class="pct" data-v="0.6582">65.8%</td>
+            <td data-v="73703">73703</td>
+            <td data-v="14.45">14.5</td>
+            <td data-v="95">95</td>
+            <td data-v="48">48</td>
+        </tr><tr>
+            <td data-v="3">3</td>
+            <td class="bot-name" data-v="CBBot">CBBot</td>
+            <td data-v="3265">3265</td>
+            <td data-v="1819">1819</td>
+            <td data-v="16">16</td>
+            <td class="pct" data-v="0.6422">64.2%</td>
+            <td data-v="68008">68008</td>
+            <td data-v="13.33">13.3</td>
+            <td data-v="80">80</td>
+            <td data-v="46">46</td>
+        </tr><tr>
+            <td data-v="4">4</td>
+            <td class="bot-name" data-v="nah_Id_Win">nah_Id_Win</td>
+            <td data-v="3252">3252</td>
+            <td data-v="1830">1830</td>
+            <td data-v="18">18</td>
+            <td class="pct" data-v="0.6399">64.0%</td>
+            <td data-v="68963">68963</td>
+            <td data-v="13.52">13.5</td>
+            <td data-v="105">105</td>
+            <td data-v="88">88</td>
+        </tr><tr>
+            <td data-v="5">5</td>
+            <td class="bot-name" data-v="liambot">liambot</td>
+            <td data-v="3227">3227</td>
+            <td data-v="1861">1861</td>
+            <td data-v="12">12</td>
+            <td class="pct" data-v="0.6342">63.4%</td>
+            <td data-v="66865">66865</td>
+            <td data-v="13.11">13.1</td>
+            <td data-v="77">77</td>
+            <td data-v="51">51</td>
+        </tr><tr>
+            <td data-v="6">6</td>
+            <td class="bot-name" data-v="DavitBOT">DavitBOT</td>
+            <td data-v="3221">3221</td>
+            <td data-v="1870">1870</td>
+            <td data-v="9">9</td>
+            <td class="pct" data-v="0.6327">63.3%</td>
+            <td data-v="67236">67236</td>
+            <td data-v="13.18">13.2</td>
+            <td data-v="81">81</td>
+            <td data-v="45">45</td>
+        </tr><tr>
+            <td data-v="7">7</td>
+            <td class="bot-name" data-v="AbbyBot">AbbyBot</td>
+            <td data-v="3193">3193</td>
+            <td data-v="1897">1897</td>
+            <td data-v="10">10</td>
+            <td class="pct" data-v="0.6273">62.7%</td>
+            <td data-v="66037">66037</td>
+            <td data-v="12.95">12.9</td>
+            <td data-v="71">71</td>
+            <td data-v="42">42</td>
+        </tr><tr>
+            <td data-v="8">8</td>
+            <td class="bot-name" data-v="ParkBot">ParkBot</td>
+            <td data-v="3161">3161</td>
+            <td data-v="1932">1932</td>
+            <td data-v="7">7</td>
+            <td class="pct" data-v="0.6207">62.1%</td>
+            <td data-v="68121">68121</td>
+            <td data-v="13.36">13.4</td>
+            <td data-v="117">117</td>
+            <td data-v="120">120</td>
+        </tr><tr>
+            <td data-v="9">9</td>
+            <td class="bot-name" data-v="IanBot">IanBot</td>
+            <td data-v="3153">3153</td>
+            <td data-v="1940">1940</td>
+            <td data-v="7">7</td>
+            <td class="pct" data-v="0.6191">61.9%</td>
+            <td data-v="67157">67157</td>
+            <td data-v="13.17">13.2</td>
+            <td data-v="165">165</td>
+            <td data-v="155">155</td>
+        </tr><tr>
+            <td data-v="10">10</td>
+            <td class="bot-name" data-v="lilybot">lilybot</td>
+            <td data-v="3151">3151</td>
+            <td data-v="1942">1942</td>
+            <td data-v="7">7</td>
+            <td class="pct" data-v="0.6187">61.9%</td>
+            <td data-v="67949">67949</td>
+            <td data-v="13.32">13.3</td>
+            <td data-v="84">84</td>
+            <td data-v="34">34</td>
+        </tr><tr>
+            <td data-v="11">11</td>
+            <td class="bot-name" data-v="Eugenebot">Eugenebot</td>
+            <td data-v="3106">3106</td>
+            <td data-v="1969">1969</td>
+            <td data-v="25">25</td>
+            <td class="pct" data-v="0.6120">61.2%</td>
+            <td data-v="65441">65441</td>
+            <td data-v="12.83">12.8</td>
+            <td data-v="42">42</td>
+            <td data-v="53">53</td>
+        </tr><tr>
+            <td data-v="12">12</td>
+            <td class="bot-name" data-v="Elodia&#39;s Bot">Elodia's Bot</td>
+            <td data-v="3114">3114</td>
+            <td data-v="1976">1976</td>
+            <td data-v="10">10</td>
+            <td class="pct" data-v="0.6118">61.2%</td>
+            <td data-v="66554">66554</td>
+            <td data-v="13.05">13.0</td>
+            <td data-v="124">124</td>
+            <td data-v="109">109</td>
+        </tr><tr>
+            <td data-v="13">13</td>
+            <td class="bot-name" data-v="SofiaBot">SofiaBot</td>
+            <td data-v="3071">3071</td>
+            <td data-v="2014">2014</td>
+            <td data-v="15">15</td>
+            <td class="pct" data-v="0.6039">60.4%</td>
+            <td data-v="67197">67197</td>
+            <td data-v="13.18">13.2</td>
+            <td data-v="147">147</td>
+            <td data-v="50">50</td>
+        </tr><tr>
+            <td data-v="14">14</td>
+            <td class="bot-name" data-v="jackS2">jackS2</td>
+            <td data-v="3024">3024</td>
+            <td data-v="2031">2031</td>
+            <td data-v="45">45</td>
+            <td class="pct" data-v="0.5982">59.8%</td>
+            <td data-v="71236">71236</td>
+            <td data-v="13.97">14.0</td>
+            <td data-v="188">188</td>
+            <td data-v="260">260</td>
+        </tr><tr>
+            <td data-v="15">15</td>
+            <td class="bot-name" data-v="aidanbot">aidanbot</td>
+            <td data-v="3011">3011</td>
+            <td data-v="2081">2081</td>
+            <td data-v="8">8</td>
+            <td class="pct" data-v="0.5913">59.1%</td>
+            <td data-v="70080">70080</td>
+            <td data-v="13.74">13.7</td>
+            <td data-v="228">228</td>
+            <td data-v="245">245</td>
+        </tr><tr>
+            <td data-v="16">16</td>
+            <td class="bot-name" data-v="DaniBot">DaniBot</td>
+            <td data-v="2997">2997</td>
+            <td data-v="2082">2082</td>
+            <td data-v="21">21</td>
+            <td class="pct" data-v="0.5901">59.0%</td>
+            <td data-v="64881">64881</td>
+            <td data-v="12.72">12.7</td>
+            <td data-v="193">193</td>
+            <td data-v="36">36</td>
+        </tr><tr>
+            <td data-v="17">17</td>
+            <td class="bot-name" data-v="LuisBot">LuisBot</td>
+            <td data-v="2933">2933</td>
+            <td data-v="2044">2044</td>
+            <td data-v="123">123</td>
+            <td class="pct" data-v="0.5893">58.9%</td>
+            <td data-v="60305">60305</td>
+            <td data-v="11.82">11.8</td>
+            <td data-v="55">55</td>
+            <td data-v="45">45</td>
+        </tr><tr>
+            <td data-v="18">18</td>
+            <td class="bot-name" data-v="EllicesRummyKimmy_bot">EllicesRummyKimmy_bot</td>
+            <td data-v="2975">2975</td>
+            <td data-v="2098">2098</td>
+            <td data-v="27">27</td>
+            <td class="pct" data-v="0.5864">58.6%</td>
+            <td data-v="67921">67921</td>
+            <td data-v="13.32">13.3</td>
+            <td data-v="233">233</td>
+            <td data-v="259">259</td>
+        </tr><tr>
+            <td data-v="19">19</td>
+            <td class="bot-name" data-v="felix">felix</td>
+            <td data-v="2974">2974</td>
+            <td data-v="2103">2103</td>
+            <td data-v="23">23</td>
+            <td class="pct" data-v="0.5858">58.6%</td>
+            <td data-v="78457">78457</td>
+            <td data-v="15.38">15.4</td>
+            <td data-v="568">568</td>
+            <td data-v="172">172</td>
+        </tr><tr>
+            <td data-v="20">20</td>
+            <td class="bot-name" data-v="YuzuBot">YuzuBot</td>
+            <td data-v="2952">2952</td>
+            <td data-v="2114">2114</td>
+            <td data-v="34">34</td>
+            <td class="pct" data-v="0.5827">58.3%</td>
+            <td data-v="66968">66968</td>
+            <td data-v="13.13">13.1</td>
+            <td data-v="221">221</td>
+            <td data-v="250">250</td>
+        </tr><tr>
+            <td data-v="21">21</td>
+            <td class="bot-name" data-v="LalaBot">LalaBot</td>
+            <td data-v="2962">2962</td>
+            <td data-v="2125">2125</td>
+            <td data-v="13">13</td>
+            <td class="pct" data-v="0.5823">58.2%</td>
+            <td data-v="73371">73371</td>
+            <td data-v="14.39">14.4</td>
+            <td data-v="299">299</td>
+            <td data-v="233">233</td>
+        </tr><tr>
+            <td data-v="22">22</td>
+            <td class="bot-name" data-v="Botadze">Botadze</td>
+            <td data-v="2889">2889</td>
+            <td data-v="2105">2105</td>
+            <td data-v="106">106</td>
+            <td class="pct" data-v="0.5785">57.8%</td>
+            <td data-v="69222">69222</td>
+            <td data-v="13.57">13.6</td>
+            <td data-v="239">239</td>
+            <td data-v="33">33</td>
+        </tr><tr>
+            <td data-v="23">23</td>
+            <td class="bot-name" data-v="IntermediateBot">IntermediateBot</td>
+            <td data-v="2880">2880</td>
+            <td data-v="2173">2173</td>
+            <td data-v="47">47</td>
+            <td class="pct" data-v="0.5700">57.0%</td>
+            <td data-v="68507">68507</td>
+            <td data-v="13.43">13.4</td>
+            <td data-v="254">254</td>
+            <td data-v="383">383</td>
+        </tr><tr>
+            <td data-v="24">24</td>
+            <td class="bot-name" data-v="wwjd">wwjd</td>
+            <td data-v="2868">2868</td>
+            <td data-v="2203">2203</td>
+            <td data-v="29">29</td>
+            <td class="pct" data-v="0.5656">56.6%</td>
+            <td data-v="68860">68860</td>
+            <td data-v="13.50">13.5</td>
+            <td data-v="261">261</td>
+            <td data-v="370">370</td>
+        </tr><tr>
+            <td data-v="25">25</td>
+            <td class="bot-name" data-v="drewv1">drewv1</td>
+            <td data-v="2839">2839</td>
+            <td data-v="2219">2219</td>
+            <td data-v="42">42</td>
+            <td class="pct" data-v="0.5613">56.1%</td>
+            <td data-v="69904">69904</td>
+            <td data-v="13.71">13.7</td>
+            <td data-v="346">346</td>
+            <td data-v="105">105</td>
+        </tr><tr>
+            <td data-v="26">26</td>
+            <td class="bot-name" data-v="JulianBot">JulianBot</td>
+            <td data-v="2803">2803</td>
+            <td data-v="2200">2200</td>
+            <td data-v="97">97</td>
+            <td class="pct" data-v="0.5603">56.0%</td>
+            <td data-v="57024">57024</td>
+            <td data-v="11.18">11.2</td>
+            <td data-v="75">75</td>
+            <td data-v="47">47</td>
+        </tr><tr>
+            <td data-v="27">27</td>
+            <td class="bot-name" data-v="kiahncode">kiahncode</td>
+            <td data-v="2832">2832</td>
+            <td data-v="2253">2253</td>
+            <td data-v="15">15</td>
+            <td class="pct" data-v="0.5569">55.7%</td>
+            <td data-v="72672">72672</td>
+            <td data-v="14.25">14.2</td>
+            <td data-v="365">365</td>
+            <td data-v="492">492</td>
+        </tr><tr>
+            <td data-v="28">28</td>
+            <td class="bot-name" data-v="Avi&#39;s_Counterstrike">Avi's_Counterstrike</td>
+            <td data-v="2781">2781</td>
+            <td data-v="2250">2250</td>
+            <td data-v="68">68</td>
+            <td class="pct" data-v="0.5528">55.3%</td>
+            <td data-v="58900">58900</td>
+            <td data-v="11.55">11.6</td>
+            <td data-v="111">111</td>
+            <td data-v="129">129</td>
+        </tr><tr>
+            <td data-v="29">29</td>
+            <td class="bot-name" data-v="caryn_bot">caryn_bot</td>
+            <td data-v="2745">2745</td>
+            <td data-v="2334">2334</td>
+            <td data-v="21">21</td>
+            <td class="pct" data-v="0.5405">54.0%</td>
+            <td data-v="69137">69137</td>
+            <td data-v="13.56">13.6</td>
+            <td data-v="290">290</td>
+            <td data-v="551">551</td>
+        </tr><tr>
+            <td data-v="30">30</td>
+            <td class="bot-name" data-v="mayukh">mayukh</td>
+            <td data-v="2735">2735</td>
+            <td data-v="2341">2341</td>
+            <td data-v="24">24</td>
+            <td class="pct" data-v="0.5388">53.9%</td>
+            <td data-v="75906">75906</td>
+            <td data-v="14.88">14.9</td>
+            <td data-v="524">524</td>
+            <td data-v="582">582</td>
+        </tr><tr>
+            <td data-v="31">31</td>
+            <td class="bot-name" data-v="EthanyBot">EthanyBot</td>
+            <td data-v="2700">2700</td>
+            <td data-v="2379">2379</td>
+            <td data-v="21">21</td>
+            <td class="pct" data-v="0.5316">53.2%</td>
+            <td data-v="75692">75692</td>
+            <td data-v="14.84">14.8</td>
+            <td data-v="524">524</td>
+            <td data-v="636">636</td>
+        </tr><tr>
+            <td data-v="32">32</td>
+            <td class="bot-name" data-v="Martin_bot">Martin_bot</td>
+            <td data-v="2679">2679</td>
+            <td data-v="2392">2392</td>
+            <td data-v="29">29</td>
+            <td class="pct" data-v="0.5283">52.8%</td>
+            <td data-v="55117">55117</td>
+            <td data-v="10.81">10.8</td>
+            <td data-v="65">65</td>
+            <td data-v="76">76</td>
+        </tr><tr>
+            <td data-v="33">33</td>
+            <td class="bot-name" data-v="ErinBot">ErinBot</td>
+            <td data-v="2548">2548</td>
+            <td data-v="2503">2503</td>
+            <td data-v="49">49</td>
+            <td class="pct" data-v="0.5045">50.4%</td>
+            <td data-v="68477">68477</td>
+            <td data-v="13.43">13.4</td>
+            <td data-v="415">415</td>
+            <td data-v="550">550</td>
+        </tr><tr>
+            <td data-v="34">34</td>
+            <td class="bot-name" data-v="Eerobot">Eerobot</td>
+            <td data-v="2496">2496</td>
+            <td data-v="2512">2512</td>
+            <td data-v="92">92</td>
+            <td class="pct" data-v="0.4984">49.8%</td>
+            <td data-v="100109">100109</td>
+            <td data-v="19.63">19.6</td>
+            <td data-v="1228">1228</td>
+            <td data-v="1268">1268</td>
+        </tr><tr>
+            <td data-v="35">35</td>
+            <td class="bot-name" data-v="TaraBot">TaraBot</td>
+            <td data-v="2409">2409</td>
+            <td data-v="2630">2630</td>
+            <td data-v="61">61</td>
+            <td class="pct" data-v="0.4781">47.8%</td>
+            <td data-v="59495">59495</td>
+            <td data-v="11.67">11.7</td>
+            <td data-v="221">221</td>
+            <td data-v="346">346</td>
+        </tr><tr>
+            <td data-v="36">36</td>
+            <td class="bot-name" data-v="Franky_bot">Franky_bot</td>
+            <td data-v="2345">2345</td>
+            <td data-v="2687">2687</td>
+            <td data-v="68">68</td>
+            <td class="pct" data-v="0.4660">46.6%</td>
+            <td data-v="60203">60203</td>
+            <td data-v="11.80">11.8</td>
+            <td data-v="286">286</td>
+            <td data-v="441">441</td>
+        </tr><tr>
+            <td data-v="37">37</td>
+            <td class="bot-name" data-v="BucaneerBot">BucaneerBot</td>
+            <td data-v="2327">2327</td>
+            <td data-v="2704">2704</td>
+            <td data-v="69">69</td>
+            <td class="pct" data-v="0.4625">46.3%</td>
+            <td data-v="47540">47540</td>
+            <td data-v="9.32">9.3</td>
+            <td data-v="104">104</td>
+            <td data-v="137">137</td>
+        </tr><tr>
+            <td data-v="38">38</td>
+            <td class="bot-name" data-v="NarekBot">NarekBot</td>
+            <td data-v="2327">2327</td>
+            <td data-v="2716">2716</td>
+            <td data-v="57">57</td>
+            <td class="pct" data-v="0.4614">46.1%</td>
+            <td data-v="62419">62419</td>
+            <td data-v="12.24">12.2</td>
+            <td data-v="404">404</td>
+            <td data-v="528">528</td>
+        </tr><tr>
+            <td data-v="39">39</td>
+            <td class="bot-name" data-v="AdeleBot">AdeleBot</td>
+            <td data-v="2251">2251</td>
+            <td data-v="2692">2692</td>
+            <td data-v="157">157</td>
+            <td class="pct" data-v="0.4554">45.5%</td>
+            <td data-v="46428">46428</td>
+            <td data-v="9.10">9.1</td>
+            <td data-v="31">31</td>
+            <td data-v="45">45</td>
+        </tr><tr>
+            <td data-v="40">40</td>
+            <td class="bot-name" data-v="BasicBot">BasicBot</td>
+            <td data-v="2250">2250</td>
+            <td data-v="2692">2692</td>
+            <td data-v="158">158</td>
+            <td class="pct" data-v="0.4553">45.5%</td>
+            <td data-v="47142">47142</td>
+            <td data-v="9.24">9.2</td>
+            <td data-v="28">28</td>
+            <td data-v="58">58</td>
+        </tr><tr>
+            <td data-v="41">41</td>
+            <td class="bot-name" data-v="suttv2">suttv2</td>
+            <td data-v="2213">2213</td>
+            <td data-v="2813">2813</td>
+            <td data-v="74">74</td>
+            <td class="pct" data-v="0.4403">44.0%</td>
+            <td data-v="54893">54893</td>
+            <td data-v="10.76">10.8</td>
+            <td data-v="271">271</td>
+            <td data-v="21">21</td>
+        </tr><tr>
+            <td data-v="42">42</td>
+            <td class="bot-name" data-v="bot_Timothy_v2">bot_Timothy_v2</td>
+            <td data-v="2135">2135</td>
+            <td data-v="2839">2839</td>
+            <td data-v="126">126</td>
+            <td class="pct" data-v="0.4292">42.9%</td>
+            <td data-v="46914">46914</td>
+            <td data-v="9.20">9.2</td>
+            <td data-v="42">42</td>
+            <td data-v="53">53</td>
+        </tr><tr>
+            <td data-v="43">43</td>
+            <td class="bot-name" data-v="Dora&#39;s Explorer">Dora's Explorer</td>
+            <td data-v="1851">1851</td>
+            <td data-v="3143">3143</td>
+            <td data-v="106">106</td>
+            <td class="pct" data-v="0.3706">37.1%</td>
+            <td data-v="45644">45644</td>
+            <td data-v="8.95">8.9</td>
+            <td data-v="333">333</td>
+            <td data-v="14">14</td>
+        </tr><tr>
+            <td data-v="44">44</td>
+            <td class="bot-name" data-v="ethan_bot">ethan_bot</td>
+            <td data-v="1717">1717</td>
+            <td data-v="3109">3109</td>
+            <td data-v="274">274</td>
+            <td class="pct" data-v="0.3558">35.6%</td>
+            <td data-v="30998">30998</td>
+            <td data-v="6.08">6.1</td>
+            <td data-v="31">31</td>
+            <td data-v="28">28</td>
+        </tr><tr>
+            <td data-v="45">45</td>
+            <td class="bot-name" data-v="TristanBot">TristanBot</td>
+            <td data-v="1669">1669</td>
+            <td data-v="3206">3206</td>
+            <td data-v="225">225</td>
+            <td class="pct" data-v="0.3424">34.2%</td>
+            <td data-v="54675">54675</td>
+            <td data-v="10.72">10.7</td>
+            <td data-v="526">526</td>
+            <td data-v="364">364</td>
+        </tr><tr>
+            <td data-v="46">46</td>
+            <td class="bot-name" data-v="suttv1">suttv1</td>
+            <td data-v="1713">1713</td>
+            <td data-v="3294">3294</td>
+            <td data-v="93">93</td>
+            <td class="pct" data-v="0.3421">34.2%</td>
+            <td data-v="41397">41397</td>
+            <td data-v="8.12">8.1</td>
+            <td data-v="111">111</td>
+            <td data-v="27">27</td>
+        </tr><tr>
+            <td data-v="47">47</td>
+            <td class="bot-name" data-v="Dani is an NPC">Dani is an NPC</td>
+            <td data-v="1494">1494</td>
+            <td data-v="3296">3296</td>
+            <td data-v="310">310</td>
+            <td class="pct" data-v="0.3119">31.2%</td>
+            <td data-v="35975">35975</td>
+            <td data-v="7.05">7.1</td>
+            <td data-v="65">65</td>
+            <td data-v="142">142</td>
+        </tr><tr>
+            <td data-v="48">48</td>
+            <td class="bot-name" data-v="bot_justin">bot_justin</td>
+            <td data-v="799">799</td>
+            <td data-v="3771">3771</td>
+            <td data-v="530">530</td>
+            <td class="pct" data-v="0.1748">17.5%</td>
+            <td data-v="33639">33639</td>
+            <td data-v="6.60">6.6</td>
+            <td data-v="299">299</td>
+            <td data-v="500">500</td>
+        </tr><tr>
+            <td data-v="49">49</td>
+            <td class="bot-name" data-v="Adrianna_bot">Adrianna_bot</td>
+            <td data-v="724">724</td>
+            <td data-v="4087">4087</td>
+            <td data-v="289">289</td>
+            <td class="pct" data-v="0.1505">15.0%</td>
+            <td data-v="17621">17621</td>
+            <td data-v="3.46">3.5</td>
+            <td data-v="119">119</td>
+            <td data-v="9">9</td>
+        </tr><tr>
+            <td data-v="50">50</td>
+            <td class="bot-name" data-v="avabot">avabot</td>
+            <td data-v="473">473</td>
+            <td data-v="4201">4201</td>
+            <td data-v="426">426</td>
+            <td class="pct" data-v="0.1012">10.1%</td>
+            <td data-v="9846">9846</td>
+            <td data-v="1.93">1.9</td>
+            <td data-v="10">10</td>
+            <td data-v="15">15</td>
+        </tr><tr>
+            <td data-v="51">51</td>
+            <td class="bot-name" data-v="RandomBot">RandomBot</td>
+            <td data-v="22">22</td>
+            <td data-v="4795">4795</td>
+            <td data-v="283">283</td>
+            <td class="pct" data-v="0.0046">0.5%</td>
+            <td data-v="661">661</td>
+            <td data-v="0.13">0.1</td>
+            <td data-v="0">0</td>
+            <td data-v="2">2</td>
+        </tr><tr>
+            <td data-v="52">52</td>
+            <td class="bot-name" data-v="jillian">jillian</td>
+            <td data-v="0">0</td>
+            <td data-v="4479">4479</td>
+            <td data-v="620">620</td>
+            <td class="pct" data-v="0.0000">0.0%</td>
+            <td data-v="0">0</td>
+            <td data-v="0.00">0.0</td>
+            <td data-v="0">0</td>
+            <td data-v="0">0</td>
+        </tr>
+</tbody>
+</table>
+</div>
+
+<div class="card">
+<h2>Head-to-Head</h2>
+<table>
+<tbody><tr><th></th><th class="h2h-name">FinnBot</th><th class="h2h-name">kaiV2bot</th><th class="h2h-name">CBBot</th><th class="h2h-name">nah_Id_Win</th><th class="h2h-name">liambot</th><th class="h2h-name">DavitBOT</th><th class="h2h-name">AbbyBot</th><th class="h2h-name">ParkBot</th><th class="h2h-name">IanBot</th><th class="h2h-name">lilybot</th><th class="h2h-name">Eugenebot</th><th class="h2h-name">Elodia's Bot</th><th class="h2h-name">SofiaBot</th><th class="h2h-name">jackS2</th><th class="h2h-name">aidanbot</th><th class="h2h-name">DaniBot</th><th class="h2h-name">LuisBot</th><th class="h2h-name">EllicesRummyKimmy_bot</th><th class="h2h-name">felix</th><th class="h2h-name">YuzuBot</th><th class="h2h-name">LalaBot</th><th class="h2h-name">Botadze</th><th class="h2h-name">IntermediateBot</th><th class="h2h-name">wwjd</th><th class="h2h-name">drewv1</th><th class="h2h-name">JulianBot</th><th class="h2h-name">kiahncode</th><th class="h2h-name">Avi's_Counterstrike</th><th class="h2h-name">caryn_bot</th><th class="h2h-name">mayukh</th><th class="h2h-name">EthanyBot</th><th class="h2h-name">Martin_bot</th><th class="h2h-name">ErinBot</th><th class="h2h-name">Eerobot</th><th class="h2h-name">TaraBot</th><th class="h2h-name">Franky_bot</th><th class="h2h-name">BucaneerBot</th><th class="h2h-name">NarekBot</th><th class="h2h-name">AdeleBot</th><th class="h2h-name">BasicBot</th><th class="h2h-name">suttv2</th><th class="h2h-name">bot_Timothy_v2</th><th class="h2h-name">Dora's Explorer</th><th class="h2h-name">ethan_bot</th><th class="h2h-name">TristanBot</th><th class="h2h-name">suttv1</th><th class="h2h-name">Dani is an NPC</th><th class="h2h-name">bot_justin</th><th class="h2h-name">Adrianna_bot</th><th class="h2h-name">avabot</th><th class="h2h-name">RandomBot</th><th class="h2h-name">jillian</th></tr>
+<tr><td class="bot-name">FinnBot</td><td class="self">—</td><td class="even">54-46</td><td class="even">54-46</td><td class="even">47-53</td><td class="even">55-45</td><td class="win">59-41</td><td class="win">56-44</td><td class="win">70-30</td><td class="win">64-36</td><td class="win">62-38</td><td class="even">50-49</td><td class="win">56-44</td><td class="win">61-39</td><td class="win">61-39</td><td class="win">62-38</td><td class="even">55-45</td><td class="even">55-45</td><td class="win">69-30</td><td class="win">67-33</td><td class="win">60-40</td><td class="win">67-33</td><td class="win">61-39</td><td class="win">65-35</td><td class="win">60-40</td><td class="win">69-31</td><td class="win">58-41</td><td class="win">57-43</td><td class="win">68-31</td><td class="win">60-40</td><td class="win">69-31</td><td class="win">70-30</td><td class="win">79-21</td><td class="win">73-27</td><td class="win">71-28</td><td class="win">73-27</td><td class="win">77-23</td><td class="win">72-28</td><td class="win">73-27</td><td class="win">69-30</td><td class="win">60-37</td><td class="win">70-30</td><td class="win">73-27</td><td class="win">79-21</td><td class="win">84-16</td><td class="win">80-20</td><td class="win">77-23</td><td class="win">76-24</td><td class="win">90-10</td><td class="win">94-6</td><td class="win">94-6</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">kaiV2bot</td><td class="even">46-54</td><td class="self">—</td><td class="even">54-46</td><td class="even">54-46</td><td class="even">54-46</td><td class="loss">40-60</td><td class="win">56-44</td><td class="win">57-43</td><td class="even">54-46</td><td class="win">60-40</td><td class="win">63-37</td><td class="win">56-44</td><td class="win">61-39</td><td class="even">54-46</td><td class="win">63-37</td><td class="win">57-43</td><td class="even">54-46</td><td class="win">64-36</td><td class="win">68-32</td><td class="win">59-41</td><td class="win">61-38</td><td class="even">55-45</td><td class="win">56-44</td><td class="win">61-39</td><td class="win">58-42</td><td class="win">58-42</td><td class="win">66-34</td><td class="win">62-38</td><td class="win">65-35</td><td class="win">66-34</td><td class="win">66-34</td><td class="win">60-40</td><td class="win">71-29</td><td class="win">60-39</td><td class="win">69-31</td><td class="win">70-30</td><td class="win">67-33</td><td class="win">73-26</td><td class="win">71-28</td><td class="win">66-34</td><td class="win">69-31</td><td class="win">67-33</td><td class="win">70-30</td><td class="win">75-25</td><td class="win">79-21</td><td class="win">78-22</td><td class="win">75-24</td><td class="win">91-6</td><td class="win">95-5</td><td class="win">97-2</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">CBBot</td><td class="even">46-54</td><td class="even">46-54</td><td class="self">—</td><td class="win">56-44</td><td class="even">48-52</td><td class="even">54-46</td><td class="even">45-55</td><td class="even">51-49</td><td class="win">58-42</td><td class="even">50-50</td><td class="even">51-49</td><td class="win">59-41</td><td class="win">56-44</td><td class="even">55-45</td><td class="win">60-40</td><td class="win">63-37</td><td class="even">45-55</td><td class="win">61-39</td><td class="win">56-44</td><td class="win">58-41</td><td class="win">61-39</td><td class="even">54-46</td><td class="win">63-37</td><td class="win">58-41</td><td class="win">67-33</td><td class="even">51-49</td><td class="win">61-38</td><td class="win">56-44</td><td class="win">63-37</td><td class="win">59-41</td><td class="win">69-31</td><td class="win">57-43</td><td class="win">63-37</td><td class="even">48-52</td><td class="win">77-23</td><td class="win">65-34</td><td class="win">65-35</td><td class="win">72-28</td><td class="win">72-27</td><td class="win">66-32</td><td class="win">63-36</td><td class="win">76-24</td><td class="win">76-24</td><td class="win">79-21</td><td class="win">80-20</td><td class="win">82-18</td><td class="win">76-23</td><td class="win">80-14</td><td class="win">94-6</td><td class="win">94-5</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">nah_Id_Win</td><td class="even">53-47</td><td class="even">46-54</td><td class="loss">44-56</td><td class="self">—</td><td class="even">49-51</td><td class="even">54-45</td><td class="even">50-50</td><td class="even">54-46</td><td class="win">64-36</td><td class="even">50-50</td><td class="even">49-50</td><td class="even">51-49</td><td class="win">61-39</td><td class="even">52-48</td><td class="even">46-53</td><td class="even">54-46</td><td class="win">61-39</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">61-39</td><td class="win">60-40</td><td class="even">50-50</td><td class="even">52-48</td><td class="win">62-37</td><td class="win">61-39</td><td class="even">53-47</td><td class="win">58-42</td><td class="win">62-37</td><td class="win">66-33</td><td class="win">65-35</td><td class="even">54-46</td><td class="win">55-44</td><td class="win">60-40</td><td class="win">57-43</td><td class="win">70-29</td><td class="win">69-31</td><td class="win">61-36</td><td class="win">76-24</td><td class="win">69-31</td><td class="win">63-36</td><td class="win">69-31</td><td class="win">73-27</td><td class="win">77-23</td><td class="win">76-24</td><td class="win">79-21</td><td class="win">84-16</td><td class="win">80-20</td><td class="win">84-12</td><td class="win">92-8</td><td class="win">94-4</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">liambot</td><td class="even">45-55</td><td class="even">46-54</td><td class="even">52-48</td><td class="even">51-49</td><td class="self">—</td><td class="even">51-49</td><td class="even">49-51</td><td class="win">56-44</td><td class="win">58-42</td><td class="even">45-55</td><td class="win">57-43</td><td class="even">48-52</td><td class="even">46-54</td><td class="win">59-41</td><td class="even">54-46</td><td class="even">54-46</td><td class="win">59-41</td><td class="win">58-42</td><td class="even">55-45</td><td class="even">51-49</td><td class="win">62-38</td><td class="even">55-45</td><td class="win">58-42</td><td class="win">59-41</td><td class="win">63-37</td><td class="win">67-33</td><td class="win">56-44</td><td class="win">57-43</td><td class="even">53-47</td><td class="even">54-45</td><td class="win">67-33</td><td class="win">61-39</td><td class="win">64-36</td><td class="win">61-39</td><td class="win">65-35</td><td class="win">74-25</td><td class="win">68-32</td><td class="win">69-29</td><td class="win">58-40</td><td class="win">59-40</td><td class="win">70-30</td><td class="win">69-30</td><td class="win">77-23</td><td class="win">84-16</td><td class="win">75-25</td><td class="win">83-17</td><td class="win">73-27</td><td class="win">87-10</td><td class="win">92-8</td><td class="win">95-4</td><td class="win">98-2</td><td class="win">100-0</td></tr><tr><td class="bot-name">DavitBOT</td><td class="loss">41-59</td><td class="win">60-40</td><td class="even">46-54</td><td class="even">45-54</td><td class="even">49-51</td><td class="self">—</td><td class="even">50-50</td><td class="even">46-54</td><td class="even">54-46</td><td class="even">55-45</td><td class="even">51-49</td><td class="even">52-48</td><td class="win">56-44</td><td class="even">50-50</td><td class="even">51-49</td><td class="even">48-52</td><td class="win">56-44</td><td class="win">60-39</td><td class="win">58-42</td><td class="even">50-50</td><td class="win">56-44</td><td class="win">62-38</td><td class="even">55-45</td><td class="even">48-51</td><td class="win">65-35</td><td class="win">56-44</td><td class="win">59-41</td><td class="even">49-51</td><td class="win">61-39</td><td class="win">72-28</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">58-42</td><td class="win">66-34</td><td class="win">69-31</td><td class="win">68-31</td><td class="win">67-33</td><td class="win">67-33</td><td class="win">65-35</td><td class="win">65-34</td><td class="win">74-26</td><td class="win">76-24</td><td class="win">73-27</td><td class="win">74-26</td><td class="win">78-22</td><td class="win">78-22</td><td class="win">86-14</td><td class="win">91-6</td><td class="win">90-10</td><td class="win">94-5</td><td class="win">99-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">AbbyBot</td><td class="loss">44-56</td><td class="loss">44-56</td><td class="even">55-45</td><td class="even">50-50</td><td class="even">51-49</td><td class="even">50-50</td><td class="self">—</td><td class="even">54-46</td><td class="even">45-55</td><td class="even">48-52</td><td class="even">51-49</td><td class="even">53-47</td><td class="win">60-40</td><td class="win">57-43</td><td class="even">53-47</td><td class="even">53-47</td><td class="even">51-49</td><td class="even">51-49</td><td class="even">52-48</td><td class="win">57-43</td><td class="win">60-40</td><td class="win">57-43</td><td class="even">52-48</td><td class="win">59-41</td><td class="win">62-38</td><td class="even">54-46</td><td class="win">60-40</td><td class="win">57-43</td><td class="even">55-45</td><td class="win">58-42</td><td class="win">59-41</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">65-35</td><td class="win">67-32</td><td class="win">63-36</td><td class="win">64-36</td><td class="win">70-30</td><td class="win">61-37</td><td class="win">61-36</td><td class="win">75-25</td><td class="win">71-28</td><td class="win">80-20</td><td class="win">79-21</td><td class="win">76-24</td><td class="win">72-28</td><td class="win">80-20</td><td class="win">92-7</td><td class="win">88-12</td><td class="win">95-4</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">ParkBot</td><td class="loss">30-70</td><td class="loss">43-57</td><td class="even">49-51</td><td class="even">46-54</td><td class="loss">44-56</td><td class="even">54-46</td><td class="even">46-54</td><td class="self">—</td><td class="even">50-50</td><td class="even">48-52</td><td class="even">53-47</td><td class="even">46-54</td><td class="even">48-52</td><td class="even">48-52</td><td class="even">54-46</td><td class="even">52-48</td><td class="win">57-43</td><td class="even">55-45</td><td class="win">56-44</td><td class="even">50-50</td><td class="win">62-38</td><td class="loss">44-56</td><td class="win">62-38</td><td class="win">58-42</td><td class="win">61-39</td><td class="win">59-41</td><td class="win">59-41</td><td class="even">54-46</td><td class="win">58-42</td><td class="win">63-36</td><td class="win">57-43</td><td class="win">63-37</td><td class="win">66-34</td><td class="win">63-37</td><td class="win">68-32</td><td class="win">76-24</td><td class="win">69-29</td><td class="win">71-29</td><td class="win">63-36</td><td class="win">68-32</td><td class="win">70-30</td><td class="win">73-26</td><td class="win">76-24</td><td class="win">79-21</td><td class="win">73-27</td><td class="win">74-26</td><td class="win">75-25</td><td class="win">83-15</td><td class="win">92-8</td><td class="win">93-7</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">IanBot</td><td class="loss">36-64</td><td class="even">46-54</td><td class="loss">42-58</td><td class="loss">36-64</td><td class="loss">42-58</td><td class="even">46-54</td><td class="even">55-45</td><td class="even">50-50</td><td class="self">—</td><td class="even">53-47</td><td class="even">47-53</td><td class="even">48-52</td><td class="win">61-39</td><td class="even">49-51</td><td class="win">64-36</td><td class="even">53-47</td><td class="even">55-45</td><td class="win">57-43</td><td class="win">65-35</td><td class="win">58-42</td><td class="win">57-43</td><td class="even">55-45</td><td class="even">54-46</td><td class="even">49-51</td><td class="even">55-45</td><td class="even">47-53</td><td class="win">58-42</td><td class="win">58-41</td><td class="win">56-44</td><td class="win">57-43</td><td class="win">62-38</td><td class="win">61-38</td><td class="win">68-32</td><td class="win">67-33</td><td class="win">65-35</td><td class="win">61-38</td><td class="win">65-35</td><td class="win">71-28</td><td class="win">62-37</td><td class="win">77-23</td><td class="win">64-36</td><td class="win">75-25</td><td class="win">70-30</td><td class="win">72-28</td><td class="win">82-18</td><td class="win">82-18</td><td class="win">73-27</td><td class="win">84-15</td><td class="win">91-9</td><td class="win">93-6</td><td class="win">99-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">lilybot</td><td class="loss">38-62</td><td class="loss">40-60</td><td class="even">50-50</td><td class="even">50-50</td><td class="even">55-45</td><td class="even">45-55</td><td class="even">52-48</td><td class="even">52-48</td><td class="even">47-53</td><td class="self">—</td><td class="loss">40-60</td><td class="even">45-55</td><td class="even">55-45</td><td class="win">59-41</td><td class="even">48-52</td><td class="even">55-45</td><td class="even">45-55</td><td class="win">59-41</td><td class="win">59-41</td><td class="even">48-52</td><td class="even">52-48</td><td class="win">60-40</td><td class="even">46-54</td><td class="win">58-41</td><td class="even">55-45</td><td class="win">57-43</td><td class="even">54-46</td><td class="win">62-38</td><td class="loss">44-56</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">66-34</td><td class="even">52-48</td><td class="win">74-26</td><td class="win">69-31</td><td class="win">66-34</td><td class="win">65-35</td><td class="win">67-33</td><td class="win">68-30</td><td class="win">70-30</td><td class="win">65-35</td><td class="win">74-25</td><td class="win">70-30</td><td class="win">79-21</td><td class="win">76-24</td><td class="win">81-19</td><td class="win">79-21</td><td class="win">87-11</td><td class="win">98-2</td><td class="win">94-6</td><td class="win">100-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">Eugenebot</td><td class="even">49-50</td><td class="loss">37-63</td><td class="even">49-51</td><td class="even">50-49</td><td class="loss">43-57</td><td class="even">49-51</td><td class="even">49-51</td><td class="even">47-53</td><td class="even">53-47</td><td class="win">60-40</td><td class="self">—</td><td class="loss">44-56</td><td class="win">58-42</td><td class="even">51-48</td><td class="even">52-48</td><td class="win">62-38</td><td class="even">49-51</td><td class="win">59-41</td><td class="even">49-51</td><td class="even">52-48</td><td class="win">56-44</td><td class="even">55-45</td><td class="even">55-45</td><td class="win">60-40</td><td class="win">59-41</td><td class="win">61-39</td><td class="even">47-52</td><td class="win">57-43</td><td class="even">49-51</td><td class="win">56-44</td><td class="win">58-42</td><td class="win">57-43</td><td class="win">59-41</td><td class="even">49-51</td><td class="win">64-36</td><td class="win">67-32</td><td class="win">67-33</td><td class="win">71-29</td><td class="win">55-42</td><td class="win">66-32</td><td class="win">73-27</td><td class="win">60-36</td><td class="win">78-22</td><td class="win">75-25</td><td class="win">76-23</td><td class="win">77-22</td><td class="win">66-32</td><td class="win">85-8</td><td class="win">91-9</td><td class="win">95-5</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">Elodia's Bot</td><td class="loss">44-56</td><td class="loss">44-56</td><td class="loss">41-59</td><td class="even">49-51</td><td class="even">52-48</td><td class="even">48-52</td><td class="even">47-53</td><td class="even">54-46</td><td class="even">52-48</td><td class="even">55-45</td><td class="win">56-44</td><td class="self">—</td><td class="even">54-46</td><td class="loss">41-58</td><td class="win">56-44</td><td class="even">53-47</td><td class="loss">42-58</td><td class="even">51-49</td><td class="win">58-42</td><td class="win">64-36</td><td class="even">47-53</td><td class="loss">42-58</td><td class="win">56-44</td><td class="even">51-49</td><td class="even">46-54</td><td class="win">63-37</td><td class="even">55-45</td><td class="win">60-39</td><td class="win">62-38</td><td class="win">59-40</td><td class="win">66-34</td><td class="win">59-41</td><td class="even">54-46</td><td class="win">60-40</td><td class="win">63-35</td><td class="win">70-30</td><td class="win">67-33</td><td class="win">70-30</td><td class="win">61-37</td><td class="win">70-30</td><td class="win">67-33</td><td class="win">67-33</td><td class="win">68-32</td><td class="win">71-29</td><td class="win">81-19</td><td class="win">75-25</td><td class="win">74-26</td><td class="win">88-10</td><td class="win">84-15</td><td class="win">97-3</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">SofiaBot</td><td class="loss">39-61</td><td class="loss">39-61</td><td class="loss">44-56</td><td class="loss">39-61</td><td class="even">54-46</td><td class="loss">44-56</td><td class="loss">40-60</td><td class="even">52-48</td><td class="loss">39-61</td><td class="even">45-55</td><td class="loss">42-58</td><td class="even">46-54</td><td class="self">—</td><td class="even">51-49</td><td class="even">51-49</td><td class="even">52-48</td><td class="even">52-48</td><td class="win">62-38</td><td class="even">48-52</td><td class="even">53-47</td><td class="even">50-50</td><td class="win">60-40</td><td class="win">63-37</td><td class="even">47-53</td><td class="win">58-42</td><td class="even">55-45</td><td class="even">54-46</td><td class="win">63-37</td><td class="even">54-46</td><td class="win">58-42</td><td class="win">56-44</td><td class="win">58-42</td><td class="win">57-43</td><td class="win">62-38</td><td class="win">75-25</td><td class="win">65-35</td><td class="win">64-34</td><td class="win">72-28</td><td class="win">62-36</td><td class="win">57-39</td><td class="win">67-33</td><td class="win">69-30</td><td class="win">72-28</td><td class="win">76-24</td><td class="win">75-25</td><td class="win">84-16</td><td class="win">84-16</td><td class="win">78-16</td><td class="win">90-10</td><td class="win">96-4</td><td class="win">98-2</td><td class="win">100-0</td></tr><tr><td class="bot-name">jackS2</td><td class="loss">39-61</td><td class="even">46-54</td><td class="even">45-55</td><td class="even">48-52</td><td class="loss">41-59</td><td class="even">50-50</td><td class="loss">43-57</td><td class="even">52-48</td><td class="even">51-49</td><td class="loss">41-59</td><td class="even">48-51</td><td class="win">58-41</td><td class="even">49-51</td><td class="self">—</td><td class="even">53-47</td><td class="even">51-49</td><td class="win">58-42</td><td class="loss">36-64</td><td class="even">53-47</td><td class="loss">43-57</td><td class="win">58-42</td><td class="even">54-46</td><td class="win">54-44</td><td class="even">51-49</td><td class="even">55-45</td><td class="win">58-42</td><td class="win">62-38</td><td class="win">57-42</td><td class="even">55-45</td><td class="even">53-45</td><td class="win">63-37</td><td class="even">52-48</td><td class="win">72-28</td><td class="win">67-32</td><td class="even">53-46</td><td class="win">62-36</td><td class="win">66-34</td><td class="win">58-42</td><td class="win">71-26</td><td class="win">53-43</td><td class="win">71-29</td><td class="win">61-38</td><td class="win">75-25</td><td class="win">72-28</td><td class="win">73-27</td><td class="win">73-26</td><td class="win">68-26</td><td class="win">83-4</td><td class="win">85-15</td><td class="win">85-10</td><td class="win">99-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">aidanbot</td><td class="loss">38-62</td><td class="loss">37-63</td><td class="loss">40-60</td><td class="even">53-46</td><td class="even">46-54</td><td class="even">49-51</td><td class="even">47-53</td><td class="even">46-54</td><td class="loss">36-64</td><td class="even">52-48</td><td class="even">48-52</td><td class="loss">44-56</td><td class="even">49-51</td><td class="even">47-53</td><td class="self">—</td><td class="even">46-54</td><td class="even">47-53</td><td class="even">53-47</td><td class="loss">43-57</td><td class="even">49-51</td><td class="loss">39-61</td><td class="even">55-45</td><td class="loss">39-61</td><td class="win">59-41</td><td class="even">54-46</td><td class="even">51-49</td><td class="win">63-37</td><td class="even">46-54</td><td class="even">50-50</td><td class="win">59-41</td><td class="win">55-44</td><td class="win">69-31</td><td class="win">69-31</td><td class="win">59-41</td><td class="win">67-33</td><td class="win">67-33</td><td class="win">62-37</td><td class="win">66-34</td><td class="win">67-30</td><td class="win">70-30</td><td class="win">70-30</td><td class="win">62-38</td><td class="win">66-34</td><td class="win">66-34</td><td class="win">80-20</td><td class="win">84-16</td><td class="win">74-26</td><td class="win">89-9</td><td class="win">92-8</td><td class="win">92-8</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">DaniBot</td><td class="even">45-55</td><td class="loss">43-57</td><td class="loss">37-63</td><td class="even">46-54</td><td class="even">46-54</td><td class="even">52-48</td><td class="even">47-53</td><td class="even">48-52</td><td class="even">47-53</td><td class="even">45-55</td><td class="loss">38-62</td><td class="even">47-53</td><td class="even">48-52</td><td class="even">49-51</td><td class="even">54-46</td><td class="self">—</td><td class="loss">40-58</td><td class="even">52-48</td><td class="win">68-32</td><td class="even">52-48</td><td class="even">49-51</td><td class="win">55-44</td><td class="even">48-52</td><td class="even">55-45</td><td class="win">58-41</td><td class="win">61-38</td><td class="win">59-41</td><td class="even">53-46</td><td class="even">47-53</td><td class="even">52-48</td><td class="win">60-40</td><td class="even">51-49</td><td class="win">58-42</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">69-31</td><td class="win">61-38</td><td class="win">57-43</td><td class="win">67-32</td><td class="win">65-34</td><td class="win">59-41</td><td class="win">62-38</td><td class="win">73-26</td><td class="win">69-29</td><td class="win">77-23</td><td class="win">77-23</td><td class="win">79-21</td><td class="win">81-15</td><td class="win">81-18</td><td class="win">92-8</td><td class="win">100-0</td><td class="win">96-0</td></tr><tr><td class="bot-name">LuisBot</td><td class="even">45-55</td><td class="even">46-54</td><td class="even">55-45</td><td class="loss">39-61</td><td class="loss">41-59</td><td class="loss">44-56</td><td class="even">49-51</td><td class="loss">43-57</td><td class="even">45-55</td><td class="even">55-45</td><td class="even">51-49</td><td class="win">58-42</td><td class="even">48-52</td><td class="loss">42-58</td><td class="even">53-47</td><td class="win">58-40</td><td class="self">—</td><td class="even">50-50</td><td class="even">52-48</td><td class="win">54-41</td><td class="even">55-45</td><td class="even">45-46</td><td class="even">49-48</td><td class="even">54-46</td><td class="win">59-39</td><td class="even">46-44</td><td class="even">53-47</td><td class="win">58-40</td><td class="win">60-40</td><td class="even">53-47</td><td class="loss">43-57</td><td class="win">55-44</td><td class="even">49-49</td><td class="win">57-43</td><td class="win">57-38</td><td class="win">59-40</td><td class="win">56-43</td><td class="win">61-36</td><td class="win">63-35</td><td class="win">57-40</td><td class="win">69-31</td><td class="win">75-24</td><td class="win">65-34</td><td class="win">62-34</td><td class="win">73-20</td><td class="win">79-21</td><td class="win">79-17</td><td class="win">80-11</td><td class="win">83-14</td><td class="win">85-5</td><td class="win">99-1</td><td class="win">67-0</td></tr><tr><td class="bot-name">EllicesRummyKimmy_bot</td><td class="loss">30-69</td><td class="loss">36-64</td><td class="loss">39-61</td><td class="loss">38-62</td><td class="loss">42-58</td><td class="loss">39-60</td><td class="even">49-51</td><td class="even">45-55</td><td class="loss">43-57</td><td class="loss">41-59</td><td class="loss">41-59</td><td class="even">49-51</td><td class="loss">38-62</td><td class="win">64-36</td><td class="even">47-53</td><td class="even">48-52</td><td class="even">50-50</td><td class="self">—</td><td class="even">50-50</td><td class="even">48-52</td><td class="win">57-43</td><td class="even">47-53</td><td class="even">52-48</td><td class="win">56-43</td><td class="even">50-50</td><td class="even">50-50</td><td class="win">62-38</td><td class="win">58-42</td><td class="win">63-37</td><td class="even">55-45</td><td class="win">61-39</td><td class="win">56-43</td><td class="win">59-41</td><td class="win">63-37</td><td class="win">65-34</td><td class="win">65-34</td><td class="win">72-28</td><td class="win">62-38</td><td class="win">61-36</td><td class="win">54-42</td><td class="win">61-39</td><td class="win">70-30</td><td class="win">70-30</td><td class="win">73-26</td><td class="win">71-28</td><td class="win">76-24</td><td class="win">73-25</td><td class="win">85-6</td><td class="win">94-6</td><td class="win">97-2</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">felix</td><td class="loss">33-67</td><td class="loss">32-68</td><td class="loss">44-56</td><td class="loss">40-60</td><td class="even">45-55</td><td class="loss">42-58</td><td class="even">48-52</td><td class="loss">44-56</td><td class="loss">35-65</td><td class="loss">41-59</td><td class="even">51-49</td><td class="loss">42-58</td><td class="even">52-48</td><td class="even">47-53</td><td class="win">57-43</td><td class="loss">32-68</td><td class="even">48-52</td><td class="even">50-50</td><td class="self">—</td><td class="even">52-48</td><td class="win">63-37</td><td class="even">45-50</td><td class="even">55-45</td><td class="even">50-50</td><td class="even">53-47</td><td class="even">52-48</td><td class="win">64-36</td><td class="win">56-44</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">61-39</td><td class="even">53-47</td><td class="win">67-33</td><td class="win">66-34</td><td class="win">67-33</td><td class="win">66-34</td><td class="win">72-28</td><td class="win">64-36</td><td class="win">69-30</td><td class="win">65-34</td><td class="win">58-41</td><td class="win">57-43</td><td class="win">67-33</td><td class="win">75-25</td><td class="win">64-36</td><td class="win">76-24</td><td class="win">74-25</td><td class="win">90-9</td><td class="win">88-10</td><td class="win">91-9</td><td class="win">100-0</td><td class="win">89-0</td></tr><tr><td class="bot-name">YuzuBot</td><td class="loss">40-60</td><td class="loss">41-59</td><td class="loss">41-58</td><td class="loss">39-61</td><td class="even">49-51</td><td class="even">50-50</td><td class="loss">43-57</td><td class="even">50-50</td><td class="loss">42-58</td><td class="even">52-48</td><td class="even">48-52</td><td class="loss">36-64</td><td class="even">47-53</td><td class="win">57-43</td><td class="even">51-49</td><td class="even">48-52</td><td class="loss">41-54</td><td class="even">52-48</td><td class="even">48-52</td><td class="self">—</td><td class="even">47-53</td><td class="even">47-53</td><td class="win">57-41</td><td class="win">61-39</td><td class="even">51-49</td><td class="even">49-50</td><td class="even">54-46</td><td class="even">50-48</td><td class="even">54-46</td><td class="win">60-40</td><td class="win">62-38</td><td class="even">51-48</td><td class="win">56-44</td><td class="even">55-45</td><td class="win">60-40</td><td class="win">62-38</td><td class="win">65-31</td><td class="win">62-37</td><td class="win">63-37</td><td class="win">70-29</td><td class="win">65-35</td><td class="win">65-33</td><td class="win">62-38</td><td class="win">67-33</td><td class="win">72-27</td><td class="win">73-27</td><td class="win">65-33</td><td class="win">86-5</td><td class="win">94-6</td><td class="win">93-6</td><td class="win">100-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">LalaBot</td><td class="loss">33-67</td><td class="loss">38-61</td><td class="loss">39-61</td><td class="loss">40-60</td><td class="loss">38-62</td><td class="loss">44-56</td><td class="loss">40-60</td><td class="loss">38-62</td><td class="loss">43-57</td><td class="even">48-52</td><td class="loss">44-56</td><td class="even">53-47</td><td class="even">50-50</td><td class="loss">42-58</td><td class="win">61-39</td><td class="even">51-49</td><td class="even">45-55</td><td class="loss">43-57</td><td class="loss">37-63</td><td class="even">53-47</td><td class="self">—</td><td class="even">54-46</td><td class="win">56-43</td><td class="even">48-52</td><td class="even">51-49</td><td class="even">52-48</td><td class="even">54-46</td><td class="win">58-42</td><td class="win">66-34</td><td class="win">64-36</td><td class="even">52-47</td><td class="even">51-49</td><td class="win">59-41</td><td class="win">63-37</td><td class="win">61-39</td><td class="win">71-29</td><td class="win">61-39</td><td class="win">64-36</td><td class="win">65-35</td><td class="win">68-30</td><td class="win">62-38</td><td class="win">57-43</td><td class="win">67-32</td><td class="win">74-26</td><td class="win">75-25</td><td class="win">76-23</td><td class="win">76-24</td><td class="win">90-5</td><td class="win">93-7</td><td class="win">94-5</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">Botadze</td><td class="loss">39-61</td><td class="even">45-55</td><td class="even">46-54</td><td class="even">50-50</td><td class="even">45-55</td><td class="loss">38-62</td><td class="loss">43-57</td><td class="win">56-44</td><td class="even">45-55</td><td class="loss">40-60</td><td class="even">45-55</td><td class="win">58-42</td><td class="loss">40-60</td><td class="even">46-54</td><td class="even">45-55</td><td class="loss">44-55</td><td class="even">46-45</td><td class="even">53-47</td><td class="even">50-45</td><td class="even">53-47</td><td class="even">46-54</td><td class="self">—</td><td class="even">47-53</td><td class="even">48-52</td><td class="even">50-49</td><td class="even">50-50</td><td class="even">46-54</td><td class="even">47-53</td><td class="win">59-41</td><td class="win">58-42</td><td class="win">59-41</td><td class="even">53-47</td><td class="win">58-42</td><td class="win">58-42</td><td class="win">67-33</td><td class="win">70-30</td><td class="win">65-34</td><td class="win">58-41</td><td class="win">69-31</td><td class="win">65-35</td><td class="win">65-32</td><td class="win">65-35</td><td class="win">71-27</td><td class="win">68-19</td><td class="win">70-24</td><td class="win">70-30</td><td class="win">79-20</td><td class="win">79-18</td><td class="win">78-11</td><td class="win">83-6</td><td class="win">99-1</td><td class="win">62-0</td></tr><tr><td class="bot-name">IntermediateBot</td><td class="loss">35-65</td><td class="loss">44-56</td><td class="loss">37-63</td><td class="even">48-52</td><td class="loss">42-58</td><td class="even">45-55</td><td class="even">48-52</td><td class="loss">38-62</td><td class="even">46-54</td><td class="even">54-46</td><td class="even">45-55</td><td class="loss">44-56</td><td class="loss">37-63</td><td class="loss">44-54</td><td class="win">61-39</td><td class="even">52-48</td><td class="even">48-49</td><td class="even">48-52</td><td class="even">45-55</td><td class="loss">41-57</td><td class="loss">43-56</td><td class="even">53-47</td><td class="self">—</td><td class="even">50-50</td><td class="even">50-50</td><td class="loss">40-60</td><td class="even">53-47</td><td class="even">53-45</td><td class="win">64-36</td><td class="even">51-49</td><td class="even">52-48</td><td class="even">55-45</td><td class="win">60-40</td><td class="win">58-41</td><td class="win">65-34</td><td class="win">68-32</td><td class="even">52-47</td><td class="win">59-41</td><td class="win">60-36</td><td class="win">58-39</td><td class="win">67-33</td><td class="win">68-30</td><td class="win">66-34</td><td class="win">66-34</td><td class="win">69-31</td><td class="win">67-30</td><td class="win">73-23</td><td class="win">83-7</td><td class="win">91-8</td><td class="win">87-9</td><td class="win">100-0</td><td class="win">97-0</td></tr><tr><td class="bot-name">wwjd</td><td class="loss">40-60</td><td class="loss">39-61</td><td class="loss">41-58</td><td class="loss">37-62</td><td class="loss">41-59</td><td class="even">51-48</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="even">51-49</td><td class="loss">41-58</td><td class="loss">40-60</td><td class="even">49-51</td><td class="even">53-47</td><td class="even">49-51</td><td class="loss">41-59</td><td class="even">45-55</td><td class="even">46-54</td><td class="loss">43-56</td><td class="even">50-50</td><td class="loss">39-61</td><td class="even">52-48</td><td class="even">52-48</td><td class="even">50-50</td><td class="self">—</td><td class="even">52-48</td><td class="loss">35-65</td><td class="win">56-44</td><td class="even">48-49</td><td class="even">54-46</td><td class="win">58-42</td><td class="win">69-31</td><td class="win">59-41</td><td class="win">56-44</td><td class="win">62-38</td><td class="win">60-40</td><td class="win">63-37</td><td class="win">63-36</td><td class="win">58-42</td><td class="win">59-38</td><td class="win">59-38</td><td class="win">56-44</td><td class="even">53-45</td><td class="win">65-35</td><td class="win">68-32</td><td class="win">79-21</td><td class="win">68-32</td><td class="win">74-24</td><td class="win">88-7</td><td class="win">90-10</td><td class="win">84-11</td><td class="win">99-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">drewv1</td><td class="loss">31-69</td><td class="loss">42-58</td><td class="loss">33-67</td><td class="loss">39-61</td><td class="loss">37-63</td><td class="loss">35-65</td><td class="loss">38-62</td><td class="loss">39-61</td><td class="even">45-55</td><td class="even">45-55</td><td class="loss">41-59</td><td class="even">54-46</td><td class="loss">42-58</td><td class="even">45-55</td><td class="even">46-54</td><td class="loss">41-58</td><td class="loss">39-59</td><td class="even">50-50</td><td class="even">47-53</td><td class="even">49-51</td><td class="even">49-51</td><td class="even">49-50</td><td class="even">50-50</td><td class="even">48-52</td><td class="self">—</td><td class="even">47-50</td><td class="even">54-46</td><td class="win">55-44</td><td class="win">63-37</td><td class="win">61-39</td><td class="even">53-47</td><td class="even">53-47</td><td class="win">54-42</td><td class="win">64-35</td><td class="win">65-34</td><td class="win">60-40</td><td class="win">62-38</td><td class="win">60-39</td><td class="win">69-31</td><td class="win">69-30</td><td class="even">53-46</td><td class="win">62-36</td><td class="win">62-37</td><td class="win">61-32</td><td class="win">72-27</td><td class="win">79-21</td><td class="win">73-25</td><td class="win">80-18</td><td class="win">91-8</td><td class="win">89-8</td><td class="win">100-0</td><td class="win">94-0</td></tr><tr><td class="bot-name">JulianBot</td><td class="loss">41-58</td><td class="loss">42-58</td><td class="even">49-51</td><td class="even">47-53</td><td class="loss">33-67</td><td class="loss">44-56</td><td class="even">46-54</td><td class="loss">41-59</td><td class="even">53-47</td><td class="loss">43-57</td><td class="loss">39-61</td><td class="loss">37-63</td><td class="even">45-55</td><td class="loss">42-58</td><td class="even">49-51</td><td class="loss">38-61</td><td class="even">44-46</td><td class="even">50-50</td><td class="even">48-52</td><td class="even">50-49</td><td class="even">48-52</td><td class="even">50-50</td><td class="win">60-40</td><td class="win">65-35</td><td class="even">50-47</td><td class="self">—</td><td class="loss">41-59</td><td class="even">49-50</td><td class="even">52-48</td><td class="even">50-50</td><td class="even">55-45</td><td class="even">52-47</td><td class="even">51-42</td><td class="even">49-48</td><td class="even">49-47</td><td class="win">60-39</td><td class="win">56-43</td><td class="win">57-37</td><td class="win">57-43</td><td class="win">67-31</td><td class="win">63-32</td><td class="win">60-38</td><td class="win">67-32</td><td class="win">56-31</td><td class="win">67-30</td><td class="win">77-23</td><td class="win">70-27</td><td class="win">80-9</td><td class="win">88-11</td><td class="win">91-8</td><td class="win">100-0</td><td class="win">85-0</td></tr><tr><td class="bot-name">kiahncode</td><td class="loss">43-57</td><td class="loss">34-66</td><td class="loss">38-61</td><td class="loss">42-58</td><td class="loss">44-56</td><td class="loss">41-59</td><td class="loss">40-60</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="even">46-54</td><td class="even">52-47</td><td class="even">45-55</td><td class="even">46-54</td><td class="loss">38-62</td><td class="loss">37-63</td><td class="loss">41-59</td><td class="even">47-53</td><td class="loss">38-62</td><td class="loss">36-64</td><td class="even">46-54</td><td class="even">46-54</td><td class="even">54-46</td><td class="even">47-53</td><td class="loss">44-56</td><td class="even">46-54</td><td class="win">59-41</td><td class="self">—</td><td class="loss">44-56</td><td class="even">55-45</td><td class="even">53-47</td><td class="even">55-45</td><td class="win">62-37</td><td class="win">58-42</td><td class="win">59-41</td><td class="win">58-42</td><td class="win">63-37</td><td class="win">62-37</td><td class="win">58-42</td><td class="win">67-32</td><td class="win">66-32</td><td class="win">60-40</td><td class="even">51-46</td><td class="win">72-28</td><td class="win">67-33</td><td class="win">74-26</td><td class="win">73-27</td><td class="win">76-23</td><td class="win">86-11</td><td class="win">92-8</td><td class="win">88-11</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">Avi's_Counterstrike</td><td class="loss">31-68</td><td class="loss">38-62</td><td class="loss">44-56</td><td class="loss">37-62</td><td class="loss">43-57</td><td class="even">51-49</td><td class="loss">43-57</td><td class="even">46-54</td><td class="loss">41-58</td><td class="loss">38-62</td><td class="loss">43-57</td><td class="loss">39-60</td><td class="loss">37-63</td><td class="loss">42-57</td><td class="even">54-46</td><td class="even">46-53</td><td class="loss">40-58</td><td class="loss">42-58</td><td class="loss">44-56</td><td class="even">48-50</td><td class="loss">42-58</td><td class="even">53-47</td><td class="even">45-53</td><td class="even">49-48</td><td class="loss">44-55</td><td class="even">50-49</td><td class="win">56-44</td><td class="self">—</td><td class="even">51-49</td><td class="even">46-53</td><td class="even">54-46</td><td class="even">50-49</td><td class="even">51-49</td><td class="win">60-39</td><td class="win">66-33</td><td class="win">71-27</td><td class="win">60-38</td><td class="even">55-45</td><td class="win">60-31</td><td class="win">55-44</td><td class="win">64-36</td><td class="win">56-39</td><td class="win">65-35</td><td class="win">70-30</td><td class="win">71-28</td><td class="win">67-31</td><td class="win">74-23</td><td class="win">78-10</td><td class="win">86-10</td><td class="win">90-7</td><td class="win">98-1</td><td class="win">97-0</td></tr><tr><td class="bot-name">caryn_bot</td><td class="loss">40-60</td><td class="loss">35-65</td><td class="loss">37-63</td><td class="loss">33-66</td><td class="even">47-53</td><td class="loss">39-61</td><td class="even">45-55</td><td class="loss">42-58</td><td class="loss">44-56</td><td class="win">56-44</td><td class="even">51-49</td><td class="loss">38-62</td><td class="even">46-54</td><td class="even">45-55</td><td class="even">50-50</td><td class="even">53-47</td><td class="loss">40-60</td><td class="loss">37-63</td><td class="loss">38-62</td><td class="even">46-54</td><td class="loss">34-66</td><td class="loss">41-59</td><td class="loss">36-64</td><td class="even">46-54</td><td class="loss">37-63</td><td class="even">48-52</td><td class="even">45-55</td><td class="even">49-51</td><td class="self">—</td><td class="even">52-47</td><td class="win">56-44</td><td class="win">64-36</td><td class="even">54-46</td><td class="even">47-53</td><td class="win">57-43</td><td class="win">63-37</td><td class="win">58-40</td><td class="even">53-47</td><td class="win">63-36</td><td class="win">66-30</td><td class="win">56-44</td><td class="win">55-43</td><td class="win">63-37</td><td class="win">57-43</td><td class="win">75-25</td><td class="win">73-26</td><td class="win">76-23</td><td class="win">80-12</td><td class="win">86-14</td><td class="win">93-7</td><td class="win">100-0</td><td class="win">100-0</td></tr><tr><td class="bot-name">mayukh</td><td class="loss">31-69</td><td class="loss">34-66</td><td class="loss">41-59</td><td class="loss">35-65</td><td class="even">45-54</td><td class="loss">28-72</td><td class="loss">42-58</td><td class="loss">36-63</td><td class="loss">43-57</td><td class="loss">38-62</td><td class="loss">44-56</td><td class="loss">40-59</td><td class="loss">42-58</td><td class="even">45-53</td><td class="loss">41-59</td><td class="even">48-52</td><td class="even">47-53</td><td class="even">45-55</td><td class="loss">40-60</td><td class="loss">40-60</td><td class="loss">36-64</td><td class="loss">42-58</td><td class="even">49-51</td><td class="loss">42-58</td><td class="loss">39-61</td><td class="even">50-50</td><td class="even">47-53</td><td class="even">53-46</td><td class="even">47-52</td><td class="self">—</td><td class="even">55-45</td><td class="win">59-40</td><td class="even">55-45</td><td class="win">57-43</td><td class="even">53-46</td><td class="win">63-36</td><td class="win">67-33</td><td class="win">60-40</td><td class="win">62-36</td><td class="win">60-38</td><td class="even">52-48</td><td class="win">67-31</td><td class="win">66-34</td><td class="win">69-31</td><td class="win">68-32</td><td class="win">64-36</td><td class="win">70-28</td><td class="win">89-6</td><td class="win">96-4</td><td class="win">94-5</td><td class="win">99-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">EthanyBot</td><td class="loss">30-70</td><td class="loss">34-66</td><td class="loss">31-69</td><td class="even">46-54</td><td class="loss">33-67</td><td class="loss">38-62</td><td class="loss">41-59</td><td class="loss">43-57</td><td class="loss">38-62</td><td class="loss">40-60</td><td class="loss">42-58</td><td class="loss">34-66</td><td class="loss">44-56</td><td class="loss">37-63</td><td class="loss">44-55</td><td class="loss">40-60</td><td class="win">57-43</td><td class="loss">39-61</td><td class="loss">39-61</td><td class="loss">38-62</td><td class="even">47-52</td><td class="loss">41-59</td><td class="even">48-52</td><td class="loss">31-69</td><td class="even">47-53</td><td class="even">45-55</td><td class="even">45-55</td><td class="even">46-54</td><td class="loss">44-56</td><td class="even">45-55</td><td class="self">—</td><td class="even">51-49</td><td class="win">56-44</td><td class="win">60-40</td><td class="win">58-42</td><td class="win">62-37</td><td class="win">56-42</td><td class="win">69-30</td><td class="win">58-41</td><td class="win">62-35</td><td class="win">64-36</td><td class="win">64-34</td><td class="win">69-31</td><td class="win">58-42</td><td class="win">64-36</td><td class="win">72-28</td><td class="win">73-26</td><td class="win">86-7</td><td class="win">96-4</td><td class="win">96-3</td><td class="win">99-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">Martin_bot</td><td class="loss">21-79</td><td class="loss">40-60</td><td class="loss">43-57</td><td class="loss">44-55</td><td class="loss">39-61</td><td class="loss">40-60</td><td class="loss">38-62</td><td class="loss">37-63</td><td class="loss">38-61</td><td class="loss">34-66</td><td class="loss">43-57</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="even">48-52</td><td class="loss">31-69</td><td class="even">49-51</td><td class="loss">44-55</td><td class="loss">43-56</td><td class="even">47-53</td><td class="even">48-51</td><td class="even">49-51</td><td class="even">47-53</td><td class="even">45-55</td><td class="loss">41-59</td><td class="even">47-53</td><td class="even">47-52</td><td class="loss">37-62</td><td class="even">49-50</td><td class="loss">36-64</td><td class="loss">40-59</td><td class="even">49-51</td><td class="self">—</td><td class="even">49-50</td><td class="even">52-47</td><td class="win">56-44</td><td class="win">60-40</td><td class="even">54-46</td><td class="win">63-37</td><td class="even">52-46</td><td class="even">50-46</td><td class="win">59-41</td><td class="win">63-34</td><td class="win">77-23</td><td class="win">73-27</td><td class="win">65-34</td><td class="win">70-30</td><td class="win">73-26</td><td class="win">87-9</td><td class="win">89-11</td><td class="win">91-7</td><td class="win">100-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">ErinBot</td><td class="loss">27-73</td><td class="loss">29-71</td><td class="loss">37-63</td><td class="loss">40-60</td><td class="loss">36-64</td><td class="loss">42-58</td><td class="loss">40-60</td><td class="loss">34-66</td><td class="loss">32-68</td><td class="even">48-52</td><td class="loss">41-59</td><td class="even">46-54</td><td class="loss">43-57</td><td class="loss">28-72</td><td class="loss">31-69</td><td class="loss">42-58</td><td class="even">49-49</td><td class="loss">41-59</td><td class="loss">33-67</td><td class="loss">44-56</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="loss">40-60</td><td class="loss">44-56</td><td class="loss">42-54</td><td class="even">42-51</td><td class="loss">42-58</td><td class="even">49-51</td><td class="even">46-54</td><td class="even">45-55</td><td class="loss">44-56</td><td class="even">50-49</td><td class="self">—</td><td class="even">52-47</td><td class="loss">44-55</td><td class="even">47-52</td><td class="win">59-40</td><td class="even">54-45</td><td class="even">49-50</td><td class="win">54-44</td><td class="win">58-42</td><td class="win">60-39</td><td class="win">68-30</td><td class="win">69-28</td><td class="win">61-36</td><td class="win">66-34</td><td class="win">71-29</td><td class="win">80-17</td><td class="win">86-13</td><td class="win">91-6</td><td class="win">100-0</td><td class="win">89-0</td></tr><tr><td class="bot-name">Eerobot</td><td class="loss">28-71</td><td class="loss">39-60</td><td class="even">52-48</td><td class="loss">43-57</td><td class="loss">39-61</td><td class="loss">34-66</td><td class="loss">35-65</td><td class="loss">37-63</td><td class="loss">33-67</td><td class="loss">26-74</td><td class="even">51-49</td><td class="loss">40-60</td><td class="loss">38-62</td><td class="loss">32-67</td><td class="loss">41-59</td><td class="loss">38-62</td><td class="loss">43-57</td><td class="loss">37-63</td><td class="loss">34-66</td><td class="even">45-55</td><td class="loss">37-63</td><td class="loss">42-58</td><td class="loss">41-58</td><td class="loss">38-62</td><td class="loss">35-64</td><td class="even">48-49</td><td class="loss">41-59</td><td class="loss">39-60</td><td class="even">53-47</td><td class="loss">43-57</td><td class="loss">40-60</td><td class="even">47-52</td><td class="even">47-52</td><td class="self">—</td><td class="even">50-47</td><td class="even">51-46</td><td class="win">67-32</td><td class="win">58-42</td><td class="win">55-40</td><td class="even">50-42</td><td class="win">57-43</td><td class="win">60-36</td><td class="win">66-34</td><td class="win">65-35</td><td class="win">61-39</td><td class="win">61-38</td><td class="win">62-26</td><td class="win">59-11</td><td class="win">75-22</td><td class="win">86-5</td><td class="win">97-1</td><td class="win">100-0</td></tr><tr><td class="bot-name">TaraBot</td><td class="loss">27-73</td><td class="loss">31-69</td><td class="loss">23-77</td><td class="loss">29-70</td><td class="loss">35-65</td><td class="loss">31-69</td><td class="loss">32-67</td><td class="loss">32-68</td><td class="loss">35-65</td><td class="loss">31-69</td><td class="loss">36-64</td><td class="loss">35-63</td><td class="loss">25-75</td><td class="even">46-53</td><td class="loss">33-67</td><td class="loss">40-60</td><td class="loss">38-57</td><td class="loss">34-65</td><td class="loss">33-67</td><td class="loss">40-60</td><td class="loss">39-61</td><td class="loss">33-67</td><td class="loss">34-65</td><td class="loss">40-60</td><td class="loss">34-65</td><td class="even">47-49</td><td class="loss">42-58</td><td class="loss">33-66</td><td class="loss">43-57</td><td class="even">46-53</td><td class="loss">42-58</td><td class="loss">44-56</td><td class="win">55-44</td><td class="even">47-50</td><td class="self">—</td><td class="even">47-53</td><td class="win">61-38</td><td class="even">52-46</td><td class="loss">42-53</td><td class="win">54-44</td><td class="win">55-44</td><td class="win">63-33</td><td class="win">73-27</td><td class="win">71-29</td><td class="win">70-30</td><td class="win">69-31</td><td class="win">64-31</td><td class="win">82-9</td><td class="win">80-19</td><td class="win">83-11</td><td class="win">100-0</td><td class="win">98-0</td></tr><tr><td class="bot-name">Franky_bot</td><td class="loss">23-77</td><td class="loss">30-70</td><td class="loss">34-65</td><td class="loss">31-69</td><td class="loss">25-74</td><td class="loss">31-68</td><td class="loss">36-63</td><td class="loss">24-76</td><td class="loss">38-61</td><td class="loss">34-66</td><td class="loss">32-67</td><td class="loss">30-70</td><td class="loss">35-65</td><td class="loss">36-62</td><td class="loss">33-67</td><td class="loss">31-69</td><td class="loss">40-59</td><td class="loss">34-65</td><td class="loss">34-66</td><td class="loss">38-62</td><td class="loss">29-71</td><td class="loss">30-70</td><td class="loss">32-68</td><td class="loss">37-63</td><td class="loss">40-60</td><td class="loss">39-60</td><td class="loss">37-63</td><td class="loss">27-71</td><td class="loss">37-63</td><td class="loss">36-63</td><td class="loss">37-62</td><td class="loss">40-60</td><td class="even">52-47</td><td class="even">46-51</td><td class="even">53-47</td><td class="self">—</td><td class="win">59-40</td><td class="win">62-37</td><td class="even">43-49</td><td class="win">55-39</td><td class="win">60-40</td><td class="win">59-37</td><td class="win">76-24</td><td class="win">65-35</td><td class="win">64-34</td><td class="win">64-36</td><td class="win">69-26</td><td class="win">71-15</td><td class="win">93-7</td><td class="win">86-8</td><td class="win">99-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">BucaneerBot</td><td class="loss">28-72</td><td class="loss">33-67</td><td class="loss">35-65</td><td class="loss">36-61</td><td class="loss">32-68</td><td class="loss">33-67</td><td class="loss">36-64</td><td class="loss">29-69</td><td class="loss">35-65</td><td class="loss">35-65</td><td class="loss">33-67</td><td class="loss">33-67</td><td class="loss">34-64</td><td class="loss">34-66</td><td class="loss">37-62</td><td class="loss">38-61</td><td class="loss">43-56</td><td class="loss">28-72</td><td class="loss">28-72</td><td class="loss">31-65</td><td class="loss">39-61</td><td class="loss">34-65</td><td class="even">47-52</td><td class="loss">36-63</td><td class="loss">38-62</td><td class="loss">43-56</td><td class="loss">37-62</td><td class="loss">38-60</td><td class="loss">40-58</td><td class="loss">33-67</td><td class="loss">42-56</td><td class="even">46-54</td><td class="loss">40-59</td><td class="loss">32-67</td><td class="loss">38-61</td><td class="loss">40-59</td><td class="self">—</td><td class="loss">42-56</td><td class="even">47-49</td><td class="even">50-45</td><td class="win">67-33</td><td class="win">62-34</td><td class="win">68-32</td><td class="win">62-37</td><td class="win">64-36</td><td class="win">68-31</td><td class="win">62-33</td><td class="win">68-22</td><td class="win">83-16</td><td class="win">96-3</td><td class="win">99-0</td><td class="win">95-0</td></tr><tr><td class="bot-name">NarekBot</td><td class="loss">27-73</td><td class="loss">26-73</td><td class="loss">28-72</td><td class="loss">24-76</td><td class="loss">29-69</td><td class="loss">33-67</td><td class="loss">30-70</td><td class="loss">29-71</td><td class="loss">28-71</td><td class="loss">33-67</td><td class="loss">29-71</td><td class="loss">30-70</td><td class="loss">28-72</td><td class="loss">42-58</td><td class="loss">34-66</td><td class="loss">43-57</td><td class="loss">36-61</td><td class="loss">38-62</td><td class="loss">36-64</td><td class="loss">37-62</td><td class="loss">36-64</td><td class="loss">41-58</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="loss">39-60</td><td class="loss">37-57</td><td class="loss">42-58</td><td class="even">45-55</td><td class="even">47-53</td><td class="loss">40-60</td><td class="loss">30-69</td><td class="loss">37-63</td><td class="even">45-54</td><td class="loss">42-58</td><td class="even">46-52</td><td class="loss">37-62</td><td class="win">56-42</td><td class="self">—</td><td class="even">52-44</td><td class="even">49-48</td><td class="win">58-42</td><td class="win">55-42</td><td class="win">60-40</td><td class="win">63-37</td><td class="win">70-29</td><td class="win">68-32</td><td class="win">62-35</td><td class="win">69-15</td><td class="win">87-12</td><td class="win">92-6</td><td class="win">100-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">AdeleBot</td><td class="loss">30-69</td><td class="loss">28-71</td><td class="loss">27-72</td><td class="loss">31-69</td><td class="loss">40-58</td><td class="loss">35-65</td><td class="loss">37-61</td><td class="loss">36-63</td><td class="loss">37-62</td><td class="loss">30-68</td><td class="loss">42-55</td><td class="loss">37-61</td><td class="loss">36-62</td><td class="loss">26-71</td><td class="loss">30-67</td><td class="loss">32-67</td><td class="loss">35-63</td><td class="loss">36-61</td><td class="loss">30-69</td><td class="loss">37-63</td><td class="loss">35-65</td><td class="loss">31-69</td><td class="loss">36-60</td><td class="loss">38-59</td><td class="loss">31-69</td><td class="loss">43-57</td><td class="loss">32-67</td><td class="loss">31-60</td><td class="loss">36-63</td><td class="loss">36-62</td><td class="loss">41-58</td><td class="even">46-52</td><td class="even">50-49</td><td class="loss">40-55</td><td class="win">53-42</td><td class="even">49-43</td><td class="even">49-47</td><td class="even">44-52</td><td class="self">—</td><td class="even">43-52</td><td class="loss">36-58</td><td class="loss">43-53</td><td class="even">55-45</td><td class="win">71-29</td><td class="win">62-32</td><td class="win">52-42</td><td class="win">71-23</td><td class="win">77-11</td><td class="win">68-18</td><td class="win">87-3</td><td class="win">95-0</td><td class="win">98-0</td></tr><tr><td class="bot-name">BasicBot</td><td class="loss">37-60</td><td class="loss">34-66</td><td class="loss">32-66</td><td class="loss">36-63</td><td class="loss">40-59</td><td class="loss">34-65</td><td class="loss">36-61</td><td class="loss">32-68</td><td class="loss">23-77</td><td class="loss">30-70</td><td class="loss">32-66</td><td class="loss">30-70</td><td class="loss">39-57</td><td class="loss">43-53</td><td class="loss">30-70</td><td class="loss">34-65</td><td class="loss">40-57</td><td class="loss">42-54</td><td class="loss">34-65</td><td class="loss">29-70</td><td class="loss">30-68</td><td class="loss">35-65</td><td class="loss">39-58</td><td class="loss">38-59</td><td class="loss">30-69</td><td class="loss">31-67</td><td class="loss">32-66</td><td class="loss">44-55</td><td class="loss">30-66</td><td class="loss">38-60</td><td class="loss">35-62</td><td class="even">46-50</td><td class="loss">44-54</td><td class="even">42-50</td><td class="loss">44-54</td><td class="loss">39-55</td><td class="even">45-50</td><td class="even">48-49</td><td class="even">52-43</td><td class="self">—</td><td class="win">55-40</td><td class="win">61-34</td><td class="even">46-54</td><td class="win">68-32</td><td class="even">51-44</td><td class="win">56-36</td><td class="win">64-29</td><td class="win">73-13</td><td class="win">67-18</td><td class="win">82-10</td><td class="win">99-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">suttv2</td><td class="loss">30-70</td><td class="loss">31-69</td><td class="loss">36-63</td><td class="loss">31-69</td><td class="loss">30-70</td><td class="loss">26-74</td><td class="loss">25-75</td><td class="loss">30-70</td><td class="loss">36-64</td><td class="loss">35-65</td><td class="loss">27-73</td><td class="loss">33-67</td><td class="loss">33-67</td><td class="loss">29-71</td><td class="loss">30-70</td><td class="loss">41-59</td><td class="loss">31-69</td><td class="loss">39-61</td><td class="loss">41-58</td><td class="loss">35-65</td><td class="loss">38-62</td><td class="loss">32-65</td><td class="loss">33-67</td><td class="loss">44-56</td><td class="even">46-53</td><td class="loss">32-63</td><td class="loss">40-60</td><td class="loss">36-64</td><td class="loss">44-56</td><td class="even">48-52</td><td class="loss">36-64</td><td class="loss">41-59</td><td class="loss">42-58</td><td class="loss">43-57</td><td class="loss">44-55</td><td class="loss">40-60</td><td class="loss">33-67</td><td class="loss">42-58</td><td class="win">58-36</td><td class="loss">40-55</td><td class="self">—</td><td class="loss">42-57</td><td class="win">63-35</td><td class="win">48-38</td><td class="win">56-42</td><td class="win">62-35</td><td class="win">61-36</td><td class="win">72-24</td><td class="win">86-14</td><td class="win">82-15</td><td class="win">97-1</td><td class="win">83-0</td></tr><tr><td class="bot-name">bot_Timothy_v2</td><td class="loss">27-73</td><td class="loss">33-67</td><td class="loss">24-76</td><td class="loss">27-73</td><td class="loss">30-69</td><td class="loss">24-76</td><td class="loss">28-71</td><td class="loss">26-73</td><td class="loss">25-75</td><td class="loss">25-74</td><td class="loss">36-60</td><td class="loss">33-67</td><td class="loss">30-69</td><td class="loss">38-61</td><td class="loss">38-62</td><td class="loss">38-62</td><td class="loss">24-75</td><td class="loss">30-70</td><td class="loss">43-57</td><td class="loss">33-65</td><td class="loss">43-57</td><td class="loss">35-65</td><td class="loss">30-68</td><td class="even">45-53</td><td class="loss">36-62</td><td class="loss">38-60</td><td class="even">46-51</td><td class="loss">39-56</td><td class="loss">43-55</td><td class="loss">31-67</td><td class="loss">34-64</td><td class="loss">34-63</td><td class="loss">39-60</td><td class="loss">36-60</td><td class="loss">33-63</td><td class="loss">37-59</td><td class="loss">34-62</td><td class="loss">42-55</td><td class="win">53-43</td><td class="loss">34-61</td><td class="win">57-42</td><td class="self">—</td><td class="win">60-40</td><td class="win">56-44</td><td class="win">60-39</td><td class="win">60-35</td><td class="win">59-33</td><td class="win">58-17</td><td class="win">79-16</td><td class="win">74-14</td><td class="win">99-0</td><td class="win">99-0</td></tr><tr><td class="bot-name">Dora's Explorer</td><td class="loss">21-79</td><td class="loss">30-70</td><td class="loss">24-76</td><td class="loss">23-77</td><td class="loss">23-77</td><td class="loss">27-73</td><td class="loss">20-80</td><td class="loss">24-76</td><td class="loss">30-70</td><td class="loss">30-70</td><td class="loss">22-78</td><td class="loss">32-68</td><td class="loss">28-72</td><td class="loss">25-75</td><td class="loss">34-66</td><td class="loss">26-73</td><td class="loss">34-65</td><td class="loss">30-70</td><td class="loss">33-67</td><td class="loss">38-62</td><td class="loss">32-67</td><td class="loss">27-71</td><td class="loss">34-66</td><td class="loss">35-65</td><td class="loss">37-62</td><td class="loss">32-67</td><td class="loss">28-72</td><td class="loss">35-65</td><td class="loss">37-63</td><td class="loss">34-66</td><td class="loss">31-69</td><td class="loss">23-77</td><td class="loss">30-68</td><td class="loss">34-66</td><td class="loss">27-73</td><td class="loss">24-76</td><td class="loss">32-68</td><td class="loss">40-60</td><td class="even">45-55</td><td class="even">54-46</td><td class="loss">35-63</td><td class="loss">40-60</td><td class="self">—</td><td class="loss">22-42</td><td class="even">46-46</td><td class="even">53-46</td><td class="even">47-44</td><td class="win">72-27</td><td class="win">71-27</td><td class="win">75-22</td><td class="win">92-0</td><td class="win">73-0</td></tr><tr><td class="bot-name">ethan_bot</td><td class="loss">16-84</td><td class="loss">25-75</td><td class="loss">21-79</td><td class="loss">24-76</td><td class="loss">16-84</td><td class="loss">26-74</td><td class="loss">21-79</td><td class="loss">21-79</td><td class="loss">28-72</td><td class="loss">21-79</td><td class="loss">25-75</td><td class="loss">29-71</td><td class="loss">24-76</td><td class="loss">28-72</td><td class="loss">34-66</td><td class="loss">29-69</td><td class="loss">34-62</td><td class="loss">26-73</td><td class="loss">25-75</td><td class="loss">33-67</td><td class="loss">26-74</td><td class="loss">19-68</td><td class="loss">34-66</td><td class="loss">32-68</td><td class="loss">32-61</td><td class="loss">31-56</td><td class="loss">33-67</td><td class="loss">30-70</td><td class="loss">43-57</td><td class="loss">31-69</td><td class="loss">42-58</td><td class="loss">27-73</td><td class="loss">28-69</td><td class="loss">35-65</td><td class="loss">29-71</td><td class="loss">35-65</td><td class="loss">37-62</td><td class="loss">37-63</td><td class="loss">29-71</td><td class="loss">32-68</td><td class="loss">38-48</td><td class="loss">44-56</td><td class="win">42-22</td><td class="self">—</td><td class="win">37-18</td><td class="loss">40-60</td><td class="even">39-34</td><td class="win">69-25</td><td class="win">78-22</td><td class="win">49-15</td><td class="win">98-1</td><td class="win">35-0</td></tr><tr><td class="bot-name">TristanBot</td><td class="loss">20-80</td><td class="loss">21-79</td><td class="loss">20-80</td><td class="loss">21-79</td><td class="loss">25-75</td><td class="loss">22-78</td><td class="loss">24-76</td><td class="loss">27-73</td><td class="loss">18-82</td><td class="loss">24-76</td><td class="loss">23-76</td><td class="loss">19-81</td><td class="loss">25-75</td><td class="loss">27-73</td><td class="loss">20-80</td><td class="loss">23-77</td><td class="loss">20-73</td><td class="loss">28-71</td><td class="loss">36-64</td><td class="loss">27-72</td><td class="loss">25-75</td><td class="loss">24-70</td><td class="loss">31-69</td><td class="loss">21-79</td><td class="loss">27-72</td><td class="loss">30-67</td><td class="loss">26-74</td><td class="loss">28-71</td><td class="loss">25-75</td><td class="loss">32-68</td><td class="loss">36-64</td><td class="loss">34-65</td><td class="loss">36-61</td><td class="loss">39-61</td><td class="loss">30-70</td><td class="loss">34-64</td><td class="loss">36-64</td><td class="loss">29-70</td><td class="loss">32-62</td><td class="even">44-51</td><td class="loss">42-56</td><td class="loss">39-60</td><td class="even">46-46</td><td class="loss">18-37</td><td class="self">—</td><td class="even">52-43</td><td class="win">46-36</td><td class="win">59-22</td><td class="win">67-18</td><td class="win">70-16</td><td class="win">97-0</td><td class="win">44-0</td></tr><tr><td class="bot-name">suttv1</td><td class="loss">23-77</td><td class="loss">22-78</td><td class="loss">18-82</td><td class="loss">16-84</td><td class="loss">17-83</td><td class="loss">22-78</td><td class="loss">28-72</td><td class="loss">26-74</td><td class="loss">18-82</td><td class="loss">19-81</td><td class="loss">22-77</td><td class="loss">25-75</td><td class="loss">16-84</td><td class="loss">26-73</td><td class="loss">16-84</td><td class="loss">23-77</td><td class="loss">21-79</td><td class="loss">24-76</td><td class="loss">24-76</td><td class="loss">27-73</td><td class="loss">23-76</td><td class="loss">30-70</td><td class="loss">30-67</td><td class="loss">32-68</td><td class="loss">21-79</td><td class="loss">23-77</td><td class="loss">27-73</td><td class="loss">31-67</td><td class="loss">26-73</td><td class="loss">36-64</td><td class="loss">28-72</td><td class="loss">30-70</td><td class="loss">34-66</td><td class="loss">38-61</td><td class="loss">31-69</td><td class="loss">36-64</td><td class="loss">31-68</td><td class="loss">32-68</td><td class="loss">42-52</td><td class="loss">36-56</td><td class="loss">35-62</td><td class="loss">35-60</td><td class="even">46-53</td><td class="win">60-40</td><td class="even">43-52</td><td class="self">—</td><td class="win">61-33</td><td class="win">57-28</td><td class="win">64-22</td><td class="win">77-19</td><td class="win">89-0</td><td class="win">96-0</td></tr><tr><td class="bot-name">Dani is an NPC</td><td class="loss">24-76</td><td class="loss">24-75</td><td class="loss">23-76</td><td class="loss">20-80</td><td class="loss">27-73</td><td class="loss">14-86</td><td class="loss">20-80</td><td class="loss">25-75</td><td class="loss">27-73</td><td class="loss">21-79</td><td class="loss">32-66</td><td class="loss">26-74</td><td class="loss">16-84</td><td class="loss">26-68</td><td class="loss">26-74</td><td class="loss">21-79</td><td class="loss">17-79</td><td class="loss">25-73</td><td class="loss">25-74</td><td class="loss">33-65</td><td class="loss">24-76</td><td class="loss">20-79</td><td class="loss">23-73</td><td class="loss">24-74</td><td class="loss">25-73</td><td class="loss">27-70</td><td class="loss">23-76</td><td class="loss">23-74</td><td class="loss">23-76</td><td class="loss">28-70</td><td class="loss">26-73</td><td class="loss">26-73</td><td class="loss">29-71</td><td class="loss">26-62</td><td class="loss">31-64</td><td class="loss">26-69</td><td class="loss">33-62</td><td class="loss">35-62</td><td class="loss">23-71</td><td class="loss">29-64</td><td class="loss">36-61</td><td class="loss">33-59</td><td class="even">44-47</td><td class="even">34-39</td><td class="loss">36-46</td><td class="loss">33-61</td><td class="self">—</td><td class="win">44-19</td><td class="win">48-31</td><td class="win">61-12</td><td class="win">64-0</td><td class="win">65-0</td></tr><tr><td class="bot-name">bot_justin</td><td class="loss">10-90</td><td class="loss">6-91</td><td class="loss">14-80</td><td class="loss">12-84</td><td class="loss">10-87</td><td class="loss">6-91</td><td class="loss">7-92</td><td class="loss">15-83</td><td class="loss">15-84</td><td class="loss">11-87</td><td class="loss">8-85</td><td class="loss">10-88</td><td class="loss">16-78</td><td class="loss">4-83</td><td class="loss">9-89</td><td class="loss">15-81</td><td class="loss">11-80</td><td class="loss">6-85</td><td class="loss">9-90</td><td class="loss">5-86</td><td class="loss">5-90</td><td class="loss">18-79</td><td class="loss">7-83</td><td class="loss">7-88</td><td class="loss">18-80</td><td class="loss">9-80</td><td class="loss">11-86</td><td class="loss">10-78</td><td class="loss">12-80</td><td class="loss">6-89</td><td class="loss">7-86</td><td class="loss">9-87</td><td class="loss">17-80</td><td class="loss">11-59</td><td class="loss">9-82</td><td class="loss">15-71</td><td class="loss">22-68</td><td class="loss">15-69</td><td class="loss">11-77</td><td class="loss">13-73</td><td class="loss">24-72</td><td class="loss">17-58</td><td class="loss">27-72</td><td class="loss">25-69</td><td class="loss">22-59</td><td class="loss">28-57</td><td class="loss">19-44</td><td class="self">—</td><td class="win">51-26</td><td class="win">20-15</td><td class="win">72-0</td><td class="win">63-0</td></tr><tr><td class="bot-name">Adrianna_bot</td><td class="loss">6-94</td><td class="loss">5-95</td><td class="loss">6-94</td><td class="loss">8-92</td><td class="loss">8-92</td><td class="loss">10-90</td><td class="loss">12-88</td><td class="loss">8-92</td><td class="loss">9-91</td><td class="loss">2-98</td><td class="loss">9-91</td><td class="loss">15-84</td><td class="loss">10-90</td><td class="loss">15-85</td><td class="loss">8-92</td><td class="loss">18-81</td><td class="loss">14-83</td><td class="loss">6-94</td><td class="loss">10-88</td><td class="loss">6-94</td><td class="loss">7-93</td><td class="loss">11-78</td><td class="loss">8-91</td><td class="loss">10-90</td><td class="loss">8-91</td><td class="loss">11-88</td><td class="loss">8-92</td><td class="loss">10-86</td><td class="loss">14-86</td><td class="loss">4-96</td><td class="loss">4-96</td><td class="loss">11-89</td><td class="loss">13-86</td><td class="loss">22-75</td><td class="loss">19-80</td><td class="loss">7-93</td><td class="loss">16-83</td><td class="loss">12-87</td><td class="loss">18-68</td><td class="loss">18-67</td><td class="loss">14-86</td><td class="loss">16-79</td><td class="loss">27-71</td><td class="loss">22-78</td><td class="loss">18-67</td><td class="loss">22-64</td><td class="loss">31-48</td><td class="loss">26-51</td><td class="self">—</td><td class="win">41-19</td><td class="win">64-1</td><td class="win">27-0</td></tr><tr><td class="bot-name">avabot</td><td class="loss">6-94</td><td class="loss">2-97</td><td class="loss">5-94</td><td class="loss">4-94</td><td class="loss">4-95</td><td class="loss">5-94</td><td class="loss">4-95</td><td class="loss">7-93</td><td class="loss">6-93</td><td class="loss">6-94</td><td class="loss">5-95</td><td class="loss">3-97</td><td class="loss">4-96</td><td class="loss">10-85</td><td class="loss">8-92</td><td class="loss">8-92</td><td class="loss">5-85</td><td class="loss">2-97</td><td class="loss">9-91</td><td class="loss">6-93</td><td class="loss">5-94</td><td class="loss">6-83</td><td class="loss">9-87</td><td class="loss">11-84</td><td class="loss">8-89</td><td class="loss">8-91</td><td class="loss">11-88</td><td class="loss">7-90</td><td class="loss">7-93</td><td class="loss">5-94</td><td class="loss">3-96</td><td class="loss">7-91</td><td class="loss">6-91</td><td class="loss">5-86</td><td class="loss">11-83</td><td class="loss">8-86</td><td class="loss">3-96</td><td class="loss">6-92</td><td class="loss">3-87</td><td class="loss">10-82</td><td class="loss">15-82</td><td class="loss">14-74</td><td class="loss">22-75</td><td class="loss">15-49</td><td class="loss">16-70</td><td class="loss">19-77</td><td class="loss">12-61</td><td class="loss">15-20</td><td class="loss">19-41</td><td class="self">—</td><td class="win">48-3</td><td class="win">30-0</td></tr><tr><td class="bot-name">RandomBot</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">2-98</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">2-98</td><td class="loss">0-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">1-98</td><td class="loss">0-100</td><td class="loss">1-99</td><td class="loss">1-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">1-97</td><td class="loss">0-100</td><td class="loss">0-99</td><td class="loss">0-99</td><td class="loss">0-100</td><td class="loss">0-95</td><td class="loss">0-99</td><td class="loss">1-97</td><td class="loss">0-99</td><td class="loss">0-92</td><td class="loss">1-98</td><td class="loss">0-97</td><td class="loss">0-89</td><td class="loss">0-64</td><td class="loss">0-72</td><td class="loss">1-64</td><td class="loss">3-48</td><td class="self">—</td><td class="win">3-0</td></tr><tr><td class="bot-name">jillian</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-99</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-96</td><td class="loss">0-67</td><td class="loss">0-100</td><td class="loss">0-89</td><td class="loss">0-99</td><td class="loss">0-100</td><td class="loss">0-62</td><td class="loss">0-97</td><td class="loss">0-100</td><td class="loss">0-94</td><td class="loss">0-85</td><td class="loss">0-100</td><td class="loss">0-97</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-100</td><td class="loss">0-99</td><td class="loss">0-89</td><td class="loss">0-100</td><td class="loss">0-98</td><td class="loss">0-99</td><td class="loss">0-95</td><td class="loss">0-99</td><td class="loss">0-98</td><td class="loss">0-99</td><td class="loss">0-83</td><td class="loss">0-99</td><td class="loss">0-73</td><td class="loss">0-35</td><td class="loss">0-44</td><td class="loss">0-96</td><td class="loss">0-65</td><td class="loss">0-63</td><td class="loss">0-27</td><td class="loss">0-30</td><td class="loss">0-3</td><td class="self">—</td></tr>
+</tbody></table>
+</div>
+
+
+        <div class="errors">
+            <h2>Errors (1)</h2>
+            <ul><li>Avi's_Counterstrike vs jillian: Game 90: ValueError: min() iterable argument is empty</li></ul>
+        </div>
+
+<script>
+document.querySelectorAll("#rankings th.sortable").forEach(th => {
+  th.addEventListener("click", () => {
+    const table = document.getElementById("rankings");
+    const tbody = table.querySelector("tbody");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+    const col = parseInt(th.dataset.col);
+    const type = th.dataset.type;
+    const isAsc = th.classList.contains("asc");
+    const dir = isAsc ? -1 : 1;
+
+    rows.sort((a, b) => {
+      const av = a.children[col].dataset.v;
+      const bv = b.children[col].dataset.v;
+      if (type === "num") return (parseFloat(av) - parseFloat(bv)) * dir;
+      return av.localeCompare(bv) * dir;
+    });
+
+    table.querySelectorAll("th.sortable").forEach(h => h.classList.remove("asc", "desc"));
+    th.classList.add(isAsc ? "desc" : "asc");
+    rows.forEach(r => tbody.appendChild(r));
+  });
+});
+</script>
+
+</body></html>

@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.154.2">
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,33 +66,33 @@
 <ol>
 <li>To download the starting code for this exercise, paste the following command into your codespace&rsquo;s terminal:</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/scienceacademy/apcsp2025/refs/heads/main/practice/hours.c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/scienceacademy/apcsp2025/refs/heads/main/practice/hours.c
 </span></span></code></pre></div><ol start="2">
 <li>Open the code by typing</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>code hours.c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>code hours.c
 </span></span></code></pre></div><h2 id="details">Details</h2>
 <p>The <code>main</code> function prompts the user for the number of weeks the user has been taking APCSP, then creates an array with that many elements. After the data has been entered, the program then prompts the user to enter a &ldquo;T&rdquo; or an &ldquo;A&rdquo; - to either print the total or average hours spent, respectively. However, that last part doesn&rsquo;t work yet!</p>
 <p>Your task is to complete the <code>calc_hours</code> function. You should first total up the hours into a new variable. Then, depending on the value of <code>choice</code>, return either that sum or the average.</p>
 <h2 id="testing-your-code">Testing Your Code</h2>
 <p>Your code should behave like the examples below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
 </span></span><span style="display:flex;"><span>Number of weeks taking APCSP: 3
 </span></span><span style="display:flex;"><span>Week 0 hours coding: 3
 </span></span><span style="display:flex;"><span>Week 1 hours coding: 7
 </span></span><span style="display:flex;"><span>Week 2 hours coding: 10
 </span></span><span style="display:flex;"><span>Enter T for total hours, A for average hours per week: A
 </span></span><span style="display:flex;"><span>6.7 hours
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./hours
 </span></span><span style="display:flex;"><span>Number of weeks taking APCSP: 2
 </span></span><span style="display:flex;"><span>Week 0 hours coding: 2
 </span></span><span style="display:flex;"><span>Week 1 hours coding: 8
 </span></span><span style="display:flex;"><span>Enter T for total hours, A for average hours per week: T
 </span></span><span style="display:flex;"><span>10.0 hours
 </span></span></code></pre></div><p>You can check the code with <code>check50</code> using the following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/hours
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/hours
 </span></span></code></pre></div><h2 id="submitting">Submitting</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/hours
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/hours
 </span></span></code></pre></div>
 </div>
     </main>

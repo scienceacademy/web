@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.154.2">
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,13 +56,13 @@
 <p>Toward the beginning of World 1-1 in Nintendo&rsquo;s Super Mario Brothers, Mario must hop over adjacent pyramids of blocks, as shown below.</p>
 <p><img src="/web/pyramids.png" alt="screenshot of Mario jumping over adjacent pyramids"></p>
 <p>Let&rsquo;s recreate those pyramids in C, albeit in text, using hashes (<code>#</code>) for bricks, a la the below. Each hash is a bit taller than it is wide (at least for the font we&rsquo;re using), so the pyramids themselves will also appear taller than they are wide.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>   #  #
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>   #  #
 </span></span><span style="display:flex;"><span>  ##  ##
 </span></span><span style="display:flex;"><span> ###  ###
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">####  ####
 </span></span></span></code></pre></div><p>The program we&rsquo;ll write will be called <code>mario</code>. And let&rsquo;s allow the user to decide just how tall the pyramids should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.</p>
 <p>Here&rsquo;s how the program might work if the user inputs <code>8</code> when prompted:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
 </span></span><span style="display:flex;"><span>Height: 8
 </span></span><span style="display:flex;"><span>       #  #
 </span></span><span style="display:flex;"><span>      ##  ##
@@ -73,23 +73,23 @@
 </span></span><span style="display:flex;"><span> #######  #######
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">########  ########
 </span></span></span></code></pre></div><p>Here&rsquo;s how the program might work if the user inputs <code>4</code> when prompted:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
 </span></span><span style="display:flex;"><span>Height: 4
 </span></span><span style="display:flex;"><span>   #  #
 </span></span><span style="display:flex;"><span>  ##  ##
 </span></span><span style="display:flex;"><span> ###  ###
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">####  ####
 </span></span></span></code></pre></div><p>Here&rsquo;s how the program might work if the user inputs <code>2</code> when prompted:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
 </span></span><span style="display:flex;"><span>Height: 2
 </span></span><span style="display:flex;"><span> #  #
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">##  ##
 </span></span></span></code></pre></div><p>And here&rsquo;s how the program might work if the user inputs <code>1</code> when prompted:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
 </span></span><span style="display:flex;"><span>Height: 1
 </span></span><span style="display:flex;"><span><span style="font-weight:bold">#  #
 </span></span></span></code></pre></div><p>If the user doesn&rsquo;t, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./mario
 </span></span><span style="display:flex;"><span>Height: -1
 </span></span><span style="display:flex;"><span>Height: 0
 </span></span><span style="display:flex;"><span>Height: 42
@@ -112,12 +112,12 @@
 <li>no input at all, when you only hit Enter?</li>
 </ul>
 <p>You can also execute the below to evaluate the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/mario/more
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/mario/more
 </span></span></code></pre></div><p>Execute the below to evaluate the style of your code using <code>style50</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 mario.c
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>style50 mario.c
 </span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/mario/more
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/mario/more
 </span></span></code></pre></div>
 </div>
     </main>

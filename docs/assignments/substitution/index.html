@@ -3,7 +3,7 @@
 <head>
   <link href="https://gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.154.2">
+  <meta name="generator" content="Hugo 0.157.0">
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
   <h1>Substitution</h1>
   <time datetime=2025-09-11T14:55:45-0700 class="post-date">Thu, Sep 11, 2025</time>
   <p>Implement a program that encrypts messages using the substitution cipher.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution JTREKYAVOGDXPSNCUIZLFBMWHQ
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution JTREKYAVOGDXPSNCUIZLFBMWHQ
 </span></span><span style="display:flex;"><span>plaintext:  HELLO
 </span></span><span style="display:flex;"><span>ciphertext: VKXXN
 </span></span></code></pre></div><h2 id="background">Background</h2>
@@ -62,20 +62,20 @@
 <p>A message like <code>HELLO</code>, then, would be encrypted as <code>FOLLE</code>, replacing each of the letters according to the mapping determined by the key.</p>
 <p>Write a program called <code>substitution</code> that enables you to encrypt messages using a substitution cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime.</p>
 <p>Here are a few examples of how the program might work. For example, if the user inputs a key of <code>YTNSHKVEFXRBAUQZCLWDMIPGJO</code> and a plaintext of <code>HELLO</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
 </span></span><span style="display:flex;"><span>plaintext:  HELLO
 </span></span><span style="display:flex;"><span>ciphertext: EHBBQ
 </span></span></code></pre></div><p>Here’s how the program might work if the user provides a key of <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> and a plaintext of <code>hello, world</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
 </span></span><span style="display:flex;"><span>plaintext:  hello, world
 </span></span><span style="display:flex;"><span>ciphertext: jrssb, ybwsp
 </span></span></code></pre></div><p>Notice that neither the comma nor the space were substituted by the cipher. Only substitute alphabetical characters! Notice, too, that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.</p>
 <p>Whether the characters in the key itself are uppercase or lowercase doesn’t matter. A key of <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> is functionally identical to a key of <code>vchprzgjntlskfbdqwaxeuymoi</code> (as is, for that matter, <code>VcHpRzGjNtLsKfBdQwAxEuYmOi</code>).</p>
 <p>And what if a user doesn’t provide a valid key?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution ABC
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution ABC
 </span></span><span style="display:flex;"><span>Key must contain 26 characters.
 </span></span></code></pre></div><p>Or really doesn’t cooperate?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>$ ./substitution
 </span></span><span style="display:flex;"><span>Usage: ./substitution key
 </span></span></code></pre></div><h2 id="specification">Specification</h2>
 <p>Implement a program, <code>substitution</code>, that encrypts messages using a substitution cipher.</p>
@@ -91,10 +91,10 @@
 </ul>
 <h2 id="how-to-test-your-code">How to Test Your Code</h2>
 <p>Execute the below to check the correctness of your code using <code>check50</code>. But be sure to compile and test it yourself as well!</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/substitution
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>check50 scienceacademy/problems/2025ap/substitution
 </span></span></code></pre></div><h2 id="how-to-submit">How to Submit</h2>
 <p>Execute the below, logging in with your GitHub username and password when prompted.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/substitution
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>submit50 scienceacademy/problems/2025ap/substitution
 </span></span></code></pre></div>
 </div>
     </main>
