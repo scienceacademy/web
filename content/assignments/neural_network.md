@@ -1,6 +1,6 @@
 ---
 title: "Experimenting with ML"
-date: 2023-12-01T13:55:45-07:00
+date: 2026-03-01T13:55:45-07:00
 draft: true
 ---
 
@@ -57,7 +57,7 @@ Your task is to explore how changing various parameters of a neural network affe
      - Your observations and conclusions about each change.
 
 5.  **Report Your Conclusions**
-    - In the "Conclusions" tab of the data sheet, compile your observations into a brief report. Include your hypotheses on why certain parameters had the impacts they did.
+    - In the "Conclusions" tab of the data sheet, compile your observations into a brief summary. Include your hypotheses on why certain parameters had the impacts they did.
 
 ## Guidelines
 
