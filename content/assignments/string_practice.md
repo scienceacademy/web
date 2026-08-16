@@ -1,7 +1,7 @@
 ---
 title: "String Practice"
 date: 2025-09-02T17:55:45-07:00
-draft: false
+draft: true
 ---
 Practice with strings...
 

@@ -1,10 +1,10 @@
 ---
 title: "Welcome"
-date: 2025-08-11T19:55:45-07:00
+date: 2026-08-12T19:55:45-07:00
 draft: false
 ---
 
-Welcome to AP Computer Science Principles for 2025-2026! Read this to get started.
+Welcome to AP Computer Science Principles for 2026-2027! Read this to get started.
 
 <!--more-->
 

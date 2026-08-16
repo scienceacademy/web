@@ -1,7 +1,7 @@
 ---
 title: "Credit"
 date: 2025-08-27T01:55:45-07:00
-draft: false
+draft: true
 ---
 
 Validating credit cards...

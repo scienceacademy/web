@@ -1,6 +1,6 @@
 ---
 title: "Hello"
-date: 2025-08-19T16:55:45-07:00
+date: 2026-08-16T08:55:45-07:00
 draft: false
 ---
 
@@ -107,22 +107,16 @@ Remember, to use `get_string`, you need to include `cs50.h` (in which `get_strin
 
 ### How to Test Your Code
 
-Once you've tested the program yourself, execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
+Once you've tested the program yourself, execute the command below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2025ap/hello
-```
-
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 hello.c
+check50 scienceacademy/problems/2026ap/hello
 ```
 
 ## How to Submit
 
-Execute the following:
+Execute the following in your terminal window:
 
 ```md
-submit50 scienceacademy/problems/2025ap/hello
+submit50 scienceacademy/problems/2026ap/hello
 ```
