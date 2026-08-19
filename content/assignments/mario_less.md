@@ -1,7 +1,7 @@
 ---
 title: "Mario: Less comfortable"
-date: 2025-08-21T19:55:45-07:00
-draft: true
+date: 2026-08-18T19:55:45-07:00
+draft: false
 ---
 <!--more-->
 
@@ -188,19 +188,15 @@ All that remains now is a finishing flourish! Modify your program so that it pri
 Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2025ap/mario/less
+check50 scienceacademy/problems/2026ap/mario/less
 ```
 
-Execute the below to evaluate the style of your code using `style50`.
-
-```md
-style50 mario.c
-```
+Don't forget to check the style of your code using `style50`.
 
 ## How to Submit
 
 Execute the below:
 
 ```md
-submit50 scienceacademy/problems/2025ap/mario/less
+submit50 scienceacademy/problems/2026ap/mario/less
 ```
