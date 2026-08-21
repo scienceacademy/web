@@ -65,7 +65,7 @@ Does your code work as prescribed when you input
 You can also execute the below to evaluate the correctness of your code using `check50`. **But be sure to compile and test it yourself as well!**
 
 ```md
-check50 scienceacademy/problems/2025ap/cash
+check50 scienceacademy/problems/2026ap/cash
 ```
 
 ## How to Submit
@@ -73,5 +73,5 @@ check50 scienceacademy/problems/2025ap/cash
 Execute the below:
 
 ```md
-submit50 scienceacademy/problems/2025ap/cash
+submit50 scienceacademy/problems/2026ap/cash
 ```
