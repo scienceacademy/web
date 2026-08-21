@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Tue, 18 Aug 2026 19:55:45 -0700</lastBuildDate>
+			<lastBuildDate>Thu, 20 Aug 2026 19:55:45 -0700</lastBuildDate>
 		
 			<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cash</title>
+				<link>https://scienceacademy.github.io/web/assignments/cash/</link>
+				<pubDate>Thu, 20 Aug 2026 19:55:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/cash/</guid>
+				<description>&lt;p&gt;Making change&amp;hellip;&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Mario: Less comfortable</title>
 				<link>https://scienceacademy.github.io/web/assignments/mario_less/</link>
