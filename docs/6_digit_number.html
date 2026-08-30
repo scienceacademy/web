@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- TODO: remove this file and 6digit-puzzle-888x959-2025-05-20.png -->
+<!-- Or keep them :) -->
+
+<head>
+    <title>6 Digit Number</title>
+</head>
+
+<body>
+    <h1>6 Digit Number Puzzle</h1>
+
+    <p>To complete this puzzle, use the following the image to find a 6 digit number.</p>
+    <p><img src="/web/6digit-puzzle-888x959-2025-05-20.png"></p>
+    <p>Hint: Analyze all aspects of the image. Think outside the box.</p>
+
+    <p>Enter your answer here:</p>
+    <p id="nextLink"></p>
+    <input id="solution">
+    <button type="button" onclick="checkSolution()">Submit</button>
+    <script>
+
+        function checkSolution() {
+            let solution = document.getElementById("solution").value;
+
+            let next_link;
+            if (solution == atob("ODg4OTU5")) {
+                next_link = "Please out the following Google Form for points: <a target=\"_blank\" href=" + atob("aHR0cHM6Ly9mb3Jtcy5nbGUvcWY5R3NaTjF3ODNUWW9OcTg=") + ">The Form</a>"
+            } else {
+                next_link = "Incorrect solution";
+            }
+
+            document.getElementById("nextLink").innerHTML = next_link;
+        }
+    </script>
+</body>
