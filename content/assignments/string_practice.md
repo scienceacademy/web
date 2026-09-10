@@ -1,7 +1,7 @@
 ---
 title: "String Practice"
-date: 2025-09-02T17:55:45-07:00
-draft: true
+date: 2026-09-09T17:55:45-07:00
+draft: false
 ---
 Practice with strings...
 
@@ -28,13 +28,13 @@ Reverse: .drawrof si sihT
 ### Checking
 
 ```bash
-check50 scienceacademy/problems/2025ap/reverse
+check50 scienceacademy/problems/2026ap/reverse
 ```
 
 ### Submitting
 
 ```bash
-submit50 scienceacademy/problems/2025ap/reverse
+submit50 scienceacademy/problems/2026ap/reverse
 ```
 
 {{< /details >}}
@@ -60,13 +60,13 @@ No
 ### Checking
 
 ```bash
-check50 scienceacademy/problems/2025ap/alphabetical
+check50 scienceacademy/problems/2026ap/alphabetical
 ```
 
 ### Submitting
 
 ```bash
-submit50 scienceacademy/problems/2025ap/alphabetical
+submit50 scienceacademy/problems/2026ap/alphabetical
 ```
 
 {{< /details >}}
@@ -92,18 +92,20 @@ NOT PALINDROME
 ### Checking
 
 ```bash
-check50 scienceacademy/problems/2025ap/palindrome
+check50 scienceacademy/problems/2026ap/palindrome
 ```
 
 ### Submitting
 
 ```bash
-submit50 scienceacademy/problems/2025ap/palindrome
+submit50 scienceacademy/problems/2026ap/palindrome
 ```
 
 {{< /details >}}
 
 ## More Comfortable
+
+Complete the following two programs:
 
 {{< details Palindrome2 >}}
 
@@ -112,13 +114,13 @@ submit50 scienceacademy/problems/2025ap/palindrome
 ### Checking
 
 ```bash
-check50 scienceacademy/problems/2025ap/palindrome2
+check50 scienceacademy/problems/2026ap/palindrome2
 ```
 
 ### Submitting
 
 ```bash
-submit50 scienceacademy/problems/2025ap/palindrome2
+submit50 scienceacademy/problems/2026ap/palindrome2
 ```
 
 {{< /details >}}
@@ -163,13 +165,13 @@ Alphabetic characters only.
 ### Checking
 
 ```bash
-check50 scienceacademy/problems/2025ap/anagram
+check50 scienceacademy/problems/2026ap/anagram
 ```
 
 ### Submitting
 
 ```bash
-submit50 scienceacademy/problems/2025ap/anagram
+submit50 scienceacademy/problems/2026ap/anagram
 ```
 
 {{< /details >}}
