@@ -1,7 +1,7 @@
 ---
 title: "Columnar Transposition Cipher"
-date: 2025-09-11T15:55:45-07:00
-draft: true
+date: 2026-09-14T15:55:45-07:00
+draft: false
 ---
 
 Implement a program that encrypts messages using the columnar transposition cipher.
@@ -88,7 +88,7 @@ Implement a program, `column`, that encrypts messages using a columnar transposi
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2025ap/column
+check50 scienceacademy/problems/2026ap/column
 ```
 
 ## How to Submit
@@ -96,4 +96,4 @@ check50 scienceacademy/problems/2025ap/column
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```md
-submit50 scienceacademy/problems/2025ap/column
+submit50 scienceacademy/problems/2026ap/column

@@ -1,7 +1,7 @@
 ---
 title: "Substitution"
-date: 2025-09-11T14:55:45-07:00
-draft: true
+date: 2026-09-14T14:55:45-07:00
+draft: false
 ---
 
 Implement a program that encrypts messages using the substitution cipher.
@@ -74,7 +74,7 @@ Implement a program, `substitution`, that encrypts messages using a substitution
 Execute the below to check the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
 
 ```md
-check50 scienceacademy/problems/2025ap/substitution
+check50 scienceacademy/problems/2026ap/substitution
 ```
 
 ## How to Submit
@@ -82,4 +82,4 @@ check50 scienceacademy/problems/2025ap/substitution
 Execute the below, logging in with your GitHub username and password when prompted.
 
 ```md
-submit50 scienceacademy/problems/2025ap/substitution
+submit50 scienceacademy/problems/2026ap/substitution
