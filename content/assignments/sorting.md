@@ -1,6 +1,6 @@
 ---
 title: "Lab: Sorting"
-date: 2026-08-21T13:55:45-07:00
+date: 2026-09-21T13:55:45-07:00
 draft: false
 ---
 

@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 14 Sep 2026 15:55:45 -0700</lastBuildDate>
+			<lastBuildDate>Mon, 21 Sep 2026 13:55:45 -0700</lastBuildDate>
 		
 			<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Lab: Sorting</title>
+				<link>https://scienceacademy.github.io/web/assignments/sorting/</link>
+				<pubDate>Mon, 21 Sep 2026 13:55:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/sorting/</guid>
+				<description>&lt;p&gt;Analyze three sorting programs to determine which algorithms they use.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Columnar Transposition Cipher</title>
 				<link>https://scienceacademy.github.io/web/assignments/column_cipher/</link>
@@ -47,13 +54,6 @@
 				<pubDate>Wed, 26 Aug 2026 01:55:45 -0700</pubDate>
 				<guid>https://scienceacademy.github.io/web/assignments/credit/</guid>
 				<description>&lt;p&gt;Validating credit cards&amp;hellip;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Lab: Sorting</title>
-				<link>https://scienceacademy.github.io/web/assignments/sorting/</link>
-				<pubDate>Fri, 21 Aug 2026 13:55:45 -0700</pubDate>
-				<guid>https://scienceacademy.github.io/web/assignments/sorting/</guid>
-				<description>&lt;p&gt;Analyze three sorting programs to determine which algorithms they use.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Cash</title>
