@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 21 Sep 2026 13:55:45 -0700</lastBuildDate>
+			<lastBuildDate>Wed, 23 Sep 2026 13:55:45 -0700</lastBuildDate>
 		
 			<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Plurality</title>
+				<link>https://scienceacademy.github.io/web/assignments/plurality/</link>
+				<pubDate>Wed, 23 Sep 2026 13:55:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/plurality/</guid>
+				<description>&lt;p&gt;Implement a program that runs a plurality election, as shown below.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Lab: Sorting</title>
 				<link>https://scienceacademy.github.io/web/assignments/sorting/</link>
