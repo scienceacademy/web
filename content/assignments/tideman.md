@@ -1,6 +1,6 @@
 ---
 title: "Voting: Tideman"
-date: 2026-09-26T13:55:45-07:00
+date: 2026-09-24T13:55:45-07:00
 draft: false
 ---
 Implement a program that runs a "Tideman" election, as shown below.
