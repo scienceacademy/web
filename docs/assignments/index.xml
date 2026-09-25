@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Wed, 23 Sep 2026 13:55:45 -0700</lastBuildDate>
+			<lastBuildDate>Thu, 24 Sep 2026 12:55:45 -0700</lastBuildDate>
 		
 			<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Voting: Runoff</title>
+				<link>https://scienceacademy.github.io/web/assignments/runoff/</link>
+				<pubDate>Thu, 24 Sep 2026 12:55:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/runoff/</guid>
+				<description>&lt;p&gt;Implement a program that runs a runoff election, as shown below.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Plurality</title>
 				<link>https://scienceacademy.github.io/web/assignments/plurality/</link>
