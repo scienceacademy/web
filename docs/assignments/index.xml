@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Sat, 10 Oct 2026 13:55:45 -0700</lastBuildDate>
+			<lastBuildDate>Wed, 14 Oct 2026 03:56:45 -0700</lastBuildDate>
 		
 			<atom:link href="https://scienceacademy.github.io/web/assignments/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Filter: More Comfortable</title>
+				<link>https://scienceacademy.github.io/web/assignments/filter-more2/</link>
+				<pubDate>Wed, 14 Oct 2026 03:56:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/filter-more2/</guid>
+				<description>&lt;p&gt;Implement a program that applies filters to images.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Filter: Less Comfortable</title>
+				<link>https://scienceacademy.github.io/web/assignments/filter-less/</link>
+				<pubDate>Wed, 14 Oct 2026 02:55:45 -0700</pubDate>
+				<guid>https://scienceacademy.github.io/web/assignments/filter-less/</guid>
+				<description>&lt;p&gt;Implement a program that applies filters to images.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Lab: Volume</title>
 				<link>https://scienceacademy.github.io/web/assignments/volume/</link>
