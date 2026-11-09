@@ -80,5 +80,5 @@ test_image = [
 ## How to Submit
 
 ```
-submit50 scienceacademy/problems/2025ap/rle
+submit50 scienceacademy/problems/2026ap/rle
 ```
